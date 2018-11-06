@@ -1,0 +1,652 @@
+body {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+   background-attachment: fixed;
+  
+}
+
+#logInButton, #logOutButton, .playerbutton {
+     
+    position:fixed;
+    right: 2%;
+    top:2%;
+    
+}
+
+.cards {
+ margin-top:2%;
+}
+
+.playerbutton {
+   margin-top:4%;
+}
+
+#header1 {
+    margin-left:25%;
+    font-size:60px;
+}
+
+#popUp {
+    background-color: gray;
+    height: 200px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border: black 2px solid;
+    border-top: 1px;
+    background: rgba(128,128,128,0.5);
+    border-radius: 15px 50px 30px;
+     
+}
+
+#popUp2 {
+    background-color: gray;
+    height: 60px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    border: black 2px solid;
+    border-bottom: 0px;
+    background: rgba(128,128,128,0.5);
+    padding-left:5%;
+    border-radius: 15px 50px 30px;
+     
+}
+
+#popUp3 {
+     position:absolute;
+    top: 90px;
+    left: 40%;
+    background-color:grey;
+    display: none;
+    padding: 5%;
+    padding-top: 3%;
+    border: black 2px solid;
+    background: rgba(128,128,128,0.8);
+    border-radius: 15px 50px 30px;
+    position: fixed;
+     
+}
+
+#deleteInput {
+    max-width:60px;
+    margin-bottom: 5%;
+}
+
+#deleteButton {
+    margin-top: -7.4%;
+    float:left;
+}
+
+#A,#B,#C,#D,#E,#F,#G,#H {
+    font-size: 120px;
+    float:left;
+    margin-left:7%;
+}
+
+#A:hover,#B:hover,#C:hover,#D:hover,#E:hover,#F:hover,#G:hover,#H:hover {
+   background-color: gray;
+    background: rgba(255,255,255, 0.4); 
+    cursor: pointer;
+    -webkit-transition: background 1s ease-out;
+    -moz-transition: background 1s ease-out;
+    -o-transition: background 1s ease-out;
+    transition: background 1s ease-out;
+}
+
+
+#popUpWrapper {
+    margin-top:15%;
+   
+}
+
+#teamInfoBoxWrapper {
+     display: none;
+}
+
+#playerInfoWrapperBasel {
+    display: none;
+}
+
+#baselBox {
+    padding-left:350px;
+}
+
+#baselLogo {
+    margin-left:-320px;
+}
+
+#baselName {
+    margin-left: -350px;
+}
+
+#movskaInfo {
+    margin-left:290px;
+}
+
+#moskvaBox {
+    padding-left: 300px;
+}
+
+#movskaLogo {
+    margin-left: -250px;
+}
+
+#movskaName {
+    margin-left: -250px;
+}
+
+
+#benficaBox {
+padding-left: 320px;    
+
+}
+
+#teamInfo {
+padding-left: 100px;    
+
+}
+
+#benficaLogo {
+margin-left:-280px !important;
+    
+}
+
+#benficaName {
+    margin-left: -300px;
+}
+
+ 
+
+.teamInfoBox {
+    background-color: gray;
+    margin-top:5%;
+    padding:6%;
+    padding-left:100px;
+    height: 600px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border: black 2px solid;
+    background: rgba(128,128,128,0.6);
+    border-radius: 15px 50px 30px;
+    font-size: 32px;
+     
+}
+
+#wrapperOfPlayers {
+    display: none;
+}
+
+#playerInfoWrapperManchester {
+    display: none;
+}
+
+
+h1 {
+     font-size: 30px;
+     text-decoration: underline;
+     
+}
+
+h2 {
+     text-decoration: underline;
+     font-weight: bold;
+     
+}
+
+.title {
+    margin-top: 10px;
+     float:left;
+    font-weight: bold;
+}
+
+.infoNumber {
+   
+    font-size:50px;
+    font-weight: bold;
+}
+
+.teamName {
+    float:left;
+   font-weight: bold;
+   margin-left:-100px;
+   
+}
+.playedGames {
+   margin-top:100px;
+   margin-left:-300px;
+  
+}
+
+.playerInfo {
+    float:left;
+     margin-top:-200px;
+    
+}
+
+.teamLogo {
+    max-width: 200px;
+    margin-left:-75px;
+    margin-right:0;
+    margin-top:-80px;
+    
+}
+
+
+.fname {
+    margin-left:20%;
+   
+}
+
+.nationality {
+    margin-left:48%;
+}
+
+.position {
+    margin-left: 87%;
+}
+
+.playerGames {
+ margin-left: 63%;   
+}
+
+.madeGoals {
+    margin-left: 78%;
+}
+
+.lastname {
+   margin-left:30%; 
+}
+
+.age {
+    margin-left: 42%;
+}
+
+
+.margin{
+    margin-left:1%;
+}
+
+
+.wonGames {
+    margin-top:100px;
+    
+}
+
+.drawGames {
+   margin-top:100px;
+   margin-left:4%;
+}
+
+.totalGoals {
+    margin-top:100px;
+    margin-left: 4%;
+}
+
+.totalGoals2 {
+    margin-top:100px;
+    margin-left: 4%;
+}
+
+
+.lostGames {
+    margin-left: 4%;
+   margin-top:100px;
+}
+
+.points {
+   margin-top:100px;
+   margin-left:4%;
+}
+
+
+#logIn {
+    position:absolute;
+    width: 600px;
+    height: 400px;
+    background-color:grey;
+    margin-left: 35%;
+    margin-top: -7%;
+    display: none;
+    padding: 5%;
+    padding-top: 3%;
+    border: black 2px solid;
+    background: rgba(128,128,128,0.8);
+    border-radius: 15px 50px 30px;
+    position: fixed;
+
+}
+
+#adminHeader {
+    font-size: 32px;
+}
+
+.cancel {
+    float:right;
+    margin-top: -7.4%;
+}
+
+
+.adminForm {
+    
+    background-color: gray;
+    padding: 5%;
+    padding-left:18%;
+    width: 50%;
+    min-height:600px;
+    margin-left: auto;
+    margin-right: auto;
+    border: black 2px solid;
+    background: rgba(128,128,128,0.6);
+    border-radius: 15px 50px 30px;
+    font-size: 32px;
+    
+}
+
+.addFormItem {
+     margin-left: auto;
+    margin-right: auto;
+}
+
+.formButton {
+    width:60%;
+}
+
+
+.moreInfo {
+      margin:0;
+      margin-top:400px;
+      margin-left: 20%;
+      max-width: 160px;
+}
+
+
+#manInfo {
+    margin-left: 35%;
+}
+
+
+
+.moreInfo:hover {
+    
+    cursor: pointer;
+    
+    
+}
+
+#pvm {
+    max-width: 300px;
+}
+
+.gameList {
+    margin-top: 20px;
+    
+}
+
+
+#ListOfGames {
+    display:none;
+}
+
+
+.gameListGame {
+    background-color: gray;
+    padding: 5%;
+    width: 50%;
+    min-height:600px;
+    margin-left: auto;
+    margin-right: auto;
+    border: black 2px solid;
+    background: rgba(128,128,128,0.6);
+    border-radius: 15px 50px 30px;
+    font-size: 32px;
+    
+}
+
+#gameButton {
+    float:right;
+}
+
+#popUp4 {
+   position:absolute;
+    top: 90px;
+    left: 40%;
+    background-color:grey;
+    display: none;
+    padding: 5%;
+    padding-top: 3%;
+    border: black 2px solid;
+    background: rgba(128,128,128,0.8);
+    border-radius: 15px 50px 30px;
+    position: fixed;
+}
+
+#poistaPeliNappi {
+    float:right;
+}
+
+#poistaNappi2 {
+    float:left;
+    
+}
+
+#peruutaNappi2 {
+    float:right;
+}
+
+@media only screen and (max-width: 1895px) {
+  .wonGames {
+      margin-left:-80px;
+  }
+  
+  .playedGames {
+  
+  
+}
+
+.drawGames {
+   margin-left: 1%;
+}
+
+.lostGames {
+     margin-left: 1%;
+    
+}
+
+.totalGoals {
+    margin-left: 1%;
+}
+
+.totalGoals2 {
+ margin-left: 1%;
+}
+
+.points {
+  margin-left: 1%;
+}
+
+
+
+}
+
+
+    
+  
+
+@media only screen and (max-width: 1650px) {
+  
+
+.teamInfoBox img {
+    display:none;
+}
+
+
+
+.playerInfo  {
+    margin:0;
+    margin-top:10%;
+    margin-left:2%;
+}
+
+
+}
+
+
+
+@media only screen and (max-width: 1630px) {
+     .playerInfo {
+       font-size: 30px;
+       margin-top:0;
+    }
+    
+    .teamInfoBox {
+        height:auto;
+    }
+    
+   h1 {
+        font-size: 30px !important;
+    }
+    
+    img {
+        width: 125px !important;
+        height: 150px !important;
+    }
+    
+     .teamInfoBox img {
+         display: none;
+     }
+.teamInfoBox {
+    
+   
+   min-height: 300px;
+}
+     
+     
+.moreInfo {
+        margin-top: 100px;
+}
+    
+    
+    
+    .infoNumber {
+        font-size: 30px !important;
+    }
+    
+    .card {
+        height: 50px !important;
+        width: 50px !important;
+        margin:0 !important;
+        
+    }
+    
+   p {
+       font-size: 80px !important;
+   }
+   
+   #header1 {
+       margin-left: 5% !important;
+   }
+    
+    
+    
+ 
+}
+
+@media only screen and (max-width: 1525px) {
+    .playerInfo {
+        
+    }
+}
+
+@media only screen and (max-width: 1430px) {
+ 
+  
+    
+    
+    #adminForm {
+        padding-left:3%;
+    }
+    
+    .title {
+        float:left;
+    }
+    
+    
+     
+}
+
+@media only screen and (max-width: 1320px) {
+  .teamInfoBox {
+      padding:0;
+      max-width: 600px;
+      height:auto;
+      margin-left:25%;
+  }
+  .title {
+      float:none;
+      margin:0;
+      clear:both;
+      
+  }
+  
+  #baselBox {
+    padding-left:5%;
+}
+
+#baselName {
+    margin-left:0;
+}
+
+#moskvaBox {
+    padding-left:5%;
+}
+
+#movskaName {
+    margin-left:0;
+}
+
+#movskaInfo {
+    margin-left:100px;
+}
+
+#manInfo {
+    margin-left:-20px;
+}
+
+
+#benficaBox {
+padding-left: 5%;   
+
+}
+
+#benficaName {
+    margin-left:0;
+}
+    
+}
+
+@media only screen and (max-width: 1102px) {
+
+     p {
+       font-size: 60px !important;
+   }
+   
+   #popUp {
+       height:150px !important;
+   }
+   
+}
+
+
+@media only screen and (max-width: 725px) {
+    
+ #header1 {
+       margin-left: 2% !important;
+   }
+   
+  
+    
+}
