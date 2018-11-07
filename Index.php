@@ -262,7 +262,7 @@ $kirjautunut = $_SESSION['userIsAdmin'];
 
     <button onclick="openLogIn()" class="btn btn-primary" id="logInButton"> Krjaudu</button>
     <form method="POST">
-     <button onclick="LogOut()" class="btn btn-primary" id="logOutButton" name="logOutForm"> Kirjaudu Ulos</button>
+     <button onclick="LogOut()" class="btn btn-primary" id="logOutButton" name="logOutForm"> Kirjaudu Ulo</button>
     </form>
      <div id="logIn">
 
