@@ -262,12 +262,12 @@ $kirjautunut = $_SESSION['userIsAdmin'];
 
     <button onclick="openLogIn()" class="btn btn-primary" id="logInButton"> Kirjaudu</button>
     <form method="POST">
-     <button onclick="LogOut()" class="btn btn-primary" id="logOutButton" name="logOutForm"> Kirjaudu Ulos</button>
+     <button onclick="LogOut()" class="btn btn-primary" id="logOutButton" name="logOutForm"> Kirjaudu Ulo</button>
     </form>
      <div id="logIn">
 
          <form method="POST">
-             <label id="adminHeader"> Anna Admin tunnukset</label>
+             <label id="adminHeader"> Anna Admi tunnukset</label>
   <div class="form-group">
 
     <label for="exampleInputEmail1">Email address</label>
