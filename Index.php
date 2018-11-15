@@ -22,6 +22,9 @@ include_once 'config.php';
 
 var kirjautunut = "<?php echo $_SESSION['userIsAdmin']; ?>"
 
+
+
+
 function LogOut() {
     "<?php $_SESSION['userIsAdmin'] = 0; ?>"
    kirjautunut = "<?php echo $_SESSION['userIsAdmin']; ?>";
@@ -59,7 +62,7 @@ function adminMode() {
 
 function  playerCardManchester() {
 
-    document.getElementById("teamInfoBoxWrapper").style.display = "none";
+    document.getElementById("teamInfoBoxWrapperA").style.display = "none";
      document.getElementById("popUp").style.display = "none";
      document.getElementById("popUp2").style.display = "none";
      document.getElementById("popUpWrapper").style.display = "none";
@@ -71,7 +74,7 @@ function  playerCardManchester() {
 }
 
 function  playerCardBasel() {
-      document.getElementById("teamInfoBoxWrapper").style.display = "none";
+      document.getElementById("teamInfoBoxWrapperA").style.display = "none";
      document.getElementById("popUp").style.display = "none";
      document.getElementById("popUp2").style.display = "none";
      document.getElementById("popUpWrapper").style.display = "none";
@@ -85,7 +88,7 @@ function  playerCardBasel() {
 
 function  playerCardMoskva() {
 
-    document.getElementById("teamInfoBoxWrapper").style.display = "none";
+    document.getElementById("teamInfoBoxWrapperA").style.display = "none";
      document.getElementById("popUp").style.display = "none";
      document.getElementById("popUp2").style.display = "none";
      document.getElementById("popUpWrapper").style.display = "none";
@@ -97,7 +100,7 @@ function  playerCardMoskva() {
 }
 
 function  playerCardBelfica() {
-      document.getElementById("teamInfoBoxWrapper").style.display = "none";
+      document.getElementById("teamInfoBoxWrapperA").style.display = "none";
      document.getElementById("popUp").style.display = "none";
      document.getElementById("popUp2").style.display = "none";
      document.getElementById("popUpWrapper").style.display = "none";
@@ -128,22 +131,44 @@ document.getElementById("popUp3").style.display = "none";
 alert(<?php echo $_POST['gameToDelete']; ?>)
 }
 
+<?php
+function teamQuery($table, $column, $ID) {
+	$value = "";
+	$sql = "SELECT " .$column. " FROM " .$table. " Where id = '".$ID."'";
+		$result = $mysqli->query($sql);
+			if ($result->num_rows > 0) {
+				while($row = $result->fetch_assoc()) {
+					$value = $row[''.$column.''];
+}
+return $value;
+} 
+} //end of function 'makeQuery'
+?>
 
 
 
 function showGroupA() {
 
      document.getElementById("popUpWrapper").style.display = "none";
-     document.getElementById("teamInfoBoxWrapper").style.display = "block";
+     document.getElementById("teamInfoBoxWrapperA").style.display = "block";
+}
+
+function showGroupB() {
+
+     document.getElementById("popUpWrapper").style.display = "none";
+     document.getElementById("teamInfoBoxWrapperB").style.display = "block";
 }
 
 function openLogIn() {
     document.getElementById("logIn").style.display = "block";
 
-
-
-
 }
+
+
+
+
+
+
 
 function closePlayerInfo() {
 
@@ -436,10 +461,6 @@ $kirjautunut = $_SESSION['userIsAdmin'];
  </div>
 
 </div>
-
-
-
-
 
 
 
@@ -3620,14 +3641,14 @@ $kirjautunut = $_SESSION['userIsAdmin'];
 
     <div id="popUpWrapper">
     <div id="popUp2">
-   <div id=header1> Valitse Lohko</div>
+   <div id=header1>Lohkot</div>
     </div>
 <div id="popUp">
     <div>
         <p id="A" onclick="showGroupA()" class="group">A</p>
     </div>
      <div>
-        <p id="B" class="group">B</p>
+        <p id="B" onclick="showGroupB()" class="group">B</p>
     </div>
     <div>
         <p id="C" class="group">C</p>
@@ -3649,10 +3670,10 @@ $kirjautunut = $_SESSION['userIsAdmin'];
     </div>
 </div>
 </div>
-
-<div id="teamInfoBoxWrapper">
+<!-- A   -->
+<div id="teamInfoBoxWrapperA">
      <!-- manchester -->
-<div class="teamInfoBox" id="teamInfo">
+<div class="teamInfoBox" id="teamInfoA">
 
 
  <div class="teamLogo">
@@ -4613,6 +4634,20 @@ $kirjautunut = $_SESSION['userIsAdmin'];
 
 </div>
 </div>
+
+<!-- B-lohko -->
+<div id="teamInfoBoxWrapperB">
+     
+<div class="teamInfoBox" id="teamInfoB">
+    
+
+    
+    
+</div>
+
+ 
+</div>
+
 
 <?php
 

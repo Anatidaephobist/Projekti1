@@ -24,16 +24,18 @@ body {
 }
 
 #header1 {
-    margin-left:25%;
+    text-align: center;
     font-size:60px;
 }
 
 #popUp {
     background-color: gray;
-    height: 200px;
+    padding-left:5%;
+    height: 180px;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+    padding-top:20px;
     border: black 2px solid;
     border-top: 1px;
     background: rgba(128,128,128,0.5);
@@ -50,7 +52,6 @@ body {
     border: black 2px solid;
     border-bottom: 0px;
     background: rgba(128,128,128,0.5);
-    padding-left:5%;
     border-radius: 15px 50px 30px;
      
 }
@@ -69,6 +70,10 @@ body {
     position: fixed;
      
 }
+
+
+
+
 
 #deleteInput {
     max-width:60px;
@@ -98,11 +103,11 @@ body {
 
 
 #popUpWrapper {
-    margin-top:15%;
+    margin-top:10%;
    
 }
 
-#teamInfoBoxWrapper {
+#teamInfoBoxWrapperA, #teamInfoBoxWrapperB {
      display: none;
 }
 
@@ -144,7 +149,7 @@ padding-left: 320px;
 
 }
 
-#teamInfo {
+#teamInfoA {
 padding-left: 100px;    
 
 }
@@ -547,7 +552,7 @@ h2 {
    }
    
    #header1 {
-       margin-left: 5% !important;
+       margin-left: 16%;
    }
     
     
