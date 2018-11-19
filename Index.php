@@ -137,6 +137,7 @@ alert(<?php echo $_POST['gameToDelete']; ?>)
 <?php
 function databaseQuery($table, $column, $ID) {
 	$value = "";
+	global $mysqli;
 	$sql = "SELECT " .$column. " FROM " .$table. " Where id = '".$ID."'";
 		$result = $mysqli->query($sql);
 if ($result->num_rows > 0) {
@@ -2292,16 +2293,15 @@ $kirjautunut = $_SESSION['userIsAdmin'];
 </div>
 </div>
 
-<!-- B-lohko -->
-<div id="teamInfoBoxWrapperB">
 
+
+<!-- B-lohko -->
+
+<div id="teamInfoBoxWrapperB">
+    
 <div class="teamInfoBox" id="teamInfoB">
 
-
-
-
 </div>
-
 
 </div>
 
