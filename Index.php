@@ -141,7 +141,7 @@ function teamQuery($table, $column, $ID) {
 					$value = $row[''.$column.''];
 }
 return $value;
-} 
+}
 } //end of function 'makeQuery'
 ?>
 
@@ -285,9 +285,9 @@ $kirjautunut = $_SESSION['userIsAdmin'];
 </head>
 <body background="football1.jpg" onload="adminMode()">
 
-    <button onclick="openLogIn()" class="btn btn-primary" id="logInButton"> Kirjaud</button>
+    <button onclick="openLogIn()" class="btn btn-primary" id="logInButton"> Kirjaudu</button>
     <form method="POST">
-     <button onclick="LogOut()" class="btn btn-primary" id="logOutButton" name="logOutForm"> Kirjaudu Ulo</button>
+     <button onclick="LogOut()" class="btn btn-primary" id="logOutButton" name="logOutForm"> Kirjaudu Ulos</button>
     </form>
      <div id="logIn">
 
@@ -4637,15 +4637,15 @@ $kirjautunut = $_SESSION['userIsAdmin'];
 
 <!-- B-lohko -->
 <div id="teamInfoBoxWrapperB">
-     
-<div class="teamInfoBox" id="teamInfoB">
-    
 
-    
-    
+<div class="teamInfoBox" id="teamInfoB">
+
+
+
+
 </div>
 
- 
+
 </div>
 
 
