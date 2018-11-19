@@ -7,7 +7,7 @@ body {
 
 }
 
-#logInButton, #logOutButton, .playerbutton {
+#logInButton, #logOutButton, .playerbutton, .backButton {
 
     position:fixed;
     right: 2%;
@@ -20,6 +20,10 @@ body {
 }
 
 .playerbutton {
+   margin-top:4%;
+}
+
+.backButton {
    margin-top:4%;
 }
 
