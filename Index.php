@@ -4665,6 +4665,18 @@ $kirjautunut = $_SESSION['userIsAdmin'];
 
 
 </div>
+<!-- F-lohko -->
+<div id="teamInfoBoxWrapperF">
+
+<div class="teamInfoBox" id="teamInfoF">
+
+
+
+
+</div>
+
+
+</div>
 
 
 <?php
