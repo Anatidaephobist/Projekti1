@@ -159,6 +159,24 @@ function showGroupB() {
      document.getElementById("teamInfoBoxWrapperB").style.display = "block";
 }
 
+<<<<<<< HEAD
+function showGroupC() {
+
+     document.getElementById("popUpWrapper").style.display = "none";
+     document.getElementById("teamInfoBoxWrapperB").style.display = "block";
+}
+
+function showGroupD() {
+
+     document.getElementById("popUpWrapper").style.display = "none";
+     document.getElementById("teamInfoBoxWrapperB").style.display = "block";
+}
+
+function showGroupE() {
+
+     document.getElementById("popUpWrapper").style.display = "none";
+     document.getElementById("teamInfoBoxWrapperB").style.display = "block";
+
 function showGroupF() {
 
      document.getElementById("popUpWrapper").style.display = "none";
@@ -175,6 +193,7 @@ function showGroupH() {
 
      document.getElementById("popUpWrapper").style.display = "none";
      document.getElementById("teamInfoBoxWrapperH").style.display = "block";
+
 }
 
 function openLogIn() {
@@ -3669,13 +3688,13 @@ $kirjautunut = $_SESSION['userIsAdmin'];
         <p id="B" onclick="showGroupB()" class="group">B</p>
     </div>
     <div>
-        <p id="C" class="group">C</p>
+        <p id="C" onclick="showGroupC()" class="group">C</p>
     </div>
     <div>
-        <p id="D" class="group">D</p>
+        <p id="D" onclick="showGroupD()" class="group">D</p>
     </div>
     <div>
-        <p id="E" class="group">E</p>
+        <p id="E" onclick="showGroupE()" class="group">E</p>
     </div>
     <div>
         <p id="F" onclick="showGroupF()" class="group">F</p>
@@ -4657,18 +4676,6 @@ $kirjautunut = $_SESSION['userIsAdmin'];
 <div id="teamInfoBoxWrapperB">
 
 <div class="teamInfoBox" id="teamInfoB">
-
-
-
-
-</div>
-
-
-</div>
-<!-- F-lohko -->
-<div id="teamInfoBoxWrapperF">
-
-<div class="teamInfoBox" id="teamInfoF">
 
 
 
