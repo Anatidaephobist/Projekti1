@@ -146,6 +146,20 @@ return $value;
 ?>
 
 
+<?php
+function databaseQuery($table, $column, $ID) {
+	$value = "";
+	$sql = "SELECT " .$column. " FROM " .$table. " Where id = '".$ID."'";
+		$result = $mysqli->query($sql);
+if ($result->num_rows > 0) {
+		while($row = $result->fetch_assoc()) {
+			$value = $row[''.$column.''];
+}
+return $value;
+} 
+} //end of function 'makeQuery'
+?>
+
 
 function showGroupA() {
 
@@ -181,7 +195,6 @@ function showGroupF() {
 
      document.getElementById("popUpWrapper").style.display = "none";
      document.getElementById("teamInfoBoxWrapperF").style.display = "block";
-}
 
 function showGroupG() {
 
@@ -4678,7 +4691,7 @@ $kirjautunut = $_SESSION['userIsAdmin'];
 <div class="teamInfoBox" id="teamInfoB">
 
 
-
+<?php echo databaseQuery('Joukkueet','SL Benfica','4'); ?>
 
 </div>
 
@@ -4710,6 +4723,35 @@ $kirjautunut = $_SESSION['userIsAdmin'];
 <div class="teamInfoBox" id="teamInfoH">
 
 </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<!-- F-lohko -->
+<div id="teamInfoBoxWrapperF">
+
+<div class="teamInfoBox" id="teamInfoF">
+
+</div>
+
+</div>
+
+<!-- G-lohko -->
+<div id="teamInfoBoxWrapperG">
+
+<div class="teamInfoBox" id="teamInfoG">
+
+</div>
+
+</div>
+
+<!-- H-lohko -->
+<div id="teamInfoBoxWrapperH">
+
+<div class="teamInfoBox" id="teamInfoH">
+
+</div>
+>>>>>>> 9407e0ebf8d088f70943c9e98ef546726aa3ee56
 =======
 >>>>>>> f23930efb5f36ef594f19b26a546df4d19090cab
 
