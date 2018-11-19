@@ -159,6 +159,24 @@ function showGroupB() {
      document.getElementById("teamInfoBoxWrapperB").style.display = "block";
 }
 
+function showGroupF() {
+
+     document.getElementById("popUpWrapper").style.display = "none";
+     document.getElementById("teamInfoBoxWrapperF").style.display = "block";
+}
+
+function showGroupG() {
+
+     document.getElementById("popUpWrapper").style.display = "none";
+     document.getElementById("teamInfoBoxWrapperG").style.display = "block";
+}
+
+function showGroupH() {
+
+     document.getElementById("popUpWrapper").style.display = "none";
+     document.getElementById("teamInfoBoxWrapperH").style.display = "block";
+}
+
 function openLogIn() {
     document.getElementById("logIn").style.display = "block";
 
@@ -3660,13 +3678,13 @@ $kirjautunut = $_SESSION['userIsAdmin'];
         <p id="E" class="group">E</p>
     </div>
     <div>
-        <p id="F" class="group">F</p>
+        <p id="F" onclick="showGroupF()" class="group">F</p>
     </div>
     <div>
-        <p id="G" class="group">G</p>
+        <p id="G" onclick="showGroupG()" class="group">G</p>
     </div>
     <div>
-        <p id="H" class="group">H</p>
+        <p id="H" onclick="showGroupH()" class="group">H</p>
     </div>
 </div>
 </div>
