@@ -285,7 +285,7 @@ $kirjautunut = $_SESSION['userIsAdmin'];
 </head>
 <body background="football1.jpg" onload="adminMode()">
 
-    <button onclick="openLogIn()" class="btn btn-primary" id="logInButton"> Kirjaudu</button>
+    <button onclick="openLogIn()" class="btn btn-primary" id="logInButton"> Kirjaud</button>
     <form method="POST">
      <button onclick="LogOut()" class="btn btn-primary" id="logOutButton" name="logOutForm"> Kirjaudu Ulo</button>
     </form>
