@@ -163,19 +163,19 @@ function showGroupB() {
 function showGroupC() {
 
      document.getElementById("popUpWrapper").style.display = "none";
-     document.getElementById("teamInfoBoxWrapperB").style.display = "block";
+     document.getElementById("teamInfoBoxWrapperC").style.display = "block";
 }
 
 function showGroupD() {
 
      document.getElementById("popUpWrapper").style.display = "none";
-     document.getElementById("teamInfoBoxWrapperB").style.display = "block";
+     document.getElementById("teamInfoBoxWrapperD").style.display = "block";
 }
 
 function showGroupE() {
 
      document.getElementById("popUpWrapper").style.display = "none";
-     document.getElementById("teamInfoBoxWrapperB").style.display = "block";
+     document.getElementById("teamInfoBoxWrapperE").style.display = "block";
 
 function showGroupF() {
 
