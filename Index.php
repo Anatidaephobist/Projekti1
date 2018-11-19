@@ -172,7 +172,7 @@ function showGroupC() {
      document.getElementById("teamInfoBoxWrapperC").style.display = "block";
 }
 
-/*
+
 function showGroupD() {
 
      document.getElementById("popUpWrapper").style.display = "none";
@@ -183,11 +183,15 @@ function showGroupE() {
 
      document.getElementById("popUpWrapper").style.display = "none";
      document.getElementById("teamInfoBoxWrapperE").style.display = "block";
+     
+}
 
 function showGroupF() {
 
      document.getElementById("popUpWrapper").style.display = "none";
      document.getElementById("teamInfoBoxWrapperF").style.display = "block";
+     
+}
 
 function showGroupG() {
 
@@ -201,7 +205,7 @@ function showGroupH() {
      document.getElementById("teamInfoBoxWrapperH").style.display = "block";
 
 }
-*/
+
 
 function openLogIn() {
     document.getElementById("logIn").style.display = "block";
@@ -313,6 +317,10 @@ function goBack() {
     document.getElementById("teamInfoBoxWrapperF").style.display = "none";
     document.getElementById("teamInfoBoxWrapperG").style.display = "none";
     document.getElementById("teamInfoBoxWrapperH").style.display = "none";
+    
+    
+    
+    
     
 }
 
@@ -2296,9 +2304,39 @@ $kirjautunut = $_SESSION['userIsAdmin'];
 
 
 </div>
-<<<<<<< HEAD
+
+<!-- C-lohko -->
+
+<div id="teamInfoBoxWrapperC">
+
+<div class="teamInfoBox" id="teamInfoC">
+
+</div>
+
+</div>
+
+<!-- D-lohko -->
+
+<div id="teamInfoBoxWrapperD">
+
+<div class="teamInfoBox" id="teamInfoD">
+
+</div>
+
+</div>
+
+<!-- E-lohko -->
+
+<div id="teamInfoBoxWrapperE">
+
+<div class="teamInfoBox" id="teamInfoE">
+
+</div>
+
+</div>
 
 <!-- F-lohko -->
+
 <div id="teamInfoBoxWrapperF">
 
 <div class="teamInfoBox" id="teamInfoF">
@@ -2308,6 +2346,7 @@ $kirjautunut = $_SESSION['userIsAdmin'];
 </div>
 
 <!-- G-lohko -->
+
 <div id="teamInfoBoxWrapperG">
 
 <div class="teamInfoBox" id="teamInfoG">
@@ -2317,44 +2356,16 @@ $kirjautunut = $_SESSION['userIsAdmin'];
 </div>
 
 <!-- H-lohko -->
+
 <div id="teamInfoBoxWrapperH">
 
 <div class="teamInfoBox" id="teamInfoH">
 
 </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-<!-- F-lohko -->
-<div id="teamInfoBoxWrapperF">
-
-<div class="teamInfoBox" id="teamInfoF">
 
 </div>
 
-</div>
 
-<!-- G-lohko -->
-<div id="teamInfoBoxWrapperG">
-
-<div class="teamInfoBox" id="teamInfoG">
-
-</div>
-
-</div>
-
-<!-- H-lohko -->
-<div id="teamInfoBoxWrapperH">
-
-<div class="teamInfoBox" id="teamInfoH">
-
-</div>
->>>>>>> 9407e0ebf8d088f70943c9e98ef546726aa3ee56
-=======
->>>>>>> f23930efb5f36ef594f19b26a546df4d19090cab
-
-</div>
 
 <?php
 
