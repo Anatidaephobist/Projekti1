@@ -145,7 +145,7 @@ if ($result->num_rows > 0) {
 			$value = $row[''.$column.''];
 }
 return $value;
-} 
+}
 } //end of function 'makeQuery'
 ?>
 
@@ -184,14 +184,14 @@ function showGroupE() {
 
      document.getElementById("popUpWrapper").style.display = "none";
      document.getElementById("teamInfoBoxWrapperE").style.display = "block";
-     
+
 }
 
 function showGroupF() {
 
      document.getElementById("popUpWrapper").style.display = "none";
      document.getElementById("teamInfoBoxWrapperF").style.display = "block";
-     
+
 }
 
 function showGroupG() {
@@ -307,8 +307,8 @@ function areYouSure() {
 }
 
 function goBack() {
-    
-    
+
+
     document.getElementById("popUpWrapper").style.display = "block";
     document.getElementById("teamInfoBoxWrapperA").style.display = "none";
     document.getElementById("teamInfoBoxWrapperB").style.display = "none";
@@ -318,11 +318,11 @@ function goBack() {
     document.getElementById("teamInfoBoxWrapperF").style.display = "none";
     document.getElementById("teamInfoBoxWrapperG").style.display = "none";
     document.getElementById("teamInfoBoxWrapperH").style.display = "none";
-    
-    
-    
-    
-    
+
+
+
+
+
 }
 
 function notSure() {
@@ -1291,7 +1291,7 @@ $kirjautunut = $_SESSION['userIsAdmin'];
 
 </div>
 
- 
+
 </div>
 
 
@@ -2298,7 +2298,7 @@ $kirjautunut = $_SESSION['userIsAdmin'];
 <!-- B-lohko -->
 
 <div id="teamInfoBoxWrapperB">
-    
+
 <div class="teamInfoBox" id="teamInfoB">
 
 </div>
