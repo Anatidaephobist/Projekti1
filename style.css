@@ -69,9 +69,7 @@ body {
     position: fixed;
 }
 
-.teamInfo{
-    padding-left: 100px;
-}
+
 
 #deleteInput {
     max-width:60px;
@@ -107,67 +105,32 @@ body {
      display: none;
 }
 
-#playerInfoWrapperBasel {
-    display: none;
+
+.title {
+    float:left;
+    margin-top: 100px;
+    margin-left: 70px;
 }
 
-#baselBox {
-    padding-left:350px;
-}
-
-#baselLogo {
-    margin-left:-320px;
-}
-
-#baselName {
-    margin-left: -350px;
-}
-
-#movskaInfo {
-    margin-left:290px;
-}
-
-#moskvaBox {
-    padding-left: 300px;
-}
-
-#movskaLogo {
-    margin-left: -250px;
-}
-
-#movskaName {
-    margin-left: -250px;
-}
-
-#benficaBox {
-padding-left: 320px;
-}
-
-#teamInfoA, #teamInfoB {
-padding-left: 100px;
-
+.infoNumber {
+    text-align: center;
 }
 
 
 
-#benficaLogo {
-margin-left:-280px !important;
 
-}
 
-#benficaName {
-    margin-left: -300px;
-}
+
+
+
 
 .teamInfoBox {
     background-color: gray;
     margin-top:5%;
-    padding:6%;
     padding-left:100px;
     height: 600px;
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+   
     border: black 2px solid;
     background: rgba(128,128,128,0.6);
     border-radius: 15px 50px 30px;
@@ -178,7 +141,7 @@ margin-left:-280px !important;
     display: none;
 }
 
-#playerInfoWrapperManchester {
+#playerInfoWrapper {
     display: none;
 }
 
@@ -192,38 +155,19 @@ h2 {
      font-weight: bold;
 }
 
-.title {
-    margin-top: 10px;
-     float:left;
-    font-weight: bold;
-}
 
-.infoNumber {
-    font-size:50px;
-    font-weight: bold;
-}
 
-.teamName {
-    float:left;
-   font-weight: bold;
-   margin-left:-100px;
-}
 
-.playedGames {
-   margin-top:100px;
-   margin-left:-300px;
-}
 
 .playerInfo {
     float:left;
-     margin-top:-200px;
 }
 
 .teamLogo {
     max-width: 200px;
     margin-left:-75px;
     margin-right:0;
-    margin-top:-80px;
+    margin-top:10px;
 }
 
 .fname {
@@ -258,34 +202,6 @@ h2 {
     margin-left:1%;
 }
 
-.wonGames {
-    margin-top:100px;
-}
-
-.drawGames {
-   margin-top:100px;
-   margin-left:4%;
-}
-
-.totalGoals {
-    margin-top:100px;
-    margin-left: 4%;
-}
-
-.totalGoals2 {
-    margin-top:100px;
-    margin-left: 4%;
-}
-
-.lostGames {
-    margin-left: 4%;
-   margin-top:100px;
-}
-
-.points {
-   margin-top:100px;
-   margin-left:4%;
-}
 
 #logIn {
     position:absolute;
@@ -337,14 +253,12 @@ h2 {
 
 .moreInfo {
       margin:0;
-      margin-top:400px;
-      margin-left: 20%;
+      margin-top:300px;
+      margin-left: 42%;
       max-width: 160px;
 }
 
-#manInfo {
-    margin-left: 35%;
-}
+
 
 .moreInfo:hover {
     cursor: pointer;
@@ -410,8 +324,7 @@ h2 {
       margin-left:-80px;
   }
 
-  .playedGames {
-}
+
 
 .drawGames {
    margin-left: 1%;
@@ -496,10 +409,7 @@ h2 {
    }
 }
 
-@media only screen and (max-width: 1525px) {
-    .playerInfo {
-    }
-}
+
 
 @media only screen and (max-width: 1430px) {
 
@@ -525,37 +435,9 @@ h2 {
       clear:both;
   }
 
-  #baselBox {
-    padding-left:5%;
-}
+ 
 
-#baselName {
-    margin-left:0;
-}
 
-#moskvaBox {
-    padding-left:5%;
-}
-
-#movskaName {
-    margin-left:0;
-}
-
-#movskaInfo {
-    margin-left:100px;
-}
-
-#manInfo {
-    margin-left:-20px;
-}
-
-#benficaBox {
-padding-left: 5%;
-}
-
-#benficaName {
-    margin-left:0;
-}
 }
 
 @media only screen and (max-width: 1102px) {

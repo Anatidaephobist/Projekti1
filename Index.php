@@ -1342,15 +1342,15 @@ $kirjautunut = $_SESSION['userIsAdmin'];
 
 <div id="teamInfoBoxWrapperB">
 
-<div class="teamInfoBox teamInfo">
+<div class="teamInfoBox">
     
- <div class="teamLogo" id="barcelonaLogo">
+ <div class="teamLogo">
 
      <img src="barcelona.jpg" style="width:100px;height:100px;">
 
  </div>
 
- <div class="teamName" id="barcelonaName">
+ <div class="teamName">
  <?php
 
  echo databaseQuery('Joukkueet','Nimi','5');
@@ -1360,7 +1360,7 @@ $kirjautunut = $_SESSION['userIsAdmin'];
 
     <!-- Pelatut pelit -->
 
-  <div class="playedGames title">
+  <div class="title">
       <h1> Pelatut pelit</h1>
       <div class="infoNumber">
 <?php
@@ -1373,7 +1373,7 @@ echo databaseQuery('Joukkueet','Pelatutpelit','5');
 
     <!-- Voitetut pelit -->
 
-    <div class="wonGames title">
+    <div class="title">
         <h1> Voitetut pelit</h1>
         <div class="infoNumber">
  <?php
@@ -1391,7 +1391,7 @@ echo databaseQuery('Joukkueet','Pelatutpelit','5');
 
     <!-- tasapelit -->
 
-     <div class="drawGames title">
+     <div class="title">
         <h1> Tasapelit</h1>
         <div class="infoNumber">
  <?php
@@ -1408,7 +1408,7 @@ echo databaseQuery('Joukkueet','Pelatutpelit','5');
 
      <!-- Havityt pelit -->
 
-     <div class="lostGames title">
+     <div class="title">
         <h1> Havityt pelit</h1>
         <div class="infoNumber">
  <?php
@@ -1425,7 +1425,7 @@ echo databaseQuery('Joukkueet','Pelatutpelit','5');
     </div>
 
 
-     <div class="totalGoals title">
+     <div class="title">
         <h1> Tehdyt Maalit</h1>
         <div class="infoNumber">
  <?php
@@ -1442,7 +1442,7 @@ echo databaseQuery('Joukkueet','Pelatutpelit','5');
 
      <!-- Pisteet -->
 
-    <div class="points title">
+    <div class="title">
         <h1> Pisteet</h1>
         <div class="infoNumber">
  <?php
@@ -1460,7 +1460,7 @@ echo databaseQuery('Joukkueet','Pelatutpelit','5');
 
     <!-- Päästetyt Maalit -->
 
-    <div class="totalGoals2 title">
+    <div class="title">
         <h1> Päästetyt Maalit</h1>
         <div class="infoNumber">
  <?php
