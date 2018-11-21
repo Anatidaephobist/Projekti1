@@ -4,15 +4,12 @@ body {
   -o-background-size: cover;
   background-size: cover;
    background-attachment: fixed;
-
 }
 
 #logInButton, #logOutButton, .playerbutton, .backButton {
-
     position:fixed;
     right: 2%;
     top:2%;
-
 }
 
 .cards {
@@ -44,7 +41,6 @@ body {
     border-top: 1px;
     background: rgba(128,128,128,0.5);
     border-radius: 15px 50px 30px;
-
 }
 
 #popUp2 {
@@ -57,7 +53,6 @@ body {
     border-bottom: 0px;
     background: rgba(128,128,128,0.5);
     border-radius: 15px 50px 30px;
-
 }
 
 #popUp3 {
@@ -72,12 +67,7 @@ body {
     background: rgba(128,128,128,0.8);
     border-radius: 15px 50px 30px;
     position: fixed;
-
 }
-
-
-
-
 
 #deleteInput {
     max-width:60px;
@@ -105,10 +95,8 @@ body {
     transition: background 1s ease-out;
 }
 
-
 #popUpWrapper {
     margin-top:10%;
-
 }
 
 #teamInfoBoxWrapperA, #teamInfoBoxWrapperB, #teamInfoBoxWrapperC, #teamInfoBoxWrapperD, #teamInfoBoxWrapperE, #teamInfoBoxWrapperF, #teamInfoBoxWrapperG, #teamInfoBoxWrapperH {
@@ -147,10 +135,8 @@ body {
     margin-left: -250px;
 }
 
-
 #benficaBox {
 padding-left: 320px;
-
 }
 
 #teamInfoA {
@@ -167,8 +153,6 @@ margin-left:-280px !important;
     margin-left: -300px;
 }
 
-
-
 .teamInfoBox {
     background-color: gray;
     margin-top:5%;
@@ -182,7 +166,6 @@ margin-left:-280px !important;
     background: rgba(128,128,128,0.6);
     border-radius: 15px 50px 30px;
     font-size: 32px;
-
 }
 
 #wrapperOfPlayers {
@@ -193,17 +176,14 @@ margin-left:-280px !important;
     display: none;
 }
 
-
 h1 {
      font-size: 30px;
      text-decoration: underline;
-
 }
 
 h2 {
      text-decoration: underline;
      font-weight: bold;
-
 }
 
 .title {
@@ -213,7 +193,6 @@ h2 {
 }
 
 .infoNumber {
-
     font-size:50px;
     font-weight: bold;
 }
@@ -222,18 +201,16 @@ h2 {
     float:left;
    font-weight: bold;
    margin-left:-100px;
-
 }
+
 .playedGames {
    margin-top:100px;
    margin-left:-300px;
-
 }
 
 .playerInfo {
     float:left;
      margin-top:-200px;
-
 }
 
 .teamLogo {
@@ -241,13 +218,10 @@ h2 {
     margin-left:-75px;
     margin-right:0;
     margin-top:-80px;
-
 }
-
 
 .fname {
     margin-left:20%;
-
 }
 
 .nationality {
@@ -274,15 +248,12 @@ h2 {
     margin-left: 42%;
 }
 
-
 .margin{
     margin-left:1%;
 }
 
-
 .wonGames {
     margin-top:100px;
-
 }
 
 .drawGames {
@@ -300,7 +271,6 @@ h2 {
     margin-left: 4%;
 }
 
-
 .lostGames {
     margin-left: 4%;
    margin-top:100px;
@@ -310,7 +280,6 @@ h2 {
    margin-top:100px;
    margin-left:4%;
 }
-
 
 #logIn {
     position:absolute;
@@ -326,7 +295,6 @@ h2 {
     background: rgba(128,128,128,0.8);
     border-radius: 15px 50px 30px;
     position: fixed;
-
 }
 
 #adminHeader {
@@ -338,9 +306,7 @@ h2 {
     margin-top: -7.4%;
 }
 
-
 .adminForm {
-
     background-color: gray;
     padding: 5%;
     padding-left:18%;
@@ -352,7 +318,6 @@ h2 {
     background: rgba(128,128,128,0.6);
     border-radius: 15px 50px 30px;
     font-size: 32px;
-
 }
 
 .addFormItem {
@@ -364,7 +329,6 @@ h2 {
     width:60%;
 }
 
-
 .moreInfo {
       margin:0;
       margin-top:400px;
@@ -372,18 +336,12 @@ h2 {
       max-width: 160px;
 }
 
-
 #manInfo {
     margin-left: 35%;
 }
 
-
-
 .moreInfo:hover {
-
     cursor: pointer;
-
-
 }
 
 #pvm {
@@ -392,14 +350,11 @@ h2 {
 
 .gameList {
     margin-top: 20px;
-
 }
-
 
 #ListOfGames {
     display:none;
 }
-
 
 .gameListGame {
     background-color: gray;
@@ -412,7 +367,6 @@ h2 {
     background: rgba(128,128,128,0.6);
     border-radius: 15px 50px 30px;
     font-size: 32px;
-
 }
 
 #gameButton {
@@ -439,7 +393,6 @@ h2 {
 
 #poistaNappi2 {
     float:left;
-
 }
 
 #peruutaNappi2 {
@@ -452,8 +405,6 @@ h2 {
   }
 
   .playedGames {
-
-
 }
 
 .drawGames {
@@ -462,7 +413,6 @@ h2 {
 
 .lostGames {
      margin-left: 1%;
-
 }
 
 .totalGoals {
@@ -476,34 +426,20 @@ h2 {
 .points {
   margin-left: 1%;
 }
-
-
-
 }
 
-
-
-
-
 @media only screen and (max-width: 1650px) {
-
 
 .teamInfoBox img {
     display:none;
 }
-
-
 
 .playerInfo  {
     margin:0;
     margin-top:10%;
     margin-left:2%;
 }
-
-
 }
-
-
 
 @media only screen and (max-width: 1630px) {
      .playerInfo {
@@ -528,17 +464,12 @@ h2 {
          display: none;
      }
 .teamInfoBox {
-
-
    min-height: 300px;
 }
-
 
 .moreInfo {
         margin-top: 100px;
 }
-
-
 
     .infoNumber {
         font-size: 30px !important;
@@ -548,7 +479,6 @@ h2 {
         height: 50px !important;
         width: 50px !important;
         margin:0 !important;
-
     }
 
    p {
@@ -558,22 +488,14 @@ h2 {
    #header1 {
        margin-left: 16%;
    }
-
-
-
-
 }
 
 @media only screen and (max-width: 1525px) {
     .playerInfo {
-
     }
 }
 
 @media only screen and (max-width: 1430px) {
-
-
-
 
     #adminForm {
         padding-left:3%;
@@ -582,9 +504,6 @@ h2 {
     .title {
         float:left;
     }
-
-
-
 }
 
 @media only screen and (max-width: 1320px) {
@@ -598,7 +517,6 @@ h2 {
       float:none;
       margin:0;
       clear:both;
-
   }
 
   #baselBox {
@@ -625,16 +543,13 @@ h2 {
     margin-left:-20px;
 }
 
-
 #benficaBox {
 padding-left: 5%;
-
 }
 
 #benficaName {
     margin-left:0;
 }
-
 }
 
 @media only screen and (max-width: 1102px) {
@@ -646,16 +561,11 @@ padding-left: 5%;
    #popUp {
        height:150px !important;
    }
-
 }
-
 
 @media only screen and (max-width: 725px) {
 
  #header1 {
        margin-left: 2% !important;
    }
-
-
-
 }
