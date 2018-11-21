@@ -1335,10 +1335,13 @@ $kirjautunut = $_SESSION['userIsAdmin'];
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 <div class="teamInfoBox">
     
 =======
 >>>>>>> 551a58b866ca2a0771408916e88ff8a8708b0825
+=======
+>>>>>>> 03e96022ebd532a9849fae32de0241b448cb5acd
  <div class="teamLogo">
 
      <img src="manchester.jpg" style="width:100px;height:100px;">
@@ -2317,6 +2320,7 @@ $kirjautunut = $_SESSION['userIsAdmin'];
 
 <div id="teamInfoBoxWrapperC">
 
+<<<<<<< HEAD
   <div class="teamInfoBox" id="napoliBox">
 
     <div class="teamLogo" id="napoliLogo">
@@ -2324,6 +2328,15 @@ $kirjautunut = $_SESSION['userIsAdmin'];
     </div>
 
     <div class="teamName" id="napoliName">
+=======
+  <div class="teamInfoBox">
+
+    <div class="teamLogo">
+       <img src="napoli.png" style="width:100px;height:100px;">
+    </div>
+
+    <div class="teamName">
+>>>>>>> 03e96022ebd532a9849fae32de0241b448cb5acd
     <?php
     echo databaseQuery('Joukkueet','Nimi','9');
     ?>
@@ -2404,6 +2417,7 @@ $kirjautunut = $_SESSION['userIsAdmin'];
     </div>
   </div>
 
+<<<<<<< HEAD
   <div class="teamInfoBox" id="liverBox">
 
     <div class="teamLogo" id="liverLogo">
@@ -2411,6 +2425,15 @@ $kirjautunut = $_SESSION['userIsAdmin'];
     </div>
 
     <div class="teamName" id="liverName">
+=======
+  <div class="teamInfoBox">
+
+    <div class="teamLogo">
+       <img src="liverpool.png" style="width:100px;height:100px;">
+    </div>
+
+    <div class="teamName">
+>>>>>>> 03e96022ebd532a9849fae32de0241b448cb5acd
     <?php
     echo databaseQuery('Joukkueet','Nimi','10');
     ?>
@@ -2491,6 +2514,7 @@ $kirjautunut = $_SESSION['userIsAdmin'];
     </div>
   </div>
 
+<<<<<<< HEAD
   <div class="teamInfoBox" id="psgBox">
 
   <div class="teamLogo" id="psgLogo">
@@ -2498,6 +2522,15 @@ $kirjautunut = $_SESSION['userIsAdmin'];
   </div>
 
   <div class="teamName" id="psgName">
+=======
+  <div class="teamInfoBox">
+
+  <div class="teamLogo">
+     <img src="psg.png" style="width:100px;height:100px;">
+  </div>
+
+  <div class="teamName">
+>>>>>>> 03e96022ebd532a9849fae32de0241b448cb5acd
   <?php
   echo databaseQuery('Joukkueet','Nimi','11');
   ?>
@@ -2578,6 +2611,7 @@ $kirjautunut = $_SESSION['userIsAdmin'];
   </div>
 </div>
 
+<<<<<<< HEAD
 <div class="teamInfoBox" id="crvenaBox">
 
 <div class="teamLogo" id="crvenaLogo">
@@ -2585,6 +2619,15 @@ $kirjautunut = $_SESSION['userIsAdmin'];
 </div>
 
 <div class="teamName" id="crvenaName">
+=======
+<div class="teamInfoBox">
+
+<div class="teamLogo">
+   <img src="crvena.png" style="width:100px;height:100px;">
+</div>
+
+<div class="teamName">
+>>>>>>> 03e96022ebd532a9849fae32de0241b448cb5acd
 <?php
 echo databaseQuery('Joukkueet','Nimi','12');
 ?>
@@ -2670,6 +2713,7 @@ echo databaseQuery('Joukkueet','PaastetytMaalit','12');
 
 <div id="teamInfoBoxWrapperD">
 
+<<<<<<< HEAD
   <div class="teamInfoBox" id="portoBox">
 
     <div class="teamLogo" id="portoLogo">
@@ -2677,6 +2721,15 @@ echo databaseQuery('Joukkueet','PaastetytMaalit','12');
     </div>
 
     <div class="teamName" id="portoName">
+=======
+  <div class="teamInfoBox">
+
+    <div class="teamLogo">
+       <img src="porto.png" style="width:100px;height:100px;">
+    </div>
+
+    <div class="teamName">
+>>>>>>> 03e96022ebd532a9849fae32de0241b448cb5acd
     <?php
     echo databaseQuery('Joukkueet','Nimi','13');
     ?>
@@ -2757,6 +2810,7 @@ echo databaseQuery('Joukkueet','PaastetytMaalit','12');
     </div>
   </div>
 
+<<<<<<< HEAD
   <div class="teamInfoBox" id="schalkeBox">
 
     <div class="teamLogo" id="schalkeLogo">
@@ -2764,6 +2818,15 @@ echo databaseQuery('Joukkueet','PaastetytMaalit','12');
     </div>
 
     <div class="teamName" id="schalkeName">
+=======
+  <div class="teamInfoBox">
+
+    <div class="teamLogo">
+       <img src="schalke.png" style="width:100px;height:100px;">
+    </div>
+
+    <div class="teamName">
+>>>>>>> 03e96022ebd532a9849fae32de0241b448cb5acd
     <?php
     echo databaseQuery('Joukkueet','Nimi','14');
     ?>
@@ -2844,6 +2907,7 @@ echo databaseQuery('Joukkueet','PaastetytMaalit','12');
     </div>
   </div>
 
+<<<<<<< HEAD
   <div class="teamInfoBox" id="galaBox">
 
   <div class="teamLogo" id="galaLogo">
@@ -2851,6 +2915,15 @@ echo databaseQuery('Joukkueet','PaastetytMaalit','12');
   </div>
 
   <div class="teamName" id="galaName">
+=======
+  <div class="teamInfoBox">
+
+  <div class="teamLogo">
+     <img src="galatasaray.png" style="width:100px;height:100px;">
+  </div>
+
+  <div class="teamName">
+>>>>>>> 03e96022ebd532a9849fae32de0241b448cb5acd
   <?php
   echo databaseQuery('Joukkueet','Nimi','15');
   ?>
@@ -2931,6 +3004,7 @@ echo databaseQuery('Joukkueet','PaastetytMaalit','12');
   </div>
 </div>
 
+<<<<<<< HEAD
 <div class="teamInfoBox" id="lokMosBox">
 
 <div class="teamLogo" id="lokMosLogo">
@@ -2938,6 +3012,15 @@ echo databaseQuery('Joukkueet','PaastetytMaalit','12');
 </div>
 
 <div class="teamName" id="lokMosName">
+=======
+<div class="teamInfoBox">
+
+<div class="teamLogo">
+   <img src="lok_moskova.png" style="width:100px;height:100px;">
+</div>
+
+<div class="teamName">
+>>>>>>> 03e96022ebd532a9849fae32de0241b448cb5acd
 <?php
 echo databaseQuery('Joukkueet','Nimi','16');
 ?>
@@ -3023,6 +3106,7 @@ echo databaseQuery('Joukkueet','PaastetytMaalit','16');
 
 <div id="teamInfoBoxWrapperE">
 
+<<<<<<< HEAD
   <div class="teamInfoBox" id="bayernBox">
 
     <div class="teamLogo" id="bayernLogo">
@@ -3030,6 +3114,15 @@ echo databaseQuery('Joukkueet','PaastetytMaalit','16');
     </div>
 
     <div class="teamName" id="bayernName">
+=======
+  <div class="teamInfoBox">
+
+    <div class="teamLogo">
+       <img src="bayern.png" style="width:100px;height:100px;">
+    </div>
+
+    <div class="teamName">
+>>>>>>> 03e96022ebd532a9849fae32de0241b448cb5acd
     <?php
     echo databaseQuery('Joukkueet','Nimi','17');
     ?>
@@ -3110,6 +3203,7 @@ echo databaseQuery('Joukkueet','PaastetytMaalit','16');
     </div>
   </div>
 
+<<<<<<< HEAD
   <div class="teamInfoBox" id="ajaxBox">
 
     <div class="teamLogo" id="ajaxLogo">
@@ -3117,6 +3211,15 @@ echo databaseQuery('Joukkueet','PaastetytMaalit','16');
     </div>
 
     <div class="teamName" id="ajaxName">
+=======
+  <div class="teamInfoBox">
+
+    <div class="teamLogo">
+       <img src="ajax.png" style="width:100px;height:100px;">
+    </div>
+
+    <div class="teamName">
+>>>>>>> 03e96022ebd532a9849fae32de0241b448cb5acd
     <?php
     echo databaseQuery('Joukkueet','Nimi','18');
     ?>
@@ -3197,6 +3300,7 @@ echo databaseQuery('Joukkueet','PaastetytMaalit','16');
     </div>
   </div>
 
+<<<<<<< HEAD
   <div class="teamInfoBox" id="benficaBox">
 
   <div class="teamLogo" id="benficaLogo">
@@ -3204,6 +3308,15 @@ echo databaseQuery('Joukkueet','PaastetytMaalit','16');
   </div>
 
   <div class="teamName" id="benficaName">
+=======
+  <div class="teamInfoBox">
+
+  <div class="teamLogo">
+     <img src="benfica.png" style="width:100px;height:100px;">
+  </div>
+
+  <div class="teamName">
+>>>>>>> 03e96022ebd532a9849fae32de0241b448cb5acd
   <?php
   echo databaseQuery('Joukkueet','Nimi','19');
   ?>
@@ -3284,6 +3397,7 @@ echo databaseQuery('Joukkueet','PaastetytMaalit','16');
   </div>
 </div>
 
+<<<<<<< HEAD
 <div class="teamInfoBox" id="aekBox">
 
 <div class="teamLogo" id="aekLogo">
@@ -3291,6 +3405,15 @@ echo databaseQuery('Joukkueet','PaastetytMaalit','16');
 </div>
 
 <div class="teamName" id="aekName">
+=======
+<div class="teamInfoBox">
+
+<div class="teamLogo">
+   <img src="aek.png" style="width:100px;height:100px;">
+</div>
+
+<div class="teamName">
+>>>>>>> 03e96022ebd532a9849fae32de0241b448cb5acd
 <?php
 echo databaseQuery('Joukkueet','Nimi','20');
 ?>
@@ -3376,6 +3499,7 @@ echo databaseQuery('Joukkueet','PaastetytMaalit','20');
 
 <div id="teamInfoBoxWrapperF">
 
+<<<<<<< HEAD
   <div class="teamInfoBox" id="manchesterCityBox">
 
     <div class="teamLogo" id="manchesterCityLogo">
@@ -3383,6 +3507,15 @@ echo databaseQuery('Joukkueet','PaastetytMaalit','20');
     </div>
 
     <div class="teamName" id="manchesterCityName">
+=======
+  <div class="teamInfoBox">
+
+    <div class="teamLogo">
+       <img src="manchester_city.png" style="width:100px;height:100px;">
+    </div>
+
+    <div class="teamName">
+>>>>>>> 03e96022ebd532a9849fae32de0241b448cb5acd
     <?php
     echo databaseQuery('Joukkueet','Nimi','21');
     ?>
@@ -3463,6 +3596,7 @@ echo databaseQuery('Joukkueet','PaastetytMaalit','20');
     </div>
   </div>
 
+<<<<<<< HEAD
   <div class="teamInfoBox" id="lyonBox">
 
     <div class="teamLogo" id="lyonLogo">
@@ -3470,6 +3604,15 @@ echo databaseQuery('Joukkueet','PaastetytMaalit','20');
     </div>
 
     <div class="teamName" id="lyonName">
+=======
+  <div class="teamInfoBox">
+
+    <div class="teamLogo">
+       <img src="lyon.png" style="width:100px;height:100px;">
+    </div>
+
+    <div class="teamName">
+>>>>>>> 03e96022ebd532a9849fae32de0241b448cb5acd
     <?php
     echo databaseQuery('Joukkueet','Nimi','22');
     ?>
@@ -3550,6 +3693,7 @@ echo databaseQuery('Joukkueet','PaastetytMaalit','20');
     </div>
   </div>
 
+<<<<<<< HEAD
   <div class="teamInfoBox" id="hoffenheimBox">
 
   <div class="teamLogo" id="hoffeinheimLogo">
@@ -3557,6 +3701,15 @@ echo databaseQuery('Joukkueet','PaastetytMaalit','20');
   </div>
 
   <div class="teamName" id="hoffenheimName">
+=======
+  <div class="teamInfoBox">
+
+  <div class="teamLogo">
+     <img src="hoffenheim.png" style="width:100px;height:100px;">
+  </div>
+
+  <div class="teamName">
+>>>>>>> 03e96022ebd532a9849fae32de0241b448cb5acd
   <?php
   echo databaseQuery('Joukkueet','Nimi','23');
   ?>
@@ -3636,6 +3789,7 @@ echo databaseQuery('Joukkueet','PaastetytMaalit','20');
     <h1> Lisätietoa </h1>
   </div>
 </div>
+<<<<<<< HEAD
 <div class="teamInfoBox" id="shakhtarBox">
 
 <div class="teamLogo" id="shakhtarLogo">
@@ -3643,6 +3797,15 @@ echo databaseQuery('Joukkueet','PaastetytMaalit','20');
 </div>
 
 <div class="teamName" id="shakhtarName">
+=======
+<div class="teamInfoBox">
+
+<div class="teamLogo">
+   <img src="shakhtar.png" style="width:100px;height:100px;">
+</div>
+
+<div class="teamName">
+>>>>>>> 03e96022ebd532a9849fae32de0241b448cb5acd
 <?php
 echo databaseQuery('Joukkueet','Nimi','24');
 ?>
@@ -3728,6 +3891,7 @@ echo databaseQuery('Joukkueet','PaastetytMaalit','24');
 
 <div id="teamInfoBoxWrapperG">
 
+<<<<<<< HEAD
   <div class="teamInfoBox" id="madridBox">
 
     <div class="teamLogo" id="madridLogo">
@@ -3735,6 +3899,15 @@ echo databaseQuery('Joukkueet','PaastetytMaalit','24');
     </div>
 
     <div class="teamName" id="madridName">
+=======
+  <div class="teamInfoBox">
+
+    <div class="teamLogo">
+       <img src="madrid.png" style="width:100px;height:100px;">
+    </div>
+
+    <div class="teamName">
+>>>>>>> 03e96022ebd532a9849fae32de0241b448cb5acd
     <?php
     echo databaseQuery('Joukkueet','Nimi','25');
     ?>
@@ -3816,6 +3989,7 @@ echo databaseQuery('Joukkueet','PaastetytMaalit','24');
   </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
      <div class="title">
         <h1> Tehdyt Maalit</h1>
         <div class="infoNumber">
@@ -3829,6 +4003,15 @@ echo databaseQuery('Joukkueet','PaastetytMaalit','24');
     </div>
 
     <div class="teamName" id="romaName">
+=======
+  <div class="teamInfoBox">
+
+    <div class="teamLogo">
+       <img src="roma.png" style="width:100px;height:100px;">
+    </div>
+
+    <div class="teamName">
+>>>>>>> 03e96022ebd532a9849fae32de0241b448cb5acd
     <?php
     echo databaseQuery('Joukkueet','Nimi','26');
     ?>
@@ -3885,6 +4068,7 @@ echo databaseQuery('Joukkueet','PaastetytMaalit','24');
     </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div class="title">
         <h1> Pisteet</h1>
         <div class="infoNumber">
@@ -3899,6 +4083,8 @@ echo databaseQuery('Joukkueet','PaastetytMaalit','24');
 
 
 =======
+=======
+>>>>>>> 03e96022ebd532a9849fae32de0241b448cb5acd
     <!-- Pisteet -->
     <div class="points title">
       <h1> Pisteet</h1>
@@ -3907,6 +4093,7 @@ echo databaseQuery('Joukkueet','PaastetytMaalit','24');
     echo databaseQuery('Joukkueet','Pisteet','26');
     ?>
       </div>
+<<<<<<< HEAD
 >>>>>>> 551a58b866ca2a0771408916e88ff8a8708b0825
     </div>
 
@@ -3918,6 +4105,11 @@ echo databaseQuery('Joukkueet','PaastetytMaalit','24');
         <div class="infoNumber">
  <?php
 =======
+=======
+    </div>
+
+    <!-- Päästetyt Maalit -->
+>>>>>>> 03e96022ebd532a9849fae32de0241b448cb5acd
     <div class="totalGoals2 title">
       <h1> Päästetyt Maalit</h1>
       <div class="infoNumber">
@@ -3926,13 +4118,17 @@ echo databaseQuery('Joukkueet','PaastetytMaalit','24');
     ?>
       </div>
     </div>
+<<<<<<< HEAD
 >>>>>>> 551a58b866ca2a0771408916e88ff8a8708b0825
+=======
+>>>>>>> 03e96022ebd532a9849fae32de0241b448cb5acd
 
     <div class="moreInfo"  onclick="playerCardBelfica()">
       <h1> Lisätietoa </h1>
     </div>
   </div>
 
+<<<<<<< HEAD
   <div class="teamInfoBox" id="cskaMoscowBox">
 
   <div class="teamLogo" id="cskaMoscowLogo">
@@ -3940,6 +4136,15 @@ echo databaseQuery('Joukkueet','PaastetytMaalit','24');
   </div>
 
   <div class="teamName" id="cskaMoscowName">
+=======
+  <div class="teamInfoBox">
+
+  <div class="teamLogo">
+     <img src="cska_movska.png" style="width:100px;height:100px;">
+  </div>
+
+  <div class="teamName">
+>>>>>>> 03e96022ebd532a9849fae32de0241b448cb5acd
   <?php
   echo databaseQuery('Joukkueet','Nimi','27');
   ?>
@@ -4020,6 +4225,7 @@ echo databaseQuery('Joukkueet','PaastetytMaalit','24');
   </div>
 </div>
 
+<<<<<<< HEAD
 <div class="teamInfoBox" id="plzenBox">
 
 <div class="teamLogo" id="plzenLogo">
@@ -4027,6 +4233,15 @@ echo databaseQuery('Joukkueet','PaastetytMaalit','24');
 </div>
 
 <div class="teamName" id="plzenName">
+=======
+<div class="teamInfoBox">
+
+<div class="teamLogo">
+   <img src="plzen.png" style="width:100px;height:100px;">
+</div>
+
+<div class="teamName">
+>>>>>>> 03e96022ebd532a9849fae32de0241b448cb5acd
 <?php
 echo databaseQuery('Joukkueet','Nimi','28');
 ?>
@@ -4112,6 +4327,7 @@ echo databaseQuery('Joukkueet','PaastetytMaalit','28');
 
 <div id="teamInfoBoxWrapperH">
 
+<<<<<<< HEAD
   <div class="teamInfoBox" id="juventusBox">
 
     <div class="teamLogo" id="juventusLogo">
@@ -4119,6 +4335,15 @@ echo databaseQuery('Joukkueet','PaastetytMaalit','28');
     </div>
 
     <div class="teamName" id="juventusName">
+=======
+  <div class="teamInfoBox">
+
+    <div class="teamLogo">
+       <img src="juventus.png" style="width:100px;height:100px;">
+    </div>
+
+    <div class="teamName">
+>>>>>>> 03e96022ebd532a9849fae32de0241b448cb5acd
     <?php
     echo databaseQuery('Joukkueet','Nimi','29');
     ?>
@@ -4199,6 +4424,7 @@ echo databaseQuery('Joukkueet','PaastetytMaalit','28');
     </div>
   </div>
 
+<<<<<<< HEAD
   <div class="teamInfoBox" id="manUnBox">
 
     <div class="teamLogo" id="manUnLogo">
@@ -4206,6 +4432,15 @@ echo databaseQuery('Joukkueet','PaastetytMaalit','28');
     </div>
 
     <div class="teamName" id="manUnName">
+=======
+  <div class="teamInfoBox">
+
+    <div class="teamLogo">
+       <img src="manchester_united.png" style="width:100px;height:100px;">
+    </div>
+
+    <div class="teamName">
+>>>>>>> 03e96022ebd532a9849fae32de0241b448cb5acd
     <?php
     echo databaseQuery('Joukkueet','Nimi','30');
     ?>
@@ -4286,6 +4521,7 @@ echo databaseQuery('Joukkueet','PaastetytMaalit','28');
     </div>
   </div>
 
+<<<<<<< HEAD
   <div class="teamInfoBox" id="valenciaBox">
 
   <div class="teamLogo" id="valenciaLogo">
@@ -4293,6 +4529,15 @@ echo databaseQuery('Joukkueet','PaastetytMaalit','28');
   </div>
 
   <div class="teamName" id="valenciaName">
+=======
+  <div class="teamInfoBox">
+
+  <div class="teamLogo">
+     <img src="valencia.png" style="width:100px;height:100px;">
+  </div>
+
+  <div class="teamName">
+>>>>>>> 03e96022ebd532a9849fae32de0241b448cb5acd
   <?php
   echo databaseQuery('Joukkueet','Nimi','31');
   ?>
@@ -4373,6 +4618,7 @@ echo databaseQuery('Joukkueet','PaastetytMaalit','28');
   </div>
 </div>
 
+<<<<<<< HEAD
 <div class="teamInfoBox" id="youngBoysBox">
 
 <div class="teamLogo" id="youngBoysLogo">
@@ -4380,6 +4626,15 @@ echo databaseQuery('Joukkueet','PaastetytMaalit','28');
 </div>
 
 <div class="teamName" id="youngBoysName">
+=======
+<div class="teamInfoBox">
+
+<div class="teamLogo">
+   <img src="young_boys.png" style="width:100px;height:100px;">
+</div>
+
+<div class="teamName">
+>>>>>>> 03e96022ebd532a9849fae32de0241b448cb5acd
 <?php
 echo databaseQuery('Joukkueet','Nimi','32');
 ?>
