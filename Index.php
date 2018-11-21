@@ -1336,10 +1336,13 @@ $kirjautunut = $_SESSION['userIsAdmin'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <div class="teamInfoBox">
     
 =======
 >>>>>>> 551a58b866ca2a0771408916e88ff8a8708b0825
+=======
+>>>>>>> 03e96022ebd532a9849fae32de0241b448cb5acd
 =======
 >>>>>>> 03e96022ebd532a9849fae32de0241b448cb5acd
  <div class="teamLogo">
@@ -1466,6 +1469,8 @@ $kirjautunut = $_SESSION['userIsAdmin'];
     echo "0 results";
 }
 
+<<<<<<< HEAD
+=======
 
 
  ?>
@@ -1477,6 +1482,2349 @@ $kirjautunut = $_SESSION['userIsAdmin'];
     </div>
 
 
+    <!-- Tehdyt maalit  -->
+
+     <div class="totalGoals title">
+        <h1> Tehdyt Maalit</h1>
+        <div class="infoNumber">
+ <?php
+
+     $sql = "SELECT TehdytMaalit FROM Joukkueet where id = '1'";
+ $result = $mysqli->query($sql);
+
+ if ($result->num_rows > 0) {
+
+    while($row = $result->fetch_assoc()) {
+        echo  $row["TehdytMaalit"];
+    }
+} else {
+    echo "0 results";
+}
+
+
+
+ ?>
+
+
+        </div>
+
+
+    </div>
+
+    <!-- Päästetyt Maalit -->
+
+    <div class="totalGoals2 title">
+        <h1> Päästetyt Maalit</h1>
+        <div class="infoNumber">
+ <?php
+
+     $sql = "SELECT PaastetytMaalit FROM Joukkueet where id = '1'";
+ $result = $mysqli->query($sql);
+
+ if ($result->num_rows > 0) {
+
+    while($row = $result->fetch_assoc()) {
+        echo  $row["PaastetytMaalit"];
+    }
+} else {
+    echo "0 results";
+}
+
+
+
+ ?>
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+     <!-- Pisteet -->
+
+    <div class="points title">
+        <h1> Pisteet</h1>
+        <div class="infoNumber">
+ <?php
+
+     $sql = "SELECT Pisteet FROM Joukkueet where id = '1'";
+ $result = $mysqli->query($sql);
+
+ if ($result->num_rows > 0) {
+
+    while($row = $result->fetch_assoc()) {
+        echo  $row["Pisteet"];
+    }
+} else {
+    echo "0 results";
+}
+
+
+
+ ?>
+
+
+        </div>
+
+
+    </div>
+
+    <div class="moreInfo" id="manInfo" onclick="playerCardManchester()">
+
+        <h1> Lisätietoa </h1>
+
+
+
+    </div>
+
+
+
+
+
+</div>
+
+ <!-- FC Basel 1893 -->
+
+<div class="teamInfoBox" id="baselBox">
+
+
+ <div class="teamLogo" id="baselLogo">
+
+     <img src="basel.jpg" style="width:100px;height:100px;">
+
+ </div>
+
+ <div class="teamName" id="baselName">
+ <?php
+
+ $sql = "SELECT Nimi FROM Joukkueet Where id = '2'";
+ $result = $mysqli->query($sql);
+
+ if ($result->num_rows > 0) {
+
+    while($row = $result->fetch_assoc()) {
+        echo  $row["Nimi"];
+    }
+} else {
+    echo "0 results";
+}
+?>
+    </div>
+
+    <!-- Pelatut pelit -->
+
+  <div class="playedGames title">
+      <h1> Pelatut pelit</h1>
+      <div class="infoNumber">
+<?php
+
+ $sql = "SELECT Pelatutpelit FROM Joukkueet WHERE id = '2'";
+ $result = $mysqli->query($sql);
+
+ if ($result->num_rows > 0) {
+
+    while($row = $result->fetch_assoc()) {
+        echo  $row["Pelatutpelit"];
+    }
+} else {
+    echo "0 results";
+}
+
+    ?>
+    </div>
+    </div>
+
+    <!-- Voitetut pelit -->
+
+    <div class="wonGames title">
+        <h1> Voitetut pelit</h1>
+        <div class="infoNumber">
+ <?php
+
+     $sql = "SELECT Voitetutpelit FROM Joukkueet where id = '2'";
+ $result = $mysqli->query($sql);
+
+ if ($result->num_rows > 0) {
+
+    while($row = $result->fetch_assoc()) {
+        echo  $row["Voitetutpelit"];
+    }
+} else {
+    echo "0 results";
+}
+
+>>>>>>> 03e96022ebd532a9849fae32de0241b448cb5acd
+
+
+ ?>
+
+
+        </div>
+
+
+    </div>
+
+    <!-- tasapelit -->
+
+     <div class="drawGames title">
+        <h1> Tasapelit</h1>
+        <div class="infoNumber">
+ <?php
+
+     $sql = "SELECT Tasapelit FROM Joukkueet where id = '2'";
+ $result = $mysqli->query($sql);
+
+ if ($result->num_rows > 0) {
+
+    while($row = $result->fetch_assoc()) {
+        echo  $row["Tasapelit"];
+    }
+} else {
+    echo "0 results";
+}
+
+
+
+ ?>
+
+
+        </div>
+
+
+    </div>
+
+     <!-- Havityt pelit -->
+
+     <div class="lostGames title">
+        <h1> Havityt pelit</h1>
+        <div class="infoNumber">
+ <?php
+
+     $sql = "SELECT Havitytpelit FROM Joukkueet where id = '2'";
+ $result = $mysqli->query($sql);
+
+ if ($result->num_rows > 0) {
+
+    while($row = $result->fetch_assoc()) {
+        echo  $row["Havitytpelit"];
+    }
+} else {
+    echo "0 results";
+}
+
+
+
+ ?>
+
+
+        </div>
+
+
+    </div>
+
+     <div class="totalGoals title" id="maalitBasel">
+        <h1> Tehdyt Maalit</h1>
+        <div class="infoNumber">
+ <?php
+
+     $sql = "SELECT TehdytMaalit FROM Joukkueet where id = '2'";
+ $result = $mysqli->query($sql);
+
+ if ($result->num_rows > 0) {
+
+    while($row = $result->fetch_assoc()) {
+        echo  $row["TehdytMaalit"];
+    }
+} else {
+    echo "0 results";
+}
+
+
+
+ ?>
+
+
+        </div>
+
+
+    </div>
+
+    <!-- Päästetyt Maalit -->
+
+    <div class="totalGoals2 title">
+        <h1> Päästetyt Maalit</h1>
+        <div class="infoNumber">
+ <?php
+
+     $sql = "SELECT PaastetytMaalit FROM Joukkueet where id = '2'";
+ $result = $mysqli->query($sql);
+
+ if ($result->num_rows > 0) {
+
+    while($row = $result->fetch_assoc()) {
+        echo  $row["PaastetytMaalit"];
+    }
+} else {
+    echo "0 results";
+}
+
+
+
+ ?>
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+     <!-- Pisteet -->
+
+    <div class="points title">
+        <h1> Pisteet</h1>
+        <div class="infoNumber">
+ <?php
+
+     $sql = "SELECT Pisteet FROM Joukkueet where id = '2'";
+ $result = $mysqli->query($sql);
+
+ if ($result->num_rows > 0) {
+
+    while($row = $result->fetch_assoc()) {
+        echo  $row["Pisteet"];
+    }
+} else {
+    echo "0 results";
+}
+
+
+
+ ?>
+
+
+        </div>
+
+
+    </div>
+
+     <div class="moreInfo baselInfo"  onclick="playerCardBasel()">
+
+        <h1> Lisätietoa </h1>
+
+
+
+
+
+</div>
+</div>
+
+<!-- PFC CSKA Moskva -->
+
+<div class="teamInfoBox" id="moskvaBox">
+
+
+ <div class="teamLogo" id="movskaLogo">
+
+     <img src="movska.jpg" style="width:100px;height:100px;">
+
+ </div>
+
+ <div class="teamName" id="movskaName">
+ <?php
+
+ $sql = "SELECT Nimi FROM Joukkueet Where id = '3'";
+ $result = $mysqli->query($sql);
+
+ if ($result->num_rows > 0) {
+
+    while($row = $result->fetch_assoc()) {
+        echo  $row["Nimi"];
+    }
+} else {
+    echo "0 results";
+}
+?>
+    </div>
+
+    <!-- Pelatut pelit -->
+
+  <div class="playedGames title">
+      <h1> Pelatut pelit</h1>
+      <div class="infoNumber">
+<?php
+
+ $sql = "SELECT Pelatutpelit FROM Joukkueet WHERE id = '3'";
+ $result = $mysqli->query($sql);
+
+ if ($result->num_rows > 0) {
+
+    while($row = $result->fetch_assoc()) {
+        echo  $row["Pelatutpelit"];
+    }
+} else {
+    echo "0 results";
+}
+
+    ?>
+    </div>
+    </div>
+
+    <!-- Voitetut pelit -->
+
+    <div class="wonGames title">
+        <h1> Voitetut pelit</h1>
+        <div class="infoNumber">
+ <?php
+
+     $sql = "SELECT Voitetutpelit FROM Joukkueet where id = '3'";
+ $result = $mysqli->query($sql);
+
+ if ($result->num_rows > 0) {
+
+    while($row = $result->fetch_assoc()) {
+        echo  $row["Voitetutpelit"];
+    }
+} else {
+    echo "0 results";
+}
+
+
+
+ ?>
+
+
+        </div>
+
+
+    </div>
+
+    <!-- tasapelit -->
+
+     <div class="drawGames title">
+        <h1> Tasapelit</h1>
+        <div class="infoNumber">
+ <?php
+
+     $sql = "SELECT Tasapelit FROM Joukkueet where id = '3'";
+ $result = $mysqli->query($sql);
+
+ if ($result->num_rows > 0) {
+
+    while($row = $result->fetch_assoc()) {
+        echo  $row["Tasapelit"];
+    }
+} else {
+    echo "0 results";
+}
+
+
+
+ ?>
+
+
+        </div>
+
+
+    </div>
+
+     <!-- Havityt pelit -->
+
+     <div class="lostGames title">
+        <h1> Havityt pelit</h1>
+        <div class="infoNumber">
+ <?php
+
+     $sql = "SELECT Havitytpelit FROM Joukkueet where id = '3'";
+ $result = $mysqli->query($sql);
+
+ if ($result->num_rows > 0) {
+
+    while($row = $result->fetch_assoc()) {
+        echo  $row["Havitytpelit"];
+    }
+} else {
+    echo "0 results";
+}
+
+
+
+ ?>
+
+
+        </div>
+
+
+    </div>
+
+
+     <div class="totalGoals title">
+        <h1> Tehdyt Maalit</h1>
+        <div class="infoNumber">
+ <?php
+
+     $sql = "SELECT TehdytMaalit FROM Joukkueet where id = '3'";
+ $result = $mysqli->query($sql);
+
+ if ($result->num_rows > 0) {
+
+    while($row = $result->fetch_assoc()) {
+        echo  $row["TehdytMaalit"];
+    }
+} else {
+    echo "0 results";
+}
+
+
+
+ ?>
+
+
+        </div>
+
+
+    </div>
+
+    <!-- Päästetyt Maalit -->
+
+    <div class="totalGoals2 title">
+        <h1> Päästetyt Maalit</h1>
+        <div class="infoNumber">
+ <?php
+
+     $sql = "SELECT PaastetytMaalit FROM Joukkueet where id = '3'";
+ $result = $mysqli->query($sql);
+
+ if ($result->num_rows > 0) {
+
+    while($row = $result->fetch_assoc()) {
+        echo  $row["PaastetytMaalit"];
+    }
+} else {
+    echo "0 results";
+}
+
+
+
+ ?>
+
+
+        </div>
+
+
+    </div>
+
+
+
+     <!-- Pisteet -->
+
+    <div class="points title">
+        <h1> Pisteet</h1>
+        <div class="infoNumber">
+ <?php
+
+     $sql = "SELECT Pisteet FROM Joukkueet where id = '3'";
+ $result = $mysqli->query($sql);
+
+ if ($result->num_rows > 0) {
+
+    while($row = $result->fetch_assoc()) {
+        echo  $row["Pisteet"];
+    }
+} else {
+    echo "0 results";
+}
+
+
+
+ ?>
+
+
+        </div>
+
+
+    </div>
+
+    <div class="moreInfo" id="movskaInfo" onclick="playerCardMoskva()">
+
+        <h1> Lisätietoa </h1>
+
+</div>
+
+
+
+
+
+</div>
+
+<!-- SL Benfica  -->
+
+<div class="teamInfoBox" id="benficaBox">
+
+
+ <div class="teamLogo" id="benficaLogo">
+
+     <img src="benfica.jpg" style="width:100px;height:100px;">
+
+ </div>
+
+ <div class="teamName" id="benficaName">
+ <?php
+
+ $sql = "SELECT Nimi FROM Joukkueet Where id = '4'";
+ $result = $mysqli->query($sql);
+
+ if ($result->num_rows > 0) {
+
+    while($row = $result->fetch_assoc()) {
+        echo  $row["Nimi"];
+    }
+} else {
+    echo "0 results";
+}
+?>
+    </div>
+
+    <!-- Pelatut pelit -->
+
+  <div class="playedGames title">
+      <h1> Pelatut pelit</h1>
+      <div class="infoNumber">
+<?php
+
+ $sql = "SELECT Pelatutpelit FROM Joukkueet WHERE id = '4'";
+ $result = $mysqli->query($sql);
+
+ if ($result->num_rows > 0) {
+
+    while($row = $result->fetch_assoc()) {
+        echo  $row["Pelatutpelit"];
+    }
+} else {
+    echo "0 results";
+}
+
+    ?>
+    </div>
+    </div>
+
+    <!-- Voitetut pelit -->
+
+    <div class="wonGames title">
+        <h1> Voitetut pelit</h1>
+        <div class="infoNumber">
+ <?php
+
+     $sql = "SELECT Voitetutpelit FROM Joukkueet where id = '4'";
+ $result = $mysqli->query($sql);
+
+ if ($result->num_rows > 0) {
+
+    while($row = $result->fetch_assoc()) {
+        echo  $row["Voitetutpelit"];
+    }
+} else {
+    echo "0 results";
+}
+
+
+
+ ?>
+
+
+        </div>
+
+
+    </div>
+
+    <!-- tasapelit -->
+
+     <div class="drawGames title">
+        <h1> Tasapelit</h1>
+        <div class="infoNumber">
+ <?php
+
+     $sql = "SELECT Tasapelit FROM Joukkueet where id = '4'";
+ $result = $mysqli->query($sql);
+
+ if ($result->num_rows > 0) {
+
+    while($row = $result->fetch_assoc()) {
+        echo  $row["Tasapelit"];
+    }
+} else {
+    echo "0 results";
+}
+
+
+
+ ?>
+
+
+        </div>
+
+
+    </div>
+
+     <!-- Havityt pelit -->
+
+     <div class="lostGames title">
+        <h1> Havityt pelit</h1>
+        <div class="infoNumber">
+ <?php
+
+     $sql = "SELECT Havitytpelit FROM Joukkueet where id = '4'";
+ $result = $mysqli->query($sql);
+
+ if ($result->num_rows > 0) {
+
+    while($row = $result->fetch_assoc()) {
+        echo  $row["Havitytpelit"];
+    }
+} else {
+    echo "0 results";
+}
+
+
+
+ ?>
+
+
+        </div>
+
+
+    </div>
+
+
+     <div class="totalGoals title">
+        <h1> Tehdyt Maalit</h1>
+        <div class="infoNumber">
+ <?php
+
+     $sql = "SELECT TehdytMaalit FROM Joukkueet where id = '4'";
+ $result = $mysqli->query($sql);
+
+ if ($result->num_rows > 0) {
+
+    while($row = $result->fetch_assoc()) {
+        echo  $row["TehdytMaalit"];
+    }
+} else {
+    echo "0 results";
+}
+
+
+
+ ?>
+
+
+        </div>
+
+
+    </div>
+
+     <!-- Pisteet -->
+
+    <div class="points title">
+        <h1> Pisteet</h1>
+        <div class="infoNumber">
+ <?php
+
+     $sql = "SELECT Pisteet FROM Joukkueet where id = '4'";
+ $result = $mysqli->query($sql);
+
+ if ($result->num_rows > 0) {
+
+    while($row = $result->fetch_assoc()) {
+        echo  $row["Pisteet"];
+    }
+} else {
+    echo "0 results";
+}
+
+
+
+ ?>
+
+
+        </div>
+
+
+    </div>
+
+
+    <!-- Päästetyt Maalit -->
+
+    <div class="totalGoals2 title">
+        <h1> Päästetyt Maalit</h1>
+        <div class="infoNumber">
+ <?php
+
+     $sql = "SELECT PaastetytMaalit FROM Joukkueet where id = '4'";
+ $result = $mysqli->query($sql);
+
+ if ($result->num_rows > 0) {
+
+    while($row = $result->fetch_assoc()) {
+        echo  $row["PaastetytMaalit"];
+    }
+} else {
+    echo "0 results";
+}
+
+
+
+ ?>
+
+
+        </div>
+
+
+    </div>
+
+     <div class="moreInfo"  onclick="playerCardBelfica()">
+
+        <h1> Lisätietoa </h1>
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+<!-- B-lohko -->
+
+<div id="teamInfoBoxWrapperB">
+
+<div class="teamInfoBox" id="teamInfoB">
+
+</div>
+
+</div>
+
+<!-- C-lohko -->
+
+<div id="teamInfoBoxWrapperC">
+
+  <div class="teamInfoBox">
+
+    <div class="teamLogo">
+       <img src="napoli.png" style="width:100px;height:100px;">
+    </div>
+
+    <div class="teamName">
+    <?php
+    echo databaseQuery('Joukkueet','Nimi','9');
+    ?>
+    </div>
+
+    <!-- Pelatut pelit -->
+    <div class="playedGames title">
+      <h1> Pelatut pelit</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','Pelatutpelit','9');
+    ?>
+      </div>
+    </div>
+
+    <!-- Voitetut pelit -->
+    <div class="wonGames title">
+      <h1> Voitetut pelit</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','Voitetutpelit','9');
+    ?>
+      </div>
+    </div>
+
+    <!-- tasapelit -->
+    <div class="drawGames title">
+      <h1> Tasapelit</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','Tasapelit','9');
+    ?>
+      </div>
+    </div>
+
+    <!-- Havityt pelit -->
+    <div class="lostGames title">
+      <h1> Havityt pelit</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','Havitytpelit','9');
+    ?>
+      </div>
+    </div>
+
+    <!-- Tehdyt maalit -->
+    <div class="totalGoals title">
+      <h1> Tehdyt Maalit</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','TehdytMaalit','9');
+    ?>
+      </div>
+    </div>
+
+    <!-- Pisteet -->
+    <div class="points title">
+      <h1> Pisteet</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','Pisteet','9');
+    ?>
+      </div>
+    </div>
+
+    <!-- Päästetyt Maalit -->
+    <div class="totalGoals2 title">
+      <h1> Päästetyt Maalit</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','PaastetytMaalit','9');
+    ?>
+      </div>
+    </div>
+
+    <div class="moreInfo"  onclick="playerCardBelfica()">
+      <h1> Lisätietoa </h1>
+    </div>
+  </div>
+
+  <div class="teamInfoBox">
+
+    <div class="teamLogo">
+       <img src="liverpool.png" style="width:100px;height:100px;">
+    </div>
+
+    <div class="teamName">
+    <?php
+    echo databaseQuery('Joukkueet','Nimi','10');
+    ?>
+    </div>
+
+    <!-- Pelatut pelit -->
+    <div class="playedGames title">
+      <h1> Pelatut pelit</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','Pelatutpelit','10');
+    ?>
+      </div>
+    </div>
+
+    <!-- Voitetut pelit -->
+    <div class="wonGames title">
+      <h1> Voitetut pelit</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','Voitetutpelit','10');
+    ?>
+      </div>
+    </div>
+
+    <!-- tasapelit -->
+    <div class="drawGames title">
+      <h1> Tasapelit</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','Tasapelit','10');
+    ?>
+      </div>
+    </div>
+
+    <!-- Havityt pelit -->
+    <div class="lostGames title">
+      <h1> Havityt pelit</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','Havitytpelit','10');
+    ?>
+      </div>
+    </div>
+
+    <!-- Tehdyt maalit -->
+    <div class="totalGoals title">
+      <h1> Tehdyt Maalit</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','TehdytMaalit','10');
+    ?>
+      </div>
+    </div>
+
+    <!-- Pisteet -->
+    <div class="points title">
+      <h1> Pisteet</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','Pisteet','10');
+    ?>
+      </div>
+    </div>
+
+    <!-- Päästetyt Maalit -->
+    <div class="totalGoals2 title">
+      <h1> Päästetyt Maalit</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','PaastetytMaalit','10');
+    ?>
+      </div>
+    </div>
+
+    <div class="moreInfo"  onclick="playerCardBelfica()">
+      <h1> Lisätietoa </h1>
+    </div>
+  </div>
+
+  <div class="teamInfoBox">
+
+  <div class="teamLogo">
+     <img src="psg.png" style="width:100px;height:100px;">
+  </div>
+
+  <div class="teamName">
+  <?php
+  echo databaseQuery('Joukkueet','Nimi','11');
+  ?>
+  </div>
+
+  <!-- Pelatut pelit -->
+  <div class="playedGames title">
+    <h1> Pelatut pelit</h1>
+    <div class="infoNumber">
+  <?php
+  echo databaseQuery('Joukkueet','Pelatutpelit','11');
+  ?>
+    </div>
+  </div>
+
+  <!-- Voitetut pelit -->
+  <div class="wonGames title">
+    <h1> Voitetut pelit</h1>
+    <div class="infoNumber">
+  <?php
+  echo databaseQuery('Joukkueet','Voitetutpelit','11');
+  ?>
+    </div>
+  </div>
+
+  <!-- tasapelit -->
+  <div class="drawGames title">
+    <h1> Tasapelit</h1>
+    <div class="infoNumber">
+  <?php
+  echo databaseQuery('Joukkueet','Tasapelit','11');
+  ?>
+    </div>
+  </div>
+
+  <!-- Havityt pelit -->
+  <div class="lostGames title">
+    <h1> Havityt pelit</h1>
+    <div class="infoNumber">
+  <?php
+  echo databaseQuery('Joukkueet','Havitytpelit','11');
+  ?>
+    </div>
+  </div>
+
+  <!-- Tehdyt maalit -->
+  <div class="totalGoals title">
+    <h1> Tehdyt Maalit</h1>
+    <div class="infoNumber">
+  <?php
+  echo databaseQuery('Joukkueet','TehdytMaalit','11');
+  ?>
+    </div>
+  </div>
+
+  <!-- Pisteet -->
+  <div class="points title">
+    <h1> Pisteet</h1>
+    <div class="infoNumber">
+  <?php
+  echo databaseQuery('Joukkueet','Pisteet','11');
+  ?>
+    </div>
+  </div>
+
+  <!-- Päästetyt Maalit -->
+  <div class="totalGoals2 title">
+    <h1> Päästetyt Maalit</h1>
+    <div class="infoNumber">
+  <?php
+  echo databaseQuery('Joukkueet','PaastetytMaalit','11');
+  ?>
+    </div>
+  </div>
+
+  <div class="moreInfo"  onclick="playerCardBelfica()">
+    <h1> Lisätietoa </h1>
+  </div>
+</div>
+
+<div class="teamInfoBox">
+
+<div class="teamLogo">
+   <img src="crvena.png" style="width:100px;height:100px;">
+</div>
+
+<div class="teamName">
+<?php
+echo databaseQuery('Joukkueet','Nimi','12');
+?>
+</div>
+
+<!-- Pelatut pelit -->
+<div class="playedGames title">
+  <h1> Pelatut pelit</h1>
+  <div class="infoNumber">
+<?php
+echo databaseQuery('Joukkueet','Pelatutpelit','12');
+?>
+  </div>
+</div>
+
+<!-- Voitetut pelit -->
+<div class="wonGames title">
+  <h1> Voitetut pelit</h1>
+  <div class="infoNumber">
+<?php
+echo databaseQuery('Joukkueet','Voitetutpelit','12');
+?>
+  </div>
+</div>
+
+<!-- tasapelit -->
+<div class="drawGames title">
+  <h1> Tasapelit</h1>
+  <div class="infoNumber">
+<?php
+echo databaseQuery('Joukkueet','Tasapelit','12');
+?>
+  </div>
+</div>
+
+<!-- Havityt pelit -->
+<div class="lostGames title">
+  <h1> Havityt pelit</h1>
+  <div class="infoNumber">
+<?php
+echo databaseQuery('Joukkueet','Havitytpelit','12');
+?>
+  </div>
+</div>
+
+<!-- Tehdyt maalit -->
+<div class="totalGoals title">
+  <h1> Tehdyt Maalit</h1>
+  <div class="infoNumber">
+<?php
+echo databaseQuery('Joukkueet','TehdytMaalit','12');
+?>
+  </div>
+</div>
+
+<!-- Pisteet -->
+<div class="points title">
+  <h1> Pisteet</h1>
+  <div class="infoNumber">
+<?php
+echo databaseQuery('Joukkueet','Pisteet','12');
+?>
+  </div>
+</div>
+
+<!-- Päästetyt Maalit -->
+<div class="totalGoals2 title">
+  <h1> Päästetyt Maalit</h1>
+  <div class="infoNumber">
+<?php
+echo databaseQuery('Joukkueet','PaastetytMaalit','12');
+?>
+  </div>
+</div>
+
+<div class="moreInfo"  onclick="playerCardBelfica()">
+  <h1> Lisätietoa </h1>
+</div>
+</div>
+</div>
+
+<!-- D-lohko -->
+
+<div id="teamInfoBoxWrapperD">
+
+  <div class="teamInfoBox">
+
+    <div class="teamLogo">
+       <img src="porto.png" style="width:100px;height:100px;">
+    </div>
+
+    <div class="teamName">
+    <?php
+    echo databaseQuery('Joukkueet','Nimi','13');
+    ?>
+    </div>
+
+    <!-- Pelatut pelit -->
+    <div class="playedGames title">
+      <h1> Pelatut pelit</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','Pelatutpelit','13');
+    ?>
+      </div>
+    </div>
+
+    <!-- Voitetut pelit -->
+    <div class="wonGames title">
+      <h1> Voitetut pelit</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','Voitetutpelit','13');
+    ?>
+      </div>
+    </div>
+
+    <!-- tasapelit -->
+    <div class="drawGames title">
+      <h1> Tasapelit</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','Tasapelit','13');
+    ?>
+      </div>
+    </div>
+
+    <!-- Havityt pelit -->
+    <div class="lostGames title">
+      <h1> Havityt pelit</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','Havitytpelit','13');
+    ?>
+      </div>
+    </div>
+
+    <!-- Tehdyt maalit -->
+    <div class="totalGoals title">
+      <h1> Tehdyt Maalit</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','TehdytMaalit','13');
+    ?>
+      </div>
+    </div>
+
+    <!-- Pisteet -->
+    <div class="points title">
+      <h1> Pisteet</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','Pisteet','13');
+    ?>
+      </div>
+    </div>
+
+    <!-- Päästetyt Maalit -->
+    <div class="totalGoals2 title">
+      <h1> Päästetyt Maalit</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','PaastetytMaalit','13');
+    ?>
+      </div>
+    </div>
+
+    <div class="moreInfo"  onclick="playerCardBelfica()">
+      <h1> Lisätietoa </h1>
+    </div>
+  </div>
+
+  <div class="teamInfoBox">
+
+    <div class="teamLogo">
+       <img src="schalke.png" style="width:100px;height:100px;">
+    </div>
+
+    <div class="teamName">
+    <?php
+    echo databaseQuery('Joukkueet','Nimi','14');
+    ?>
+    </div>
+
+    <!-- Pelatut pelit -->
+    <div class="playedGames title">
+      <h1> Pelatut pelit</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','Pelatutpelit','14');
+    ?>
+      </div>
+    </div>
+
+    <!-- Voitetut pelit -->
+    <div class="wonGames title">
+      <h1> Voitetut pelit</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','Voitetutpelit','14');
+    ?>
+      </div>
+    </div>
+
+    <!-- tasapelit -->
+    <div class="drawGames title">
+      <h1> Tasapelit</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','Tasapelit','14');
+    ?>
+      </div>
+    </div>
+
+    <!-- Havityt pelit -->
+    <div class="lostGames title">
+      <h1> Havityt pelit</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','Havitytpelit','14');
+    ?>
+      </div>
+    </div>
+
+    <!-- Tehdyt maalit -->
+    <div class="totalGoals title">
+      <h1> Tehdyt Maalit</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','TehdytMaalit','14');
+    ?>
+      </div>
+    </div>
+
+    <!-- Pisteet -->
+    <div class="points title">
+      <h1> Pisteet</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','Pisteet','14');
+    ?>
+      </div>
+    </div>
+
+    <!-- Päästetyt Maalit -->
+    <div class="totalGoals2 title">
+      <h1> Päästetyt Maalit</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','PaastetytMaalit','14');
+    ?>
+      </div>
+    </div>
+
+    <div class="moreInfo"  onclick="playerCardBelfica()">
+      <h1> Lisätietoa </h1>
+    </div>
+  </div>
+
+  <div class="teamInfoBox">
+
+  <div class="teamLogo">
+     <img src="galatasaray.png" style="width:100px;height:100px;">
+  </div>
+
+  <div class="teamName">
+  <?php
+  echo databaseQuery('Joukkueet','Nimi','15');
+  ?>
+  </div>
+
+  <!-- Pelatut pelit -->
+  <div class="playedGames title">
+    <h1> Pelatut pelit</h1>
+    <div class="infoNumber">
+  <?php
+  echo databaseQuery('Joukkueet','Pelatutpelit','15');
+  ?>
+    </div>
+  </div>
+
+  <!-- Voitetut pelit -->
+  <div class="wonGames title">
+    <h1> Voitetut pelit</h1>
+    <div class="infoNumber">
+  <?php
+  echo databaseQuery('Joukkueet','Voitetutpelit','15');
+  ?>
+    </div>
+  </div>
+
+  <!-- tasapelit -->
+  <div class="drawGames title">
+    <h1> Tasapelit</h1>
+    <div class="infoNumber">
+  <?php
+  echo databaseQuery('Joukkueet','Tasapelit','15');
+  ?>
+    </div>
+  </div>
+
+  <!-- Havityt pelit -->
+  <div class="lostGames title">
+    <h1> Havityt pelit</h1>
+    <div class="infoNumber">
+  <?php
+  echo databaseQuery('Joukkueet','Havitytpelit','15');
+  ?>
+    </div>
+  </div>
+
+  <!-- Tehdyt maalit -->
+  <div class="totalGoals title">
+    <h1> Tehdyt Maalit</h1>
+    <div class="infoNumber">
+  <?php
+  echo databaseQuery('Joukkueet','TehdytMaalit','15');
+  ?>
+    </div>
+  </div>
+
+  <!-- Pisteet -->
+  <div class="points title">
+    <h1> Pisteet</h1>
+    <div class="infoNumber">
+  <?php
+  echo databaseQuery('Joukkueet','Pisteet','15');
+  ?>
+    </div>
+  </div>
+
+  <!-- Päästetyt Maalit -->
+  <div class="totalGoals2 title">
+    <h1> Päästetyt Maalit</h1>
+    <div class="infoNumber">
+  <?php
+  echo databaseQuery('Joukkueet','PaastetytMaalit','15');
+  ?>
+    </div>
+  </div>
+
+  <div class="moreInfo"  onclick="playerCardBelfica()">
+    <h1> Lisätietoa </h1>
+  </div>
+</div>
+
+<div class="teamInfoBox">
+
+<div class="teamLogo">
+   <img src="lok_moskova.png" style="width:100px;height:100px;">
+</div>
+
+<div class="teamName">
+<?php
+echo databaseQuery('Joukkueet','Nimi','16');
+?>
+</div>
+
+<!-- Pelatut pelit -->
+<div class="playedGames title">
+  <h1> Pelatut pelit</h1>
+  <div class="infoNumber">
+<?php
+echo databaseQuery('Joukkueet','Pelatutpelit','16');
+?>
+  </div>
+</div>
+
+<!-- Voitetut pelit -->
+<div class="wonGames title">
+  <h1> Voitetut pelit</h1>
+  <div class="infoNumber">
+<?php
+echo databaseQuery('Joukkueet','Voitetutpelit','16');
+?>
+  </div>
+</div>
+
+<!-- tasapelit -->
+<div class="drawGames title">
+  <h1> Tasapelit</h1>
+  <div class="infoNumber">
+<?php
+echo databaseQuery('Joukkueet','Tasapelit','16');
+?>
+  </div>
+</div>
+
+<!-- Havityt pelit -->
+<div class="lostGames title">
+  <h1> Havityt pelit</h1>
+  <div class="infoNumber">
+<?php
+echo databaseQuery('Joukkueet','Havitytpelit','16');
+?>
+  </div>
+</div>
+
+<!-- Tehdyt maalit -->
+<div class="totalGoals title">
+  <h1> Tehdyt Maalit</h1>
+  <div class="infoNumber">
+<?php
+echo databaseQuery('Joukkueet','TehdytMaalit','16');
+?>
+  </div>
+</div>
+
+<!-- Pisteet -->
+<div class="points title">
+  <h1> Pisteet</h1>
+  <div class="infoNumber">
+<?php
+echo databaseQuery('Joukkueet','Pisteet','16');
+?>
+  </div>
+</div>
+
+<!-- Päästetyt Maalit -->
+<div class="totalGoals2 title">
+  <h1> Päästetyt Maalit</h1>
+  <div class="infoNumber">
+<?php
+echo databaseQuery('Joukkueet','PaastetytMaalit','16');
+?>
+  </div>
+</div>
+
+<div class="moreInfo"  onclick="playerCardBelfica()">
+  <h1> Lisätietoa </h1>
+</div>
+</div>
+</div>
+
+<!-- E-lohko -->
+
+<div id="teamInfoBoxWrapperE">
+
+  <div class="teamInfoBox">
+
+    <div class="teamLogo">
+       <img src="bayern.png" style="width:100px;height:100px;">
+    </div>
+
+    <div class="teamName">
+    <?php
+    echo databaseQuery('Joukkueet','Nimi','17');
+    ?>
+    </div>
+
+    <!-- Pelatut pelit -->
+    <div class="playedGames title">
+      <h1> Pelatut pelit</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','Pelatutpelit','17');
+    ?>
+      </div>
+    </div>
+
+    <!-- Voitetut pelit -->
+    <div class="wonGames title">
+      <h1> Voitetut pelit</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','Voitetutpelit','17');
+    ?>
+      </div>
+    </div>
+
+    <!-- tasapelit -->
+    <div class="drawGames title">
+      <h1> Tasapelit</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','Tasapelit','17');
+    ?>
+      </div>
+    </div>
+
+    <!-- Havityt pelit -->
+    <div class="lostGames title">
+      <h1> Havityt pelit</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','Havitytpelit','17');
+    ?>
+      </div>
+    </div>
+
+    <!-- Tehdyt maalit -->
+    <div class="totalGoals title">
+      <h1> Tehdyt Maalit</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','TehdytMaalit','17');
+    ?>
+      </div>
+    </div>
+
+    <!-- Pisteet -->
+    <div class="points title">
+      <h1> Pisteet</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','Pisteet','17');
+    ?>
+      </div>
+    </div>
+
+    <!-- Päästetyt Maalit -->
+    <div class="totalGoals2 title">
+      <h1> Päästetyt Maalit</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','PaastetytMaalit','17');
+    ?>
+      </div>
+    </div>
+
+    <div class="moreInfo"  onclick="playerCardBelfica()">
+      <h1> Lisätietoa </h1>
+    </div>
+  </div>
+
+  <div class="teamInfoBox">
+
+    <div class="teamLogo">
+       <img src="ajax.png" style="width:100px;height:100px;">
+    </div>
+
+    <div class="teamName">
+    <?php
+    echo databaseQuery('Joukkueet','Nimi','18');
+    ?>
+    </div>
+
+    <!-- Pelatut pelit -->
+    <div class="playedGames title">
+      <h1> Pelatut pelit</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','Pelatutpelit','18');
+    ?>
+      </div>
+    </div>
+
+    <!-- Voitetut pelit -->
+    <div class="wonGames title">
+      <h1> Voitetut pelit</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','Voitetutpelit','18');
+    ?>
+      </div>
+    </div>
+
+    <!-- tasapelit -->
+    <div class="drawGames title">
+      <h1> Tasapelit</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','Tasapelit','18');
+    ?>
+      </div>
+    </div>
+
+    <!-- Havityt pelit -->
+    <div class="lostGames title">
+      <h1> Havityt pelit</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','Havitytpelit','18');
+    ?>
+      </div>
+    </div>
+
+    <!-- Tehdyt maalit -->
+    <div class="totalGoals title">
+      <h1> Tehdyt Maalit</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','TehdytMaalit','18');
+    ?>
+      </div>
+    </div>
+
+    <!-- Pisteet -->
+    <div class="points title">
+      <h1> Pisteet</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','Pisteet','18');
+    ?>
+      </div>
+    </div>
+
+    <!-- Päästetyt Maalit -->
+    <div class="totalGoals2 title">
+      <h1> Päästetyt Maalit</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','PaastetytMaalit','18');
+    ?>
+      </div>
+    </div>
+
+    <div class="moreInfo"  onclick="playerCardBelfica()">
+      <h1> Lisätietoa </h1>
+    </div>
+  </div>
+
+  <div class="teamInfoBox">
+
+  <div class="teamLogo">
+     <img src="benfica.png" style="width:100px;height:100px;">
+  </div>
+
+  <div class="teamName">
+  <?php
+  echo databaseQuery('Joukkueet','Nimi','19');
+  ?>
+  </div>
+
+  <!-- Pelatut pelit -->
+  <div class="playedGames title">
+    <h1> Pelatut pelit</h1>
+    <div class="infoNumber">
+  <?php
+  echo databaseQuery('Joukkueet','Pelatutpelit','19');
+  ?>
+    </div>
+  </div>
+
+  <!-- Voitetut pelit -->
+  <div class="wonGames title">
+    <h1> Voitetut pelit</h1>
+    <div class="infoNumber">
+  <?php
+  echo databaseQuery('Joukkueet','Voitetutpelit','19');
+  ?>
+    </div>
+  </div>
+
+  <!-- tasapelit -->
+  <div class="drawGames title">
+    <h1> Tasapelit</h1>
+    <div class="infoNumber">
+  <?php
+  echo databaseQuery('Joukkueet','Tasapelit','19');
+  ?>
+    </div>
+  </div>
+
+  <!-- Havityt pelit -->
+  <div class="lostGames title">
+    <h1> Havityt pelit</h1>
+    <div class="infoNumber">
+  <?php
+  echo databaseQuery('Joukkueet','Havitytpelit','19');
+  ?>
+    </div>
+  </div>
+
+  <!-- Tehdyt maalit -->
+  <div class="totalGoals title">
+    <h1> Tehdyt Maalit</h1>
+    <div class="infoNumber">
+  <?php
+  echo databaseQuery('Joukkueet','TehdytMaalit','19');
+  ?>
+    </div>
+  </div>
+
+  <!-- Pisteet -->
+  <div class="points title">
+    <h1> Pisteet</h1>
+    <div class="infoNumber">
+  <?php
+  echo databaseQuery('Joukkueet','Pisteet','19');
+  ?>
+    </div>
+  </div>
+
+  <!-- Päästetyt Maalit -->
+  <div class="totalGoals2 title">
+    <h1> Päästetyt Maalit</h1>
+    <div class="infoNumber">
+  <?php
+  echo databaseQuery('Joukkueet','PaastetytMaalit','19');
+  ?>
+    </div>
+  </div>
+
+  <div class="moreInfo"  onclick="playerCardBelfica()">
+    <h1> Lisätietoa </h1>
+  </div>
+</div>
+
+<div class="teamInfoBox">
+
+<div class="teamLogo">
+   <img src="aek.png" style="width:100px;height:100px;">
+</div>
+
+<div class="teamName">
+<?php
+echo databaseQuery('Joukkueet','Nimi','20');
+?>
+</div>
+
+<!-- Pelatut pelit -->
+<div class="playedGames title">
+  <h1> Pelatut pelit</h1>
+  <div class="infoNumber">
+<?php
+echo databaseQuery('Joukkueet','Pelatutpelit','20');
+?>
+  </div>
+</div>
+
+<!-- Voitetut pelit -->
+<div class="wonGames title">
+  <h1> Voitetut pelit</h1>
+  <div class="infoNumber">
+<?php
+echo databaseQuery('Joukkueet','Voitetutpelit','20');
+?>
+  </div>
+</div>
+
+<!-- tasapelit -->
+<div class="drawGames title">
+  <h1> Tasapelit</h1>
+  <div class="infoNumber">
+<?php
+echo databaseQuery('Joukkueet','Tasapelit','20');
+?>
+  </div>
+</div>
+
+<!-- Havityt pelit -->
+<div class="lostGames title">
+  <h1> Havityt pelit</h1>
+  <div class="infoNumber">
+<?php
+echo databaseQuery('Joukkueet','Havitytpelit','20');
+?>
+  </div>
+</div>
+
+<!-- Tehdyt maalit -->
+<div class="totalGoals title">
+  <h1> Tehdyt Maalit</h1>
+  <div class="infoNumber">
+<?php
+echo databaseQuery('Joukkueet','TehdytMaalit','20');
+?>
+  </div>
+</div>
+
+<!-- Pisteet -->
+<div class="points title">
+  <h1> Pisteet</h1>
+  <div class="infoNumber">
+<?php
+echo databaseQuery('Joukkueet','Pisteet','20');
+?>
+  </div>
+</div>
+
+<!-- Päästetyt Maalit -->
+<div class="totalGoals2 title">
+  <h1> Päästetyt Maalit</h1>
+  <div class="infoNumber">
+<?php
+echo databaseQuery('Joukkueet','PaastetytMaalit','20');
+?>
+  </div>
+</div>
+
+<div class="moreInfo"  onclick="playerCardBelfica()">
+  <h1> Lisätietoa </h1>
+</div>
+</div>
+</div>
+
+<!-- F-lohko -->
+
+<div id="teamInfoBoxWrapperF">
+
+  <div class="teamInfoBox">
+
+    <div class="teamLogo">
+       <img src="manchester_city.png" style="width:100px;height:100px;">
+    </div>
+
+    <div class="teamName">
+    <?php
+    echo databaseQuery('Joukkueet','Nimi','21');
+    ?>
+    </div>
+
+    <!-- Pelatut pelit -->
+    <div class="playedGames title">
+      <h1> Pelatut pelit</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','Pelatutpelit','21');
+    ?>
+      </div>
+    </div>
+
+    <!-- Voitetut pelit -->
+    <div class="wonGames title">
+      <h1> Voitetut pelit</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','Voitetutpelit','21');
+    ?>
+      </div>
+    </div>
+
+    <!-- tasapelit -->
+    <div class="drawGames title">
+      <h1> Tasapelit</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','Tasapelit','21');
+    ?>
+      </div>
+    </div>
+
+    <!-- Havityt pelit -->
+    <div class="lostGames title">
+      <h1> Havityt pelit</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','Havitytpelit','21');
+    ?>
+      </div>
+    </div>
+
+    <!-- Tehdyt maalit -->
+    <div class="totalGoals title">
+      <h1> Tehdyt Maalit</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','TehdytMaalit','21');
+    ?>
+      </div>
+    </div>
+
+    <!-- Pisteet -->
+    <div class="points title">
+      <h1> Pisteet</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','Pisteet','21');
+    ?>
+      </div>
+    </div>
+
+    <!-- Päästetyt Maalit -->
+    <div class="totalGoals2 title">
+      <h1> Päästetyt Maalit</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','PaastetytMaalit','21');
+    ?>
+      </div>
+    </div>
+
+    <div class="moreInfo"  onclick="playerCardBelfica()">
+      <h1> Lisätietoa </h1>
+    </div>
+  </div>
+
+  <div class="teamInfoBox">
+
+    <div class="teamLogo">
+       <img src="lyon.png" style="width:100px;height:100px;">
+    </div>
+
+    <div class="teamName">
+    <?php
+    echo databaseQuery('Joukkueet','Nimi','22');
+    ?>
+    </div>
+
+    <!-- Pelatut pelit -->
+    <div class="playedGames title">
+      <h1> Pelatut pelit</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','Pelatutpelit','22');
+    ?>
+      </div>
+    </div>
+
+    <!-- Voitetut pelit -->
+    <div class="wonGames title">
+      <h1> Voitetut pelit</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','Voitetutpelit','22');
+    ?>
+      </div>
+    </div>
+
+    <!-- tasapelit -->
+    <div class="drawGames title">
+      <h1> Tasapelit</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','Tasapelit','22');
+    ?>
+      </div>
+    </div>
+
+    <!-- Havityt pelit -->
+    <div class="lostGames title">
+      <h1> Havityt pelit</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','Havitytpelit','22');
+    ?>
+      </div>
+    </div>
+
+    <!-- Tehdyt maalit -->
+    <div class="totalGoals title">
+      <h1> Tehdyt Maalit</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','TehdytMaalit','22');
+    ?>
+      </div>
+    </div>
+
+    <!-- Pisteet -->
+    <div class="points title">
+      <h1> Pisteet</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','Pisteet','22');
+    ?>
+      </div>
+    </div>
+
+    <!-- Päästetyt Maalit -->
+    <div class="totalGoals2 title">
+      <h1> Päästetyt Maalit</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','PaastetytMaalit','22');
+    ?>
+      </div>
+    </div>
+
+    <div class="moreInfo"  onclick="playerCardBelfica()">
+      <h1> Lisätietoa </h1>
+    </div>
+  </div>
+
+  <div class="teamInfoBox">
+
+  <div class="teamLogo">
+     <img src="hoffenheim.png" style="width:100px;height:100px;">
+  </div>
+
+  <div class="teamName">
+  <?php
+  echo databaseQuery('Joukkueet','Nimi','23');
+  ?>
+  </div>
+
+  <!-- Pelatut pelit -->
+  <div class="playedGames title">
+    <h1> Pelatut pelit</h1>
+    <div class="infoNumber">
+  <?php
+  echo databaseQuery('Joukkueet','Pelatutpelit','23');
+  ?>
+    </div>
+  </div>
+
+  <!-- Voitetut pelit -->
+  <div class="wonGames title">
+    <h1> Voitetut pelit</h1>
+    <div class="infoNumber">
+  <?php
+  echo databaseQuery('Joukkueet','Voitetutpelit','23');
+  ?>
+    </div>
+  </div>
+
+  <!-- tasapelit -->
+  <div class="drawGames title">
+    <h1> Tasapelit</h1>
+    <div class="infoNumber">
+  <?php
+  echo databaseQuery('Joukkueet','Tasapelit','23');
+  ?>
+    </div>
+  </div>
+
+  <!-- Havityt pelit -->
+  <div class="lostGames title">
+    <h1> Havityt pelit</h1>
+    <div class="infoNumber">
+  <?php
+  echo databaseQuery('Joukkueet','Havitytpelit','23');
+  ?>
+    </div>
+  </div>
+
+  <!-- Tehdyt maalit -->
+  <div class="totalGoals title">
+    <h1> Tehdyt Maalit</h1>
+    <div class="infoNumber">
+  <?php
+  echo databaseQuery('Joukkueet','TehdytMaalit','23');
+  ?>
+    </div>
+  </div>
+
+  <!-- Pisteet -->
+  <div class="points title">
+    <h1> Pisteet</h1>
+    <div class="infoNumber">
+  <?php
+  echo databaseQuery('Joukkueet','Pisteet','23');
+  ?>
+    </div>
+  </div>
+
+  <!-- Päästetyt Maalit -->
+  <div class="totalGoals2 title">
+    <h1> Päästetyt Maalit</h1>
+    <div class="infoNumber">
+  <?php
+  echo databaseQuery('Joukkueet','PaastetytMaalit','23');
+  ?>
+    </div>
+  </div>
+
+  <div class="moreInfo"  onclick="playerCardBelfica()">
+    <h1> Lisätietoa </h1>
+  </div>
+</div>
+<div class="teamInfoBox">
+
+<div class="teamLogo">
+   <img src="shakhtar.png" style="width:100px;height:100px;">
+</div>
+
+<div class="teamName">
+<?php
+echo databaseQuery('Joukkueet','Nimi','24');
+?>
+</div>
+
+<!-- Pelatut pelit -->
+<div class="playedGames title">
+  <h1> Pelatut pelit</h1>
+  <div class="infoNumber">
+<?php
+echo databaseQuery('Joukkueet','Pelatutpelit','24');
+?>
+  </div>
+</div>
+
+<!-- Voitetut pelit -->
+<div class="wonGames title">
+  <h1> Voitetut pelit</h1>
+  <div class="infoNumber">
+<?php
+echo databaseQuery('Joukkueet','Voitetutpelit','24');
+?>
+  </div>
+</div>
+
+<!-- tasapelit -->
+<div class="drawGames title">
+  <h1> Tasapelit</h1>
+  <div class="infoNumber">
+<?php
+echo databaseQuery('Joukkueet','Tasapelit','24');
+?>
+  </div>
+</div>
+
+<!-- Havityt pelit -->
+<div class="lostGames title">
+  <h1> Havityt pelit</h1>
+  <div class="infoNumber">
+<?php
+echo databaseQuery('Joukkueet','Havitytpelit','24');
+?>
+  </div>
+</div>
+
+<!-- Tehdyt maalit -->
+<div class="totalGoals title">
+  <h1> Tehdyt Maalit</h1>
+  <div class="infoNumber">
+<?php
+echo databaseQuery('Joukkueet','TehdytMaalit','24');
+?>
+  </div>
+</div>
+
+<!-- Pisteet -->
+<div class="points title">
+  <h1> Pisteet</h1>
+  <div class="infoNumber">
+<?php
+echo databaseQuery('Joukkueet','Pisteet','24');
+?>
+  </div>
+</div>
+
+<!-- Päästetyt Maalit -->
+<div class="totalGoals2 title">
+  <h1> Päästetyt Maalit</h1>
+  <div class="infoNumber">
+<?php
+echo databaseQuery('Joukkueet','PaastetytMaalit','24');
+?>
+  </div>
+</div>
+
+<div class="moreInfo"  onclick="playerCardBelfica()">
+  <h1> Lisätietoa </h1>
+</div>
+</div>
+</div>
+
+<!-- G-lohko -->
+
+<div id="teamInfoBoxWrapperG">
+
+  <div class="teamInfoBox">
+
+    <div class="teamLogo">
+       <img src="madrid.png" style="width:100px;height:100px;">
+    </div>
+
+    <div class="teamName">
+    <?php
+    echo databaseQuery('Joukkueet','Nimi','25');
+    ?>
+    </div>
+
+    <!-- Pelatut pelit -->
+    <div class="playedGames title">
+      <h1> Pelatut pelit</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','Pelatutpelit','25');
+    ?>
+      </div>
+    </div>
+
+    <!-- Voitetut pelit -->
+    <div class="wonGames title">
+      <h1> Voitetut pelit</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','Voitetutpelit','25');
+    ?>
+      </div>
+    </div>
+
+    <!-- tasapelit -->
+    <div class="drawGames title">
+      <h1> Tasapelit</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','Tasapelit','25');
+    ?>
+      </div>
+    </div>
+
+    <!-- Havityt pelit -->
+    <div class="lostGames title">
+      <h1> Havityt pelit</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','Havitytpelit','25');
+    ?>
+      </div>
+    </div>
+
+    <!-- Tehdyt maalit -->
+    <div class="totalGoals title">
+      <h1> Tehdyt Maalit</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','TehdytMaalit','25');
+    ?>
+      </div>
+    </div>
+
+    <!-- Pisteet -->
+    <div class="points title">
+      <h1> Pisteet</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','Pisteet','25');
+    ?>
+      </div>
+    </div>
+
+    <!-- Päästetyt Maalit -->
+    <div class="totalGoals2 title">
+      <h1> Päästetyt Maalit</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','PaastetytMaalit','25');
+    ?>
+      </div>
+    </div>
+
+    <div class="moreInfo"  onclick="playerCardBelfica()">
+      <h1> Lisätietoa </h1>
+    </div>
+  </div>
+
+<<<<<<< HEAD
     <!-- Tehdyt maalit  -->
 
      <div class="totalGoals title">
@@ -4006,11 +6354,18 @@ echo databaseQuery('Joukkueet','PaastetytMaalit','24');
 =======
   <div class="teamInfoBox">
 
+=======
+  <div class="teamInfoBox">
+
+>>>>>>> 03e96022ebd532a9849fae32de0241b448cb5acd
     <div class="teamLogo">
        <img src="roma.png" style="width:100px;height:100px;">
     </div>
 
     <div class="teamName">
+<<<<<<< HEAD
+>>>>>>> 03e96022ebd532a9849fae32de0241b448cb5acd
+=======
 >>>>>>> 03e96022ebd532a9849fae32de0241b448cb5acd
     <?php
     echo databaseQuery('Joukkueet','Nimi','26');
@@ -4069,6 +6424,7 @@ echo databaseQuery('Joukkueet','PaastetytMaalit','24');
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div class="title">
         <h1> Pisteet</h1>
         <div class="infoNumber">
@@ -4085,6 +6441,8 @@ echo databaseQuery('Joukkueet','PaastetytMaalit','24');
 =======
 =======
 >>>>>>> 03e96022ebd532a9849fae32de0241b448cb5acd
+=======
+>>>>>>> 03e96022ebd532a9849fae32de0241b448cb5acd
     <!-- Pisteet -->
     <div class="points title">
       <h1> Pisteet</h1>
@@ -4093,6 +6451,7 @@ echo databaseQuery('Joukkueet','PaastetytMaalit','24');
     echo databaseQuery('Joukkueet','Pisteet','26');
     ?>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 551a58b866ca2a0771408916e88ff8a8708b0825
     </div>
@@ -4156,6 +6515,42 @@ echo databaseQuery('Joukkueet','PaastetytMaalit','24');
     <div class="infoNumber">
   <?php
   echo databaseQuery('Joukkueet','Pelatutpelit','27');
+=======
+    </div>
+
+    <!-- Päästetyt Maalit -->
+    <div class="totalGoals2 title">
+      <h1> Päästetyt Maalit</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','PaastetytMaalit','26');
+    ?>
+      </div>
+    </div>
+
+    <div class="moreInfo"  onclick="playerCardBelfica()">
+      <h1> Lisätietoa </h1>
+    </div>
+  </div>
+
+  <div class="teamInfoBox">
+
+  <div class="teamLogo">
+     <img src="cska_movska.png" style="width:100px;height:100px;">
+  </div>
+
+  <div class="teamName">
+  <?php
+  echo databaseQuery('Joukkueet','Nimi','27');
+  ?>
+  </div>
+
+  <!-- Pelatut pelit -->
+  <div class="playedGames title">
+    <h1> Pelatut pelit</h1>
+    <div class="infoNumber">
+  <?php
+  echo databaseQuery('Joukkueet','Pelatutpelit','27');
   ?>
     </div>
   </div>
@@ -4186,10 +6581,69 @@ echo databaseQuery('Joukkueet','PaastetytMaalit','24');
     <div class="infoNumber">
   <?php
   echo databaseQuery('Joukkueet','Havitytpelit','27');
+>>>>>>> 03e96022ebd532a9849fae32de0241b448cb5acd
   ?>
     </div>
   </div>
 
+<<<<<<< HEAD
+  <!-- Voitetut pelit -->
+  <div class="wonGames title">
+    <h1> Voitetut pelit</h1>
+    <div class="infoNumber">
+  <?php
+  echo databaseQuery('Joukkueet','Voitetutpelit','27');
+=======
+  <!-- Tehdyt maalit -->
+  <div class="totalGoals title">
+    <h1> Tehdyt Maalit</h1>
+    <div class="infoNumber">
+  <?php
+  echo databaseQuery('Joukkueet','TehdytMaalit','27');
+>>>>>>> 03e96022ebd532a9849fae32de0241b448cb5acd
+  ?>
+    </div>
+  </div>
+
+<<<<<<< HEAD
+  <!-- tasapelit -->
+  <div class="drawGames title">
+    <h1> Tasapelit</h1>
+    <div class="infoNumber">
+  <?php
+  echo databaseQuery('Joukkueet','Tasapelit','27');
+=======
+  <!-- Pisteet -->
+  <div class="points title">
+    <h1> Pisteet</h1>
+    <div class="infoNumber">
+  <?php
+  echo databaseQuery('Joukkueet','Pisteet','27');
+>>>>>>> 03e96022ebd532a9849fae32de0241b448cb5acd
+  ?>
+    </div>
+  </div>
+
+<<<<<<< HEAD
+  <!-- Havityt pelit -->
+  <div class="lostGames title">
+    <h1> Havityt pelit</h1>
+    <div class="infoNumber">
+  <?php
+  echo databaseQuery('Joukkueet','Havitytpelit','27');
+=======
+  <!-- Päästetyt Maalit -->
+  <div class="totalGoals2 title">
+    <h1> Päästetyt Maalit</h1>
+    <div class="infoNumber">
+  <?php
+  echo databaseQuery('Joukkueet','PaastetytMaalit','27');
+>>>>>>> 03e96022ebd532a9849fae32de0241b448cb5acd
+  ?>
+    </div>
+  </div>
+
+<<<<<<< HEAD
   <!-- Tehdyt maalit -->
   <div class="totalGoals title">
     <h1> Tehdyt Maalit</h1>
@@ -4263,6 +6717,40 @@ echo databaseQuery('Joukkueet','Pelatutpelit','28');
   <div class="infoNumber">
 <?php
 echo databaseQuery('Joukkueet','Voitetutpelit','28');
+=======
+  <div class="moreInfo"  onclick="playerCardBelfica()">
+    <h1> Lisätietoa </h1>
+  </div>
+</div>
+
+<div class="teamInfoBox">
+
+<div class="teamLogo">
+   <img src="plzen.png" style="width:100px;height:100px;">
+</div>
+
+<div class="teamName">
+<?php
+echo databaseQuery('Joukkueet','Nimi','28');
+?>
+</div>
+
+<!-- Pelatut pelit -->
+<div class="playedGames title">
+  <h1> Pelatut pelit</h1>
+  <div class="infoNumber">
+<?php
+echo databaseQuery('Joukkueet','Pelatutpelit','28');
+?>
+  </div>
+</div>
+
+<!-- Voitetut pelit -->
+<div class="wonGames title">
+  <h1> Voitetut pelit</h1>
+  <div class="infoNumber">
+<?php
+echo databaseQuery('Joukkueet','Voitetutpelit','28');
 ?>
   </div>
 </div>
@@ -4273,10 +6761,31 @@ echo databaseQuery('Joukkueet','Voitetutpelit','28');
   <div class="infoNumber">
 <?php
 echo databaseQuery('Joukkueet','Tasapelit','28');
+>>>>>>> 03e96022ebd532a9849fae32de0241b448cb5acd
 ?>
   </div>
 </div>
 
+<<<<<<< HEAD
+<!-- tasapelit -->
+<div class="drawGames title">
+  <h1> Tasapelit</h1>
+  <div class="infoNumber">
+<?php
+echo databaseQuery('Joukkueet','Tasapelit','28');
+=======
+<!-- Havityt pelit -->
+<div class="lostGames title">
+  <h1> Havityt pelit</h1>
+  <div class="infoNumber">
+<?php
+echo databaseQuery('Joukkueet','Havitytpelit','28');
+>>>>>>> 03e96022ebd532a9849fae32de0241b448cb5acd
+?>
+  </div>
+</div>
+
+<<<<<<< HEAD
 <!-- Havityt pelit -->
 <div class="lostGames title">
   <h1> Havityt pelit</h1>
@@ -4287,6 +6796,8 @@ echo databaseQuery('Joukkueet','Havitytpelit','28');
   </div>
 </div>
 
+=======
+>>>>>>> 03e96022ebd532a9849fae32de0241b448cb5acd
 <!-- Tehdyt maalit -->
 <div class="totalGoals title">
   <h1> Tehdyt Maalit</h1>
@@ -4328,6 +6839,7 @@ echo databaseQuery('Joukkueet','PaastetytMaalit','28');
 <div id="teamInfoBoxWrapperH">
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   <div class="teamInfoBox" id="juventusBox">
 
     <div class="teamLogo" id="juventusLogo">
@@ -4335,6 +6847,15 @@ echo databaseQuery('Joukkueet','PaastetytMaalit','28');
     </div>
 
     <div class="teamName" id="juventusName">
+=======
+  <div class="teamInfoBox">
+
+    <div class="teamLogo">
+       <img src="juventus.png" style="width:100px;height:100px;">
+    </div>
+
+    <div class="teamName">
+>>>>>>> 03e96022ebd532a9849fae32de0241b448cb5acd
 =======
   <div class="teamInfoBox">
 
@@ -4425,6 +6946,7 @@ echo databaseQuery('Joukkueet','PaastetytMaalit','28');
   </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   <div class="teamInfoBox" id="manUnBox">
 
     <div class="teamLogo" id="manUnLogo">
@@ -4432,6 +6954,15 @@ echo databaseQuery('Joukkueet','PaastetytMaalit','28');
     </div>
 
     <div class="teamName" id="manUnName">
+=======
+  <div class="teamInfoBox">
+
+    <div class="teamLogo">
+       <img src="manchester_united.png" style="width:100px;height:100px;">
+    </div>
+
+    <div class="teamName">
+>>>>>>> 03e96022ebd532a9849fae32de0241b448cb5acd
 =======
   <div class="teamInfoBox">
 
@@ -4520,6 +7051,7 @@ echo databaseQuery('Joukkueet','PaastetytMaalit','28');
       <h1> Lisätietoa </h1>
     </div>
   </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   <div class="teamInfoBox" id="valenciaBox">
@@ -4660,6 +7192,128 @@ echo databaseQuery('Joukkueet','Voitetutpelit','32');
   </div>
 </div>
 
+=======
+
+  <div class="teamInfoBox">
+
+  <div class="teamLogo">
+     <img src="valencia.png" style="width:100px;height:100px;">
+  </div>
+
+  <div class="teamName">
+  <?php
+  echo databaseQuery('Joukkueet','Nimi','31');
+  ?>
+  </div>
+
+  <!-- Pelatut pelit -->
+  <div class="playedGames title">
+    <h1> Pelatut pelit</h1>
+    <div class="infoNumber">
+  <?php
+  echo databaseQuery('Joukkueet','Pelatutpelit','31');
+  ?>
+    </div>
+  </div>
+
+  <!-- Voitetut pelit -->
+  <div class="wonGames title">
+    <h1> Voitetut pelit</h1>
+    <div class="infoNumber">
+  <?php
+  echo databaseQuery('Joukkueet','Voitetutpelit','31');
+  ?>
+    </div>
+  </div>
+
+  <!-- tasapelit -->
+  <div class="drawGames title">
+    <h1> Tasapelit</h1>
+    <div class="infoNumber">
+  <?php
+  echo databaseQuery('Joukkueet','Tasapelit','31');
+  ?>
+    </div>
+  </div>
+
+  <!-- Havityt pelit -->
+  <div class="lostGames title">
+    <h1> Havityt pelit</h1>
+    <div class="infoNumber">
+  <?php
+  echo databaseQuery('Joukkueet','Havitytpelit','31');
+  ?>
+    </div>
+  </div>
+
+  <!-- Tehdyt maalit -->
+  <div class="totalGoals title">
+    <h1> Tehdyt Maalit</h1>
+    <div class="infoNumber">
+  <?php
+  echo databaseQuery('Joukkueet','TehdytMaalit','31');
+  ?>
+    </div>
+  </div>
+
+  <!-- Pisteet -->
+  <div class="points title">
+    <h1> Pisteet</h1>
+    <div class="infoNumber">
+  <?php
+  echo databaseQuery('Joukkueet','Pisteet','31');
+  ?>
+    </div>
+  </div>
+
+  <!-- Päästetyt Maalit -->
+  <div class="totalGoals2 title">
+    <h1> Päästetyt Maalit</h1>
+    <div class="infoNumber">
+  <?php
+  echo databaseQuery('Joukkueet','PaastetytMaalit','31');
+  ?>
+    </div>
+  </div>
+
+  <div class="moreInfo"  onclick="playerCardBelfica()">
+    <h1> Lisätietoa </h1>
+  </div>
+</div>
+
+<div class="teamInfoBox">
+
+<div class="teamLogo">
+   <img src="young_boys.png" style="width:100px;height:100px;">
+</div>
+
+<div class="teamName">
+<?php
+echo databaseQuery('Joukkueet','Nimi','32');
+?>
+</div>
+
+<!-- Pelatut pelit -->
+<div class="playedGames title">
+  <h1> Pelatut pelit</h1>
+  <div class="infoNumber">
+<?php
+echo databaseQuery('Joukkueet','Pelatutpelit','32');
+?>
+  </div>
+</div>
+
+<!-- Voitetut pelit -->
+<div class="wonGames title">
+  <h1> Voitetut pelit</h1>
+  <div class="infoNumber">
+<?php
+echo databaseQuery('Joukkueet','Voitetutpelit','32');
+?>
+  </div>
+</div>
+
+>>>>>>> 03e96022ebd532a9849fae32de0241b448cb5acd
 <!-- tasapelit -->
 <div class="drawGames title">
   <h1> Tasapelit</h1>
