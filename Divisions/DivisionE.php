@@ -70,22 +70,22 @@
       </div>
     </div>
 
-    <!-- Pisteet -->
-    <div class="points title">
-      <h1> Pisteet</h1>
-      <div class="infoNumber">
-    <?php
-    echo databaseQuery('Joukkueet','Pisteet','17');
-    ?>
-      </div>
-    </div>
-
     <!-- Päästetyt Maalit -->
     <div class="totalGoals2 title">
       <h1> Päästetyt Maalit</h1>
       <div class="infoNumber">
     <?php
     echo databaseQuery('Joukkueet','PaastetytMaalit','17');
+    ?>
+      </div>
+    </div>
+
+    <!-- Pisteet -->
+    <div class="points title">
+      <h1> Pisteet</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','Pisteet','17');
     ?>
       </div>
     </div>
@@ -157,22 +157,22 @@
       </div>
     </div>
 
-    <!-- Pisteet -->
-    <div class="points title">
-      <h1> Pisteet</h1>
-      <div class="infoNumber">
-    <?php
-    echo databaseQuery('Joukkueet','Pisteet','18');
-    ?>
-      </div>
-    </div>
-
     <!-- Päästetyt Maalit -->
     <div class="totalGoals2 title">
       <h1> Päästetyt Maalit</h1>
       <div class="infoNumber">
     <?php
     echo databaseQuery('Joukkueet','PaastetytMaalit','18');
+    ?>
+      </div>
+    </div>
+
+    <!-- Pisteet -->
+    <div class="points title">
+      <h1> Pisteet</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','Pisteet','18');
     ?>
       </div>
     </div>
@@ -244,22 +244,22 @@
     </div>
   </div>
 
-  <!-- Pisteet -->
-  <div class="points title">
-    <h1> Pisteet</h1>
-    <div class="infoNumber">
-  <?php
-  echo databaseQuery('Joukkueet','Pisteet','19');
-  ?>
-    </div>
-  </div>
-
   <!-- Päästetyt Maalit -->
   <div class="totalGoals2 title">
     <h1> Päästetyt Maalit</h1>
     <div class="infoNumber">
   <?php
   echo databaseQuery('Joukkueet','PaastetytMaalit','19');
+  ?>
+    </div>
+  </div>
+
+  <!-- Pisteet -->
+  <div class="points title">
+    <h1> Pisteet</h1>
+    <div class="infoNumber">
+  <?php
+  echo databaseQuery('Joukkueet','Pisteet','19');
   ?>
     </div>
   </div>
@@ -331,22 +331,22 @@ echo databaseQuery('Joukkueet','TehdytMaalit','20');
   </div>
 </div>
 
-<!-- Pisteet -->
-<div class="points title">
-  <h1> Pisteet</h1>
-  <div class="infoNumber">
-<?php
-echo databaseQuery('Joukkueet','Pisteet','20');
-?>
-  </div>
-</div>
-
 <!-- Päästetyt Maalit -->
 <div class="totalGoals2 title">
   <h1> Päästetyt Maalit</h1>
   <div class="infoNumber">
 <?php
 echo databaseQuery('Joukkueet','PaastetytMaalit','20');
+?>
+  </div>
+</div>
+
+<!-- Pisteet -->
+<div class="points title">
+  <h1> Pisteet</h1>
+  <div class="infoNumber">
+<?php
+echo databaseQuery('Joukkueet','Pisteet','20');
 ?>
   </div>
 </div>

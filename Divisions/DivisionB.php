@@ -9,7 +9,7 @@
 
 <div id="teamInfoBoxWrapperB">
  <!-- Joukkue 1 -->
- 
+
  <div class="teamInfoBox">
 
     <div class="teamLogo">
@@ -72,16 +72,6 @@
       </div>
     </div>
 
-    <!-- Pisteet -->
-    <div class="points title">
-      <h1> Pisteet</h1>
-      <div class="infoNumber">
-    <?php
-    echo databaseQuery('Joukkueet','Pisteet','5');
-    ?>
-      </div>
-    </div>
-
     <!-- Päästetyt Maalit -->
     <div class="totalGoals2 title">
       <h1> Päästetyt Maalit</h1>
@@ -92,13 +82,23 @@
       </div>
     </div>
 
+    <!-- Pisteet -->
+    <div class="points title">
+      <h1> Pisteet</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','Pisteet','5');
+    ?>
+      </div>
+    </div>
+
     <div class="moreInfo"  onclick="playerCardBelfica()">
       <h1> Lisätietoa </h1>
     </div>
   </div>
-  
+
   <!-- Joukkue 2 -->
-  
+
    <div class="teamInfoBox">
 
     <div class="teamLogo">
@@ -161,16 +161,6 @@
       </div>
     </div>
 
-    <!-- Pisteet -->
-    <div class="points title">
-      <h1> Pisteet</h1>
-      <div class="infoNumber">
-    <?php
-    echo databaseQuery('Joukkueet','Pisteet','6');
-    ?>
-      </div>
-    </div>
-
     <!-- Päästetyt Maalit -->
     <div class="totalGoals2 title">
       <h1> Päästetyt Maalit</h1>
@@ -181,13 +171,23 @@
       </div>
     </div>
 
+    <!-- Pisteet -->
+    <div class="points title">
+      <h1> Pisteet</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','Pisteet','6');
+    ?>
+      </div>
+    </div>
+
     <div class="moreInfo"  onclick="playerCardBelfica()">
       <h1> Lisätietoa </h1>
     </div>
   </div>
-  
+
   <!-- Joukkue 3 -->
-  
+
    <div class="teamInfoBox">
 
     <div class="teamLogo">
@@ -250,16 +250,6 @@
       </div>
     </div>
 
-    <!-- Pisteet -->
-    <div class="points title">
-      <h1> Pisteet</h1>
-      <div class="infoNumber">
-    <?php
-    echo databaseQuery('Joukkueet','Pisteet','7');
-    ?>
-      </div>
-    </div>
-
     <!-- Päästetyt Maalit -->
     <div class="totalGoals2 title">
       <h1> Päästetyt Maalit</h1>
@@ -270,13 +260,23 @@
       </div>
     </div>
 
+    <!-- Pisteet -->
+    <div class="points title">
+      <h1> Pisteet</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','Pisteet','7');
+    ?>
+      </div>
+    </div>
+
     <div class="moreInfo"  onclick="playerCardBelfica()">
       <h1> Lisätietoa </h1>
     </div>
   </div>
-  
+
   <!-- Joukkue 4 -->
-  
+
    <div class="teamInfoBox">
 
     <div class="teamLogo">
@@ -339,16 +339,6 @@
       </div>
     </div>
 
-    <!-- Pisteet -->
-    <div class="points title">
-      <h1> Pisteet</h1>
-      <div class="infoNumber">
-    <?php
-    echo databaseQuery('Joukkueet','Pisteet','8');
-    ?>
-      </div>
-    </div>
-
     <!-- Päästetyt Maalit -->
     <div class="totalGoals2 title">
       <h1> Päästetyt Maalit</h1>
@@ -359,10 +349,20 @@
       </div>
     </div>
 
+    <!-- Pisteet -->
+    <div class="points title">
+      <h1> Pisteet</h1>
+      <div class="infoNumber">
+    <?php
+    echo databaseQuery('Joukkueet','Pisteet','8');
+    ?>
+      </div>
+    </div>
+
     <div class="moreInfo"  onclick="playerCardBelfica()">
       <h1> Lisätietoa </h1>
     </div>
   </div>
-  
+
 
 </div> <!-- end of teaminfoboxwrapper -->
