@@ -121,7 +121,7 @@ body {
 .teamInfoBox {
     background-color: gray;
     margin-top:5%;
-    padding:6%;
+    padding: 1%;
     padding-left:100px;
     height: 600px;
     width: 100%;
@@ -152,15 +152,18 @@ h2 {
 }
 
 .title {
-    margin-top: 10px;
-     float:left;
+    margin-top: 50px;
+    margin-right: 4%;
+    float:left;
     font-weight: bold;
 }
 
 .infoNumber {
     font-size:50px;
     font-weight: bold;
+    text-align: center;
 }
+
 
 
 
@@ -214,8 +217,8 @@ h2 {
 
 .moreInfo {
       margin:0;
-      margin-top:400px;
-      margin-left: 20%;
+      margin-top:375px;
+      margin-left: 39%;
       max-width: 160px;
 }
 
