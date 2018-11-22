@@ -1,0 +1,171 @@
+
+@media only screen and (max-width: 1895px) {
+  .wonGames {
+      margin-left:-80px;
+  }
+
+  .playedGames {
+}
+
+.drawGames {
+   margin-left: 1%;
+}
+
+.lostGames {
+     margin-left: 1%;
+}
+
+.totalGoals {
+    margin-left: 1%;
+}
+
+.totalGoals2 {
+ margin-left: 1%;
+}
+
+.points {
+  margin-left: 1%;
+}
+}
+
+@media only screen and (max-width: 1650px) {
+
+.teamInfoBox img {
+    display:none;
+}
+
+.playerInfo  {
+    margin:0;
+    margin-top:10%;
+    margin-left:2%;
+}
+}
+
+@media only screen and (max-width: 1630px) {
+     .playerInfo {
+       font-size: 30px;
+       margin-top:0;
+    }
+
+    .teamInfoBox {
+        height:auto;
+    }
+
+   h1 {
+        font-size: 30px !important;
+    }
+
+    img {
+        width: 125px !important;
+        height: 150px !important;
+    }
+
+     .teamInfoBox img {
+         display: none;
+     }
+.teamInfoBox {
+   min-height: 300px;
+}
+
+.moreInfo {
+        margin-top: 100px;
+}
+
+    .infoNumber {
+        font-size: 30px !important;
+    }
+
+    .card {
+        height: 50px !important;
+        width: 50px !important;
+        margin:0 !important;
+    }
+
+   p {
+       font-size: 80px !important;
+   }
+
+   #header1 {
+       margin-left: 16%;
+   }
+}
+
+@media only screen and (max-width: 1525px) {
+    .playerInfo {
+    }
+}
+
+@media only screen and (max-width: 1430px) {
+
+    #adminForm {
+        padding-left:3%;
+    }
+
+    .title {
+        float:left;
+    }
+}
+
+@media only screen and (max-width: 1320px) {
+  .teamInfoBox {
+      padding:0;
+      max-width: 600px;
+      height:auto;
+      margin-left:25%;
+  }
+  .title {
+      float:none;
+      margin:0;
+      clear:both;
+  }
+
+  #baselBox {
+    padding-left:5%;
+}
+
+#baselName {
+    margin-left:0;
+}
+
+#moskvaBox {
+    padding-left:5%;
+}
+
+#movskaName {
+    margin-left:0;
+}
+
+#movskaInfo {
+    margin-left:100px;
+}
+
+#manInfo {
+    margin-left:-20px;
+}
+
+#benficaBox {
+padding-left: 5%;
+}
+
+#benficaName {
+    margin-left:0;
+}
+}
+
+@media only screen and (max-width: 1102px) {
+
+     p {
+       font-size: 60px !important;
+   }
+
+   #popUp {
+       height:150px !important;
+   }
+}
+
+@media only screen and (max-width: 725px) {
+
+ #header1 {
+       margin-left: 2% !important;
+   }
+}
