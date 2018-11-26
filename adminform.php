@@ -55,11 +55,11 @@
   <br>
   <label>Maalien määrä pelissä</label>
   <br>
-  <input class ="adminInputNumberField" name = "input1" type="number" min="0">
+  <input id="numberOfGoals" class ="adminInputNumberField" onchange="addGoalScorer()" name = "input1" type="number" min="0">
   <br>
   <br>
 
-<div class="goalScorer">
+<div id="goalScorerDiv">
   <hr>
   <h1>Maalintekijä</h1>
 

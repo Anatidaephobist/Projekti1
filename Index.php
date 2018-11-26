@@ -301,6 +301,16 @@ function checkTeam() {
 
 }
 
+document.getElementsByName("input1")[1].addEventListener('change', addGoalScorer());
+
+function addGoalScorer() {
+  if (document.getElementById("numberOfGoals").value == 1 ) {
+    document.getElementById('goalScorerDiv').style.display = "block";
+  } else {
+    return;
+  }
+}
+
 function areYouSure() {
     document.getElementById("popUp4").style.display = "block";
      document.getElementById("popUp3").style.display = "none";

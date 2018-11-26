@@ -147,6 +147,10 @@ body {
 max-width: 60px;
 
 }
+#goalScorerDiv {
+display: none;
+
+}
 
 h1 {
      font-size: 30px;
