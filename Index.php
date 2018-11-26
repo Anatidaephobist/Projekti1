@@ -300,10 +300,6 @@ function checkTeam() {
        document.getElementById("moskva2").disabled = false;
 
     }
-
-
-
-
 }
 
 document.getElementsByName("input1")[1].addEventListener('change', addGoalScorer());
