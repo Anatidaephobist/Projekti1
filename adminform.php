@@ -59,7 +59,8 @@
   <br>
   <br>
 
-<div id="goalScorerDiv">
+<!-- goalmaker 1 -->
+<div id="goalScorerDiv1" class="goalScorerDiv">
   <hr>
   <h1>Maalintekijä</h1>
 
@@ -71,11 +72,73 @@
 <input type="checkbox" value="ownGoal"> Oma maali
 <hr>
 <br>
+
+</div>
+
+<!-- goalmaker 2 -->
+<div id="goalScorerDiv2" class="goalScorerDiv">
+  <hr>
+  <h1>Maalintekijä</h1>
+
+  <select name="meemit">
+ <option value="volvo">jonihoitaa</option>
+ <option value="saab">Saab</option>
+</select>
+<br>
+<input type="checkbox" value="ownGoal"> Oma maali
+<hr>
 <br>
 
 </div>
 
-   <!-- vierasjoukkueen maalit -->
+<!-- goalmaker 3 -->
+<div id="goalScorerDiv3" class="goalScorerDiv">
+  <hr>
+  <h1>Maalintekijä</h1>
+
+  <select name="meemit">
+ <option value="volvo">jonihoitaa</option>
+ <option value="saab">Saab</option>
+</select>
+<br>
+<input type="checkbox" value="ownGoal"> Oma maali
+<hr>
+<br>
+
+</div>
+
+<!-- goalmaker 4 -->
+<div id="goalScorerDiv4" class="goalScorerDiv">
+  <hr>
+  <h1>Maalintekijä</h1>
+
+  <select name="meemit">
+ <option value="volvo">jonihoitaa</option>
+ <option value="saab">Saab</option>
+</select>
+<br>
+<input type="checkbox" value="ownGoal"> Oma maali
+<hr>
+<br>
+
+</div>
+
+<!-- goalmaker 5 -->
+<div id="goalScorerDiv5" class="goalScorerDiv">
+  <hr>
+  <h1>Maalintekijä</h1>
+
+  <select name="meemit">
+ <option value="volvo">jonihoitaa</option>
+ <option value="saab">Saab</option>
+</select>
+<br>
+<input type="checkbox" value="ownGoal"> Oma maali
+<hr>
+
+
+</div>
+
 
 
    <input type="date" class="form-control" id="pvm" name="pvm" required>

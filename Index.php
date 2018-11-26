@@ -22,6 +22,8 @@ include_once 'config.php';
 
 var kirjautunut = "<?php echo $_SESSION['userIsAdmin']; ?>"
 
+var ScoreMakers = document.getElementsByClassName("goalScorerDiv"), n;
+
 
 
 
@@ -304,11 +306,46 @@ function checkTeam() {
 document.getElementsByName("input1")[1].addEventListener('change', addGoalScorer());
 
 function addGoalScorer() {
+  if (document.getElementById("numberOfGoals").value == 0 ) {
+    document.getElementById('goalScorerDiv1').style.display = "none";
+      document.getElementById('goalScorerDiv2').style.display = "none";
+        document.getElementById('goalScorerDiv3').style.display = "none";
+          document.getElementById('goalScorerDiv4').style.display = "none";
+            document.getElementById('goalScorerDiv5').style.display = "none";
+        }
   if (document.getElementById("numberOfGoals").value == 1 ) {
-    document.getElementById('goalScorerDiv').style.display = "block";
-  } else {
-    return;
+    document.getElementById('goalScorerDiv1').style.display = "block";
+      document.getElementById('goalScorerDiv2').style.display = "none";
+        document.getElementById('goalScorerDiv3').style.display = "none";
+          document.getElementById('goalScorerDiv4').style.display = "none";
+            document.getElementById('goalScorerDiv5').style.display = "none";
+  } else if (document.getElementById("numberOfGoals").value == 2 ) {
+    document.getElementById('goalScorerDiv1').style.display = "block";
+    document.getElementById('goalScorerDiv2').style.display = "block";
+      document.getElementById('goalScorerDiv3').style.display = "none";
+        document.getElementById('goalScorerDiv4').style.display = "none";
+          document.getElementById('goalScorerDiv5').style.display = "none";
+  } else if (document.getElementById("numberOfGoals").value == 3) {
+      document.getElementById('goalScorerDiv1').style.display = "block";
+        document.getElementById('goalScorerDiv2').style.display = "block";
+          document.getElementById('goalScorerDiv3').style.display = "block";
+            document.getElementById('goalScorerDiv4').style.display = "none";
+              document.getElementById('goalScorerDiv5').style.display = "none";
+  }  else if (document.getElementById("numberOfGoals").value == 4) {
+    document.getElementById('goalScorerDiv1').style.display = "block";
+      document.getElementById('goalScorerDiv2').style.display = "block";
+        document.getElementById('goalScorerDiv3').style.display = "block";
+          document.getElementById('goalScorerDiv4').style.display = "block";
+            document.getElementById('goalScorerDiv5').style.display = "none";
+  } else if (document.getElementById("numberOfGoals").value == 5) {
+    document.getElementById('goalScorerDiv1').style.display = "block";
+      document.getElementById('goalScorerDiv2').style.display = "block";
+        document.getElementById('goalScorerDiv3').style.display = "block";
+          document.getElementById('goalScorerDiv4').style.display = "block";
+            document.getElementById('goalScorerDiv5').style.display = "block";
+
   }
+
 }
 
 function areYouSure() {
