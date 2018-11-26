@@ -301,6 +301,9 @@ function checkTeam() {
 
     }
 
+
+
+
 }
 
 document.getElementsByName("input1")[1].addEventListener('change', addGoalScorer());
