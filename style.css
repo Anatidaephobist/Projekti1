@@ -8,6 +8,8 @@ body {
    background-attachment: fixed;
 }
 
+
+
 #logInButton, #logOutButton, .playerbutton, .backButton {
     position:fixed;
     right: 2%;
@@ -141,6 +143,11 @@ body {
     display: none;
 }
 
+.adminInputNumberField {
+max-width: 60px;
+
+}
+
 h1 {
      font-size: 30px;
      text-decoration: underline;
@@ -203,8 +210,10 @@ h2 {
     border: black 2px solid;
     background: rgba(128,128,128,0.6);
     border-radius: 15px 50px 30px;
-    font-size: 32px;
+    font-size: 20px;
 }
+
+
 
 .addFormItem {
      margin-left: auto;
@@ -282,4 +291,3 @@ h2 {
 #peruutaNappi2 {
     float:right;
 }
-
