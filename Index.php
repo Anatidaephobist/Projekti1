@@ -313,7 +313,6 @@ function addGoalScorer() {
           document.getElementById('goalScorerDiv4').style.display = "none";
             document.getElementById('goalScorerDiv5').style.display = "none";
         }
-        
   if (document.getElementById("numberOfGoals").value == 1 ) {
     document.getElementById('goalScorerDiv1').style.display = "block";
       document.getElementById('goalScorerDiv2').style.display = "none";
