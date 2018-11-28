@@ -139,7 +139,33 @@
 
 </div>
 
+<!-- bookings -->
+<div>
+<h1>Varoitukset</h1>
+<label>Varoitusten määrä pelissä</label>
+<br>
+<input id="numberOfBookings" class ="adminInputNumberField" onchange="addWrongDoer()" name = "input2" type="number" min="0">
+</div>
 
+<!-- wrongdoer1 -->
+  <div id="wrongDoerDiv1" class="wrongDoerDiv">
+    <hr>
+    <h1>Varoituksen saaja</h1>
+
+    <select name="meemit">
+   <option value="volvo">jonihoitaa</option>
+   <option value="saab">Saab</option>
+  </select>
+  <br>
+
+
+  <input type="radio" onclick="yellowCardRadioButton()" value="yellowCard" id="yellowCard" name="yellowCard" > Keltainen kortti
+  <input type="radio" onclick="redCardRadioButton()" value="redCard" id="redCard" name="redCard"> Punainen kortti <br>
+
+  <hr>
+
+
+  </div>
 
    <input type="date" class="form-control" id="pvm" name="pvm" required>
    <br>

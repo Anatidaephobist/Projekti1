@@ -300,6 +300,7 @@ function checkTeam() {
        document.getElementById("moskva2").disabled = false;
 
     }
+
 }
 
 document.getElementsByName("input1")[1].addEventListener('change', addGoalScorer());
@@ -344,6 +345,73 @@ function addGoalScorer() {
             document.getElementById('goalScorerDiv5').style.display = "block";
 
   }
+
+}
+
+document.getElementsByName("input2")[1].addEventListener('change', addbookingScorer());
+
+
+
+function addbookingScorer() {
+  if (document.getElementById("numberOfBookings").value == 0 ) {
+    document.getElementById('bookingScorerDiv1').style.display = "none";
+      document.getElementById('bookingScorerDiv2').style.display = "none";
+        document.getElementById('bookingScorerDiv3').style.display = "none";
+          document.getElementById('bookingScorerDiv4').style.display = "none";
+            document.getElementById('bookingScorerDiv5').style.display = "none";
+        }
+  if (document.getElementById("numberOfBookings").value == 1 ) {
+    document.getElementById('bookingScorerDiv1').style.display = "block";
+      document.getElementById('bookingScorerDiv2').style.display = "none";
+        document.getElementById('bookingScorerDiv3').style.display = "none";
+          document.getElementById('bookingScorerDiv4').style.display = "none";
+            document.getElementById('bookingScorerDiv5').style.display = "none";
+  } else if (document.getElementById("numberOfBookings").value == 2 ) {
+    document.getElementById('bookingScorerDiv1').style.display = "block";
+    document.getElementById('bookingScorerDiv2').style.display = "block";
+      document.getElementById('bookingScorerDiv3').style.display = "none";
+        document.getElementById('bookingScorerDiv4').style.display = "none";
+          document.getElementById('bookingScorerDiv5').style.display = "none";
+  } else if (document.getElementById("numberOfBookings").value == 3) {
+      document.getElementById('bookingScorerDiv1').style.display = "block";
+        document.getElementById('bookingScorerDiv2').style.display = "block";
+          document.getElementById('bookingScorerDiv3').style.display = "block";
+            document.getElementById('bookingScorerDiv4').style.display = "none";
+              document.getElementById('bookingScorerDiv5').style.display = "none";
+  }  else if (document.getElementById("numberOfBookings").value == 4) {
+    document.getElementById('bookingScorerDiv1').style.display = "block";
+      document.getElementById('bookingScorerDiv2').style.display = "block";
+        document.getElementById('bookingScorerDiv3').style.display = "block";
+          document.getElementById('bookingScorerDiv4').style.display = "block";
+            document.getElementById('bookingScorerDiv5').style.display = "none";
+  } else if (document.getElementById("numberOfBookings").value == 5) {
+    document.getElementById('bookingScorerDiv1').style.display = "block";
+      document.getElementById('bookingScorerDiv2').style.display = "block";
+        document.getElementById('bookingScorerDiv3').style.display = "block";
+          document.getElementById('bookingScorerDiv4').style.display = "block";
+            document.getElementById('bookingScorerDiv5').style.display = "block";
+
+  }
+
+}
+
+function yellowCardRadioButton() {
+document.getElementById('redCard').checked = false;
+}
+
+function redCardRadioButton() {
+document.getElementById('yellowCard').checked = false;
+
+  /*
+ if (document.getElementById('yellowCard').checked == true) {
+  document.getElementById('redCard').checked = false;
+}
+ else {
+alert("aaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+  document.getElementById('redCard').checked = true;
+      document.getElementById('yellowCard').checked = false;
+}
+*/
 
 }
 
