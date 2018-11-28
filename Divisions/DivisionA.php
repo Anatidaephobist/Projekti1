@@ -1,4 +1,3 @@
-
 <head>
 <script>
 @import "style.css";
@@ -13,7 +12,10 @@
 <div class="teamInfoBox" id="teamInfoA">
 
     <div class="teamLogo">
-       <img src="bayern.png" style="width:100px;height:100px;">
+      <img class="imgsize"src="
+      <?php
+      echo databaseQuery('Logot','logo','1');
+      ?>">
     </div>
 
     <div class="teamName">
@@ -102,7 +104,10 @@
     <div class="teamInfoBox">
 
     <div class="teamLogo">
-       <img src="manchester_city.png" style="width:100px;height:100px;">
+      <img class="imgsize"src="
+      <?php
+      echo databaseQuery('Logot','logo','2');
+      ?>">
     </div>
 
     <div class="teamName">
@@ -191,7 +196,10 @@
    <div class="teamInfoBox">
 
     <div class="teamLogo">
-       <img src="manchester_city.png" style="width:100px;height:100px;">
+      <img class="imgsize"src="
+      <?php
+      echo databaseQuery('Logot','logo','3');
+      ?>">
     </div>
 
     <div class="teamName">
@@ -280,7 +288,10 @@
    <div class="teamInfoBox">
 
     <div class="teamLogo">
-       <img src="manchester_city.png" style="width:100px;height:100px;">
+      <img class="imgsize"src="
+      <?php
+      echo databaseQuery('Logot','logo','4');
+      ?>">
     </div>
 
     <div class="teamName">
