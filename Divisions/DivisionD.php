@@ -12,7 +12,10 @@
   <div class="teamInfoBox">
 
     <div class="teamLogo">
-       <img src="porto.png" style="width:100px;height:100px;">
+      <img class="imgsize"src="
+      <?php
+      echo databaseQuery('Logot','logo','13');
+      ?>">
     </div>
 
     <div class="teamName">
@@ -99,7 +102,10 @@
   <div class="teamInfoBox">
 
     <div class="teamLogo">
-       <img src="schalke.png" style="width:100px;height:100px;">
+      <img class="imgsize"src="
+      <?php
+      echo databaseQuery('Logot','logo','14');
+      ?>">
     </div>
 
     <div class="teamName">
@@ -186,7 +192,10 @@
   <div class="teamInfoBox">
 
   <div class="teamLogo">
-     <img src="galatasaray.png" style="width:100px;height:100px;">
+    <img class="imgsize"src="
+    <?php
+    echo databaseQuery('Logot','logo','15');
+    ?>">
   </div>
 
   <div class="teamName">
@@ -273,7 +282,10 @@
 <div class="teamInfoBox">
 
 <div class="teamLogo">
-   <img src="lok_moskova.png" style="width:100px;height:100px;">
+  <img class="imgsize"src="
+  <?php
+  echo databaseQuery('Logot','logo','16');
+  ?>">
 </div>
 
 <div class="teamName">

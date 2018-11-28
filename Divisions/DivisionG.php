@@ -10,7 +10,10 @@
   <div class="teamInfoBox">
 
     <div class="teamLogo">
-       <img src="madrid.png" style="width:100px;height:100px;">
+      <img class="imgsize"src="
+      <?php
+      echo databaseQuery('Logot','logo','25');
+      ?>">
     </div>
 
     <div class="teamName">
@@ -97,7 +100,10 @@
   <div class="teamInfoBox">
 
     <div class="teamLogo">
-       <img src="roma.png" style="width:100px;height:100px;">
+      <img class="imgsize"src="
+      <?php
+      echo databaseQuery('Logot','logo','26');
+      ?>">
     </div>
 
     <div class="teamName">
@@ -184,7 +190,10 @@
   <div class="teamInfoBox">
 
   <div class="teamLogo">
-     <img src="cska_movska.png" style="width:100px;height:100px;">
+    <img class="imgsize"src="
+    <?php
+    echo databaseQuery('Logot','logo','27');
+    ?>">
   </div>
 
   <div class="teamName">
@@ -271,7 +280,10 @@
 <div class="teamInfoBox">
 
 <div class="teamLogo">
-   <img src="plzen.png" style="width:100px;height:100px;">
+  <img class="imgsize"src="
+  <?php
+  echo databaseQuery('Logot','logo','28');
+  ?>">
 </div>
 
 <div class="teamName">
