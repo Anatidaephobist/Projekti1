@@ -144,11 +144,11 @@
 <h1>Varoitukset</h1>
 <label>Varoitusten määrä pelissä</label>
 <br>
-<input id="numberOfBookings" class ="adminInputNumberField" onchange="addWrongDoer()" name = "input2" type="number" min="0">
+<input id="numberOfBookings" class ="adminInputNumberField" onchange="addbookingScorer()" name="input2" type="number" min="0">
 </div>
 
 <!-- wrongdoer1 -->
-  <div id="wrongDoerDiv1" class="wrongDoerDiv">
+  <div id="bookingScorerDiv1" class="wrongDoerDiv">
     <hr>
     <h1>Varoituksen saaja</h1>
 
@@ -159,16 +159,100 @@
   <br>
 
 
-  <input type="radio" onclick="yellowCardRadioButton()" value="yellowCard" id="yellowCard" name="yellowCard" > Keltainen kortti
+  <input type="radio" onclick="yellowCardRadioButton()" value="yellowCard" id="yellowCard" name="yellowCard" > Keltainen kortti <br>
   <input type="radio" onclick="redCardRadioButton()" value="redCard" id="redCard" name="redCard"> Punainen kortti <br>
 
   <hr>
 
 
   </div>
+  
+  <!-- wrong doer 2 -->
+  
+   <div id="bookingScorerDiv2" class="wrongDoerDiv">
+    <hr>
+    <h1>Varoituksen saaja</h1>
 
+    <select name="meemit">
+   <option value="volvo">jonihoitaa</option>
+   <option value="saab">Saab</option>
+  </select>
+  <br>
+
+
+  <input type="radio" onclick="yellowCardRadioButton()" value="yellowCard" id="yellowCard" name="yellowCard" > Keltainen kortti <br>
+  <input type="radio" onclick="redCardRadioButton()" value="redCard" id="redCard" name="redCard"> Punainen kortti <br>
+
+  <hr>
+
+
+  </div>
+  
+  <!-- wrong doer 3 -->
+  
+   <div id="bookingScorerDiv3" class="wrongDoerDiv">
+    <hr>
+    <h1>Varoituksen saaja</h1>
+
+    <select name="meemit">
+   <option value="volvo">jonihoitaa</option>
+   <option value="saab">Saab</option>
+  </select>
+  <br>
+
+
+  <input type="radio" onclick="yellowCardRadioButton()" value="yellowCard" id="yellowCard" name="yellowCard" > Keltainen kortti <br>
+  <input type="radio" onclick="redCardRadioButton()" value="redCard" id="redCard" name="redCard"> Punainen kortti <br>
+
+  <hr>
+
+
+  </div>
+  
+  <!-- wrong doer 4 -->
+  
+   <div id="bookingScorerDiv4" class="wrongDoerDiv">
+    <hr>
+    <h1>Varoituksen saaja</h1>
+
+    <select name="meemit">
+   <option value="volvo">jonihoitaa</option>
+   <option value="saab">Saab</option>
+  </select>
+  <br>
+
+
+  <input type="radio" onclick="yellowCardRadioButton()" value="yellowCard" id="yellowCard" name="yellowCard" > Keltainen kortti <br>
+  <input type="radio" onclick="redCardRadioButton()" value="redCard" id="redCard" name="redCard"> Punainen kortti <br>
+
+  <hr>
+
+
+  </div>
+  
+  <!-- wrong doer 5 -->
+  
+   <div id="bookingScorerDiv5" class="wrongDoerDiv">
+    <hr>
+    <h1>Varoituksen saaja</h1>
+
+    <select name="meemit">
+   <option value="volvo">jonihoitaa</option>
+   <option value="saab">Saab</option>
+  </select>
+  <br>
+
+
+  <input type="radio" onclick="yellowCardRadioButton()" value="yellowCard" id="yellowCard" name="yellowCard" > Keltainen kortti <br>
+  <input type="radio" onclick="redCardRadioButton()" value="redCard" id="redCard" name="redCard"> Punainen kortti <br>
+
+  <hr>
+
+
+  </div>
+    <label>Ottelun päivämäärä</label>
+    <br>
    <input type="date" class="form-control" id="pvm" name="pvm" required>
-   <br>
    <br>
   <button type="submit" class="btn btn-primary formButton" name="adminSubmit">Submit</button>
 </form>

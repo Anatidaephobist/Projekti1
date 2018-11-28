@@ -402,16 +402,7 @@ document.getElementById('redCard').checked = false;
 function redCardRadioButton() {
 document.getElementById('yellowCard').checked = false;
 
-  /*
- if (document.getElementById('yellowCard').checked == true) {
-  document.getElementById('redCard').checked = false;
-}
- else {
-alert("aaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
-  document.getElementById('redCard').checked = true;
-      document.getElementById('yellowCard').checked = false;
-}
-*/
+ 
 
 }
 
