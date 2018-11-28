@@ -206,7 +206,7 @@ h2 {
 .adminForm {
     background-color: gray;
     padding: 5%;
-    padding-left:10%;
+    padding-left:14%;
     width: 50%;
     min-height:600px;
     margin-left: auto;
@@ -214,7 +214,7 @@ h2 {
     border: black 2px solid;
     background: rgba(128,128,128,0.6);
     border-radius: 15px 50px 30px;
-    font-size: 20px;
+    font-size: 32px;
 }
 
 .wrongDoerDiv {
