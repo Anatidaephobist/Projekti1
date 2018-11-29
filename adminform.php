@@ -38,6 +38,18 @@
    <div class="form-group addFormItem">
       <label>Valitse Vierasjoukkue</label>
       <br>
+      <?php
+      $sql=mysql_query("SELECT id,name FROM table");
+if(mysql_num_rows($sql)){
+$select= '<select name="select">';
+while($rs=mysql_fetch_array($sql)){
+      $select.='<option value="'.$rs['id'].'">'.$rs['name'].'</option>';
+  }
+}
+$select.='</select>';
+echo $select;
+?>
+     <!--
    <select name="vierasjoukkue" id="vieras" onchange="checkTeam()">
    <option value="Joukkuevalinta" disabled selected="selected">Valitse Joukkue</option>
   <option value="Man united" id="manu">Manchester united</option>
@@ -45,6 +57,7 @@
   <option value="CSKA Moskva" id="moskva">PFC CSKA Moskva</option>
   <option value="Benfica" id="benfica">SL Benfica</option>
 </select>
+     -->
  <br>
  <br>
 
