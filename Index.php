@@ -62,48 +62,9 @@ function adminMode() {
 
 }
 
-function  playerCardManchester() {
-
-    document.getElementById("teamInfoBoxWrapperA").style.display = "none";
-     document.getElementById("popUp").style.display = "none";
-     document.getElementById("popUp2").style.display = "none";
-     document.getElementById("popUpWrapper").style.display = "none";
-     document.getElementById("wrapperOfPlayers").style.display = "block";
-     document.getElementById("playerInfoWrapperManchester").style.display = "block";
-     document.getElementById("playerInfoWrapperBasel").style.display = "none";
-     document.getElementById("playerInfoWrapperMoskva").style.display = "none";
-     document.getElementById("playerInfoWrapperBelfica").style.display = "none";
-}
-
-function  playerCardBasel() {
-      document.getElementById("teamInfoBoxWrapperA").style.display = "none";
-     document.getElementById("popUp").style.display = "none";
-     document.getElementById("popUp2").style.display = "none";
-     document.getElementById("popUpWrapper").style.display = "none";
-     document.getElementById("wrapperOfPlayers").style.display = "block";
-     document.getElementById("playerInfoWrapperBasel").style.display = "block";
-     document.getElementById("playerInfoWrapperManchester").style.display = "none";
-    document.getElementById("playerInfoWrapperMoskva").style.display = "none";
-    document.getElementById("playerInfoWrapperBelfica").style.display = "none";
-
-}
-
-function  playerCardMoskva() {
-
-    document.getElementById("teamInfoBoxWrapperA").style.display = "none";
-     document.getElementById("popUp").style.display = "none";
-     document.getElementById("popUp2").style.display = "none";
-     document.getElementById("popUpWrapper").style.display = "none";
-     document.getElementById("wrapperOfPlayers").style.display = "block";
-     document.getElementById("playerInfoWrapperMoskva").style.display = "block";
-     document.getElementById("playerInfoWrapperManchester").style.display = "none";
-      document.getElementById("playerInfoWrapperBelfica").style.display = "none";
-      document.getElementById("playerInfoWrapperBasel").style.display = "none";
-}
-
 function  playerCardBelfica() {
-/*      document.getElementById("teamInfoBoxWrapperA").style.display = "none";
-     document.getElementById("teamInfoBox").style.display = "none";
+     document.getElementById("teamInfoBoxWrapperA").style.display = "none";
+     document.getElementById("popUp").style.display = "none";
      document.getElementById("popUp2").style.display = "none";
      document.getElementById("popUpWrapper").style.display = "none";
      document.getElementById("wrapperOfPlayers").style.display = "block";
@@ -112,7 +73,6 @@ function  playerCardBelfica() {
      document.getElementById("playerInfoWrapperManchester").style.display = "none";
      document.getElementById("playerInfoWrapperMoskva").style.display = "none";
 
-*/
 }
 
 
