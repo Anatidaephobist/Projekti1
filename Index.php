@@ -102,8 +102,8 @@ function  playerCardMoskva() {
 }
 
 function  playerCardBelfica() {
-      document.getElementById("teamInfoBoxWrapperA").style.display = "none";
-     document.getElementById("popUp").style.display = "none";
+/*      document.getElementById("teamInfoBoxWrapperA").style.display = "none";
+     document.getElementById("teamInfoBox").style.display = "none";
      document.getElementById("popUp2").style.display = "none";
      document.getElementById("popUpWrapper").style.display = "none";
      document.getElementById("wrapperOfPlayers").style.display = "block";
@@ -112,7 +112,7 @@ function  playerCardBelfica() {
      document.getElementById("playerInfoWrapperManchester").style.display = "none";
      document.getElementById("playerInfoWrapperMoskva").style.display = "none";
 
-
+*/
 }
 
 
@@ -402,7 +402,7 @@ document.getElementById('redCard').checked = false;
 function redCardRadioButton() {
 document.getElementById('yellowCard').checked = false;
 
- 
+
 
 }
 
