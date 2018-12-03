@@ -212,71 +212,52 @@ function closeDelete() {
     document.getElementById("popUp3").style.display = "none";
 }
 
-function checkTeam() {
 
-    var x = document.getElementById("koti").value;
-    var y = document.getElementById("vieras").value;
+document.getElementById("koti").addEventListener("change", checkHomeTeam());
+document.getElementById("vieras").addEventListener("change", checkAwayTeam());
 
-    if (x == "Man united") {
-       document.getElementById("manu").disabled = true;
-       document.getElementById("basel").disabled = false;
-       document.getElementById("moskva").disabled = false;
-       document.getElementById("benfica").disabled = false;
-    }
-
-    if (y == "Man united") {
-       document.getElementById("manu2").disabled = true;
-       document.getElementById("basel2").disabled = false;
-       document.getElementById("moskva2").disabled = false;
-       document.getElementById("benfica2").disabled = false;
-    }
-
-    if (x == "BASEL") {
-       document.getElementById("basel").disabled = true;
-       document.getElementById("manu").disabled = false;
-       document.getElementById("moskva").disabled = false;
-       document.getElementById("benfica").disabled = false;
-    }
-
-    if (y == "BASEL") {
-       document.getElementById("basel2").disabled = true;
-       document.getElementById("manu2").disabled = false;
-       document.getElementById("moskva2").disabled = false;
-       document.getElementById("benfica2").disabled = false;
-    }
-
-
-    if (x == "CSKA Moskva") {
-       document.getElementById("moskva").disabled = true;
-       document.getElementById("manu").disabled = false;
-       document.getElementById("basel").disabled = false;
-       document.getElementById("benfica").disabled = false;
-    }
-
-     if (y == "CSKA Moskva") {
-       document.getElementById("moskva2").disabled = true;
-       document.getElementById("manu2").disabled = false;
-       document.getElementById("basel2").disabled = false;
-       document.getElementById("benfica2").disabled = false;
-    }
-
-     if (x == "Benfica") {
-       document.getElementById("benfica").disabled = true;
-       document.getElementById("manu").disabled = false;
-       document.getElementById("basel").disabled = false;
-       document.getElementById("moskva").disabled = false;
-
-    }
-
-     if (y == "Benfica") {
-       document.getElementById("benfica2").disabled = true;
-       document.getElementById("manu2").disabled = false;
-       document.getElementById("basel2").disabled = false;
-       document.getElementById("moskva2").disabled = false;
-
-    }
-
+function checkHomeTeam() {
+    
+    var select = document.getElementById("vieras");
+    var length = select.options.length;
+        for (i = 0; i < length; i++) {
+         select.options[i].disabled = false;
 }
+    
+    
+    var homeTeam = document.getElementById("koti");
+    var awayTeam = document.getElementById("vieras");
+    var homeTeamValue = document.getElementById("koti").selectedIndex;
+    var awayTeamValue = document.getElementById("vieras").selectedIndex;
+ 
+   awayTeam.options[homeTeamValue].disabled = true;
+    
+  
+   
+}
+
+
+function checkAwayTeam() {
+    
+       
+    var select = document.getElementById("koti");
+    var length = select.options.length;
+        for (i = 0; i < length; i++) {
+         select.options[i].disabled = false;
+}
+    
+    
+    var homeTeam = document.getElementById("koti");
+    var awayTeam = document.getElementById("vieras");
+    var homeTeamValue = document.getElementById("koti").selectedIndex;
+    var awayTeamValue = document.getElementById("vieras").selectedIndex;
+ 
+   homeTeam.options[awayTeamValue].disabled = true;
+
+  
+}
+
+
 
 document.getElementsByName("input1")[1].addEventListener('change', addGoalScorer());
 

@@ -9,7 +9,7 @@ include_once 'config.php';
 </head>
 
 
-<div class="adminForm" id="adminForm">
+<div class="adminForm"id="adminForm">
     <label>Lisää Peli</label>
 
     <br>
@@ -27,40 +27,40 @@ include_once 'config.php';
   <div class="form-group addFormItem">
       <label>Valitse Kotijoukkue</label>
       <br>
-   <select name="kotijoukkue" id="koti" onchange="checkTeam()">
+   <select name="kotijoukkue" id="koti" onchange="checkHomeTeam()">
        <option value="Joukkuevalinta" disabled selected="selected">Valitse Joukkue</option>
-  <option value="Man united" id="homeTeam1"><?php echo databaseQuery('Joukkueet','Nimi','1')?></option>
-  <option value="Man united" id="homeTeam2"><?php echo databaseQuery('Joukkueet','Nimi','2')?></option>
-  <option value="Man united" id="homeTeam3"><?php echo databaseQuery('Joukkueet','Nimi','3')?></option>
-  <option value="Man united" id="homeTeam4"><?php echo databaseQuery('Joukkueet','Nimi','4')?></option>
-  <option value="Man united" id="homeTeam5"><?php echo databaseQuery('Joukkueet','Nimi','5')?></option>
-  <option value="Man united" id="homeTeam6"><?php echo databaseQuery('Joukkueet','Nimi','6')?></option>
-  <option value="Man united" id="homeTeam7"><?php echo databaseQuery('Joukkueet','Nimi','7')?></option>
-  <option value="Man united" id="homeTeam8"><?php echo databaseQuery('Joukkueet','Nimi','8')?></option>
-  <option value="Man united" id="homeTeam9"><?php echo databaseQuery('Joukkueet','Nimi','9')?></option>
-  <option value="Man united" id="homeTeam10"><?php echo databaseQuery('Joukkueet','Nimi','10')?></option>
-  <option value="Man united" id="homeTeam11"><?php echo databaseQuery('Joukkueet','Nimi','11')?></option>
-  <option value="Man united" id="homeTeam12"><?php echo databaseQuery('Joukkueet','Nimi','12')?></option>
-  <option value="Man united" id="homeTeam13"><?php echo databaseQuery('Joukkueet','Nimi','13')?></option>
-  <option value="Man united" id="homeTeam14"><?php echo databaseQuery('Joukkueet','Nimi','14')?></option>
-  <option value="Man united" id="homeTeam15"><?php echo databaseQuery('Joukkueet','Nimi','15')?></option>
-  <option value="Man united" id="homeTeam16"><?php echo databaseQuery('Joukkueet','Nimi','16')?></option>
-  <option value="Man united" id="homeTeam17"><?php echo databaseQuery('Joukkueet','Nimi','17')?></option>
-  <option value="Man united" id="homeTeam18"><?php echo databaseQuery('Joukkueet','Nimi','18')?></option>
-  <option value="Man united" id="homeTeam19"><?php echo databaseQuery('Joukkueet','Nimi','19')?></option>
-  <option value="Man united" id="homeTeam20"><?php echo databaseQuery('Joukkueet','Nimi','20')?></option>
-  <option value="Man united" id="homeTeam21"><?php echo databaseQuery('Joukkueet','Nimi','21')?></option>
-  <option value="Man united" id="homeTeam22"><?php echo databaseQuery('Joukkueet','Nimi','22')?></option>
-  <option value="Man united" id="homeTeam23"><?php echo databaseQuery('Joukkueet','Nimi','23')?></option>
-  <option value="Man united" id="homeTeam24"><?php echo databaseQuery('Joukkueet','Nimi','24')?></option>
-  <option value="Man united" id="homeTeam25"><?php echo databaseQuery('Joukkueet','Nimi','25')?></option>
-  <option value="Man united" id="homeTeam26"><?php echo databaseQuery('Joukkueet','Nimi','26')?></option>
-  <option value="Man united" id="homeTeam27"><?php echo databaseQuery('Joukkueet','Nimi','27')?></option>
-  <option value="Man united" id="homeTeam28"><?php echo databaseQuery('Joukkueet','Nimi','28')?></option>
-  <option value="Man united" id="homeTeam29"><?php echo databaseQuery('Joukkueet','Nimi','29')?></option>
-  <option value="Man united" id="homeTeam30"><?php echo databaseQuery('Joukkueet','Nimi','30')?></option>
-  <option value="Man united" id="homeTeam31"><?php echo databaseQuery('Joukkueet','Nimi','31')?></option>
-  <option value="Man united" id="homeTeam32"><?php echo databaseQuery('Joukkueet','Nimi','32')?></option>
+  <option id="homeTeam1"><?php echo databaseQuery('Joukkueet','Nimi','1')?></option>
+  <option id="homeTeam2"><?php echo databaseQuery('Joukkueet','Nimi','2')?></option>
+  <option id="homeTeam3"><?php echo databaseQuery('Joukkueet','Nimi','3')?></option>
+  <option id="homeTeam4"><?php echo databaseQuery('Joukkueet','Nimi','4')?></option>
+  <option id="homeTeam5"><?php echo databaseQuery('Joukkueet','Nimi','5')?></option>
+  <option id="homeTeam6"><?php echo databaseQuery('Joukkueet','Nimi','6')?></option>
+  <option id="homeTeam7"><?php echo databaseQuery('Joukkueet','Nimi','7')?></option>
+  <option id="homeTeam8"><?php echo databaseQuery('Joukkueet','Nimi','8')?></option>
+  <option id="homeTeam9"><?php echo databaseQuery('Joukkueet','Nimi','9')?></option>
+  <option id="homeTeam10"><?php echo databaseQuery('Joukkueet','Nimi','10')?></option>
+  <option id="homeTeam11"><?php echo databaseQuery('Joukkueet','Nimi','11')?></option>
+  <option id="homeTeam12"><?php echo databaseQuery('Joukkueet','Nimi','12')?></option>
+  <option id="homeTeam13"><?php echo databaseQuery('Joukkueet','Nimi','13')?></option>
+  <option id="homeTeam14"><?php echo databaseQuery('Joukkueet','Nimi','14')?></option>
+  <option id="homeTeam15"><?php echo databaseQuery('Joukkueet','Nimi','15')?></option>
+  <option id="homeTeam16"><?php echo databaseQuery('Joukkueet','Nimi','16')?></option>
+  <option id="homeTeam17"><?php echo databaseQuery('Joukkueet','Nimi','17')?></option>
+  <option id="homeTeam18"><?php echo databaseQuery('Joukkueet','Nimi','18')?></option>
+  <option id="homeTeam19"><?php echo databaseQuery('Joukkueet','Nimi','19')?></option>
+  <option id="homeTeam20"><?php echo databaseQuery('Joukkueet','Nimi','20')?></option>
+  <option id="homeTeam21"><?php echo databaseQuery('Joukkueet','Nimi','21')?></option>
+  <option id="homeTeam22"><?php echo databaseQuery('Joukkueet','Nimi','22')?></option>
+  <option id="homeTeam23"><?php echo databaseQuery('Joukkueet','Nimi','23')?></option>
+  <option id="homeTeam24"><?php echo databaseQuery('Joukkueet','Nimi','24')?></option>
+  <option id="homeTeam25"><?php echo databaseQuery('Joukkueet','Nimi','25')?></option>
+  <option id="homeTeam26"><?php echo databaseQuery('Joukkueet','Nimi','26')?></option>
+  <option id="homeTeam27"><?php echo databaseQuery('Joukkueet','Nimi','27')?></option>
+  <option id="homeTeam28"><?php echo databaseQuery('Joukkueet','Nimi','28')?></option>
+  <option id="homeTeam29"><?php echo databaseQuery('Joukkueet','Nimi','29')?></option>
+  <option id="homeTeam30"><?php echo databaseQuery('Joukkueet','Nimi','30')?></option>
+  <option id="homeTeam31"><?php echo databaseQuery('Joukkueet','Nimi','31')?></option>
+  <option id="homeTeam32"><?php echo databaseQuery('Joukkueet','Nimi','32')?></option>
   
   </select>
 <br>
@@ -71,12 +71,40 @@ include_once 'config.php';
    <div class="form-group addFormItem">
       <label>Valitse Vierasjoukkue</label>
       <br>
-   <select name="vierasjoukkue" id="vieras" onchange="checkTeam()">
+   <select name="vierasjoukkue" id="vieras" onchange="checkAwayTeam()">
    <option value="Joukkuevalinta" disabled selected="selected">Valitse Joukkue</option>
-  <option value="Man united" id="manu"><?php echo databaseQuery('Joukkueet','Nimi','30')?></option>
-  <option value="BASEL" id="basel">FC Basel 1893</option>
-  <option value="CSKA Moskva" id="moskva">PFC CSKA Moskva</option>
-  <option value="Benfica" id="benfica">SL Benfica</option>
+    <option id="awayTeam1"><?php echo databaseQuery('Joukkueet','Nimi','1')?></option>
+  <option id="awayTeam2"><?php echo databaseQuery('Joukkueet','Nimi','2')?></option>
+  <option id="awayTeam3"><?php echo databaseQuery('Joukkueet','Nimi','3')?></option>
+  <option id="awayTeam4"><?php echo databaseQuery('Joukkueet','Nimi','4')?></option>
+  <option id="awayTeam5"><?php echo databaseQuery('Joukkueet','Nimi','5')?></option>
+  <option id="awayTeam6"><?php echo databaseQuery('Joukkueet','Nimi','6')?></option>
+  <option id="awayTeam7"><?php echo databaseQuery('Joukkueet','Nimi','7')?></option>
+  <option id="awayTeam8"><?php echo databaseQuery('Joukkueet','Nimi','8')?></option>
+  <option id="awayTeam9"><?php echo databaseQuery('Joukkueet','Nimi','9')?></option>
+  <option id="awayTeam10"><?php echo databaseQuery('Joukkueet','Nimi','10')?></option>
+  <option id="awayTeam11"><?php echo databaseQuery('Joukkueet','Nimi','11')?></option>
+  <option id="awayTeam12"><?php echo databaseQuery('Joukkueet','Nimi','12')?></option>
+  <option id="awayTeam13"><?php echo databaseQuery('Joukkueet','Nimi','13')?></option>
+  <option id="awayTeam14"><?php echo databaseQuery('Joukkueet','Nimi','14')?></option>
+  <option id="awayTeam15"><?php echo databaseQuery('Joukkueet','Nimi','15')?></option>
+  <option id="awayTeam16"><?php echo databaseQuery('Joukkueet','Nimi','16')?></option>
+  <option id="awayTeam17"><?php echo databaseQuery('Joukkueet','Nimi','17')?></option>
+  <option id="awayTeam18"><?php echo databaseQuery('Joukkueet','Nimi','18')?></option>
+  <option id="awayTeam19"><?php echo databaseQuery('Joukkueet','Nimi','19')?></option>
+  <option id="awayTeam20"><?php echo databaseQuery('Joukkueet','Nimi','20')?></option>
+  <option id="awayTeam21"><?php echo databaseQuery('Joukkueet','Nimi','21')?></option>
+  <option id="awayTeam22"><?php echo databaseQuery('Joukkueet','Nimi','22')?></option>
+  <option id="awayTeam23"><?php echo databaseQuery('Joukkueet','Nimi','23')?></option>
+  <option id="awayTeam24"><?php echo databaseQuery('Joukkueet','Nimi','24')?></option>
+  <option id="awayTeam25"><?php echo databaseQuery('Joukkueet','Nimi','25')?></option>
+  <option id="awayTeam26"><?php echo databaseQuery('Joukkueet','Nimi','26')?></option>
+  <option id="awayTeam27"><?php echo databaseQuery('Joukkueet','Nimi','27')?></option>
+  <option id="awayTeam28"><?php echo databaseQuery('Joukkueet','Nimi','28')?></option>
+  <option id="awayTeam29"><?php echo databaseQuery('Joukkueet','Nimi','29')?></option>
+  <option id="awayTeam30"><?php echo databaseQuery('Joukkueet','Nimi','30')?></option>
+  <option id="awayTeam31"><?php echo databaseQuery('Joukkueet','Nimi','31')?></option>
+  <option id="awayTeam32"><?php echo databaseQuery('Joukkueet','Nimi','32')?></option>   
 </select>
  <br>
  <br>
@@ -109,7 +137,7 @@ include_once 'config.php';
 </div>
 
 <!-- goalmaker 2 -->
-<div id="goalScorerDiv2" class="goalScorerDiv">
+<divid="goalScorerDiv2" class="goalScorerDiv">
   <hr>
   <h1>Maalintekijä</h1>
 
@@ -125,7 +153,7 @@ include_once 'config.php';
 </div>
 
 <!-- goalmaker 3 -->
-<div id="goalScorerDiv3" class="goalScorerDiv">
+<divid="goalScorerDiv3" class="goalScorerDiv">
   <hr>
   <h1>Maalintekijä</h1>
 
@@ -141,7 +169,7 @@ include_once 'config.php';
 </div>
 
 <!-- goalmaker 4 -->
-<div id="goalScorerDiv4" class="goalScorerDiv">
+<divid="goalScorerDiv4" class="goalScorerDiv">
   <hr>
   <h1>Maalintekijä</h1>
 
@@ -157,7 +185,7 @@ include_once 'config.php';
 </div>
 
 <!-- goalmaker 5 -->
-<div id="goalScorerDiv5" class="goalScorerDiv">
+<divid="goalScorerDiv5" class="goalScorerDiv">
   <hr>
   <h1>Maalintekijä</h1>
 
@@ -177,11 +205,11 @@ include_once 'config.php';
 <h1>Varoitukset</h1>
 <label>Varoitusten määrä pelissä</label>
 <br>
-<input id="numberOfBookings" class ="adminInputNumberField" onchange="addbookingScorer()" name="input2" type="number" min="0">
+<inputid="numberOfBookings" class ="adminInputNumberField" onchange="addbookingScorer()" name="input2" type="number" min="0">
 </div>
 
 <!-- wrongdoer1 -->
-  <div id="bookingScorerDiv1" class="wrongDoerDiv">
+  <divid="bookingScorerDiv1" class="wrongDoerDiv">
     <hr>
     <h1>Varoituksen saaja</h1>
 
@@ -192,8 +220,8 @@ include_once 'config.php';
   <br>
 
 
-  <input type="radio" onclick="yellowCardRadioButton()" value="yellowCard" id="yellowCard" name="yellowCard" > Keltainen kortti <br>
-  <input type="radio" onclick="redCardRadioButton()" value="redCard" id="redCard" name="redCard"> Punainen kortti <br>
+  <input type="radio" onclick="yellowCardRadioButton()" value="yellowCard"id="yellowCard" name="yellowCard" > Keltainen kortti <br>
+  <input type="radio" onclick="redCardRadioButton()" value="redCard"id="redCard" name="redCard"> Punainen kortti <br>
 
   <hr>
 
@@ -202,7 +230,7 @@ include_once 'config.php';
   
   <!-- wrong doer 2 -->
   
-   <div id="bookingScorerDiv2" class="wrongDoerDiv">
+   <divid="bookingScorerDiv2" class="wrongDoerDiv">
     <hr>
     <h1>Varoituksen saaja</h1>
 
@@ -213,8 +241,8 @@ include_once 'config.php';
   <br>
 
 
-  <input type="radio" onclick="yellowCardRadioButton()" value="yellowCard" id="yellowCard" name="yellowCard" > Keltainen kortti <br>
-  <input type="radio" onclick="redCardRadioButton()" value="redCard" id="redCard" name="redCard"> Punainen kortti <br>
+  <input type="radio" onclick="yellowCardRadioButton()" value="yellowCard"id="yellowCard" name="yellowCard" > Keltainen kortti <br>
+  <input type="radio" onclick="redCardRadioButton()" value="redCard"id="redCard" name="redCard"> Punainen kortti <br>
 
   <hr>
 
@@ -223,7 +251,7 @@ include_once 'config.php';
   
   <!-- wrong doer 3 -->
   
-   <div id="bookingScorerDiv3" class="wrongDoerDiv">
+   <divid="bookingScorerDiv3" class="wrongDoerDiv">
     <hr>
     <h1>Varoituksen saaja</h1>
 
@@ -234,8 +262,8 @@ include_once 'config.php';
   <br>
 
 
-  <input type="radio" onclick="yellowCardRadioButton()" value="yellowCard" id="yellowCard" name="yellowCard" > Keltainen kortti <br>
-  <input type="radio" onclick="redCardRadioButton()" value="redCard" id="redCard" name="redCard"> Punainen kortti <br>
+  <input type="radio" onclick="yellowCardRadioButton()" value="yellowCard"id="yellowCard" name="yellowCard" > Keltainen kortti <br>
+  <input type="radio" onclick="redCardRadioButton()" value="redCard"id="redCard" name="redCard"> Punainen kortti <br>
 
   <hr>
 
@@ -244,7 +272,7 @@ include_once 'config.php';
   
   <!-- wrong doer 4 -->
   
-   <div id="bookingScorerDiv4" class="wrongDoerDiv">
+   <divid="bookingScorerDiv4" class="wrongDoerDiv">
     <hr>
     <h1>Varoituksen saaja</h1>
 
@@ -255,8 +283,8 @@ include_once 'config.php';
   <br>
 
 
-  <input type="radio" onclick="yellowCardRadioButton()" value="yellowCard" id="yellowCard" name="yellowCard" > Keltainen kortti <br>
-  <input type="radio" onclick="redCardRadioButton()" value="redCard" id="redCard" name="redCard"> Punainen kortti <br>
+  <input type="radio" onclick="yellowCardRadioButton()" value="yellowCard"id="yellowCard" name="yellowCard" > Keltainen kortti <br>
+  <input type="radio" onclick="redCardRadioButton()" value="redCard"id="redCard" name="redCard"> Punainen kortti <br>
 
   <hr>
 
@@ -265,7 +293,7 @@ include_once 'config.php';
   
   <!-- wrong doer 5 -->
   
-   <div id="bookingScorerDiv5" class="wrongDoerDiv">
+   <divid="bookingScorerDiv5" class="wrongDoerDiv">
     <hr>
     <h1>Varoituksen saaja</h1>
 
@@ -276,8 +304,8 @@ include_once 'config.php';
   <br>
 
 
-  <input type="radio" onclick="yellowCardRadioButton()" value="yellowCard" id="yellowCard" name="yellowCard" > Keltainen kortti <br>
-  <input type="radio" onclick="redCardRadioButton()" value="redCard" id="redCard" name="redCard"> Punainen kortti <br>
+  <input type="radio" onclick="yellowCardRadioButton()" value="yellowCard"id="yellowCard" name="yellowCard" > Keltainen kortti <br>
+  <input type="radio" onclick="redCardRadioButton()" value="redCard"id="redCard" name="redCard"> Punainen kortti <br>
 
   <hr>
 
@@ -285,7 +313,7 @@ include_once 'config.php';
   </div>
     <label>Ottelun päivämäärä</label>
     <br>
-   <input type="date" class="form-control" id="pvm" name="pvm" required>
+   <input type="date" class="form-control"id="pvm" name="pvm" required>
    <br>
   <button type="submit" class="btn btn-primary formButton" name="adminSubmit">Submit</button>
 </form>
