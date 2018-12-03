@@ -1,3 +1,7 @@
+<?php
+include_once 'login.php';
+include_once 'config.php';
+?>
 <head>
   <script>
   @import "style.css";
@@ -25,10 +29,39 @@
       <br>
    <select name="kotijoukkue" id="koti" onchange="checkTeam()">
        <option value="Joukkuevalinta" disabled selected="selected">Valitse Joukkue</option>
-  <option value="Man united" id="manu2">Manchester united</option>
-  <option value="BASEL" id="basel2">FC Basel 1893</option>
-  <option value="CSKA Moskva" id="moskva2">PFC CSKA Moskva</option>
-  <option value="Benfica" id="benfica2">SL Benfica</option>
+  <option value="Man united" id="homeTeam1"><?php echo databaseQuery('Joukkueet','Nimi','1')?></option>
+  <option value="Man united" id="homeTeam2"><?php echo databaseQuery('Joukkueet','Nimi','2')?></option>
+  <option value="Man united" id="homeTeam3"><?php echo databaseQuery('Joukkueet','Nimi','3')?></option>
+  <option value="Man united" id="homeTeam4"><?php echo databaseQuery('Joukkueet','Nimi','4')?></option>
+  <option value="Man united" id="homeTeam5"><?php echo databaseQuery('Joukkueet','Nimi','5')?></option>
+  <option value="Man united" id="homeTeam6"><?php echo databaseQuery('Joukkueet','Nimi','6')?></option>
+  <option value="Man united" id="homeTeam7"><?php echo databaseQuery('Joukkueet','Nimi','7')?></option>
+  <option value="Man united" id="homeTeam8"><?php echo databaseQuery('Joukkueet','Nimi','8')?></option>
+  <option value="Man united" id="homeTeam9"><?php echo databaseQuery('Joukkueet','Nimi','9')?></option>
+  <option value="Man united" id="homeTeam10"><?php echo databaseQuery('Joukkueet','Nimi','10')?></option>
+  <option value="Man united" id="homeTeam11"><?php echo databaseQuery('Joukkueet','Nimi','11')?></option>
+  <option value="Man united" id="homeTeam12"><?php echo databaseQuery('Joukkueet','Nimi','12')?></option>
+  <option value="Man united" id="homeTeam13"><?php echo databaseQuery('Joukkueet','Nimi','13')?></option>
+  <option value="Man united" id="homeTeam14"><?php echo databaseQuery('Joukkueet','Nimi','14')?></option>
+  <option value="Man united" id="homeTeam15"><?php echo databaseQuery('Joukkueet','Nimi','15')?></option>
+  <option value="Man united" id="homeTeam16"><?php echo databaseQuery('Joukkueet','Nimi','16')?></option>
+  <option value="Man united" id="homeTeam17"><?php echo databaseQuery('Joukkueet','Nimi','17')?></option>
+  <option value="Man united" id="homeTeam18"><?php echo databaseQuery('Joukkueet','Nimi','18')?></option>
+  <option value="Man united" id="homeTeam19"><?php echo databaseQuery('Joukkueet','Nimi','19')?></option>
+  <option value="Man united" id="homeTeam20"><?php echo databaseQuery('Joukkueet','Nimi','20')?></option>
+  <option value="Man united" id="homeTeam21"><?php echo databaseQuery('Joukkueet','Nimi','21')?></option>
+  <option value="Man united" id="homeTeam22"><?php echo databaseQuery('Joukkueet','Nimi','22')?></option>
+  <option value="Man united" id="homeTeam23"><?php echo databaseQuery('Joukkueet','Nimi','23')?></option>
+  <option value="Man united" id="homeTeam24"><?php echo databaseQuery('Joukkueet','Nimi','24')?></option>
+  <option value="Man united" id="homeTeam25"><?php echo databaseQuery('Joukkueet','Nimi','25')?></option>
+  <option value="Man united" id="homeTeam26"><?php echo databaseQuery('Joukkueet','Nimi','26')?></option>
+  <option value="Man united" id="homeTeam27"><?php echo databaseQuery('Joukkueet','Nimi','27')?></option>
+  <option value="Man united" id="homeTeam28"><?php echo databaseQuery('Joukkueet','Nimi','28')?></option>
+  <option value="Man united" id="homeTeam29"><?php echo databaseQuery('Joukkueet','Nimi','29')?></option>
+  <option value="Man united" id="homeTeam30"><?php echo databaseQuery('Joukkueet','Nimi','30')?></option>
+  <option value="Man united" id="homeTeam31"><?php echo databaseQuery('Joukkueet','Nimi','31')?></option>
+  <option value="Man united" id="homeTeam32"><?php echo databaseQuery('Joukkueet','Nimi','32')?></option>
+  
   </select>
 <br>
 <br>
@@ -38,26 +71,13 @@
    <div class="form-group addFormItem">
       <label>Valitse Vierasjoukkue</label>
       <br>
-      <?php
-      $sql=mysql_query("SELECT id,name FROM table");
-if(mysql_num_rows($sql)){
-$select= '<select name="select">';
-while($rs=mysql_fetch_array($sql)){
-      $select.='<option value="'.$rs['id'].'">'.$rs['name'].'</option>';
-  }
-}
-$select.='</select>';
-echo $select;
-?>
-     <!--
    <select name="vierasjoukkue" id="vieras" onchange="checkTeam()">
    <option value="Joukkuevalinta" disabled selected="selected">Valitse Joukkue</option>
-  <option value="Man united" id="manu">Manchester united</option>
+  <option value="Man united" id="manu"><?php echo databaseQuery('Joukkueet','Nimi','30')?></option>
   <option value="BASEL" id="basel">FC Basel 1893</option>
   <option value="CSKA Moskva" id="moskva">PFC CSKA Moskva</option>
   <option value="Benfica" id="benfica">SL Benfica</option>
 </select>
-     -->
  <br>
  <br>
 

@@ -151,6 +151,21 @@ return $value;
 } //end of function 'makeQuery'
 ?>
 
+<?php
+function databaseQueryMultiple($table, $column, $ID) {
+	$value = "";
+	global $mysqli;
+	$sql = "SELECT " .$column. " FROM " .$table. " Where id > '".$ID."'";
+		$result = $mysqli->query($sql);
+if ($result->num_rows > 0) {
+		while($row = $result->fetch_assoc()) {
+			$value = $row[''.$column.''];
+}
+return $value;
+}
+} //end of function 'makeQuery'
+?>
+
 
 function showGroupA() {
 
