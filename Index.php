@@ -68,11 +68,6 @@ function  playerCardBelfica() {
      document.getElementById("popUp2").style.display = "none";
      document.getElementById("popUpWrapper").style.display = "none";
      document.getElementById("wrapperOfPlayers").style.display = "block";
-     document.getElementById("playerInfoWrapperBelfica").style.display = "block";
-     document.getElementById("playerInfoWrapperBasel").style.display = "none";
-     document.getElementById("playerInfoWrapperManchester").style.display = "none";
-     document.getElementById("playerInfoWrapperMoskva").style.display = "none";
-
 }
 
 
@@ -220,10 +215,6 @@ function closePlayerInfo() {
      document.getElementById("popUp2").style.display = "block";
     document.getElementById("popUpWrapper").style.display = "block";
      document.getElementById("wrapperOfPlayers").style.display = "none";
-     document.getElementById("playerInfoWrapperManchester").style.display = "none";
-     document.getElementById("playerInfoWrapperBasel").style.display = "none";
-
-
 }
 
 function closeDelete() {
@@ -235,44 +226,42 @@ document.getElementById("koti").addEventListener("change", checkHomeTeam());
 document.getElementById("vieras").addEventListener("change", checkAwayTeam());
 
 function checkHomeTeam() {
-    
+
     var select = document.getElementById("vieras");
     var length = select.options.length;
         for (i = 0; i < length; i++) {
          select.options[i].disabled = false;
 }
-    
-    
+
+
     var homeTeam = document.getElementById("koti");
     var awayTeam = document.getElementById("vieras");
     var homeTeamValue = document.getElementById("koti").selectedIndex;
     var awayTeamValue = document.getElementById("vieras").selectedIndex;
- 
+
    awayTeam.options[homeTeamValue].disabled = true;
-    
-    
-  
+
 }
 
 
 function checkAwayTeam() {
-    
-       
+
+
     var select = document.getElementById("koti");
     var length = select.options.length;
         for (i = 0; i < length; i++) {
          select.options[i].disabled = false;
 }
-    
-    
+
+
     var homeTeam = document.getElementById("koti");
     var awayTeam = document.getElementById("vieras");
     var homeTeamValue = document.getElementById("koti").selectedIndex;
     var awayTeamValue = document.getElementById("vieras").selectedIndex;
- 
+
    homeTeam.options[awayTeamValue].disabled = true;
 
-  
+
 }
 
 
@@ -465,165 +454,6 @@ $kirjautunut = $_SESSION['userIsAdmin'];
 
 
      </div>
-
-<div id="wrapperOfPlayers">
-
-
-         <button onclick="closePlayerInfo()" class="btn btn-primary playerbutton"> takaisin</button>
-
-
-<!-- Romelu Lukaku  -->
-<div class="teamInfoBox">
-
-
-    <div class="playerImage">
-     <img src="playerPics/lukaku.png" style="height:300px;width:250px;">
-
- </div>
-
-
-
-
- <div class="playerInfo fname ">
- <h1> Etunimi</h1>
-
-  <?php
-  $sql = "SELECT EtuNimi FROM Pelaajat Where id = '26'";
-  $result = $mysqli->query($sql);
-
-  if ($result->num_rows > 0) {
-
-    while($row = $result->fetch_assoc()) {
-        echo  $row["EtuNimi"];
-    }
-} else {
-    echo "0 results";
-}
- ?>
- </div>
-
- <div class="playerInfo lastname ">
- <h1> Sukunimi</h1>
-
- <?php
-  $sql = "SELECT Sukunimi FROM Pelaajat Where id = '26'";
-  $result = $mysqli->query($sql);
-
-  if ($result->num_rows > 0) {
-
-    while($row = $result->fetch_assoc()) {
-        echo  $row["Sukunimi"];
-    }
-} else {
-    echo "0 results";
-}
- ?>
- </div>
- <div class="playerInfo age ">
- <h1> Ikä</h1>
-
- <?php
-  $sql = "SELECT Ika FROM Pelaajat Where id = '26'";
-  $result = $mysqli->query($sql);
-
-  if ($result->num_rows > 0) {
-
-    while($row = $result->fetch_assoc()) {
-        echo  $row["Ika"];
-    }
-} else {
-    echo "0 results";
-}
- ?>
- </div>
-
-<div class="playerInfo nationality ">
- <h1> Kansallisuus</h1>
-
-  <?php
-  $sql = "SELECT Kansallisuus FROM Pelaajat Where id = '26'";
-  $result = $mysqli->query($sql);
-
-  if ($result->num_rows > 0) {
-
-    while($row = $result->fetch_assoc()) {
-        echo  $row["Kansallisuus"];
-    }
-} else {
-    echo "0 results";
-}
- ?>
- </div>
-<div class="playerInfo playerGames ">
- <h1> Pelatut Pelit</h1>
-
- <?php
-  $sql = "SELECT PelatutPelit FROM Pelaajat Where id = '26'";
-  $result = $mysqli->query($sql);
-
-  if ($result->num_rows > 0) {
-
-    while($row = $result->fetch_assoc()) {
-        echo  $row["PelatutPelit"];
-    }
-} else {
-    echo "0 results";
-}
- ?>
- </div>
-
- <div class="playerInfo madeGoals ">
- <h1> Maalit</h1>
-
-  <?php
-  $sql = "SELECT Maalit FROM Pelaajat Where id = '26'";
-  $result = $mysqli->query($sql);
-
-  if ($result->num_rows > 0) {
-
-    while($row = $result->fetch_assoc()) {
-        echo  $row["Maalit"];
-    }
-} else {
-    echo "0 results";
-}
- ?>
-</div>
-
-<div class="playerInfo position">
- <h1> Pelipaikka</h1>
-
-    <?php
-  $sql = "SELECT Pelipaikka FROM Pelaajat Where id = '26'";
-  $result = $mysqli->query($sql);
-
-  if ($result->num_rows > 0) {
-
-    while($row = $result->fetch_assoc()) {
-        echo  $row["Pelipaikka"];
-    }
-} else {
-    echo "0 results";
-}
- ?>
-</div>
-
-<div class="cards">
-
-
- </div>
-
-
-
-
-
-</div>
-
-
-
-
-
-
 
 </div>
 
