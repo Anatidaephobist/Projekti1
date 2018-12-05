@@ -241,6 +241,7 @@ function checkHomeTeam() {
 
    awayTeam.options[homeTeamValue].disabled = true;
 
+
 }
 
 
