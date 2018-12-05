@@ -199,6 +199,10 @@ h2 {
     font-size: 32px;
 }
 
+.playersAdminform {
+    display: none;
+}
+
 .cancel {
     float:right;
     margin-top: -7.4%;

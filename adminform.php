@@ -6,16 +6,25 @@ include_once 'config.php';
   <script>
   @import "style.css";
   </script>
+  <meta charset="UTF-8">
+  
+  <script>
+  
+
+      
+      
+  </script>
+  
+  
 </head>
 
-
+<form autocomplete="off" method="POST">
 <div class="adminForm"id="adminForm">
     <label>Lisää Peli</label>
 
     <br>
     <br>
     <form method="POST">
-
         <label>Peli ID</label>
         <br>
          <select>
@@ -29,7 +38,7 @@ include_once 'config.php';
       <br>
    <select name="kotijoukkue" id="koti" onchange="checkHomeTeam()">
        <option value="Joukkuevalinta" disabled selected="selected">Valitse Joukkue</option>
-  <option id="homeTeam1"><?php echo databaseQuery('Joukkueet','Nimi','1')?></option>
+        <option id="homeTeam1"><?php echo databaseQuery('Joukkueet','Nimi','1')?></option>
   <option id="homeTeam2"><?php echo databaseQuery('Joukkueet','Nimi','2')?></option>
   <option id="homeTeam3"><?php echo databaseQuery('Joukkueet','Nimi','3')?></option>
   <option id="homeTeam4"><?php echo databaseQuery('Joukkueet','Nimi','4')?></option>
@@ -61,12 +70,16 @@ include_once 'config.php';
   <option id="homeTeam30"><?php echo databaseQuery('Joukkueet','Nimi','30')?></option>
   <option id="homeTeam31"><?php echo databaseQuery('Joukkueet','Nimi','31')?></option>
   <option id="homeTeam32"><?php echo databaseQuery('Joukkueet','Nimi','32')?></option>
+     
+      
+
+      
   
   </select>
 <br>
 <br>
 
-
+</div>
    <!-- Vierasjoukkueen valinta -->
    <div class="form-group addFormItem">
       <label>Valitse Vierasjoukkue</label>
@@ -108,108 +121,39 @@ include_once 'config.php';
 </select>
  <br>
  <br>
+ </div>
 
-  </div>
+
+
+  
 
   <!-- maalintekijät -->
   <h1>Maalintekijät</h1>
   <br>
   <label>Maalien määrä pelissä</label>
   <br>
-  <input id="numberOfGoals" class ="adminInputNumberField" onchange="addGoalScorer()" name = "input1" type="number" min="0">
+ <input id="numberOfGoals" class ="adminInputNumberField" onchange="addGoalScorer()" name = "input1" type="number" min="0">
   <br>
   <br>
 
-<!-- goalmaker 1 -->
-<div id="goalScorerDiv1" class="goalScorerDiv">
-  <hr>
-  <h1>Maalintekijä</h1>
-
-  <select name="meemit">
- <option value="volvo">jonihoitaa</option>
- <option value="saab">Saab</option>
-</select>
-<br>
-<input type="checkbox" value="ownGoal"> Oma maali
-<hr>
-<br>
-
-</div>
-
-<!-- goalmaker 2 -->
-<divid="goalScorerDiv2" class="goalScorerDiv">
-  <hr>
-  <h1>Maalintekijä</h1>
-
-  <select name="meemit">
- <option value="volvo">jonihoitaa</option>
- <option value="saab">Saab</option>
-</select>
-<br>
-<input type="checkbox" value="ownGoal"> Oma maali
-<hr>
-<br>
-
-</div>
-
-<!-- goalmaker 3 -->
-<divid="goalScorerDiv3" class="goalScorerDiv">
-  <hr>
-  <h1>Maalintekijä</h1>
-
-  <select name="meemit">
- <option value="volvo">jonihoitaa</option>
- <option value="saab">Saab</option>
-</select>
-<br>
-<input type="checkbox" value="ownGoal"> Oma maali
-<hr>
-<br>
-
-</div>
-
-<!-- goalmaker 4 -->
-<divid="goalScorerDiv4" class="goalScorerDiv">
-  <hr>
-  <h1>Maalintekijä</h1>
-
-  <select name="meemit">
- <option value="volvo">jonihoitaa</option>
- <option value="saab">Saab</option>
-</select>
-<br>
-<input type="checkbox" value="ownGoal"> Oma maali
-<hr>
-<br>
-
-</div>
-
-<!-- goalmaker 5 -->
-<divid="goalScorerDiv5" class="goalScorerDiv">
-  <hr>
-  <h1>Maalintekijä</h1>
-
-  <select name="meemit">
- <option value="volvo">jonihoitaa</option>
- <option value="saab">Saab</option>
-</select>
-<br>
-<input type="checkbox" value="ownGoal"> Oma maali
-<hr>
+ <div class="autocomplete addFormItem">
+     <input id="goalScorerInput" type="text" name="" style="width: 300px;"/>
+     
+ </div> <!-- end of autocomplete div -->
 
 
-</div>
+
 
 <!-- bookings -->
 <div>
 <h1>Varoitukset</h1>
 <label>Varoitusten määrä pelissä</label>
 <br>
-<inputid="numberOfBookings" class ="adminInputNumberField" onchange="addbookingScorer()" name="input2" type="number" min="0">
+<input id="numberOfBookings" class ="adminInputNumberField" onchange="addbookingScorer()" name="input2" type="number" min="0">
 </div>
 
 <!-- wrongdoer1 -->
-  <divid="bookingScorerDiv1" class="wrongDoerDiv">
+  <div id="bookingScorerDiv1" class="wrongDoerDiv">
     <hr>
     <h1>Varoituksen saaja</h1>
 
@@ -321,4 +265,5 @@ include_once 'config.php';
 
 </div>
 
+</div>
 </div>
