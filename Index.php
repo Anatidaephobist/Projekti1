@@ -93,7 +93,25 @@ document.getElementById("popUp3").style.display = "none";
 alert(<?php echo $_POST['gameToDelete']; ?>)
 }
 
+<?php
+function databaseQueryPlayers($joukkueID) {
+    $value = "";
+    global $mysqli;
+    $sql = "SELECT EtuNimi, Sukunimi FROM Pelaajat WHERE JoukkueID = '$joukkueID'";
+$result = $mysqli->query($sql);
 
+echo "<select name='EtuNimi'>";
+while ($row = mysqli_fetch_array($result)) {
+  echo "<option value='" . $row['EtuNimi']."". $row['Sukunimi'] . "'>" . $row['EtuNimi']."". $row['Sukunimi']. "</option>";
+}
+echo "</select>";
+return;
+    
+    
+} // end of databaseQueryPlayer
+
+
+?>
 
 
 <?php
@@ -232,8 +250,8 @@ function checkHomeTeam() {
  
    awayTeam.options[homeTeamValue].disabled = true;
     
+    
   
-   
 }
 
 
@@ -256,6 +274,8 @@ function checkAwayTeam() {
 
   
 }
+
+
 
 
 
