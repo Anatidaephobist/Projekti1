@@ -384,135 +384,29 @@
 
 <div class="teamInfoBox">
 
-
-
-
-
-
   <div class="playerInfo fname ">
   <h1> Etunimi</h1>
 
-   <?php
-   $sql = "SELECT EtuNimi FROM Pelaajat Where JoukkueID = '1'";
-   $result = $mysqli->query($sql);
+    <?php
+      $sql = "SELECT * FROM Pelaajat WHERE JoukkueID = '1' ";
+      $result = $mysqli->query($sql);
+      if ($result->num_rows > 0) {
 
-   if ($result->num_rows > 0) {
+        while($row = $result->fetch_assoc()) {
+            echo "Nimi: " . $row["EtuNimi"] . " " . $row["Sukunimi"] .
+                 " Ikä: " . $row["Ika"] .
+                 " Kansallisuus: " . $row["Kansallisuus"] .
+                 " Pelatut pelit: " . $row["PelatutPelit"] .
+                 " Maalit: " . $row["Maalit"] .
+                 " Pelipaikka: " . $row["Pelipaikka"] .
+                 "<br>";
+        }
+    } else {
+        echo "0 results";
+    }
+    ?>
 
-     while($row = $result->fetch_assoc()) {
-         echo  $row["EtuNimi"];
-     }
- } else {
-     echo "0 results";
- }
-  ?>
   </div>
-
-  <div class="playerInfo lastname ">
-  <h1> Sukunimi</h1>
-
-  <?php
-   $sql = "SELECT Sukunimi FROM Pelaajat Where id = '26'";
-   $result = $mysqli->query($sql);
-
-   if ($result->num_rows > 0) {
-
-     while($row = $result->fetch_assoc()) {
-         echo  $row["Sukunimi"];
-     }
- } else {
-     echo "0 results";
- }
-  ?>
-  </div>
-  <div class="playerInfo age ">
-  <h1> Ikä</h1>
-
-  <?php
-   $sql = "SELECT Ika FROM Pelaajat Where id = '26'";
-   $result = $mysqli->query($sql);
-
-   if ($result->num_rows > 0) {
-
-     while($row = $result->fetch_assoc()) {
-         echo  $row["Ika"];
-     }
- } else {
-     echo "0 results";
- }
-  ?>
-  </div>
-
- <div class="playerInfo nationality ">
-  <h1> Kansallisuus</h1>
-
-   <?php
-   $sql = "SELECT Kansallisuus FROM Pelaajat Where id = '26'";
-   $result = $mysqli->query($sql);
-
-   if ($result->num_rows > 0) {
-
-     while($row = $result->fetch_assoc()) {
-         echo  $row["Kansallisuus"];
-     }
- } else {
-     echo "0 results";
- }
-  ?>
-  </div>
- <div class="playerInfo playerGames ">
-  <h1> Pelatut Pelit</h1>
-
-  <?php
-   $sql = "SELECT PelatutPelit FROM Pelaajat Where id = '26'";
-   $result = $mysqli->query($sql);
-
-   if ($result->num_rows > 0) {
-
-     while($row = $result->fetch_assoc()) {
-         echo  $row["PelatutPelit"];
-     }
- } else {
-     echo "0 results";
- }
-  ?>
-  </div>
-
-  <div class="playerInfo madeGoals ">
-  <h1> Maalit</h1>
-
-   <?php
-   $sql = "SELECT Maalit FROM Pelaajat Where id = '26'";
-   $result = $mysqli->query($sql);
-
-   if ($result->num_rows > 0) {
-
-     while($row = $result->fetch_assoc()) {
-         echo  $row["Maalit"];
-     }
- } else {
-     echo "0 results";
- }
-  ?>
- </div>
-
- <div class="playerInfo position">
-  <h1> Pelipaikka</h1>
-
-     <?php
-   $sql = "SELECT Pelipaikka FROM Pelaajat Where id = '26'";
-   $result = $mysqli->query($sql);
-
-   if ($result->num_rows > 0) {
-
-     while($row = $result->fetch_assoc()) {
-         echo  $row["Pelipaikka"];
-     }
- } else {
-     echo "0 results";
- }
-  ?>
- </div>
-
  <div class="cards">
 
 
