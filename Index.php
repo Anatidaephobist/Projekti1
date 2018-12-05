@@ -68,11 +68,6 @@ function  playerCardBelfica() {
      document.getElementById("popUp2").style.display = "none";
      document.getElementById("popUpWrapper").style.display = "none";
      document.getElementById("wrapperOfPlayers").style.display = "block";
-     document.getElementById("playerInfoWrapperBelfica").style.display = "block";
-     document.getElementById("playerInfoWrapperBasel").style.display = "none";
-     document.getElementById("playerInfoWrapperManchester").style.display = "none";
-     document.getElementById("playerInfoWrapperMoskva").style.display = "none";
-
 }
 
 
@@ -202,10 +197,6 @@ function closePlayerInfo() {
      document.getElementById("popUp2").style.display = "block";
     document.getElementById("popUpWrapper").style.display = "block";
      document.getElementById("wrapperOfPlayers").style.display = "none";
-     document.getElementById("playerInfoWrapperManchester").style.display = "none";
-     document.getElementById("playerInfoWrapperBasel").style.display = "none";
-
-
 }
 
 function closeDelete() {
@@ -217,44 +208,44 @@ document.getElementById("koti").addEventListener("change", checkHomeTeam());
 document.getElementById("vieras").addEventListener("change", checkAwayTeam());
 
 function checkHomeTeam() {
-    
+
     var select = document.getElementById("vieras");
     var length = select.options.length;
         for (i = 0; i < length; i++) {
          select.options[i].disabled = false;
 }
-    
-    
+
+
     var homeTeam = document.getElementById("koti");
     var awayTeam = document.getElementById("vieras");
     var homeTeamValue = document.getElementById("koti").selectedIndex;
     var awayTeamValue = document.getElementById("vieras").selectedIndex;
- 
+
    awayTeam.options[homeTeamValue].disabled = true;
-    
-  
-   
+
+
+
 }
 
 
 function checkAwayTeam() {
-    
-       
+
+
     var select = document.getElementById("koti");
     var length = select.options.length;
         for (i = 0; i < length; i++) {
          select.options[i].disabled = false;
 }
-    
-    
+
+
     var homeTeam = document.getElementById("koti");
     var awayTeam = document.getElementById("vieras");
     var homeTeamValue = document.getElementById("koti").selectedIndex;
     var awayTeamValue = document.getElementById("vieras").selectedIndex;
- 
+
    homeTeam.options[awayTeamValue].disabled = true;
 
-  
+
 }
 
 
