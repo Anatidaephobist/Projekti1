@@ -3,6 +3,8 @@ session_start();
 include_once 'login.php';
 include_once 'config.php';
 include_once 'functions.php';
+
+session_start();
 ?>
 <!DOCTYPE html>
 <html>
@@ -172,100 +174,7 @@ function closeDelete() {
 }
 
 
-document.getElementById("koti").addEventListener("change", checkHomeTeam());
-document.getElementById("vieras").addEventListener("change", checkAwayTeam());
 
-function checkHomeTeam() {
-
-    var select = document.getElementById("vieras");
-    var length = select.options.length;
-        for (i = 0; i < length; i++) {
-         select.options[i].disabled = false;
-}
-
-
-    var homeTeam = document.getElementById("koti");
-    var awayTeam = document.getElementById("vieras");
-    var homeTeamValue = document.getElementById("koti").selectedIndex;
-    var awayTeamValue = document.getElementById("vieras").selectedIndex;
-
-   awayTeam.options[homeTeamValue].disabled = true;
-
-
-}
-
-
-function checkAwayTeam() {
-
-
-    var select = document.getElementById("koti");
-    var length = select.options.length;
-        for (i = 0; i < length; i++) {
-         select.options[i].disabled = false;
-}
-
-
-    var homeTeam = document.getElementById("koti");
-    var awayTeam = document.getElementById("vieras");
-    var homeTeamValue = document.getElementById("koti").selectedIndex;
-    var awayTeamValue = document.getElementById("vieras").selectedIndex;
-
-   homeTeam.options[awayTeamValue].disabled = true;
-
-
-}
-
-function changeAdminForm() {
-   document.getElementById("popUpWrapper").style.display = "none";
-   document.getElementById("adminForm1").style.display = "none";
-   document.getElementById("adminForm2").style.display = "block";
-}
-
-
-document.getElementsByName("input1")[1].addEventListener('change', addGoalScorer());
-
-function addGoalScorer() {
-  if (document.getElementById("numberOfGoals").value == 0 ) {
-    document.getElementById('goalScorerDiv1').style.display = "none";
-      document.getElementById('goalScorerDiv2').style.display = "none";
-        document.getElementById('goalScorerDiv3').style.display = "none";
-          document.getElementById('goalScorerDiv4').style.display = "none";
-            document.getElementById('goalScorerDiv5').style.display = "none";
-        }
-  if (document.getElementById("numberOfGoals").value == 1 ) {
-    document.getElementById('goalScorerDiv1').style.display = "block";
-      document.getElementById('goalScorerDiv2').style.display = "none";
-        document.getElementById('goalScorerDiv3').style.display = "none";
-          document.getElementById('goalScorerDiv4').style.display = "none";
-            document.getElementById('goalScorerDiv5').style.display = "none";
-  } else if (document.getElementById("numberOfGoals").value == 2 ) {
-    document.getElementById('goalScorerDiv1').style.display = "block";
-    document.getElementById('goalScorerDiv2').style.display = "block";
-      document.getElementById('goalScorerDiv3').style.display = "none";
-        document.getElementById('goalScorerDiv4').style.display = "none";
-          document.getElementById('goalScorerDiv5').style.display = "none";
-  } else if (document.getElementById("numberOfGoals").value == 3) {
-      document.getElementById('goalScorerDiv1').style.display = "block";
-        document.getElementById('goalScorerDiv2').style.display = "block";
-          document.getElementById('goalScorerDiv3').style.display = "block";
-            document.getElementById('goalScorerDiv4').style.display = "none";
-              document.getElementById('goalScorerDiv5').style.display = "none";
-  }  else if (document.getElementById("numberOfGoals").value == 4) {
-    document.getElementById('goalScorerDiv1').style.display = "block";
-      document.getElementById('goalScorerDiv2').style.display = "block";
-        document.getElementById('goalScorerDiv3').style.display = "block";
-          document.getElementById('goalScorerDiv4').style.display = "block";
-            document.getElementById('goalScorerDiv5').style.display = "none";
-  } else if (document.getElementById("numberOfGoals").value == 5) {
-    document.getElementById('goalScorerDiv1').style.display = "block";
-      document.getElementById('goalScorerDiv2').style.display = "block";
-        document.getElementById('goalScorerDiv3').style.display = "block";
-          document.getElementById('goalScorerDiv4').style.display = "block";
-            document.getElementById('goalScorerDiv5').style.display = "block";
-
-  }
-
-}
 
 document.getElementsByName("input2")[1].addEventListener('change', addbookingScorer());
 
@@ -314,16 +223,7 @@ function addbookingScorer() {
 
 }
 
-function yellowCardRadioButton() {
-document.getElementById('redCard').checked = false;
-}
 
-function redCardRadioButton() {
-document.getElementById('yellowCard').checked = false;
-
-
-
-}
 
 function areYouSure() {
     document.getElementById("popUp4").style.display = "block";

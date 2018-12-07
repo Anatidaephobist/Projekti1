@@ -1,8 +1,10 @@
-
 <?php
+session_start();
 include_once 'login.php';
 include_once 'config.php';
 include_once 'functions.php';
+
+
 ?>
 <head>
 
@@ -10,7 +12,16 @@ include_once 'functions.php';
    <link rel="stylesheet" type="text/css" href="styleAdmin.css">
   <script src="http://code.jquery.com/jquery-latest.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">
+  </script>
   
+  
+  <script>
+  
+  function adminform2Direct() {
+   window.location.href = "adminform2.php";
+  }
+   
+   
   </script>
   
  
@@ -84,43 +95,43 @@ include_once 'functions.php';
       <br>
    <select name="vierasjoukkue" id="vieras" onchange="checkAwayTeam()">
    <option value="Joukkuevalinta" disabled selected="selected">Valitse Joukkue</option>
-    <option id="awayTeam1"><?php echo databaseQuery('Joukkueet','Nimi','1')?></option>
-  <option id="awayTeam2"><?php echo databaseQuery('Joukkueet','Nimi','2')?></option>
-  <option id="awayTeam3"><?php echo databaseQuery('Joukkueet','Nimi','3')?></option>
-  <option id="awayTeam4"><?php echo databaseQuery('Joukkueet','Nimi','4')?></option>
-  <option id="awayTeam5"><?php echo databaseQuery('Joukkueet','Nimi','5')?></option>
-  <option id="awayTeam6"><?php echo databaseQuery('Joukkueet','Nimi','6')?></option>
-  <option id="awayTeam7"><?php echo databaseQuery('Joukkueet','Nimi','7')?></option>
-  <option id="awayTeam8"><?php echo databaseQuery('Joukkueet','Nimi','8')?></option>
-  <option id="awayTeam9"><?php echo databaseQuery('Joukkueet','Nimi','9')?></option>
-  <option id="awayTeam10"><?php echo databaseQuery('Joukkueet','Nimi','10')?></option>
-  <option id="awayTeam11"><?php echo databaseQuery('Joukkueet','Nimi','11')?></option>
-  <option id="awayTeam12"><?php echo databaseQuery('Joukkueet','Nimi','12')?></option>
-  <option id="awayTeam13"><?php echo databaseQuery('Joukkueet','Nimi','13')?></option>
-  <option id="awayTeam14"><?php echo databaseQuery('Joukkueet','Nimi','14')?></option>
-  <option id="awayTeam15"><?php echo databaseQuery('Joukkueet','Nimi','15')?></option>
-  <option id="awayTeam16"><?php echo databaseQuery('Joukkueet','Nimi','16')?></option>
-  <option id="awayTeam17"><?php echo databaseQuery('Joukkueet','Nimi','17')?></option>
-  <option id="awayTeam18"><?php echo databaseQuery('Joukkueet','Nimi','18')?></option>
-  <option id="awayTeam19"><?php echo databaseQuery('Joukkueet','Nimi','19')?></option>
-  <option id="awayTeam20"><?php echo databaseQuery('Joukkueet','Nimi','20')?></option>
-  <option id="awayTeam21"><?php echo databaseQuery('Joukkueet','Nimi','21')?></option>
-  <option id="awayTeam22"><?php echo databaseQuery('Joukkueet','Nimi','22')?></option>
-  <option id="awayTeam23"><?php echo databaseQuery('Joukkueet','Nimi','23')?></option>
-  <option id="awayTeam24"><?php echo databaseQuery('Joukkueet','Nimi','24')?></option>
-  <option id="awayTeam25"><?php echo databaseQuery('Joukkueet','Nimi','25')?></option>
-  <option id="awayTeam26"><?php echo databaseQuery('Joukkueet','Nimi','26')?></option>
-  <option id="awayTeam27"><?php echo databaseQuery('Joukkueet','Nimi','27')?></option>
-  <option id="awayTeam28"><?php echo databaseQuery('Joukkueet','Nimi','28')?></option>
-  <option id="awayTeam29"><?php echo databaseQuery('Joukkueet','Nimi','29')?></option>
-  <option id="awayTeam30"><?php echo databaseQuery('Joukkueet','Nimi','30')?></option>
-  <option id="awayTeam31"><?php echo databaseQuery('Joukkueet','Nimi','31')?></option>
-  <option id="awayTeam32"><?php echo databaseQuery('Joukkueet','Nimi','32')?></option>   
+    <option id="awayTeam1" value="1"><?php echo databaseQuery('Joukkueet','Nimi','1')?></option>
+  <option id="awayTeam2" value="2"><?php echo databaseQuery('Joukkueet','Nimi','2')?></option>
+  <option id="awayTeam3" value="3"><?php echo databaseQuery('Joukkueet','Nimi','3')?></option>
+  <option id="awayTeam4" value="4"><?php echo databaseQuery('Joukkueet','Nimi','4')?></option>
+  <option id="awayTeam5" value="5"><?php echo databaseQuery('Joukkueet','Nimi','5')?></option>
+  <option id="awayTeam6" value="6"><?php echo databaseQuery('Joukkueet','Nimi','6')?></option>
+  <option id="awayTeam7" value="7"><?php echo databaseQuery('Joukkueet','Nimi','7')?></option>
+  <option id="awayTeam8" value="8"><?php echo databaseQuery('Joukkueet','Nimi','8')?></option>
+  <option id="awayTeam9" value="9"><?php echo databaseQuery('Joukkueet','Nimi','9')?></option>
+  <option id="awayTeam10" value="10"><?php echo databaseQuery('Joukkueet','Nimi','10')?></option>
+  <option id="awayTeam11" value="11"><?php echo databaseQuery('Joukkueet','Nimi','11')?></option>
+  <option id="awayTeam12" value="12"><?php echo databaseQuery('Joukkueet','Nimi','12')?></option>
+  <option id="awayTeam13" value="13"><?php echo databaseQuery('Joukkueet','Nimi','13')?></option>
+  <option id="awayTeam14" value="14"><?php echo databaseQuery('Joukkueet','Nimi','14')?></option>
+  <option id="awayTeam15" value="15"><?php echo databaseQuery('Joukkueet','Nimi','15')?></option>
+  <option id="awayTeam16" value="16"><?php echo databaseQuery('Joukkueet','Nimi','16')?></option>
+  <option id="awayTeam17" value="17"><?php echo databaseQuery('Joukkueet','Nimi','17')?></option>
+  <option id="awayTeam18" value="18"><?php echo databaseQuery('Joukkueet','Nimi','18')?></option>
+  <option id="awayTeam19" value="19"><?php echo databaseQuery('Joukkueet','Nimi','19')?></option>
+  <option id="awayTeam20" value="20"><?php echo databaseQuery('Joukkueet','Nimi','20')?></option>
+  <option id="awayTeam21" value="21"><?php echo databaseQuery('Joukkueet','Nimi','21')?></option>
+  <option id="awayTeam22" value="22"><?php echo databaseQuery('Joukkueet','Nimi','22')?></option>
+  <option id="awayTeam23" value="23"><?php echo databaseQuery('Joukkueet','Nimi','23')?></option>
+  <option id="awayTeam24" value="24"><?php echo databaseQuery('Joukkueet','Nimi','24')?></option>
+  <option id="awayTeam25" value="25"><?php echo databaseQuery('Joukkueet','Nimi','25')?></option>
+  <option id="awayTeam26" value="26"><?php echo databaseQuery('Joukkueet','Nimi','26')?></option>
+  <option id="awayTeam27" value="27"><?php echo databaseQuery('Joukkueet','Nimi','27')?></option>
+  <option id="awayTeam28" value="28"><?php echo databaseQuery('Joukkueet','Nimi','28')?></option>
+  <option id="awayTeam29" value="29"><?php echo databaseQuery('Joukkueet','Nimi','29')?></option>
+  <option id="awayTeam30" value="30"><?php echo databaseQuery('Joukkueet','Nimi','30')?></option>
+  <option id="awayTeam31" value="31"><?php echo databaseQuery('Joukkueet','Nimi','31')?></option>
+  <option id="awayTeam32" value="32"><?php echo databaseQuery('Joukkueet','Nimi','32')?></option>  
 </select>
  <br>
  <br>
  </div>
- <button type="submit" class="btn btn-primary formButton" name="adminSubmit2" onclick="changeAdminForm()">Submit</button>
+ <button type="submit" class="btn btn-primary formButton" name="adminSubmit2">Submit</button>
 
 </div>
  
@@ -131,15 +142,21 @@ include_once 'functions.php';
 
 <?php
 if (isset($_POST["adminSubmit2"])) {
- $chosenHomeTeam = $_POST['kotijoukkue'];
- $chosenAwayTeam = $_POST['vierasjoukkue'];
+ 
+ $_SESSION['kotijoukkue'] =  $_POST['kotijoukkue'];
+ $_SESSION['vierasjoukkue'] =  $_POST['vierasjoukkue'];
+ 
+echo '<script type="text/javascript">',
+     'adminform2Direct();',
+     '</script>'
+;
  
 }
 
 
 ?>
  
-<form method="POST">
+<form method=POST>
 <div class="formBox" id="adminForm2">
  <label>Valitse maalintekijät ja varoitusten saajat</label>
   <!-- maalintekijät -->
@@ -159,22 +176,9 @@ if (isset($_POST["adminSubmit2"])) {
  
 </div>
 
-<!--- kesken -->
 
- <div id="goalScorerDiv1" class="goalScorerDiv">
-    <hr>
-    <h1>Maalin tekijä</h1>
-    <?php
-$sql = "SELECT EtuNimi, Sukunimi FROM Pelaajat WHERE JoukkueID =  ".$chosenHomeTeam;
-$result = $mysqli->query($sql);
 
-echo "<select name='EtuNimi'>";
-while ($row = mysqli_fetch_array($result)) {
-  echo "<option value='" . $row['EtuNimi']."". $row['Sukunimi'] . "'>" . $row['EtuNimi']."". $row['Sukunimi']. "</option>";
-}
-echo "</select>";
-?>
-</div>
+ 
 
 
 <!-- bookings -->
@@ -197,102 +201,20 @@ echo "</select>";
   <br>
 
 
-  <input type="radio" onclick="yellowCardRadioButton()" value="yellowCard"id="yellowCard" name="yellowCard" > Keltainen kortti <br>
-  <input type="radio" onclick="redCardRadioButton()" value="redCard"id="redCard" name="redCard"> Punainen kortti <br>
 
   <hr>
 
 
   </div>
-  
-  <!-- wrong doer 2 -->
-  
-   <div id="bookingScorerDiv2" class="wrongDoerDiv">
-    <hr>
-    <h1>Varoituksen saaja</h1>
-
-    <select name="meemit">
-   <option value="volvo">jonihoitaa</option>
-   <option value="saab">Saab</option>
-  </select>
-  <br>
-
-
-  <input type="radio" onclick="yellowCardRadioButton()" value="yellowCard"id="yellowCard" name="yellowCard" > Keltainen kortti <br>
-  <input type="radio" onclick="redCardRadioButton()" value="redCard"id="redCard" name="redCard"> Punainen kortti <br>
-
-  <hr>
-
-
-  </div>
-  
-  <!-- wrong doer 3 -->
-  
-   <div id="bookingScorerDiv3" class="wrongDoerDiv">
-    <hr>
-    <h1>Varoituksen saaja</h1>
-
-    <select name="meemit">
-   <option value="volvo">jonihoitaa</option>
-   <option value="saab">Saab</option>
-  </select>
-  <br>
-
-
-  <input type="radio" onclick="yellowCardRadioButton()" value="yellowCard"id="yellowCard" name="yellowCard" > Keltainen kortti <br>
-  <input type="radio" onclick="redCardRadioButton()" value="redCard"id="redCard" name="redCard"> Punainen kortti <br>
-
-  <hr>
-
-
-  </div>
-  
-  <!-- wrong doer 4 -->
-  
-   <div id="bookingScorerDiv4" class="wrongDoerDiv">
-    <hr>
-    <h1>Varoituksen saaja</h1>
-
-    <select name="meemit">
-   <option value="volvo">jonihoitaa</option>
-   <option value="saab">Saab</option>
-  </select>
-  <br>
-
-
-  <input type="radio" onclick="yellowCardRadioButton()" value="yellowCard"id="yellowCard" name="yellowCard" > Keltainen kortti <br>
-  <input type="radio" onclick="redCardRadioButton()" value="redCard"id="redCard" name="redCard"> Punainen kortti <br>
-
-  <hr>
-
-
-  </div>
-  
-  <!-- wrong doer 5 -->
-  
-   <div id="bookingScorerDiv5" class="wrongDoerDiv">
-    <hr>
-    <h1>Varoituksen saaja</h1>
-
-    <select name="meemit">
-   <option value="volvo">jonihoitaa</option>
-   <option value="saab">Saab</option>
-  </select>
-  <br>
-
-
-  <input type="radio" onclick="yellowCardRadioButton()" value="yellowCard"id="yellowCard" name="yellowCard" > Keltainen kortti <br>
-  <input type="radio" onclick="redCardRadioButton()" value="redCard"id="redCard" name="redCard"> Punainen kortti <br>
-
-  <hr>
-
-
-  </div>
-    <label>Ottelun päivämäärä</label>
+ 
+ <label>Ottelun päivämäärä</label>
     <br>
    <input type="date" class="form-control"id="pvm" name="pvm" required>
    <br>
   <button type="submit" class="btn btn-primary formButton" name="adminSubmit">Submit</button>
+
+  </div>
+   
   </div>
 </form>
 
