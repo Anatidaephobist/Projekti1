@@ -114,24 +114,16 @@ body {
      display: none;
 }
 
-#playerInfoWrapperBasel {
-    display: none;
-}
-
-
-
-
-
-
 .teamInfoBox {
     background-color: gray;
     margin-top:5%;
     padding: 1%;
     padding-left:100px;
-    height: 600px;
+    height: 700px;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: auto;
     border: black 2px solid;
     background: rgba(128,128,128,0.6);
     border-radius: 15px 50px 30px;
@@ -139,10 +131,6 @@ body {
 }
 
 #wrapperOfPlayers {
-    display: none;
-}
-
-#playerInfoWrapperManchester {
     display: none;
 }
 
@@ -161,6 +149,8 @@ display: none;
 
 h1 {
      font-size: 30px;
+     float:left;
+     margin-bottom: 10px;
 }
 
 h2 {
@@ -180,8 +170,19 @@ h2 {
     text-align: center;
 }
 
+.infoPlayers {
+    text-align: center;
+    float:left;
+    margin-top: 100px;
+}
+.info1 {
+  margin-left: 10px;
+  margin-right: 10px;
+}
 
-
+.info {
+  float: left;
+}
 
 #logIn {
     position:absolute;

@@ -382,38 +382,22 @@
 
    <button onclick="closePlayerInfo()" class="btn btn-primary playerbutton"> takaisin</button>
 
-<div class="teamInfoBox">
-
-  <div class="playerInfo fname ">
-  <h1> Etunimi</h1>
-
-    <?php
-      $sql = "SELECT * FROM Pelaajat WHERE JoukkueID = '1' ";
-      $result = $mysqli->query($sql);
-      if ($result->num_rows > 0) {
-
-        while($row = $result->fetch_assoc()) {
-            echo "Nimi: " . $row["EtuNimi"] . " " . $row["Sukunimi"] .
-                 " Ikä: " . $row["Ika"] .
-                 " Kansallisuus: " . $row["Kansallisuus"] .
-                 " Pelatut pelit: " . $row["PelatutPelit"] .
-                 " Maalit: " . $row["Maalit"] .
-                 " Pelipaikka: " . $row["Pelipaikka"] .
-                 "<br>";
-        }
-    } else {
-        echo "0 results";
-    }
-    ?>
-
+   <div class= "teamInfoBox">
+  <!-- Pelaajien nimet -->
+  <div class= "infoTitles">
+    <h1> Nimi </h1>
   </div>
- <div class="cards">
-
-
+  <div class="infoPlayers">
+  <?php
+  echo databaseQueryName('1');
+  ?>
   </div>
 
-
+  <!-- Pelaajien muut tiedot -->
+  <?php
+  echo databaseQueryInfo('Ika', 'Kansallisuus', 'PelatutPelit', 'Maalit', 'Pelipaikka','1');
+  ?>
+  </div>
 
 </div>
-
 </div> <!-- End of wrapperOfPlayers -->
