@@ -2,9 +2,7 @@
 session_start();
 include_once 'login.php';
 include_once 'config.php';
-
-
-
+include_once 'functions.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -13,6 +11,8 @@ include_once 'config.php';
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/submit.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="blur-svg">
 
@@ -43,11 +43,7 @@ function LogOut() {
 
 function adminMode() {
     if(kirjautunut == 1) {
-    document.getElementById("popUp").style.display = "none";
-    document.getElementById("logInButton").style.display = "none";
-    document.getElementById("logOutButton").style.display = "block";
-    document.getElementById("popUpWrapper").style.display = "none";
-    document.getElementById("ListOfGames").style.display = "block";
+    window.location.href = "adminform.php";
 
 
 
@@ -71,6 +67,7 @@ function  playerCardBelfica() {
 }
 
 
+
 function closeLogIn() {
     document.getElementById("closeLogIn").style.display = "none";
 
@@ -85,59 +82,12 @@ function deleteGameQuestion() {
 function deleteGame() {
 document.getElementById("popUp3").style.display = "none";
 
-alert(<?php echo $_POST['gameToDelete']; ?>)
+alert(<?php echo $_POST['gameToDelete'];?>)
 }
 
-<?php
-function databaseQueryPlayers($joukkueID) {
-    $value = "";
-    global $mysqli;
-    $sql = "SELECT EtuNimi, Sukunimi FROM Pelaajat WHERE JoukkueID = '$joukkueID'";
-$result = $mysqli->query($sql);
-
-echo "<select name='EtuNimi'>";
-while ($row = mysqli_fetch_array($result)) {
-  echo "<option value='" . $row['EtuNimi']."". $row['Sukunimi'] . "'>" . $row['EtuNimi']."". $row['Sukunimi']. "</option>";
-}
-echo "</select>";
-return;
-    
-    
-} // end of databaseQueryPlayer
 
 
-?>
 
-
-<?php
-function databaseQuery($table, $column, $ID) {
-	$value = "";
-	global $mysqli;
-	$sql = "SELECT " .$column. " FROM " .$table. " Where id = '".$ID."'";
-		$result = $mysqli->query($sql);
-if ($result->num_rows > 0) {
-		while($row = $result->fetch_assoc()) {
-			$value = $row[''.$column.''];
-}
-return $value;
-}
-} //end of function 'makeQuery'
-?>
-
-<?php
-function databaseQueryMultiple($table, $column, $ID) {
-	$value = "";
-	global $mysqli;
-	$sql = "SELECT " .$column. " FROM " .$table. " Where id > '".$ID."'";
-		$result = $mysqli->query($sql);
-if ($result->num_rows > 0) {
-		while($row = $result->fetch_assoc()) {
-			$value = $row[''.$column.''];
-}
-return $value;
-}
-} //end of function 'makeQuery'
-?>
 
 
 function showGroupA() {
@@ -265,8 +215,11 @@ function checkAwayTeam() {
 
 }
 
-
-
+function changeAdminForm() {
+   document.getElementById("popUpWrapper").style.display = "none";
+   document.getElementById("adminForm1").style.display = "none";
+   document.getElementById("adminForm2").style.display = "block";
+}
 
 
 document.getElementsByName("input1")[1].addEventListener('change', addGoalScorer());
@@ -389,7 +342,9 @@ function goBack() {
     document.getElementById("teamInfoBoxWrapperF").style.display = "none";
     document.getElementById("teamInfoBoxWrapperG").style.display = "none";
     document.getElementById("teamInfoBoxWrapperH").style.display = "none";
-
+    document.getElementById("adminForm1").style.display = "none";
+    document.getElementById("adminForm2").style.display = "none";
+    document.getElementById("popUp").style.display = "block";
 
 
 
@@ -404,18 +359,6 @@ function notSure() {
 <?php
 
 $kirjautunut = $_SESSION['userIsAdmin'];
-
-
-
-	function alert($msg) {
-    echo "<script type='text/javascript'>alert('$msg');</script>";
-}
-
-
-
-
-
-
 
 ?>
 
@@ -1237,7 +1180,7 @@ $sql = "UPDATE Joukkueet SET PaastetytMaalit = PaastetytMaalit + '".$awayGoals."
     <!-- Lisäyslomake -->
     <?php include 'adminform.php' ?>
 
-
+ <div id="popUp3">
 <div class="gameList" id="ListOfGames">
 
 
@@ -1269,7 +1212,7 @@ $sql = "UPDATE Joukkueet SET PaastetytMaalit = PaastetytMaalit + '".$awayGoals."
 </div>
 
 
- <div id="popUp3">
+
 
     <form method="POST">
              <label> Anna poistettavan pelin ID</label>

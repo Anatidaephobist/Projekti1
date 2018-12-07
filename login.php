@@ -37,9 +37,7 @@ $sql = "SELECT password FROM Admin";
 // tarkastetaan tunnukset
 
     if(isset($_POST["login"])) {
-        
-       
-        
+
         $userEmail = $_POST['userEmail'];
         $userPassword =  $_POST['userPassword'];
         

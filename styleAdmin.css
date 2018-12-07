@@ -1,0 +1,25 @@
+@import 'responsiveCSS.css';
+
+.formBox {
+    background-color: gray;
+    margin-top:5%;
+    padding: 1%;
+    padding-left:100px;
+    height: 600px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border: black 2px solid;
+    background: rgba(128,128,128,0.6);
+    border-radius: 15px 50px 30px;
+    font-size: 32px;
+}
+
+
+body {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+   background-attachment: fixed;
+}
