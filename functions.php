@@ -86,7 +86,7 @@ function databaseQueryName($joukkueID) {
     global $mysqli;
     $sql = "SELECT * FROM Pelaajat WHERE JoukkueID = '$joukkueID'";
 $result = $mysqli->query($sql);
-
+echo "<div class='infoPlayers jabadaba'>";
 while ($row = mysqli_fetch_array($result)) {
   echo "<div class = 'info'>" . $row['EtuNimi']." ". $row['Sukunimi'] . "</div> <br>";
 }
@@ -108,31 +108,31 @@ $result3 = $mysqli->query($sql3);
 $result4 = $mysqli->query($sql4);
 $result5 = $mysqli->query($sql5);
 // Ikä
-echo "<div class = 'infoPlayers info1'>";
+echo "<div class = 'infoPlayers'>";
 while ($row = mysqli_fetch_array($result1)) {
   echo "<div class = 'info'>" . $row[''.$column1.'']. "</div> <br>";
 }
 echo "</div>";
 // Kansallisuus
-echo "<div class = 'infoPlayers info1'>";
+echo "<div class = 'infoPlayers'>";
 while ($row = mysqli_fetch_array($result2)) {
   echo "<div class = 'info'>" . $row[''.$column2.'']. "</div> <br>";
 }
 echo "</div>";
 // Pelatut Pelit
-echo "<div class = 'infoPlayers info1'>";
+echo "<div class = 'infoPlayers'>";
 while ($row = mysqli_fetch_array($result3)) {
   echo "<div class = 'info'>" . $row[''.$column3.'']. "</div> <br>";
 }
 echo "</div>";
 // Maalit
-echo "<div class = 'infoPlayers info1'>";
+echo "<div class = 'infoPlayers'>";
 while ($row = mysqli_fetch_array($result4)) {
   echo "<div class = 'info'>" . $row[''.$column4.'']. "</div> <br>";
 }
 echo "</div>";
 // Pelipaikka
-echo "<div class = 'infoPlayers info1'>";
+echo "<div class = 'infoPlayers'>";
 while ($row = mysqli_fetch_array($result5)) {
   echo "<div class = 'info'>" . $row[''.$column5.'']. "</div> <br>";
 }

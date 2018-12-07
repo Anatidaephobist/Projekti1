@@ -384,20 +384,15 @@
 
    <div class= "teamInfoBox">
   <!-- Pelaajien nimet -->
-  <div class= "infoTitles">
-    <h1> Nimi </h1>
-  </div>
-  <div class="infoPlayers">
   <?php
   echo databaseQueryName('1');
   ?>
-  </div>
+</div>
 
+  <div class= "teamInfoBox">
   <!-- Pelaajien muut tiedot -->
   <?php
   echo databaseQueryInfo('Ika', 'Kansallisuus', 'PelatutPelit', 'Maalit', 'Pelipaikka','1');
   ?>
   </div>
-
-</div>
 </div> <!-- End of wrapperOfPlayers -->
