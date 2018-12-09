@@ -15,6 +15,9 @@ include_once 'functions.php';
   </script>
   
   
+  
+  
+  
   <script>
   
   function adminform2Direct() {
@@ -22,12 +25,63 @@ include_once 'functions.php';
   }
    
    
+
+    document.getElementById("koti").addEventListener("change", checkHomeTeam());
+    document.getElementById("vieras").addEventListener("change", checkAwayTeam());
+   
+
+
+function checkHomeTeam() {
+   
+    var i;
+ 
+    var select = document.getElementById("vieras");
+    var length = select.options.length;
+        for (i = 0; i < length; i++) {
+         select.options[i].disabled = false;
+}
+
+
+    var homeTeam = document.getElementById("koti");
+    var awayTeam = document.getElementById("vieras");
+    var homeTeamValue = document.getElementById("koti").value;
+    var awayTeamValue = document.getElementById("vieras").value;
+
+   awayTeam.options[homeTeamValue].disabled = true;
+
+
+}
+
+
+function checkAwayTeam() {
+    var i;
+
+    var select = document.getElementById("koti");
+    var length = select.options.length;
+        for (i = 0; i < length; i++) {
+         select.options[i].disabled = false;
+}
+
+
+    var homeTeam = document.getElementById("koti");
+    var awayTeam = document.getElementById("vieras");
+    var homeTeamValue = document.getElementById("koti").value;
+    var awayTeamValue = document.getElementById("vieras").value;
+
+   homeTeam.options[awayTeamValue].disabled = true;
+
+
+}
+
+
+   
   </script>
   
  
   
 </head>
 <body background="football1.jpg">
+    
 <form method="POST">
 <div class="formBox" id="adminForm1">
     <label>Valitse koti ja vierasjoukkue</label>
@@ -46,7 +100,7 @@ include_once 'functions.php';
   <div class="form-group addFormItem">
       <label>Valitse Kotijoukkue</label>
       <br>
-   <select name="kotijoukkue" id="koti">
+   <select name="kotijoukkue" id="koti" onchange="checkHomeTeam()">
        <option value="Joukkuevalinta" disabled selected="selected">Valitse Joukkue</option>
         <option id="homeTeam1" value="1"><?php echo databaseQuery('Joukkueet','Nimi','1')?></option>
   <option id="homeTeam2" value="2"><?php echo databaseQuery('Joukkueet','Nimi','2')?></option>

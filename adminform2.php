@@ -16,6 +16,41 @@ include_once 'functions.php';
   <script>
    
    function addGoalScorer() {
+       
+      
+       
+    if(document.getElementById("numberOfGoals").value == 0) {
+        document.getElementById("goalScorerDiv1").style.display ="none";
+       document.getElementById("goalScorerDiv2").style.display = "none";
+       document.getElementById("goalScorerDiv3").style.display = "none";
+       document.getElementById("goalScorerDiv4").style.display = "none";
+       document.getElementById("goalScorerDiv5").style.display = "none";
+       document.getElementById("goalScorerDiv6").style.display = "none";
+       document.getElementById("goalScorerDiv7").style.display = "none";
+       document.getElementById("goalScorerDiv8").style.display = "none";
+       document.getElementById("goalScorerDiv9").style.display = "none";
+      document.getElementById("goalScorerDiv10").style.display = "none";
+      
+       var elements = document.getElementsByClassName("owngoal");
+             
+            for(var i = 0, length = elements.length; i < length; i++) {
+                if( elements[i].checked == true){
+                    elements[i].checked = false;
+       } 
+    }
+    
+    var elements = document.getElementsByClassName("nameOfPlayer");
+             
+            for(var i = 0, length = elements.length; i < length; i++) {
+                if( elements[i].selectedIndex != 0){
+                    elements[i].selectedIndex = 0;
+       } 
+    }
+    
+      
+      
+      
+    }
     if(document.getElementById("numberOfGoals").value == 1) {
        document.getElementById("goalScorerDiv1").style.display = "block";
        document.getElementById("goalScorerDiv2").style.display = "none";
@@ -27,6 +62,24 @@ include_once 'functions.php';
        document.getElementById("goalScorerDiv8").style.display = "none";
        document.getElementById("goalScorerDiv9").style.display = "none";
        document.getElementById("goalScorerDiv10").style.display = "none";
+       
+         var elements = document.getElementsByClassName("owngoal");
+             
+            for(var i = 1, length = elements.length; i < length; i++) {
+                if( elements[i].checked == true){
+                    elements[i].checked = false;
+       } 
+    }
+    
+     var elements = document.getElementsByClassName("nameOfPlayer");
+             
+            for(var i = 1, length = elements.length; i < length; i++) {
+                if( elements[i].selectedIndex != 0){
+                    elements[i].selectedIndex = 0;
+       } 
+    }
+    
+    
        
     }
     if(document.getElementById("numberOfGoals").value == 2) {
@@ -40,6 +93,24 @@ include_once 'functions.php';
        document.getElementById("goalScorerDiv8").style.display = "none";
        document.getElementById("goalScorerDiv9").style.display = "none";
        document.getElementById("goalScorerDiv10").style.display = "none";
+       
+        var elements = document.getElementsByClassName("owngoal");
+             
+            for(var i = 2, length = elements.length; i < length; i++) {
+                if( elements[i].checked == true){
+                    elements[i].checked = false;
+       } 
+    }
+    
+     var elements = document.getElementsByClassName("nameOfPlayer");
+             
+            for(var i = 2, length = elements.length; i < length; i++) {
+                if( elements[i].selectedIndex != 0){
+                    elements[i].selectedIndex = 0;
+       } 
+    }
+    
+    
     }
      if(document.getElementById("numberOfGoals").value == 3) {
        document.getElementById("goalScorerDiv1").style.display = "block";
@@ -52,6 +123,24 @@ include_once 'functions.php';
        document.getElementById("goalScorerDiv8").style.display = "none";
        document.getElementById("goalScorerDiv9").style.display = "none";
        document.getElementById("goalScorerDiv10").style.display = "none";
+       
+        var elements = document.getElementsByClassName("owngoal");
+             
+            for(var i = 3, length = elements.length; i < length; i++) {
+                if( elements[i].checked == true){
+                    elements[i].checked = false;
+       } 
+    }
+    
+     var elements = document.getElementsByClassName("nameOfPlayer");
+             
+            for(var i = 3, length = elements.length; i < length; i++) {
+                if( elements[i].selectedIndex != 0){
+                    elements[i].selectedIndex = 0;
+       } 
+    }
+    
+    
     }
      if(document.getElementById("numberOfGoals").value == 4) {
        document.getElementById("goalScorerDiv1").style.display = "block";
@@ -64,6 +153,24 @@ include_once 'functions.php';
        document.getElementById("goalScorerDiv8").style.display = "none";
        document.getElementById("goalScorerDiv9").style.display = "none";
        document.getElementById("goalScorerDiv10").style.display = "none";
+       
+        var elements = document.getElementsByClassName("owngoal");
+             
+            for(var i = 4, length = elements.length; i < length; i++) {
+                if( elements[i].checked == true){
+                    elements[i].checked = false;
+       } 
+    }
+    
+     var elements = document.getElementsByClassName("nameOfPlayer");
+             
+            for(var i = 4, length = elements.length; i < length; i++) {
+                if( elements[i].selectedIndex != 0){
+                    elements[i].selectedIndex = 0;
+       } 
+    }
+    
+    
     }
      if(document.getElementById("numberOfGoals").value == 5) {
        document.getElementById("goalScorerDiv1").style.display = "block";
@@ -76,6 +183,24 @@ include_once 'functions.php';
        document.getElementById("goalScorerDiv8").style.display = "none";
        document.getElementById("goalScorerDiv9").style.display = "none";
        document.getElementById("goalScorerDiv10").style.display = "none";
+       
+        var elements = document.getElementsByClassName("owngoal");
+             
+            for(var i = 5, length = elements.length; i < length; i++) {
+                if( elements[i].checked == true){
+                    elements[i].checked = false;
+       } 
+    }
+    
+     var elements = document.getElementsByClassName("nameOfPlayer");
+             
+            for(var i = 5, length = elements.length; i < length; i++) {
+                if( elements[i].selectedIndex != 0){
+                    elements[i].selectedIndex = 0;
+       } 
+    }
+    
+    
     }
      if(document.getElementById("numberOfGoals").value == 6) {
        document.getElementById("goalScorerDiv1").style.display = "block";
@@ -88,6 +213,24 @@ include_once 'functions.php';
        document.getElementById("goalScorerDiv8").style.display = "none";
        document.getElementById("goalScorerDiv9").style.display = "none";
        document.getElementById("goalScorerDiv10").style.display = "none";
+       
+        var elements = document.getElementsByClassName("owngoal");
+             
+            for(var i = 6, length = elements.length; i < length; i++) {
+                if( elements[i].checked == true){
+                    elements[i].checked = false;
+       } 
+    }
+    
+     var elements = document.getElementsByClassName("nameOfPlayer");
+             
+            for(var i = 6, length = elements.length; i < length; i++) {
+                if( elements[i].selectedIndex != 0){
+                    elements[i].selectedIndex = 0;
+       } 
+    }
+    
+    
     }
      if(document.getElementById("numberOfGoals").value == 7) {
        document.getElementById("goalScorerDiv1").style.display = "block";
@@ -100,6 +243,23 @@ include_once 'functions.php';
        document.getElementById("goalScorerDiv8").style.display = "none";
        document.getElementById("goalScorerDiv9").style.display = "none";
       document.getElementById("goalScorerDiv10").style.display = "none";
+      
+       var elements = document.getElementsByClassName("owngoal");
+             
+            for(var i = 7, length = elements.length; i < length; i++) {
+                if( elements[i].checked == true){
+                    elements[i].checked = false;
+       } 
+    }
+    
+     var elements = document.getElementsByClassName("nameOfPlayer");
+             
+            for(var i = 7, length = elements.length; i < length; i++) {
+                if( elements[i].selectedIndex != 0){
+                    elements[i].selectedIndex = 0;
+       } 
+    }
+    
     }
      if(document.getElementById("numberOfGoals").value == 8) {
        document.getElementById("goalScorerDiv1").style.display = "block";
@@ -112,6 +272,24 @@ include_once 'functions.php';
        document.getElementById("goalScorerDiv8").style.display = "block";
        document.getElementById("goalScorerDiv9").style.display = "none";
       document.getElementById("goalScorerDiv10").style.display = "none";
+      
+       var elements = document.getElementsByClassName("owngoal");
+             
+            for(var i = 8, length = elements.length; i < length; i++) {
+                if( elements[i].checked == true){
+                    elements[i].checked = false;
+       } 
+    }
+    
+     var elements = document.getElementsByClassName("nameOfPlayer");
+             
+            for(var i = 8, length = elements.length; i < length; i++) {
+                if( elements[i].selectedIndex != 0){
+                    elements[i].selectedIndex = 0;
+       } 
+    }
+    
+    
     }
      if(document.getElementById("numberOfGoals").value == 9) {
        document.getElementById("goalScorerDiv1").style.display = "block";
@@ -124,6 +302,24 @@ include_once 'functions.php';
        document.getElementById("goalScorerDiv8").style.display = "block";
        document.getElementById("goalScorerDiv9").style.display = "block";
       document.getElementById("goalScorerDiv10").style.display = "none";
+      
+       var elements = document.getElementsByClassName("owngoal");
+             
+            for(var i = 9, length = elements.length; i < length; i++) {
+                if( elements[i].checked == true){
+                    elements[i].checked = false;
+       } 
+    }
+    
+     var elements = document.getElementsByClassName("nameOfPlayer");
+             
+            for(var i = 9, length = elements.length; i < length; i++) {
+                if( elements[i].selectedIndex != 0){
+                    elements[i].selectedIndex = 0;
+       } 
+    }
+    
+    
     }
      if(document.getElementById("numberOfGoals").value == 10) {
        document.getElementById("goalScorerDiv1").style.display = "block";
@@ -136,67 +332,27 @@ include_once 'functions.php';
        document.getElementById("goalScorerDiv8").style.display = "block";
        document.getElementById("goalScorerDiv9").style.display = "block";
       document.getElementById("goalScorerDiv10").style.display = "block";
+      
+       var elements = document.getElementsByClassName("owngoal");
+             
+            for(var i = 10, length = elements.length; i < length; i++) {
+                if( elements[i].checked == true){
+                    elements[i].checked = false;
+       } 
+    }
+    
+    var elements = document.getElementsByClassName("nameOfPlayer");
+             
+            for(var i = 10, length = elements.length; i < length; i++) {
+                if( elements[i].selectedIndex != 0){
+                    elements[i].selectedIndex = 0;
+       } 
+    }
+    
     }
 }
    
-   document.getElementsByName("input1")[0].addEventListener('change', addGoalScorer());
-   
- function yellowCardRadioButton() {
-document.getElementById('redCard').checked = false;
-
-}
-
-function redCardRadioButton() {
-
-document.getElementById('yellowCard').checked = false;
-
-}
-
-
-document.getElementById("koti").addEventListener("change", checkHomeTeam());
-document.getElementById("vieras").addEventListener("change", checkAwayTeam());
-
-function checkHomeTeam() {
-
-    var select = document.getElementById("vieras");
-    var length = select.options.length;
-        for (i = 0; i < length; i++) {
-         select.options[i].disabled = false;
-}
-
-
-    var homeTeam = document.getElementById("koti");
-    var awayTeam = document.getElementById("vieras");
-    var homeTeamValue = document.getElementById("koti").selectedIndex;
-    var awayTeamValue = document.getElementById("vieras").selectedIndex;
-
-   awayTeam.options[homeTeamValue].disabled = true;
-
-
-}
-
-
-function checkAwayTeam() {
-
-
-    var select = document.getElementById("koti");
-    var length = select.options.length;
-        for (i = 0; i < length; i++) {
-         select.options[i].disabled = false;
-}
-
-
-    var homeTeam = document.getElementById("koti");
-    var awayTeam = document.getElementById("vieras");
-    var homeTeamValue = document.getElementById("koti").selectedIndex;
-    var awayTeamValue = document.getElementById("vieras").selectedIndex;
-
-   homeTeam.options[awayTeamValue].disabled = true;
-
-
-}
-
-
+document.getElementsByName("input1")[0].addEventListener('change', addGoalScorer());
 document.getElementsByName("input2")[1].addEventListener('change', addbookingScorer());
 
 
@@ -208,6 +364,22 @@ function addbookingScorer() {
         document.getElementById('bookingScorerDiv3').style.display = "none";
           document.getElementById('bookingScorerDiv4').style.display = "none";
             document.getElementById('bookingScorerDiv5').style.display = "none";
+            
+             var elements = document.getElementsByClassName("yellowCard");
+             
+            for(var i = 0, length = elements.length; i < length; i++) {
+                if( elements[i].checked == true){
+                    elements[i].checked = false;
+       } 
+    }
+    
+    var elements = document.getElementsByClassName("redcards");
+             
+            for(var i = 0, length = elements.length; i < length; i++) {
+                if( elements[i].checked == true){
+                    elements[i].checked = false;
+       } 
+    }
         }
   if (document.getElementById("numberOfBookings").value == 1 ) {
     document.getElementById('bookingScorerDiv1').style.display = "block";
@@ -253,22 +425,14 @@ function addbookingScorer() {
 </head>
 <body background="football1.jpg">
 
-
-
-
-
-
- 
-<form method=POST>
+<form method="post">
 <div class="formBox" id="adminForm2">
  <label>Valitse maalintekijät ja varoitusten saajat</label>
   <!-- maalintekijät -->
   <h1>Maalintekijät</h1>
-   
-  <br>
   <label>Maalien määrä pelissä</label>
   <br>
- <input id="numberOfGoals" class ="adminInputNumberField" onchange="addGoalScorer()" name="input1" type="number" min="0">
+ <input id="numberOfGoals" class ="adminInputNumberField" onchange="addGoalScorer()" name="input1" type="number" min="0" max="10">
   <br>
   <br>
 <div>
@@ -276,7 +440,7 @@ function addbookingScorer() {
  
 </div>
 
-<!--- kesken -->
+
 
 <div id="goalScorerDiv1" class="goalScorerDiv">
   
@@ -286,14 +450,16 @@ function addbookingScorer() {
 $sql = "SELECT EtuNimi, Sukunimi FROM Pelaajat WHERE JoukkueID =  ".$_SESSION['kotijoukkue']." "."OR"." "."JoukkueID = ".$_SESSION['vierasjoukkue'];
 $result = $mysqli->query($sql);
 
-echo "<select name='EtuNimi'>";
+echo "<select name='EtuNimi' class='nameOfPlayer'>";
+echo "<option value='0' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
 while ($row = mysqli_fetch_array($result)) {
+ 
   echo "<option value='" . $row['EtuNimi']." ". $row['Sukunimi'] . "'>" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
 }
 echo "</select>";
 ?>
 <br>
-<input type="checkbox" id="owngoal1" value="owngoal"> oma maali<br>
+<input type="checkbox" id="owngoal1" class="owngoal" value="owngoal"> oma maali<br>
 
 <hr>
 </div>
@@ -306,14 +472,15 @@ echo "</select>";
 $sql = "SELECT EtuNimi, Sukunimi FROM Pelaajat WHERE JoukkueID =  ".$_SESSION['kotijoukkue']." "."OR"." "."JoukkueID = ".$_SESSION['vierasjoukkue'];
 $result = $mysqli->query($sql);
 
-echo "<select name='EtuNimi'>";
+echo "<select name='EtuNimi' class='nameOfPlayer'>";
+echo "<option value='0' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
 while ($row = mysqli_fetch_array($result)) {
   echo "<option value='" . $row['EtuNimi']." ". $row['Sukunimi'] . "'>" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
 }
 echo "</select>";
 ?>
 <br>
-<input type="checkbox" id="owngoal2" value="owngoal"> oma maali<br>
+<input type="checkbox" id="owngoal2" class="owngoal" value="owngoal"> oma maali<br>
 
 <hr>
 </div>
@@ -326,14 +493,15 @@ echo "</select>";
 $sql = "SELECT EtuNimi, Sukunimi FROM Pelaajat WHERE JoukkueID =  ".$_SESSION['kotijoukkue']." "."OR"." "."JoukkueID = ".$_SESSION['vierasjoukkue'];
 $result = $mysqli->query($sql);
 
-echo "<select name='EtuNimi'>";
+echo "<select name='EtuNimi' class='nameOfPlayer'>";
+echo "<option value='0' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
 while ($row = mysqli_fetch_array($result)) {
   echo "<option value='" . $row['EtuNimi']." ". $row['Sukunimi'] . "'>" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
 }
 echo "</select>";
 ?>
 <br>
-<input type="checkbox" id="owngoal3" value="owngoal"> oma maali<br>
+<input type="checkbox" id="owngoal3" class="owngoal" value="owngoal"> oma maali<br>
 <hr>
 </div>
 
@@ -345,14 +513,15 @@ echo "</select>";
 $sql = "SELECT EtuNimi, Sukunimi FROM Pelaajat WHERE JoukkueID =  ".$_SESSION['kotijoukkue']." "."OR"." "."JoukkueID = ".$_SESSION['vierasjoukkue'];
 $result = $mysqli->query($sql);
 
-echo "<select name='EtuNimi'>";
+echo "<select name='EtuNimi' class='nameOfPlayer'>";
+echo "<option value='0' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
 while ($row = mysqli_fetch_array($result)) {
   echo "<option value='" . $row['EtuNimi']." ". $row['Sukunimi'] . "'>" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
 }
 echo "</select>";
 ?>
 <br>
-<input type="checkbox" id="owngoal4" value="owngoal"> oma maali<br>
+<input type="checkbox" id="owngoal4" class="owngoal" value="owngoal"> oma maali<br>
 <hr>
 </div>
 
@@ -364,14 +533,15 @@ echo "</select>";
 $sql = "SELECT EtuNimi, Sukunimi FROM Pelaajat WHERE JoukkueID =  ".$_SESSION['kotijoukkue']." "."OR"." "."JoukkueID = ".$_SESSION['vierasjoukkue'];
 $result = $mysqli->query($sql);
 
-echo "<select name='EtuNimi'>";
+echo "<select name='EtuNimi' class='nameOfPlayer'>";
+echo "<option value='0' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
 while ($row = mysqli_fetch_array($result)) {
   echo "<option value='" . $row['EtuNimi']." ". $row['Sukunimi'] . "'>" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
 }
 echo "</select>";
 ?>
 <br>
-<input type="checkbox" id="owngoal5" value="owngoal"> oma maali<br>
+<input type="checkbox" id="owngoal5" class="owngoal" value="owngoal"> oma maali<br>
 <hr>
 </div>
 
@@ -383,7 +553,8 @@ echo "</select>";
 $sql = "SELECT EtuNimi, Sukunimi FROM Pelaajat WHERE JoukkueID =  ".$_SESSION['kotijoukkue']." "."OR"." "."JoukkueID = ".$_SESSION['vierasjoukkue'];
 $result = $mysqli->query($sql);
 
-echo "<select name='EtuNimi'>";
+echo "<select name='EtuNimi' class='nameOfPlayer'>";
+echo "<option value='0' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
 while ($row = mysqli_fetch_array($result)) {
   echo "<option value='" . $row['EtuNimi']." ". $row['Sukunimi'] . "'>" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
 }
@@ -391,7 +562,7 @@ echo "</select>";
 ?>
 <hr>
 <br>
-<input type="checkbox" id="owngoal6" value="owngoal"> oma maali<br>
+<input type="checkbox" id="owngoal6" class="owngoal" value="owngoal"> oma maali<br>
 </div>
 
 <div id="goalScorerDiv7" class="goalScorerDiv">
@@ -402,7 +573,8 @@ echo "</select>";
 $sql = "SELECT EtuNimi, Sukunimi FROM Pelaajat WHERE JoukkueID =  ".$_SESSION['kotijoukkue']." "."OR"." "."JoukkueID = ".$_SESSION['vierasjoukkue'];
 $result = $mysqli->query($sql);
 
-echo "<select name='EtuNimi'>";
+echo "<select name='EtuNimi' class='nameOfPlayer'>";
+echo "<option value='0' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
 while ($row = mysqli_fetch_array($result)) {
   echo "<option value='" . $row['EtuNimi']." ". $row['Sukunimi'] . "'>" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
 }
@@ -410,7 +582,7 @@ echo "</select>";
 ?>
 <hr>
 <br>
-<input type="checkbox" id="owngoal7" value="owngoal"> oma maali<br>
+<input type="checkbox" id="owngoal7" class="owngoal" value="owngoal"> oma maali<br>
 </div>
 
 <div id="goalScorerDiv8" class="goalScorerDiv">
@@ -421,7 +593,8 @@ echo "</select>";
 $sql = "SELECT EtuNimi, Sukunimi FROM Pelaajat WHERE JoukkueID =  ".$_SESSION['kotijoukkue']." "."OR"." "."JoukkueID = ".$_SESSION['vierasjoukkue'];
 $result = $mysqli->query($sql);
 
-echo "<select name='EtuNimi'>";
+echo "<select name='EtuNimi' class='nameOfPlayer'>";
+echo "<option value='0' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
 while ($row = mysqli_fetch_array($result)) {
   echo "<option value='" . $row['EtuNimi']." ". $row['Sukunimi'] . "'>" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
 }
@@ -429,7 +602,7 @@ echo "</select>";
 ?>
 <hr>
 <br>
-<input type="checkbox" id="owngoal8" value="owngoal"> oma maali<br>
+<input type="checkbox" id="owngoal8" class="owngoal" value="owngoal"> oma maali<br>
 </div>
 
 <div id="goalScorerDiv9" class="goalScorerDiv">
@@ -440,7 +613,8 @@ echo "</select>";
 $sql = "SELECT EtuNimi, Sukunimi FROM Pelaajat WHERE JoukkueID =  ".$_SESSION['kotijoukkue']." "."OR"." "."JoukkueID = ".$_SESSION['vierasjoukkue'];
 $result = $mysqli->query($sql);
 
-echo "<select name='EtuNimi'>";
+echo "<select name='EtuNimi' class='nameOfPlayer'>";
+echo "<option value='0' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
 while ($row = mysqli_fetch_array($result)) {
   echo "<option value='" . $row['EtuNimi']." ". $row['Sukunimi'] . "'>" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
 }
@@ -448,7 +622,7 @@ echo "</select>";
 ?>
 <hr>
 <br>
-<input type="checkbox" id="owngoal9" value="owngoal"> oma maali<br>
+<input type="checkbox" id="owngoal9" class="owngoal" value="owngoal"> oma maali<br>
 </div>
 
 <div id="goalScorerDiv10" class="goalScorerDiv">
@@ -459,14 +633,15 @@ echo "</select>";
 $sql = "SELECT EtuNimi, Sukunimi FROM Pelaajat WHERE JoukkueID =  ".$_SESSION['kotijoukkue']." "."OR"." "."JoukkueID = ".$_SESSION['vierasjoukkue'];
 $result = $mysqli->query($sql);
 
-echo "<select name='EtuNimi'>";
+echo "<select name='EtuNimi' class='nameOfPlayer'>";
+echo "<option value='0' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
 while ($row = mysqli_fetch_array($result)) {
   echo "<option value='" . $row['EtuNimi']." ". $row['Sukunimi'] . "'>" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
 }
 echo "</select>";
 ?>
 <br>
-<input type="checkbox" id="owngoal10" value="owngoal"> oma maali<br>
+<input type="checkbox" id="owngoal10" class="owngoal" value="owngoal"> oma maali<br>
 <hr>
 </div>
 
@@ -490,6 +665,7 @@ $sql = "SELECT EtuNimi, Sukunimi FROM Pelaajat WHERE JoukkueID =  ".$_SESSION['k
 $result = $mysqli->query($sql);
 
 echo "<select name='EtuNimi'>";
+echo "<option value='0' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
 while ($row = mysqli_fetch_array($result)) {
   echo "<option value='" . $row['EtuNimi']." ". $row['Sukunimi'] . "'>" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
 }
@@ -498,8 +674,8 @@ echo "</select>";
   <br>
 
 
-  <input type="radio" onclick="yellowCardRadioButton()" value="yellowCard"id="yellowCard" name="Card1" required> Keltainen kortti <br>
-  <input type="radio" onclick="redCardRadioButton()" value="redCard"id="redCard" name="Card1"> Punainen kortti <br>
+  <input type="radio" onclick="yellowCardRadioButton()" value="yellowCard" id="yellowCard1" class="yellowcard" name="Card1"> Keltainen kortti <br>
+  <input type="radio" onclick="redCardRadioButton()" value="redCard" id="redCard1" class="redcards" name="Card1"> Punainen kortti <br>
 
   <hr>
 
@@ -515,6 +691,7 @@ $sql = "SELECT EtuNimi, Sukunimi FROM Pelaajat WHERE JoukkueID =  ".$_SESSION['k
 $result = $mysqli->query($sql);
 
 echo "<select name='EtuNimi'>";
+echo "<option selected='selected' disabled>"."Valitse Pelaaja". "</option>";
 while ($row = mysqli_fetch_array($result)) {
   echo "<option value='" . $row['EtuNimi']." ". $row['Sukunimi'] . "'>" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
 }
@@ -523,8 +700,8 @@ echo "</select>";
   <br>
 
 
-  <input type="radio" onclick="yellowCardRadioButton()" value="yellowCard"id="yellowCard" name="Card2" required> Keltainen kortti <br>
-  <input type="radio" onclick="redCardRadioButton()" value="redCard"id="redCard" name="Card2"> Punainen kortti <br>
+  <input type="radio" onclick="yellowCardRadioButton()" value="yellowCard" id="yellowCard2" class="yellowcard" name="Card2"> Keltainen kortti <br>
+  <input type="radio" onclick="redCardRadioButton()" value="redCard" id="redCard2" class="redcards" name="Card2"> Punainen kortti <br>
 
   <hr>
 
@@ -549,8 +726,8 @@ echo "</select>";
   <br>
 
 
-  <input type="radio" onclick="yellowCardRadioButton()" value="yellowCard"id="yellowCard" name="Card3" required> Keltainen kortti <br>
-  <input type="radio" onclick="redCardRadioButton()" value="redCard"id="redCard" name="Card3"> Punainen kortti <br>
+  <input type="radio" onclick="yellowCardRadioButton()" value="yellowCard" id="yellowCard3" class="yellowcard" name="Card3"> Keltainen kortti <br>
+  <input type="radio" onclick="redCardRadioButton()" value="redCard" id="redCard3" class="redcards" name="Card3"> Punainen kortti <br>
 
   <hr>
 
@@ -575,8 +752,8 @@ echo "</select>";
   <br>
 
 
-  <input type="radio" onclick="yellowCardRadioButton()" value="yellowCard"id="yellowCard" name="Card4" required> Keltainen kortti <br>
-  <input type="radio" onclick="redCardRadioButton()" value="redCard"id="redCard" name="Card4"> Punainen kortti <br>
+  <input type="radio" onclick="yellowCardRadioButton()" value="yellowCard" id="yellowCard4" class="yellowcard"  name="Card4"> Keltainen kortti <br>
+  <input type="radio" onclick="redCardRadioButton()" value="redCard" id="redCard4" class="redcards" name="Card4"> Punainen kortti <br>
 
   <hr>
 
@@ -601,22 +778,22 @@ echo "</select>";
   <br>
 
 
-  <input type="radio" onclick="yellowCardRadioButton()" value="yellowCard"id="yellowCard" name="Card5" required> Keltainen kortti <br>
-  <input type="radio" onclick="redCardRadioButton()" value="redCard"id="redCard" name="Card5"> Punainen kortti <br>
+  <input type="radio" onclick="yellowCardRadioButton()" value="yellowCard" id="yellowCard5" class="yellowcard" name="Card5"> Keltainen kortti <br>
+  <input type="radio" onclick="redCardRadioButton()" value="redCard" id="redCard5" class="redcards" name="Card5"> Punainen kortti <br>
 
   <hr>
 
 
   </div>
  
- 
+ <br>
  <label>Ottelun päivämäärä</label>
     <br>
-   <input type="date" class="form-control"id="pvm" name="pvm" required>
+   <input type="date" class="form-control"id="pvm" name="pvm">
    <br>
+    <button type="submit" class="btn btn-primary formButton" name="adminSubmit">Submit</button>
    <br>
-  <button type="submit" class="btn btn-primary formButton" name="adminSubmit">Submit</button>
-
+ 
   </div>
    
   </div>
@@ -627,5 +804,9 @@ echo "</select>";
 
 </div>
 </div>
+
+
+
+<?php include 'adminformPHP.php';  ?>
 
 </body>
