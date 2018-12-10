@@ -380,6 +380,14 @@ function addbookingScorer() {
                     elements[i].checked = false;
        } 
     }
+    
+    var elements = document.getElementsByClassName("nameOfPlayer2");
+             
+            for(var i = 0, length = elements.length; i < length; i++) {
+                if( elements[i].selectedIndex != 0){
+                    elements[i].selectedIndex = 0;
+       } 
+    }
         }
   if (document.getElementById("numberOfBookings").value == 1 ) {
     document.getElementById('bookingScorerDiv1').style.display = "block";
@@ -387,30 +395,154 @@ function addbookingScorer() {
         document.getElementById('bookingScorerDiv3').style.display = "none";
           document.getElementById('bookingScorerDiv4').style.display = "none";
             document.getElementById('bookingScorerDiv5').style.display = "none";
-  } else if (document.getElementById("numberOfBookings").value == 2 ) {
+            
+                 var elements = document.getElementsByClassName("yellowCard");
+             
+            for(var i = 1, length = elements.length; i < length; i++) {
+                if( elements[i].checked == true){
+                    elements[i].checked = false;
+       } 
+    }
+    
+    var elements = document.getElementsByClassName("redcards");
+             
+            for(var i = 1, length = elements.length; i < length; i++) {
+                if( elements[i].checked == true){
+                    elements[i].checked = false;
+       } 
+    }
+    
+    var elements = document.getElementsByClassName("nameOfPlayer2");
+             
+            for(var i = 1, length = elements.length; i < length; i++) {
+                if( elements[i].selectedIndex != 0){
+                    elements[i].selectedIndex = 0;
+       } 
+    }
+            
+  } if (document.getElementById("numberOfBookings").value == 2 ) {
     document.getElementById('bookingScorerDiv1').style.display = "block";
     document.getElementById('bookingScorerDiv2').style.display = "block";
       document.getElementById('bookingScorerDiv3').style.display = "none";
         document.getElementById('bookingScorerDiv4').style.display = "none";
           document.getElementById('bookingScorerDiv5').style.display = "none";
-  } else if (document.getElementById("numberOfBookings").value == 3) {
+          
+               var elements = document.getElementsByClassName("yellowCard");
+             
+            for(var i = 2, length = elements.length; i < length; i++) {
+                if( elements[i].checked == true){
+                    elements[i].checked = false;
+       } 
+    }
+    
+    var elements = document.getElementsByClassName("redcards");
+             
+            for(var i = 2, length = elements.length; i < length; i++) {
+                if( elements[i].checked == true){
+                    elements[i].checked = false;
+       } 
+    }
+    
+    var elements = document.getElementsByClassName("nameOfPlayer2");
+             
+            for(var i = 2, length = elements.length; i < length; i++) {
+                if( elements[i].selectedIndex != 0){
+                    elements[i].selectedIndex = 0;
+       } 
+    }
+          
+  } if (document.getElementById("numberOfBookings").value == 3) {
       document.getElementById('bookingScorerDiv1').style.display = "block";
         document.getElementById('bookingScorerDiv2').style.display = "block";
           document.getElementById('bookingScorerDiv3').style.display = "block";
             document.getElementById('bookingScorerDiv4').style.display = "none";
               document.getElementById('bookingScorerDiv5').style.display = "none";
-  }  else if (document.getElementById("numberOfBookings").value == 4) {
+              
+                   var elements = document.getElementsByClassName("yellowCard");
+             
+            for(var i = 3, length = elements.length; i < length; i++) {
+                if( elements[i].checked == true){
+                    elements[i].checked = false;
+       } 
+    }
+    
+    var elements = document.getElementsByClassName("redcards");
+             
+            for(var i = 3, length = elements.length; i < length; i++) {
+                if( elements[i].checked == true){
+                    elements[i].checked = false;
+       } 
+    }
+    
+    var elements = document.getElementsByClassName("nameOfPlayer2");
+             
+            for(var i = 3, length = elements.length; i < length; i++) {
+                if( elements[i].selectedIndex != 0){
+                    elements[i].selectedIndex = 0;
+       } 
+    }
+              
+  }  if (document.getElementById("numberOfBookings").value == 4) {
     document.getElementById('bookingScorerDiv1').style.display = "block";
       document.getElementById('bookingScorerDiv2').style.display = "block";
         document.getElementById('bookingScorerDiv3').style.display = "block";
           document.getElementById('bookingScorerDiv4').style.display = "block";
             document.getElementById('bookingScorerDiv5').style.display = "none";
-  } else if (document.getElementById("numberOfBookings").value == 5) {
+            
+                 var elements = document.getElementsByClassName("yellowCard");
+             
+            for(var i = 4, length = elements.length; i < length; i++) {
+                if( elements[i].checked == true){
+                    elements[i].checked = false;
+       } 
+    }
+    
+    var elements = document.getElementsByClassName("redcards");
+             
+            for(var i = 4, length = elements.length; i < length; i++) {
+                if( elements[i].checked == true){
+                    elements[i].checked = false;
+       } 
+    }
+    
+    var elements = document.getElementsByClassName("nameOfPlayer2");
+             
+            for(var i = 4, length = elements.length; i < length; i++) {
+                if( elements[i].selectedIndex != 0){
+                    elements[i].selectedIndex = 0;
+       } 
+    }
+            
+  } if (document.getElementById("numberOfBookings").value == 5) {
     document.getElementById('bookingScorerDiv1').style.display = "block";
       document.getElementById('bookingScorerDiv2').style.display = "block";
         document.getElementById('bookingScorerDiv3').style.display = "block";
           document.getElementById('bookingScorerDiv4').style.display = "block";
             document.getElementById('bookingScorerDiv5').style.display = "block";
+            
+                 var elements = document.getElementsByClassName("yellowCard");
+             
+            for(var i = 5, length = elements.length; i < length; i++) {
+                if( elements[i].checked == true){
+                    elements[i].checked = false;
+       } 
+    }
+    
+    var elements = document.getElementsByClassName("redcards");
+             
+            for(var i = 5, length = elements.length; i < length; i++) {
+                if( elements[i].checked == true){
+                    elements[i].checked = false;
+       } 
+    }
+    
+    var elements = document.getElementsByClassName("nameOfPlayer2");
+             
+            for(var i = 5, length = elements.length; i < length; i++) {
+                if( elements[i].selectedIndex != 0){
+                    elements[i].selectedIndex = 0;
+       } 
+    }
 
   }
 
@@ -664,7 +796,7 @@ echo "</select>";
 $sql = "SELECT EtuNimi, Sukunimi FROM Pelaajat WHERE JoukkueID =  ".$_SESSION['kotijoukkue']." "."OR"." "."JoukkueID = ".$_SESSION['vierasjoukkue'];
 $result = $mysqli->query($sql);
 
-echo "<select name='EtuNimi'>";
+echo "<select name='EtuNimi' class='nameOfPlayer2'>";
 echo "<option value='0' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
 while ($row = mysqli_fetch_array($result)) {
   echo "<option value='" . $row['EtuNimi']." ". $row['Sukunimi'] . "'>" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
@@ -690,7 +822,7 @@ echo "</select>";
 $sql = "SELECT EtuNimi, Sukunimi FROM Pelaajat WHERE JoukkueID =  ".$_SESSION['kotijoukkue']." "."OR"." "."JoukkueID = ".$_SESSION['vierasjoukkue'];
 $result = $mysqli->query($sql);
 
-echo "<select name='EtuNimi'>";
+echo "<select name='EtuNimi' class='nameOfPlayer2'>";
 echo "<option selected='selected' disabled>"."Valitse Pelaaja". "</option>";
 while ($row = mysqli_fetch_array($result)) {
   echo "<option value='" . $row['EtuNimi']." ". $row['Sukunimi'] . "'>" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
@@ -717,7 +849,8 @@ echo "</select>";
 $sql = "SELECT EtuNimi, Sukunimi FROM Pelaajat WHERE JoukkueID =  ".$_SESSION['kotijoukkue']." "."OR"." "."JoukkueID = ".$_SESSION['vierasjoukkue'];
 $result = $mysqli->query($sql);
 
-echo "<select name='EtuNimi'>";
+echo "<select name='EtuNimi' class='nameOfPlayer2'>";
+echo "<option value='0' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
 while ($row = mysqli_fetch_array($result)) {
   echo "<option value='" . $row['EtuNimi']." ". $row['Sukunimi'] . "'>" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
 }
@@ -743,7 +876,8 @@ echo "</select>";
 $sql = "SELECT EtuNimi, Sukunimi FROM Pelaajat WHERE JoukkueID =  ".$_SESSION['kotijoukkue']." "."OR"." "."JoukkueID = ".$_SESSION['vierasjoukkue'];
 $result = $mysqli->query($sql);
 
-echo "<select name='EtuNimi'>";
+echo "<select name='EtuNimi' class='nameOfPlayer2'>";
+echo "<option value='0' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
 while ($row = mysqli_fetch_array($result)) {
   echo "<option value='" . $row['EtuNimi']." ". $row['Sukunimi'] . "'>" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
 }
@@ -769,7 +903,8 @@ echo "</select>";
 $sql = "SELECT EtuNimi, Sukunimi FROM Pelaajat WHERE JoukkueID =  ".$_SESSION['kotijoukkue']." "."OR"." "."JoukkueID = ".$_SESSION['vierasjoukkue'];
 $result = $mysqli->query($sql);
 
-echo "<select name='EtuNimi'>";
+echo "<select name='EtuNimi' class='nameOfPlayer2'>";
+echo "<option value='0' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
 while ($row = mysqli_fetch_array($result)) {
   echo "<option value='" . $row['EtuNimi']." ". $row['Sukunimi'] . "'>" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
 }
