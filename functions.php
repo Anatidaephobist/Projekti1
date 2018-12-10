@@ -9,15 +9,8 @@ $result = $mysqli->query($sql);
 while ($row = mysqli_fetch_array($result)) {
   echo $row["EtuNimi"]. " ". $row["Sukunimi"].", ";
 }
-
 return;
-
-
 } // end of databaseQueryPlayerALL
-
-
-
-
 
 function databaseQueryPlayers($joukkueID) {
     $value = "";
@@ -31,10 +24,7 @@ while ($row = mysqli_fetch_array($result)) {
 }
 echo "</select>";
 return;
-
-
 } // end of databaseQueryPlayer
-
 
 function databaseQueryTeam($table, $column, $name) {
 	$value = "";
@@ -66,7 +56,6 @@ function alert($msg) {
     echo '<script type="text/javascript">alert("' . $msg . '")</script>';
 }
 
-
 function databaseQueryMultiple($table, $column, $ID) {
 	$value = "";
 	global $mysqli;
@@ -80,63 +69,81 @@ return $value;
 }
 } //end of function 'makeQuery'
 
-
-function databaseQueryName($joukkueID) {
-    $value = "";
-    global $mysqli;
-    $sql = "SELECT * FROM Pelaajat WHERE JoukkueID = '$joukkueID'";
-$result = $mysqli->query($sql);
-echo "<div class='infoPlayers jabadaba'>";
-while ($row = mysqli_fetch_array($result)) {
-  echo "<div class = 'info'>" . $row['EtuNimi']." ". $row['Sukunimi'] . "</div> <br>";
-}
-return;
-}
-
 // Pelaajien tietojen haku
-function databaseQueryInfo($column1, $column2, $column3, $column4, $column5, $joukkueID) {
+function databaseQueryInfo($columnEtu, $columnSuku, $column1, $column2, $column3, $column4, $column5, $joukkueID) {
     $value = "";
     global $mysqli;
+    $sqlEtu = "SELECT " .$columnEtu. " FROM Pelaajat WHERE JoukkueID = '$joukkueID'";
+    $sqlSuku = "SELECT " .$columnSuku. " FROM Pelaajat WHERE JoukkueID = '$joukkueID'";
     $sql1 = "SELECT " .$column1. " FROM Pelaajat WHERE JoukkueID = '$joukkueID'";
     $sql2 = "SELECT " .$column2. " FROM Pelaajat WHERE JoukkueID = '$joukkueID'";
     $sql3 = "SELECT " .$column3. " FROM Pelaajat WHERE JoukkueID = '$joukkueID'";
     $sql4 = "SELECT " .$column4. " FROM Pelaajat WHERE JoukkueID = '$joukkueID'";
     $sql5 = "SELECT " .$column5. " FROM Pelaajat WHERE JoukkueID = '$joukkueID'";
+$resultEtu = $mysqli->query($sqlEtu);
+$resultSuku = $mysqli->query($sqlSuku);
 $result1 = $mysqli->query($sql1);
 $result2 = $mysqli->query($sql2);
 $result3 = $mysqli->query($sql3);
 $result4 = $mysqli->query($sql4);
 $result5 = $mysqli->query($sql5);
+
+// Etunimi
+    echo "<div class = 'infoPlayers'>";
+    echo "<h1>Etunimi</h1> <br>";
+    echo "<br>";
+    while ($row = mysqli_fetch_array($resultEtu)) {
+      echo "<div class = 'info'>" . $row[''.$columnEtu.'']. "</div> <br>";
+    }
+    echo "</div>";
+// Sukunimi
+    echo "<div class = 'infoPlayers'>";
+    echo "<h1>Sukunimi</h1> <br>";
+    echo "<br>";
+    while ($row = mysqli_fetch_array($resultSuku)) {
+      echo "<div class = 'info'>" . $row[''.$columnSuku.'']. "</div> <br>";
+    }
+    echo "</div>";
 // Ikä
-echo "<div class = 'infoPlayers'>";
-while ($row = mysqli_fetch_array($result1)) {
-  echo "<div class = 'info'>" . $row[''.$column1.'']. "</div> <br>";
-}
-echo "</div>";
+    echo "<div class = 'infoPlayers'>";
+    echo "<h1>Ikä</h1> <br>";
+    echo "<br>";
+    while ($row = mysqli_fetch_array($result1)) {
+      echo "<div class = 'info'>" . $row[''.$column1.'']. "</div> <br>";
+    }
+    echo "</div>";
 // Kansallisuus
-echo "<div class = 'infoPlayers'>";
-while ($row = mysqli_fetch_array($result2)) {
-  echo "<div class = 'info'>" . $row[''.$column2.'']. "</div> <br>";
-}
-echo "</div>";
+    echo "<div class = 'infoPlayers'>";
+    echo "<h1>Kansallisuus</h1> <br>";
+    echo "<br>";
+    while ($row = mysqli_fetch_array($result2)) {
+      echo "<div class = 'info'>" . $row[''.$column2.'']. "</div> <br>";
+    }
+    echo "</div>";
 // Pelatut Pelit
-echo "<div class = 'infoPlayers'>";
-while ($row = mysqli_fetch_array($result3)) {
-  echo "<div class = 'info'>" . $row[''.$column3.'']. "</div> <br>";
-}
-echo "</div>";
+    echo "<div class = 'infoPlayers'>";
+    echo "<h1>Pelatut pelit</h1> <br>";
+    echo "<br>";
+    while ($row = mysqli_fetch_array($result3)) {
+      echo "<div class = 'info'>" . $row[''.$column3.'']. "</div> <br>";
+    }
+    echo "</div>";
 // Maalit
-echo "<div class = 'infoPlayers'>";
-while ($row = mysqli_fetch_array($result4)) {
-  echo "<div class = 'info'>" . $row[''.$column4.'']. "</div> <br>";
-}
-echo "</div>";
+    echo "<div class = 'infoPlayers'>";
+    echo "<h1>Maalit</h1> <br>";
+    echo "<br>";
+    while ($row = mysqli_fetch_array($result4)) {
+      echo "<div class = 'info'>" . $row[''.$column4.'']. "</div> <br>";
+    }
+    echo "</div>";
 // Pelipaikka
-echo "<div class = 'infoPlayers'>";
-while ($row = mysqli_fetch_array($result5)) {
-  echo "<div class = 'info'>" . $row[''.$column5.'']. "</div> <br>";
-}
-echo "</div>";
+    echo "<div class = 'infoPlayers'>";
+    echo "<h1>Pelipaikka</h1> <br>";
+    echo "<br>";
+    while ($row = mysqli_fetch_array($result5)) {
+      echo "<div class = 'info'>" . $row[''.$column5.'']. "</div> <br>";
+    }
+    echo "</div>";
 return;
 }
 

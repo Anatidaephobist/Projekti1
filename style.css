@@ -130,6 +130,10 @@ body {
     font-size: 32px;
 }
 
+.playerBox {
+  height: 800px;
+}
+
 #wrapperOfPlayers {
     display: none;
 }
@@ -176,15 +180,12 @@ h2 {
     margin-top: 100px;
     margin-left: 10px;
     margin-right: 10px;
-    width: 8%;
-}
-
-.jabadaba {
-    width: 30%
+    width: 13%;
 }
 
 .info {
   float: left;
+  text-align: center;
 }
 
 #logIn {

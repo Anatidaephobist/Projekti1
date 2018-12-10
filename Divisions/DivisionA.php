@@ -382,17 +382,10 @@
 
    <button onclick="closePlayerInfo()" class="btn btn-primary playerbutton"> takaisin</button>
 
-   <div class= "teamInfoBox">
-  <!-- Pelaajien nimet -->
-  <?php
-  echo databaseQueryName('1');
-  ?>
-</div>
-
-  <div class= "teamInfoBox">
+  <div class= "teamInfoBox playerBox">
   <!-- Pelaajien muut tiedot -->
   <?php
-  echo databaseQueryInfo('Ika', 'Kansallisuus', 'PelatutPelit', 'Maalit', 'Pelipaikka','1');
+  echo databaseQueryInfo('EtuNimi', 'Sukunimi', 'Ika', 'Kansallisuus', 'PelatutPelit', 'Maalit', 'Pelipaikka','1');
   ?>
   </div>
 </div> <!-- End of wrapperOfPlayers -->
