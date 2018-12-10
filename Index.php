@@ -1,4 +1,4 @@
-2221<?php
+<?php
 session_start();
 include_once 'login.php';
 include_once 'config.php';

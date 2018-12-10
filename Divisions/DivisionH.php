@@ -91,7 +91,7 @@
       </div>
     </div>
 
-    <div class="moreInfo"  onclick="playerCardBelfica()">
+    <div class="moreInfo"  onclick="playerCard29()">
       <h1> Lisätietoa </h1>
     </div>
   </div>
@@ -181,7 +181,7 @@
       </div>
     </div>
 
-    <div class="moreInfo"  onclick="playerCardBelfica()">
+    <div class="moreInfo"  onclick="playerCard30()">
       <h1> Lisätietoa </h1>
     </div>
   </div>
@@ -271,7 +271,7 @@
     </div>
   </div>
 
-  <div class="moreInfo"  onclick="playerCardBelfica()">
+  <div class="moreInfo"  onclick="playerCard31()">
     <h1> Lisätietoa </h1>
   </div>
 </div>
@@ -361,8 +361,47 @@ echo databaseQuery('Joukkueet','Pisteet','32');
   </div>
 </div>
 
-<div class="moreInfo"  onclick="playerCardBelfica()">
+<div class="moreInfo"  onclick="playerCard32()">
   <h1> Lisätietoa </h1>
 </div>
 </div>
 </div>
+<div class="playerList" id="wrapperOfPlayers29">
+   <button onclick="closePlayerInfo()" class="btn btn-primary playerbutton"> takaisin</button>
+  <div class= "teamInfoBox playerBox">
+  <!-- Pelaajien tiedot -->
+  <?php
+  echo databaseQueryInfo('EtuNimi', 'Sukunimi', 'Ika', 'Kansallisuus', 'PelatutPelit', 'Maalit', 'Pelipaikka','29');
+  ?>
+  </div>
+</div> <!-- End of wrapperOfPlayers29 -->
+
+<div class="playerList" id="wrapperOfPlayers30">
+   <button onclick="closePlayerInfo()" class="btn btn-primary playerbutton"> takaisin</button>
+  <div class= "teamInfoBox playerBox">
+  <!-- Pelaajien tiedot -->
+  <?php
+  echo databaseQueryInfo('EtuNimi', 'Sukunimi', 'Ika', 'Kansallisuus', 'PelatutPelit', 'Maalit', 'Pelipaikka','30');
+  ?>
+  </div>
+</div> <!-- End of wrapperOfPlayers30 -->
+
+<div class="playerList" id="wrapperOfPlayers31">
+   <button onclick="closePlayerInfo()" class="btn btn-primary playerbutton"> takaisin</button>
+  <div class= "teamInfoBox playerBox">
+  <!-- Pelaajien tiedot -->
+  <?php
+  echo databaseQueryInfo('EtuNimi', 'Sukunimi', 'Ika', 'Kansallisuus', 'PelatutPelit', 'Maalit', 'Pelipaikka','31');
+  ?>
+  </div>
+</div> <!-- End of wrapperOfPlayers31 -->
+
+<div class="playerList" id="wrapperOfPlayers32">
+   <button onclick="closePlayerInfo()" class="btn btn-primary playerbutton"> takaisin</button>
+  <div class= "teamInfoBox playerBox">
+  <!-- Pelaajien tiedot -->
+  <?php
+  echo databaseQueryInfo('EtuNimi', 'Sukunimi', 'Ika', 'Kansallisuus', 'PelatutPelit', 'Maalit', 'Pelipaikka','32');
+  ?>
+  </div>
+</div> <!-- End of wrapperOfPlayers32 -->
