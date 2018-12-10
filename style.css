@@ -1,17 +1,12 @@
 @import 'responsiveCSS.css';
 
 body {
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
    background-attachment: fixed;
 }
-
-
-
-
-
 
 #logInButton, #logOutButton, .playerbutton, .backButton {
     position:fixed;
@@ -56,6 +51,7 @@ body {
     width: 50%;
     margin-left: auto;
     margin-right: auto;
+    margin-top: -200px;
     border: black 2px solid;
     border-bottom: 0px;
     background: rgba(128,128,128,0.5);
@@ -119,7 +115,7 @@ body {
     margin-top:5%;
     padding: 1%;
     padding-left:100px;
-    height: 700px;
+    height: 550px;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -134,8 +130,8 @@ body {
   height: 800px;
 }
 
-#wrapperOfPlayers {
-    display: none;
+.playerList {
+  display: none;
 }
 
 .adminInputNumberField {
@@ -221,7 +217,6 @@ h2 {
     display: none;
 }
 
-
 .adminForm {
     background-color: gray;
     padding: 5%;
@@ -240,8 +235,6 @@ h2 {
     display: none;
 }
 
-
-
 .addFormItem {
      margin-left: auto;
     margin-right: auto;
@@ -253,12 +246,10 @@ h2 {
 
 .moreInfo {
       margin:0;
-      margin-top:375px;
+      margin-top:220px;
       margin-left: 39%;
       max-width: 160px;
 }
-
-
 
 .moreInfo:hover {
     cursor: pointer;
