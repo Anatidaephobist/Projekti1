@@ -39,6 +39,7 @@ function LogOut() {
 function adminMode() {
     if(kirjautunut == 1) {
     window.location.href = "adminform.php";
+    document.getElementById("ListOfGames").style.display = "block";
     } else {
      document.getElementById("logInButton").style.display = "block";
      document.getElementById("logOutButton").style.display = "none";

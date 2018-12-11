@@ -10,7 +10,7 @@ $gameID++;
 
  if(isset($_POST["adminSubmit"])) {
      
-     alert($_SESSION['numberOfGoals']);
+    
 }
 
     //arvojen talteen ottaminen
@@ -22,6 +22,7 @@ $gameID++;
     //maalintekijät  nimenä
     $maalintekija1 = $_POST['maalintekija1'];
     $_SESSION['maalintekija1'] = $maalintekija1;
+    
     
     $maalintekija2 = $_POST['maalintekija2'];
     $_SESSION['maalintekija2'] = $maalintekija2;
@@ -52,8 +53,16 @@ $gameID++;
     
     
     if($_SESSION['numberOfGoals'] == 1) {
+    //insert into pelaaja_peli --- maali¨
+   /*  $sql = "INSERT INTO Pelaaja_peli (PeliID, PelaajaID, Tapahtuma, Kellonaika) VALUES ('".$gameID."', '".."', '".$awayTeam."', '".$date."','".$outcome."')";
+
+    if (!$mysqli->query($sql)) {
+    alert("tietojen syotto epaonnistui (" . $dbc->errno . ") " . $dbc->error);
+}
+*/
     
-    }
+    
+    } //end of if-statement
 
 /*
     //Otetaan KotiJoukkueen arvo;
@@ -742,7 +751,7 @@ $sql = "UPDATE Joukkueet SET PaastetytMaalit = PaastetytMaalit + '".$awayGoals."
   if ($result->num_rows > 0) {
 
     while($row = mysqli_fetch_assoc($result)) {
-        echo "Peli ID: " . $row["id"]. "<br>" . "Kotijoukkue: " . $row["Kotijoukkue"]. "<br>" . " Vierasjoukkue: " . $row["Vierasjoukkue"]. "<br>" . " Tulos: " . $row["Tulos"]."<br>". "päivämäärä: ". $row["pvm"]. "<br>". "<br>". "<br>";
+        echo "Peli ID: " . $row["id"]. "<br>" . "Kotijoukkue: " . $row["Kotijoukkue"]. "<br>" . " Vierasjoukkue: " . $row["Vierasjoukkue"]. "<br>" . "päivämäärä: ". $row["pvm"]. "<br>". "<br>". "<br>";
 
 
     }
