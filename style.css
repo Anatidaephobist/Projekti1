@@ -60,6 +60,20 @@ body {
 
 #popUp3 {
      position:absolute;
+     display:block;
+    top: 90px;
+    left: 40%;
+    background-color:grey;
+    padding: 5%;
+    padding-top: 3%;
+    border: black 2px solid;
+    background: rgba(128,128,128,0.8);
+    border-radius: 15px 50px 30px;
+    position: fixed;
+}
+
+#popUpGames {
+       position:absolute;
     top: 90px;
     left: 40%;
     background-color:grey;
@@ -262,9 +276,6 @@ h2 {
     margin-top: 20px;
 }
 
-#ListOfGames {
-    display:none;
-}
 
 .gameListGame {
     background-color: gray;

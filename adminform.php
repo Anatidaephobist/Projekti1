@@ -4,7 +4,7 @@ include_once 'login.php';
 include_once 'config.php';
 include_once 'functions.php';
 
-
+ $_SESSION['userIsAdmin'] = 1; 
 ?>
 <head>
 

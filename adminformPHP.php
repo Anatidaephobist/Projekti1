@@ -732,12 +732,7 @@ $sql = "UPDATE Joukkueet SET PaastetytMaalit = PaastetytMaalit + '".$awayGoals."
 ?>
 
 
- <div id="popUp3">
-<div class="gameList" id="ListOfGames">
-
-
-
-    <div class="gameListGame">
+    <div class="gameListGame formbox" id="popUpGames">
        <label id="gamelistH1">Pelit</label>
 
       <button onclick="deleteGameQuestion()" class="btn btn-danger" id="poistaPeliNappi">Poista Peli </button>
@@ -760,9 +755,9 @@ $sql = "UPDATE Joukkueet SET PaastetytMaalit = PaastetytMaalit + '".$awayGoals."
 }
 
       ?>
-    </div>
+    
 
-</div>
+
 
 
 
@@ -811,4 +806,3 @@ $sql = "SELECT id FROM Pelit ORDER BY id DESC LIMIT 1";
     </div>
         </form>
     </div>
-    

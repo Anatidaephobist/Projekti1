@@ -39,14 +39,16 @@ function LogOut() {
 function adminMode() {
     if(kirjautunut == 1) {
     window.location.href = "adminform.php";
+    document.getElementById("popUp3").style.display = "block";
     document.getElementById("ListOfGames").style.display = "block";
+    
     } else {
      document.getElementById("logInButton").style.display = "block";
      document.getElementById("logOutButton").style.display = "none";
      document.getElementById("popUpWrapper").style.display = "block";
      document.getElementById("adminForm").style.display = "none";
      document.getElementById("adminForm2").style.display = "none";
-     document.getElementById("ListOfGames").style.display = "none";
+     document.getElementById("ListOfGames").style.display = "none"
 }
 }
 
