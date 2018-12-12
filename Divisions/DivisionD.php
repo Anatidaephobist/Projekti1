@@ -7,7 +7,7 @@
 
 
 
-<div id="teamInfoBoxWrapperD">
+<div id="teamInfoBoxWrapperD" class ="teamInfoBoxWrapper">
 
   <div class="teamInfoBox">
 

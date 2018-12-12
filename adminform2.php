@@ -2,9 +2,9 @@
 session_start();
 include_once 'login.php';
 include_once 'config.php';
-include_once 'functions.php';
 
- $_SESSION['userIsAdmin'] = 1; 
+
+
 
 ?>
 <head>
@@ -13,6 +13,7 @@ include_once 'functions.php';
    <link rel="stylesheet" type="text/css" href="styleAdmin2.css">
   <script src="http://code.jquery.com/jquery-latest.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">
+  
   </script>
   
   
@@ -559,7 +560,7 @@ function addbookingScorer() {
   
 </head>
 <body background="football1.jpg">
-
+<button onclick="adminLogOut()" class="btn btn-primary" id="logOutButton" name="logOutForm"> Kirjaudu Ulos</button>
 <form method="post">
 <div class="formBox" id="adminForm2">
  <label>Valitse maalintekijät ja varoitusten saajat</label>
@@ -945,7 +946,51 @@ echo "</select>";
 </div>
 
 
+    <div class="gameListGame formbox" id="popUpGames">
+       <label id="gamelistH1">Pelit</label>
 
-<?php include 'adminformPHP.php';  ?>
+     
+
+       <br>
+       <br>
+        <?php
+
+     
+        //haetaan peli id
+      $sql = "SELECT Pelit.id as peliID, Pelit.kotijoukkueID, Pelit.vierasjoukkueID, Joukkueet.id AS homeID, Joukkueet.id AS awayID, Joukkueet.nimi as home, Joukkueet.nimi as away FROM Pelit LEFT JOIN Joukkueet ON Pelit.kotijoukkueID=Joukkueet.id";
+      $result = $mysqli->query($sql);
+      
+      $sql2 = "SELECT Pelit.vierasjoukkueID, Joukkueet.id AS awayID, Joukkueet.nimi as away FROM Pelit LEFT JOIN Joukkueet ON Pelit.vierasjoukkueID=Joukkueet.id";
+      $result2 = $mysqli->query($sql2);
+      
+      /*
+SELECT Orders.OrderID, Customers.CustomerName, Orders.OrderDate
+FROM Orders
+INNER JOIN Customers
+ON Orders.CustomerID=Customers.CustomerID;
+      */
+     
+  
+      //tulostetaan tiedot
+  if ($result->num_rows > 0) {
+    while($row = mysqli_fetch_assoc($result)) {
+       $row2 = mysqli_fetch_assoc($result2);
+        echo "Peli ID: " . $row['peliID']. "<br>". "Kotijoukkue: ".$row['home']. "<br>". "vierasjoukkue: ".$row2['away']. "<br>". "<br>". "<br>";
+    }
+} else {
+    echo "0 results";
+}
+
+ 
+
+include 'adminformPHP.php';
+
+
+      ?>
+    
+
+
+
+
 
 </body>

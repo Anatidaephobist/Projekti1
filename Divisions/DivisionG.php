@@ -5,7 +5,7 @@
 </script>
 </head>
 
-<div id="teamInfoBoxWrapperG">
+<div id="teamInfoBoxWrapperG" class ="teamInfoBoxWrapper">
 
   <div class="teamInfoBox">
 

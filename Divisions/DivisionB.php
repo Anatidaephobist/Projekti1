@@ -7,7 +7,7 @@
 
 
 
-<div id="teamInfoBoxWrapperB">
+<div id="teamInfoBoxWrapperB" class ="teamInfoBoxWrapper">
  <!-- Joukkue 1 -->
 
  <div class="teamInfoBox">

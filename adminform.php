@@ -5,6 +5,7 @@ include_once 'config.php';
 include_once 'functions.php';
 
  $_SESSION['userIsAdmin'] = 1; 
+ 
 ?>
 <head>
 
@@ -19,6 +20,13 @@ include_once 'functions.php';
   
   
   <script>
+  
+   function adminLogOut()  {
+       <?php $_SESSION['userIsAdmin'] = 0; ?>
+       window.location.href = "Index.php";
+   }
+  
+  
   
   function adminform2Direct() {
    window.location.href = "adminform2.php";
@@ -81,7 +89,7 @@ function checkAwayTeam() {
   
 </head>
 <body background="football1.jpg">
-    
+<button onclick="adminLogOut()" class="btn btn-primary" id="logOutButton" name="logOutForm"> Kirjaudu Ulos</button>
 <form method="POST">
 <div class="formBox" id="adminForm1">
     <label>Valitse koti ja vierasjoukkue</label>
@@ -277,5 +285,7 @@ echo '<script type="text/javascript">',
 
 </div>
 </div>
+
+
 
 </body>

@@ -1,7 +1,8 @@
+
+
 <?php
 session_start();
-include_once 'functions.php';
-
+include 'functions.php';
 
 //luodaan pelinID
 $gameID++;
@@ -730,79 +731,18 @@ $sql = "UPDATE Joukkueet SET PaastetytMaalit = PaastetytMaalit + '".$awayGoals."
 
 */
 ?>
-
-
-    <div class="gameListGame formbox" id="popUpGames">
-       <label id="gamelistH1">Pelit</label>
-
-      <button onclick="deleteGameQuestion()" class="btn btn-danger" id="poistaPeliNappi">Poista Peli </button>
-
-       <br>
-       <br>
-        <?php
-      $sql = "SELECT * from Pelit ORDER BY id";
-      $result = $mysqli->query($sql);
-
-  if ($result->num_rows > 0) {
-
-    while($row = mysqli_fetch_assoc($result)) {
-        echo "Peli ID: " . $row["id"]. "<br>" . "Kotijoukkue: " . $row["Kotijoukkue"]. "<br>" . " Vierasjoukkue: " . $row["Vierasjoukkue"]. "<br>" . "päivämäärä: ". $row["pvm"]. "<br>". "<br>". "<br>";
-
-
-    }
-} else {
-    echo "0 results";
-}
-
-      ?>
-    
+<head>
+    <script>
+   function adminLogOut()  {
+       <?php $_SESSION['userIsAdmin'] = 0; ?>
+       window.location.href = "Index.php";
+   }
+   </script>
+</head>
 
 
 
 
 
-
-    <form method="POST">
-             <label> Anna poistettavan pelin ID</label>
-
-  <div class="form-group">
-
-
-    <input type="number" name="gameToDelete" method="POST" class="form-control" id="deleteInput" required>
-
-    <?php
-   if(isset($_POST['deletionButton2'])){
-       //otetaan Id talteen
-       $deletedgameID = $_POST['gameToDelete'];
-       //poistetaan peli tietokannasta
-        $sql = "DELETE from Pelit where id = '".$deletedgameID."'";
-    if (!$mysqli->query($sql)) {
-    alert("INSERT failed: (" . $dbc->errno . ") " . $dbc->error);
-}
-
-}
-
-
-
-//haetaan peliID
-$sql = "SELECT id FROM Pelit ORDER BY id DESC LIMIT 1";
- $result = $mysqli->query($sql);
-
- if ($result->num_rows > 0) {
-
-    while($row = $result->fetch_assoc()) {
-         $gameID = $row["id"];
-
-    }
-} else {
-    echo "0 results";
-}
-
-
-
-
-    ?>
-
-    </div>
-        </form>
+ 
     </div>

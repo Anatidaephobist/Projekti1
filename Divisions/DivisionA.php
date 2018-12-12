@@ -5,7 +5,7 @@
 </head>
 
 
-<div id="teamInfoBoxWrapperA">
+<div id="teamInfoBoxWrapperA" class ="teamInfoBoxWrapper">
 
  <!-- Joukkue 1 -->
 

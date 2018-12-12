@@ -6,7 +6,7 @@
 </head>
 
 
-<div id="teamInfoBoxWrapperF">
+<div id="teamInfoBoxWrapperF" class ="teamInfoBoxWrapper">
 
   <div class="teamInfoBox">
 

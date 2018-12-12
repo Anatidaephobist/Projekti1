@@ -8,6 +8,23 @@ body {
    background-attachment: fixed;
 }
 
+.playerbutton {
+    display:none;
+   margin-top:4%;
+   
+}
+
+button.btn.btn-primary.playerbutton {
+    
+}
+
+.playerList {
+    display:none;
+}
+
+
+
+
 #logInButton, #logOutButton, .playerbutton, .backButton {
     position:fixed;
     right: 2%;
@@ -18,9 +35,6 @@ body {
  margin-top:2%;
 }
 
-.playerbutton {
-   margin-top:4%;
-}
 
 .backButton {
    margin-top:40px;
@@ -34,11 +48,10 @@ body {
 
 #popUp {
     background-color: gray;
-    /*padding-left:5%;*/
     height: 20vw;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    width: 96%;
+    margin-left: 2%;
+    margin-right: 2%;
     padding-top:5vw;
     border: black 2px solid;
     background: rgba(128,128,128,0.5);
@@ -120,7 +133,7 @@ body {
 }
 
 #teamInfoBoxWrapperA, #teamInfoBoxWrapperB, #teamInfoBoxWrapperC, #teamInfoBoxWrapperD, #teamInfoBoxWrapperE, #teamInfoBoxWrapperF, #teamInfoBoxWrapperG, #teamInfoBoxWrapperH {
-     display: none;
+     display:none;
 }
 
 .teamInfoBox {
@@ -141,6 +154,10 @@ body {
 
 .playerBox {
   height: 800px;
+  
+}
+#wrapperOfPlayers1, #wrapperOfPlayers2, #wrapperOfPlayers3, #wrapperOfPlayers4, #wrapperOfPlayers5, #wrapperOfPlayers6, #wrapperOfPlayers7, #wrapperOfPlayers8 {
+    display:none;
 }
 
 .player {
@@ -281,7 +298,7 @@ h2 {
     background-color: gray;
     padding: 5%;
     width: 50%;
-    min-height:600px;
+    
     margin-left: auto;
     margin-right: auto;
     border: black 2px solid;
