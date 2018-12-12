@@ -88,62 +88,58 @@ $result3 = $mysqli->query($sql3);
 $result4 = $mysqli->query($sql4);
 $result5 = $mysqli->query($sql5);
 
+  echo "<div class = 'infoAll'>";
 // Etunimi
     echo "<div class = 'infoPlayers'>";
-    echo "<h1>Etunimi</h1> <br>";
-    echo "<br>";
+    echo "<h2 class = 'infoTitle'>Etunimi</h2> <br>";
     while ($row = mysqli_fetch_array($resultEtu)) {
       echo "<div class = 'info'>" . $row[''.$columnEtu.'']. "</div> <br>";
     }
     echo "</div>";
 // Sukunimi
     echo "<div class = 'infoPlayers'>";
-    echo "<h1>Sukunimi</h1> <br>";
-    echo "<br>";
+    echo "<h2 class = 'infoTitle'>Sukunimi</h2> <br>";
     while ($row = mysqli_fetch_array($resultSuku)) {
       echo "<div class = 'info'>" . $row[''.$columnSuku.'']. "</div> <br>";
     }
     echo "</div>";
 // Ikä
-    echo "<div class = 'infoPlayers'>";
-    echo "<h1>Ikä</h1> <br>";
-    echo "<br>";
+    echo "<div class = 'infoPlayers infoPlayersMini'>";
+    echo "<h2 class = 'infoTitle'>Ikä</h2> <br>";
     while ($row = mysqli_fetch_array($result1)) {
       echo "<div class = 'info'>" . $row[''.$column1.'']. "</div> <br>";
     }
     echo "</div>";
 // Kansallisuus
     echo "<div class = 'infoPlayers'>";
-    echo "<h1>Kansallisuus</h1> <br>";
-    echo "<br>";
+    echo "<h2 class = 'infoTitle'>Kansallisuus</h2> <br>";
     while ($row = mysqli_fetch_array($result2)) {
       echo "<div class = 'info'>" . $row[''.$column2.'']. "</div> <br>";
     }
     echo "</div>";
 // Pelatut Pelit
     echo "<div class = 'infoPlayers'>";
-    echo "<h1>Pelatut pelit</h1> <br>";
-    echo "<br>";
+    echo "<h2 class = 'infoTitle'>Pelatut pelit</h2> <br>";
     while ($row = mysqli_fetch_array($result3)) {
       echo "<div class = 'info'>" . $row[''.$column3.'']. "</div> <br>";
     }
     echo "</div>";
 // Maalit
-    echo "<div class = 'infoPlayers'>";
-    echo "<h1>Maalit</h1> <br>";
-    echo "<br>";
+    echo "<div class = 'infoPlayers infoPlayersMini'>";
+    echo "<h2 class = 'infoTitle'>Maalit</h2> <br>";
     while ($row = mysqli_fetch_array($result4)) {
       echo "<div class = 'info'>" . $row[''.$column4.'']. "</div> <br>";
     }
     echo "</div>";
 // Pelipaikka
     echo "<div class = 'infoPlayers'>";
-    echo "<h1>Pelipaikka</h1> <br>";
-    echo "<br>";
+    echo "<h2 class = 'infoTitle'>Pelipaikka</h2> <br>";
     while ($row = mysqli_fetch_array($result5)) {
       echo "<div class = 'info'>" . $row[''.$column5.'']. "</div> <br>";
     }
     echo "</div>";
+    echo "</div>";
+
 return;
 }
 

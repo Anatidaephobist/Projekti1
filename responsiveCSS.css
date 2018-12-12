@@ -2,7 +2,7 @@
 @media only screen and (max-width: 1895px) {
   .wonGames {
       margin-left: 1%;
-  }
+}
 
   .playedGames {
     margin-left:1%;
@@ -43,30 +43,13 @@
 }
 
 @media only screen and (max-width: 1630px) {
-     .playerInfo {
-       /*font-size: 30px;*/
-       margin-top:0;
-    }
+.playerInfo {
+   margin-top:0;
+}
 
-    .teamInfoBox {
-        height:auto;
-    }
-
-  /*
-   h1 {
-        font-size: 30px !important;
-    }
-
-    img {
-        width: 125px !important;
-        height: 150px !important;
-    }
-
-
-     .teamInfoBox img {
-         display: none;
-     }
-     */
+.teamInfoBox {
+    height:auto;
+}
 
 .teamInfoBox {
    min-height: 300px;
@@ -75,54 +58,13 @@
 .moreInfo {
         margin-top: 100px;
 }
-/*
-    .infoNumber {
-        font-size: 30px !important;
-    }
-*/
-    .card {
-        height: 50px !important;
-        width: 50px !important;
-        margin:0 !important;
-    }
-
-   p {
-       font-size: 10%;
-   }
-
-
+.card {
+    height: 50px;
+    width: 50px;
+    margin:0;
 }
 
-/*
-
-@media only screen and (max-width: 1430px) {
-
-
-    #adminForm {
-        padding-left:3%;
-    }
-
-    .title {
-        float:left;
-    }
-
+p {
+   font-size: 10%;
 }
-
-@media only screen and (max-width: 1160px) {
-  #popUp p
-   {
-      font-size: 10px;
-      margin-left:6%;
-  }
-
 }
-
-@media only screen and (max-width: 1160px) {
-  #popUp p
-   {
-      font-size: 10px;
-      margin-left:6%;
-  }
-
-}
-*/
