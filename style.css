@@ -156,7 +156,7 @@ button.btn.btn-primary.playerbutton {
     padding: 1%;
     padding-left: 2vw;
     padding-right: 2vw;
-    height: 550px;
+    height: 400px;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -188,7 +188,7 @@ display: none;
 }
 
 h1 {
-     font-size: 30px;
+     font-size: 200px;
      float:left;
      margin-bottom: 10px;
 }
@@ -199,14 +199,29 @@ h2 {
 
 
 .title {
-    margin-top: 50px;
-    margin-right: 4%;
+    margin-top: 20px;
+    margin-right: 2%;
     float:left;
     font-weight: bold;
 }
 
+.title>h1 {
+    font-size: 2vw;
+}
+
+.teamName {
+    font-size: 2.5vw;
+}
+
+.moreInfo>h1 {
+    font-size: 1.5vw;
+    margin:0 auto;
+    margin-top: -20%;
+    float: right;
+}
+
 .infoNumber {
-    font-size:50px;
+    font-size: 1.5vw;
     font-weight: bold;
     text-align: center;
 }
@@ -365,8 +380,8 @@ h2 {
 
 .imgsize {
   width:auto;
-  height:150px;
-  padding:10px;
+  height:9vw;
+  padding:8px;
 }
 
 

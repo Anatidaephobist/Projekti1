@@ -31,9 +31,11 @@
 
 @media only screen and (max-width: 1650px) {
 
+/*
 .teamInfoBox img {
     display:none;
 }
+*/
 
 .playerInfo  {
     margin:0;
