@@ -553,7 +553,142 @@ function addbookingScorer() {
 }
 
 
-
+function validateForm() {
+    
+    //virheiden saajien validointi
+    if(document.getElementById("bookingScorerDiv1").style.display == "block") {
+  var x = document.forms["adminform"]["virheensaaja1"].value;
+  var y = document.getElementById("yellowCard1");
+  y.required = true;
+  if (x == "") {
+    alert("valitse varoituksensaaja");
+    return false;
+  }
+    }
+    
+     if(document.getElementById("bookingScorerDiv2").style.display == "block") {
+  var x = document.forms["adminform"]["virheensaaja2"].value;
+  var y = document.getElementById("yellowCard2");
+  y.required = true;
+  if (x == "") {
+    alert("valitse varoituksensaaja");
+    return false;
+  }
+    }
+    
+     if(document.getElementById("bookingScorerDiv3").style.display == "block") {
+  var x = document.forms["adminform"]["virheensaaja3"].value;
+  var y = document.getElementById("yellowCard3");
+  y.required = true;
+  if (x == "") {
+    alert("valitse varoituksensaaja");
+    return false;
+  }
+    }
+    
+     if(document.getElementById("bookingScorerDiv4").style.display == "block") {
+  var x = document.forms["adminform"]["virheensaaja4"].value;
+  var y = document.getElementById("yellowCard4");
+  y.required = true;
+  if (x == "") {
+    alert("valitse varoiuksenensaaja");
+    return false;
+  }
+    }
+    
+     if(document.getElementById("bookingScorerDiv5").style.display == "block") {
+  var x = document.forms["adminform"]["virheensaaja5"].value;
+  var y = document.getElementById("yellowCard5");
+  y.required = true;
+  if (x == "") {
+    alert("valitse varoituksensaaja");
+    return false;
+  }
+    }
+    
+    
+    //maalintekijöiden validointi
+    if(document.getElementById("goalScorerDiv1").style.display == "block") {
+  var x = document.forms["adminform"]["maalintekija1"].value;
+  if (x == "") {
+    alert("valitse maalintekijä");
+    return false;
+  }
+    }
+    
+     if(document.getElementById("goalScorerDiv2").style.display == "block") {
+  var x = document.forms["adminform"]["maalintekija2"].value;
+  if (x == "") {
+    alert("valitse maalintekijä");
+    return false;
+  }
+    }
+    
+     if(document.getElementById("goalScorerDiv3").style.display == "block") {
+  var x = document.forms["adminform"]["maalintekija3"].value;
+  if (x == "") {
+    alert("valitse maalintekijä");
+    return false;
+  }
+    }
+    
+     if(document.getElementById("goalScorerDiv4").style.display == "block") {
+  var x = document.forms["adminform"]["maalintekija4"].value;
+  if (x == "") {
+    alert("valitse maalintekijä");
+    return false;
+  }
+    }
+    
+     if(document.getElementById("goalScorerDiv5").style.display == "block") {
+  var x = document.forms["adminform"]["maalintekija5"].value;
+  if (x == "") {
+    alert("valitse maalintekijä");
+    return false;
+  }
+    }
+    
+     if(document.getElementById("goalScorerDiv6").style.display == "block") {
+  var x = document.forms["adminform"]["maalintekija6"].value;
+  if (x == "") {
+    alert("valitse maalintekijä");
+    return false;
+  }
+    }
+    
+     if(document.getElementById("goalScorerDiv7").style.display == "block") {
+  var x = document.forms["adminform"]["maalintekija7"].value;
+  if (x == "") {
+    alert("valitse maalintekijä");
+    return false;
+  }
+    }
+    
+     if(document.getElementById("goalScorerDiv8").style.display == "block") {
+  var x = document.forms["adminform"]["maalintekija8"].value;
+  if (x == "") {
+    alert("valitse maalintekijä");
+    return false;
+  }
+    }
+    
+     if(document.getElementById("goalScorerDiv9").style.display == "block") {
+  var x = document.forms["adminform"]["maalintekija9"].value;
+  if (x == "") {
+    alert("valitse maalintekijä");
+    return false;
+  }
+    }
+    
+     if(document.getElementById("goalScorerDiv10").style.display == "block") {
+  var x = document.forms["adminform"]["maalintekija10"].value;
+  if (x == "") {
+    alert("valitse maalintekijä");
+    return false;
+  }
+    }
+    
+}
 
 
   </script>
@@ -561,7 +696,7 @@ function addbookingScorer() {
 </head>
 <body background="football1.jpg">
 <button onclick="adminLogOut()" class="btn btn-primary" id="logOutButton" name="logOutForm"> Kirjaudu Ulos</button>
-<form method="post">
+<form method="post" name="adminform" onsubmit="return validateForm()">
 <div class="formBox" id="adminForm2">
  <label>Valitse maalintekijät ja varoitusten saajat</label>
   <!-- maalintekijät -->
@@ -588,7 +723,7 @@ $sql = "SELECT EtuNimi, Sukunimi FROM Pelaajat WHERE JoukkueID =  ".$_SESSION['k
 $result = $mysqli->query($sql);
 
 echo "<select name='maalintekija1' class='nameOfPlayer'>";
-echo "<option value='0' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
+echo "<option value='' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
 while ($row = mysqli_fetch_array($result)) {
  
   echo "<option value='" . $row['EtuNimi']." ". $row['Sukunimi'] . "'>" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
@@ -610,7 +745,7 @@ $sql = "SELECT EtuNimi, Sukunimi FROM Pelaajat WHERE JoukkueID =  ".$_SESSION['k
 $result = $mysqli->query($sql);
 
 echo "<select name='maalintekija2' class='nameOfPlayer'>";
-echo "<option value='0' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
+echo "<option value='' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
 while ($row = mysqli_fetch_array($result)) {
   echo "<option value='" . $row['EtuNimi']." ". $row['Sukunimi'] . "'>" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
 }
@@ -631,7 +766,7 @@ $sql = "SELECT EtuNimi, Sukunimi FROM Pelaajat WHERE JoukkueID =  ".$_SESSION['k
 $result = $mysqli->query($sql);
 
 echo "<select name='maalintekija3' class='nameOfPlayer'>";
-echo "<option value='0' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
+echo "<option value='' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
 while ($row = mysqli_fetch_array($result)) {
   echo "<option value='" . $row['EtuNimi']." ". $row['Sukunimi'] . "'>" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
 }
@@ -651,7 +786,7 @@ $sql = "SELECT EtuNimi, Sukunimi FROM Pelaajat WHERE JoukkueID =  ".$_SESSION['k
 $result = $mysqli->query($sql);
 
 echo "<select name='maalintekija4' class='nameOfPlayer'>";
-echo "<option value='0' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
+echo "<option value='' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
 while ($row = mysqli_fetch_array($result)) {
   echo "<option value='" . $row['EtuNimi']." ". $row['Sukunimi'] . "'>" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
 }
@@ -671,7 +806,7 @@ $sql = "SELECT EtuNimi, Sukunimi FROM Pelaajat WHERE JoukkueID =  ".$_SESSION['k
 $result = $mysqli->query($sql);
 
 echo "<select name='maalintekija5' class='nameOfPlayer'>";
-echo "<option value='0' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
+echo "<option value='' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
 while ($row = mysqli_fetch_array($result)) {
   echo "<option value='" . $row['EtuNimi']." ". $row['Sukunimi'] . "'>" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
 }
@@ -690,16 +825,16 @@ echo "</select>";
 $sql = "SELECT EtuNimi, Sukunimi FROM Pelaajat WHERE JoukkueID =  ".$_SESSION['kotijoukkue']." "."OR"." "."JoukkueID = ".$_SESSION['vierasjoukkue'];
 $result = $mysqli->query($sql);
 
-echo "<select name='EtuNimi' class='nameOfPlayer'>";
-echo "<option value='0' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
+echo "<select name='maalintekija6' class='nameOfPlayer'>";
+echo "<option value='' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
 while ($row = mysqli_fetch_array($result)) {
   echo "<option value='" . $row['EtuNimi']." ". $row['Sukunimi'] . "'>" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
 }
 echo "</select>";
 ?>
-<hr>
 <br>
 <input type="checkbox" id="owngoal6" class="owngoal" value="owngoal"> oma maali<br>
+<hr>
 </div>
 
 <div id="goalScorerDiv7" class="goalScorerDiv">
@@ -710,16 +845,17 @@ echo "</select>";
 $sql = "SELECT EtuNimi, Sukunimi FROM Pelaajat WHERE JoukkueID =  ".$_SESSION['kotijoukkue']." "."OR"." "."JoukkueID = ".$_SESSION['vierasjoukkue'];
 $result = $mysqli->query($sql);
 
-echo "<select name='EtuNimi' class='nameOfPlayer'>";
-echo "<option value='0' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
+echo "<select name='maalintekija7' class='nameOfPlayer'>";
+echo "<option value='' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
 while ($row = mysqli_fetch_array($result)) {
   echo "<option value='" . $row['EtuNimi']." ". $row['Sukunimi'] . "'>" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
 }
 echo "</select>";
 ?>
-<hr>
+
 <br>
 <input type="checkbox" id="owngoal7" class="owngoal" value="owngoal"> oma maali<br>
+<hr>
 </div>
 
 <div id="goalScorerDiv8" class="goalScorerDiv">
@@ -730,16 +866,17 @@ echo "</select>";
 $sql = "SELECT EtuNimi, Sukunimi FROM Pelaajat WHERE JoukkueID =  ".$_SESSION['kotijoukkue']." "."OR"." "."JoukkueID = ".$_SESSION['vierasjoukkue'];
 $result = $mysqli->query($sql);
 
-echo "<select name='EtuNimi' class='nameOfPlayer'>";
-echo "<option value='0' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
+echo "<select name='maalintekija8' class='nameOfPlayer'>";
+echo "<option value='' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
 while ($row = mysqli_fetch_array($result)) {
   echo "<option value='" . $row['EtuNimi']." ". $row['Sukunimi'] . "'>" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
 }
 echo "</select>";
 ?>
-<hr>
+
 <br>
 <input type="checkbox" id="owngoal8" class="owngoal" value="owngoal"> oma maali<br>
+<hr>
 </div>
 
 <div id="goalScorerDiv9" class="goalScorerDiv">
@@ -750,16 +887,16 @@ echo "</select>";
 $sql = "SELECT EtuNimi, Sukunimi FROM Pelaajat WHERE JoukkueID =  ".$_SESSION['kotijoukkue']." "."OR"." "."JoukkueID = ".$_SESSION['vierasjoukkue'];
 $result = $mysqli->query($sql);
 
-echo "<select name='EtuNimi' class='nameOfPlayer'>";
-echo "<option value='0' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
+echo "<select name='maalintekija9' class='nameOfPlayer'>";
+echo "<option value='' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
 while ($row = mysqli_fetch_array($result)) {
   echo "<option value='" . $row['EtuNimi']." ". $row['Sukunimi'] . "'>" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
 }
 echo "</select>";
 ?>
-<hr>
 <br>
 <input type="checkbox" id="owngoal9" class="owngoal" value="owngoal"> oma maali<br>
+<hr>
 </div>
 
 <div id="goalScorerDiv10" class="goalScorerDiv">
@@ -770,8 +907,8 @@ echo "</select>";
 $sql = "SELECT EtuNimi, Sukunimi FROM Pelaajat WHERE JoukkueID =  ".$_SESSION['kotijoukkue']." "."OR"." "."JoukkueID = ".$_SESSION['vierasjoukkue'];
 $result = $mysqli->query($sql);
 
-echo "<select name='EtuNimi' class='nameOfPlayer'>";
-echo "<option value='0' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
+echo "<select name='maalintekija10' class='nameOfPlayer'>";
+echo "<option value='' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
 while ($row = mysqli_fetch_array($result)) {
   echo "<option value='" . $row['EtuNimi']." ". $row['Sukunimi'] . "'>" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
 }
@@ -790,7 +927,7 @@ echo "</select>";
 <h1>Varoitukset</h1>
 <label>Varoitusten määrä pelissä</label>
 <br>
-<input id="numberOfBookings" class ="adminInputNumberField" onchange="addbookingScorer()" name="input2" type="number" min="0">
+<input id="numberOfBookings" class ="adminInputNumberField" onchange="addbookingScorer()" name="input2" type="number" min="0" max="5">
 </div>
 
 <!-- wrongdoer1 -->
@@ -801,8 +938,8 @@ echo "</select>";
 $sql = "SELECT EtuNimi, Sukunimi FROM Pelaajat WHERE JoukkueID =  ".$_SESSION['kotijoukkue']." "."OR"." "."JoukkueID = ".$_SESSION['vierasjoukkue'];
 $result = $mysqli->query($sql);
 
-echo "<select name='EtuNimi' class='nameOfPlayer2'>";
-echo "<option value='0' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
+echo "<select name='virheensaaja1' class='nameOfPlayer2'>";
+echo "<option value='' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
 while ($row = mysqli_fetch_array($result)) {
   echo "<option value='" . $row['EtuNimi']." ". $row['Sukunimi'] . "'>" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
 }
@@ -827,8 +964,8 @@ echo "</select>";
 $sql = "SELECT EtuNimi, Sukunimi FROM Pelaajat WHERE JoukkueID =  ".$_SESSION['kotijoukkue']." "."OR"." "."JoukkueID = ".$_SESSION['vierasjoukkue'];
 $result = $mysqli->query($sql);
 
-echo "<select name='EtuNimi' class='nameOfPlayer2'>";
-echo "<option selected='selected' disabled>"."Valitse Pelaaja". "</option>";
+echo "<select name='virheensaaja2' class='nameOfPlayer2'>";
+echo "<option value='' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
 while ($row = mysqli_fetch_array($result)) {
   echo "<option value='" . $row['EtuNimi']." ". $row['Sukunimi'] . "'>" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
 }
@@ -854,8 +991,8 @@ echo "</select>";
 $sql = "SELECT EtuNimi, Sukunimi FROM Pelaajat WHERE JoukkueID =  ".$_SESSION['kotijoukkue']." "."OR"." "."JoukkueID = ".$_SESSION['vierasjoukkue'];
 $result = $mysqli->query($sql);
 
-echo "<select name='EtuNimi' class='nameOfPlayer2'>";
-echo "<option value='0' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
+echo "<select name='virheensaaja3' class='nameOfPlayer2'>";
+echo "<option value='' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
 while ($row = mysqli_fetch_array($result)) {
   echo "<option value='" . $row['EtuNimi']." ". $row['Sukunimi'] . "'>" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
 }
@@ -881,8 +1018,8 @@ echo "</select>";
 $sql = "SELECT EtuNimi, Sukunimi FROM Pelaajat WHERE JoukkueID =  ".$_SESSION['kotijoukkue']." "."OR"." "."JoukkueID = ".$_SESSION['vierasjoukkue'];
 $result = $mysqli->query($sql);
 
-echo "<select name='EtuNimi' class='nameOfPlayer2'>";
-echo "<option value='0' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
+echo "<select name='virheensaaja4' class='nameOfPlayer2'>";
+echo "<option value='' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
 while ($row = mysqli_fetch_array($result)) {
   echo "<option value='" . $row['EtuNimi']." ". $row['Sukunimi'] . "'>" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
 }
@@ -908,8 +1045,8 @@ echo "</select>";
 $sql = "SELECT EtuNimi, Sukunimi FROM Pelaajat WHERE JoukkueID =  ".$_SESSION['kotijoukkue']." "."OR"." "."JoukkueID = ".$_SESSION['vierasjoukkue'];
 $result = $mysqli->query($sql);
 
-echo "<select name='EtuNimi' class='nameOfPlayer2'>";
-echo "<option value='0' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
+echo "<select name='virheensaaja5' class='nameOfPlayer2'>";
+echo "<option value='' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
 while ($row = mysqli_fetch_array($result)) {
   echo "<option value='" . $row['EtuNimi']." ". $row['Sukunimi'] . "'>" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
 }
@@ -929,7 +1066,7 @@ echo "</select>";
  <br>
  <label>Ottelun päivämäärä</label>
     <br>
-   <input type="date" class="form-control"id="pvm" name="pvm">
+   <input type="date" class="form-control"id="pvm" name="pvm" required>
    <br>
     <button type="submit" class="btn btn-primary formButton" name="adminSubmit">Submit</button>
    <br>
