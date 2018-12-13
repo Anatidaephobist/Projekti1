@@ -154,9 +154,9 @@ button.btn.btn-primary.playerbutton {
     background-color: gray;
     margin-top:5%;
     padding: 1%;
-    padding-left: 2vw;
+    padding-left: 3vw;
     padding-right: 2vw;
-    height: 400px;
+    height: 30vw;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -188,7 +188,6 @@ display: none;
 }
 
 h1 {
-     font-size: 200px;
      float:left;
      margin-bottom: 10px;
 }
@@ -199,31 +198,26 @@ h2 {
 
 
 .title {
+    margin:0 auto;
     margin-top: 20px;
-    margin-right: 2%;
-    float:left;
+    float: left;
     font-weight: bold;
 }
 
 .title>h1 {
-    font-size: 2vw;
+    font-size: 25px;
+    margin-right: auto;
 }
 
 .teamName {
     font-size: 2.5vw;
 }
 
-.moreInfo>h1 {
-    font-size: 1.5vw;
-    margin:0 auto;
-    margin-top: -20%;
-    float: right;
-}
-
 .infoNumber {
-    font-size: 1.5vw;
+    font-size: 30px;
     font-weight: bold;
     text-align: center;
+    margin-bottom: -5%
 }
 
 .infoPlayers {
@@ -315,11 +309,17 @@ h2 {
     width:60%;
 }
 
+.moreInfo>h1 {
+    font-size: 20px;
+    margin:0 auto;
+    margin-right: 45vw;
+    float:right;
+}
+
 .moreInfo {
-      margin:0;
-      margin-top:220px;
-      margin-left: 39%;
-      max-width: 160px;
+      margin:0 auto;
+      margin-top:11vw;
+      text-align: center;
 }
 
 .moreInfo:hover {
@@ -392,7 +392,14 @@ h2 {
 .info {
   font-size: 17px;
 }
-
+.moreInfo {
+      margin:0 auto;
+      margin-top:15vw;
+      text-align: center;
+}
+.title {
+  margin-right: 0.5%;
+}
 }
 
 @media only screen and (max-width: 600px) {
