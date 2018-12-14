@@ -16,12 +16,10 @@ body {
 
 
 
+
 .playerList {
     display:none;
 }
-
-
-
 
 #logInButton, #logOutButton, .playerbutton, .backButton {
     position:fixed;
