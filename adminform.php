@@ -98,9 +98,6 @@ function checkAwayTeam() {
     <br>
         <label>Peli ID</label>
         <br>
-         <select>
-         <option value="peliID" disabled selected="selected" name="peliID"><?php echo $gameID; ?></option>
-         </select>
          <br>
          <br>
      <!-- Kotijoukkueen valina -->
@@ -109,7 +106,7 @@ function checkAwayTeam() {
       <label>Valitse Kotijoukkue</label>
       <br>
    <select name="kotijoukkue" id="koti" onchange="checkHomeTeam()">
-       <option value="Joukkuevalinta" disabled selected="selected">Valitse Joukkue</option>
+       <option value="Joukkuevalinta" selected="selected" disabled>Valitse Joukkue</option>
         <option id="homeTeam1" value="1"><?php echo databaseQuery('Joukkueet','Nimi','1')?></option>
   <option id="homeTeam2" value="2"><?php echo databaseQuery('Joukkueet','Nimi','2')?></option>
   <option id="homeTeam3" value="3"><?php echo databaseQuery('Joukkueet','Nimi','3')?></option>
@@ -156,7 +153,7 @@ function checkAwayTeam() {
       <label>Valitse Vierasjoukkue</label>
       <br>
    <select name="vierasjoukkue" id="vieras" onchange="checkAwayTeam()">
-   <option value="Joukkuevalinta" disabled selected="selected">Valitse Joukkue</option>
+   <option value="Joukkuevalinta" selected="selected" disabled>Valitse Joukkue</option>
     <option id="awayTeam1" value="1"><?php echo databaseQuery('Joukkueet','Nimi','1')?></option>
   <option id="awayTeam2" value="2"><?php echo databaseQuery('Joukkueet','Nimi','2')?></option>
   <option id="awayTeam3" value="3"><?php echo databaseQuery('Joukkueet','Nimi','3')?></option>
