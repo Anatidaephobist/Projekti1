@@ -41,7 +41,7 @@ function adminMode() {
     window.location.href = "adminform.php";
     document.getElementById("popUp3").style.display = "block";
     document.getElementById("ListOfGames").style.display = "block";
-    
+
     } else {
      document.getElementById("logInButton").style.display = "block";
      document.getElementById("logOutButton").style.display = "none";
