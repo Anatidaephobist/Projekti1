@@ -18,6 +18,10 @@ h1 {
      font-size: 30px;
 }
 
+#gameID {
+    max-width: 50px;
+}
+
 #gameDeleteForm {
     display:none;
 }

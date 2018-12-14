@@ -1101,6 +1101,9 @@ echo "</select>";
       $sql2 = "SELECT Pelit.vierasjoukkueID, Joukkueet.id AS awayID, Joukkueet.nimi as away FROM Pelit LEFT JOIN Joukkueet ON Pelit.vierasjoukkueID=Joukkueet.id";
       $result2 = $mysqli->query($sql2);
       
+       $sql3 = "SELECT pvm FROM Pelit";
+      $result3 = $mysqli->query($sql3);
+      
 
      
   
@@ -1108,7 +1111,8 @@ echo "</select>";
   if ($result->num_rows > 0) {
     while($row = mysqli_fetch_assoc($result)) {
        $row2 = mysqli_fetch_assoc($result2);
-        echo "Peli ID: " . $row['peliID']. "<br>". "Kotijoukkue: ".$row['home']. "<br>". "vierasjoukkue: ".$row2['away']. "<br>". "<br>". "<br>";
+       $row3 = mysqli_fetch_assoc($result3);
+        echo "Peli ID: " . $row['peliID']. "<br>". "Kotijoukkue: ".$row['home']. "<br>". "vierasjoukkue: ".$row2['away']."<br>". "Päivämäärä: ".$row3['pvm']. "<br>". "<br>". "<br>";
     }
 } else {
     echo "0 results";

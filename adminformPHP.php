@@ -85,6 +85,8 @@ if ($result->num_rows > 0) {
 		while($row = $result->fetch_assoc()) {
 		   $gameID = $row['id'];
 		   
+		  $_SESSION['gameID'] = $gameID;
+		   
 }
 }
     //haetaan pelaajan ID
@@ -132,18 +134,6 @@ $mysqli->close();
 
 $mysqli->close();
 
-
-
-     
-   
-
- 
-
-
-    
-   
-    
-    
     
     
 if($_SESSION['numberOfGoals'] == 2) {

@@ -94,12 +94,8 @@ function checkAwayTeam() {
 <div class="formBox" id="adminForm1">
     <label>Valitse koti ja vierasjoukkue</label>
 
-    <br>
-    <br>
-        <label>Peli ID</label>
-        <br>
-         <br>
-         <br>
+  <br>
+  <br>
      <!-- Kotijoukkueen valina -->
 
   <div class="form-group addFormItem">
