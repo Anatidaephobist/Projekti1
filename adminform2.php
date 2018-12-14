@@ -1067,7 +1067,7 @@ echo "</select>";
  <br>
  <label>Ottelun päivämäärä</label>
     <br>
-   <input type="date" class="form-control"id="pvm" name="pvm" required>
+   <input type="date" class="form-control" id="pvm" name="pvm" required>
    <br>
     <button type="submit" class="btn btn-primary formButton" name="adminSubmit">Submit</button>
    <br>
@@ -1094,19 +1094,14 @@ echo "</select>";
         <?php
 
      
-        //haetaan peli id
+        //haetaan tiedot
       $sql = "SELECT Pelit.id as peliID, Pelit.kotijoukkueID, Pelit.vierasjoukkueID, Joukkueet.id AS homeID, Joukkueet.id AS awayID, Joukkueet.nimi as home, Joukkueet.nimi as away FROM Pelit LEFT JOIN Joukkueet ON Pelit.kotijoukkueID=Joukkueet.id";
       $result = $mysqli->query($sql);
       
       $sql2 = "SELECT Pelit.vierasjoukkueID, Joukkueet.id AS awayID, Joukkueet.nimi as away FROM Pelit LEFT JOIN Joukkueet ON Pelit.vierasjoukkueID=Joukkueet.id";
       $result2 = $mysqli->query($sql2);
       
-      /*
-SELECT Orders.OrderID, Customers.CustomerName, Orders.OrderDate
-FROM Orders
-INNER JOIN Customers
-ON Orders.CustomerID=Customers.CustomerID;
-      */
+
      
   
       //tulostetaan tiedot

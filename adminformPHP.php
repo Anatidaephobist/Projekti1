@@ -31,7 +31,9 @@ include 'functions.php';
  if(isset($_POST["adminSubmit"])) {
      
    
-
+    //pvm talteen ottaminen
+    $pvm = $_POST['pvm'];
+    $_SESSION['pvm'] = $pvm;
 
     //arvojen talteen ottaminen
     $_SESSION['gameID'];
@@ -103,7 +105,7 @@ $awayteam = $_SESSION['vierasjoukkue'];
 
 //lisätään peli
   $sql = "INSERT INTO Pelit (KotijoukkueID, VierasjoukkueID, pvm)
-VALUES ('".$hometeam."','".$awayteam."','2018-01-01')";  
+VALUES ('".$hometeam."','".$awayteam."','".$pvm."')";  
 
 if ($mysqli->query($sql) == TRUE) {
     alert("New Game created successfully");
