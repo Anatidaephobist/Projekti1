@@ -696,7 +696,7 @@ function validateForm() {
 </head>
 <body background="football1.jpg">
 <button onclick="adminLogOut()" class="btn btn-primary" id="logOutButton" name="logOutForm"> Kirjaudu Ulos</button>
-<form method="post" name="adminform" onsubmit="return validateForm()">
+<form method="POST" name="adminform" onsubmit="return validateForm()">
 <div class="formBox" id="adminForm2">
  <label>Valitse maalintekijät ja varoitusten saajat</label>
   <!-- maalintekijät -->
@@ -719,14 +719,15 @@ function validateForm() {
     <h1>Maalintekijä</h1>
   
     <?php
+   
 $sql = "SELECT EtuNimi, Sukunimi FROM Pelaajat WHERE JoukkueID =  ".$_SESSION['kotijoukkue']." "."OR"." "."JoukkueID = ".$_SESSION['vierasjoukkue'];
 $result = $mysqli->query($sql);
 
-echo "<select name='maalintekija1' class='nameOfPlayer'>";
+echo "<select name= 'maalintekija1' class='nameOfPlayer'>";
 echo "<option value='' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
 while ($row = mysqli_fetch_array($result)) {
  
-  echo "<option value='" . $row['EtuNimi']." ". $row['Sukunimi'] . "'>" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
+  echo "<option value='".$row['EtuNimi']."'".">" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
 }
 echo "</select>";
 ?>
@@ -747,7 +748,7 @@ $result = $mysqli->query($sql);
 echo "<select name='maalintekija2' class='nameOfPlayer'>";
 echo "<option value='' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
 while ($row = mysqli_fetch_array($result)) {
-  echo "<option value='" . $row['EtuNimi']." ". $row['Sukunimi'] . "'>" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
+  echo "<option value='".$row['EtuNimi']."'".">". $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
 }
 echo "</select>";
 ?>
@@ -768,7 +769,7 @@ $result = $mysqli->query($sql);
 echo "<select name='maalintekija3' class='nameOfPlayer'>";
 echo "<option value='' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
 while ($row = mysqli_fetch_array($result)) {
-  echo "<option value='" . $row['EtuNimi']." ". $row['Sukunimi'] . "'>" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
+  echo "<option value='".$row['EtuNimi']."'".">" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
 }
 echo "</select>";
 ?>
@@ -788,7 +789,7 @@ $result = $mysqli->query($sql);
 echo "<select name='maalintekija4' class='nameOfPlayer'>";
 echo "<option value='' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
 while ($row = mysqli_fetch_array($result)) {
-  echo "<option value='" . $row['EtuNimi']." ". $row['Sukunimi'] . "'>" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
+  echo "<option value='".$row['EtuNimi']."'".">" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
 }
 echo "</select>";
 ?>
@@ -808,7 +809,7 @@ $result = $mysqli->query($sql);
 echo "<select name='maalintekija5' class='nameOfPlayer'>";
 echo "<option value='' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
 while ($row = mysqli_fetch_array($result)) {
-  echo "<option value='" . $row['EtuNimi']." ". $row['Sukunimi'] . "'>" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
+  echo "<option value='".$row['EtuNimi']."'".">" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
 }
 echo "</select>";
 ?>
@@ -828,7 +829,7 @@ $result = $mysqli->query($sql);
 echo "<select name='maalintekija6' class='nameOfPlayer'>";
 echo "<option value='' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
 while ($row = mysqli_fetch_array($result)) {
-  echo "<option value='" . $row['EtuNimi']." ". $row['Sukunimi'] . "'>" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
+  echo "<option value='".$row['EtuNimi']."'".">" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
 }
 echo "</select>";
 ?>
@@ -848,7 +849,7 @@ $result = $mysqli->query($sql);
 echo "<select name='maalintekija7' class='nameOfPlayer'>";
 echo "<option value='' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
 while ($row = mysqli_fetch_array($result)) {
-  echo "<option value='" . $row['EtuNimi']." ". $row['Sukunimi'] . "'>" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
+  echo "<option value='".$row['EtuNimi']."'".">" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
 }
 echo "</select>";
 ?>
@@ -869,7 +870,7 @@ $result = $mysqli->query($sql);
 echo "<select name='maalintekija8' class='nameOfPlayer'>";
 echo "<option value='' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
 while ($row = mysqli_fetch_array($result)) {
-  echo "<option value='" . $row['EtuNimi']." ". $row['Sukunimi'] . "'>" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
+  echo "<option value='".$row['EtuNimi']."'".">". $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
 }
 echo "</select>";
 ?>
@@ -890,7 +891,7 @@ $result = $mysqli->query($sql);
 echo "<select name='maalintekija9' class='nameOfPlayer'>";
 echo "<option value='' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
 while ($row = mysqli_fetch_array($result)) {
-  echo "<option value='" . $row['EtuNimi']." ". $row['Sukunimi'] . "'>" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
+  echo "<option value='".$row['EtuNimi']."'".">" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
 }
 echo "</select>";
 ?>
@@ -910,7 +911,7 @@ $result = $mysqli->query($sql);
 echo "<select name='maalintekija10' class='nameOfPlayer'>";
 echo "<option value='' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
 while ($row = mysqli_fetch_array($result)) {
-  echo "<option value='" . $row['EtuNimi']." ". $row['Sukunimi'] . "'>" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
+  echo "<option value='".$row['EtuNimi']."'".">" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
 }
 echo "</select>";
 ?>
@@ -1085,7 +1086,7 @@ echo "</select>";
 
     <div class="gameListGame formbox" id="popUpGames">
        <label id="gamelistH1">Pelit</label>
-
+      
      
 
        <br>
