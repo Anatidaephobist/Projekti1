@@ -278,7 +278,7 @@
       </div>
     </div>
 
-    <div class="moreInfo title"  onclick="playerCard3()">
+    <div class="moreInfo"  onclick="playerCard3()">
       <h1> Lisätietoa </h1>
     </div>
   </div>
