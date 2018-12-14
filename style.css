@@ -202,10 +202,14 @@ h2 {
     margin-top: 20px;
     float: left;
     font-weight: bold;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
 }
 
 .title>h1 {
-    font-size: 25px;
+    font-size: 2vw;
     margin-right: auto;
 }
 
@@ -310,7 +314,7 @@ h2 {
 }
 
 .moreInfo>h1 {
-    font-size: 20px;
+    font-size: 1.65vw;
     margin:0 auto;
     margin-right: 45vw;
     float:right;
@@ -398,7 +402,12 @@ h2 {
       text-align: center;
 }
 .title {
-  margin-right: 0.5%;
+  margin-right: 0;
+  margin-top: 5vw;
+}
+.title>h1 {
+    margin: 0;
+    padding: 0;
 }
 }
 
