@@ -3,8 +3,35 @@
 <script>
 @import "/style.css";
 </script>
+<meta charset="UTF-8">
 </head>
 
+<?php
+
+  $sql = "SELECT Pisteet, id FROM Joukkueet WHERE id > 8 AND id < 13 ORDER BY Pisteet DESC LIMIT 1";  
+	$result = $mysqli->query($sql);
+if ($result->num_rows > 0) {
+		while ($row=mysqli_fetch_assoc($result))
+    {
+    $firstTeamPoints = $row['Pisteet'];
+    $firstTeamID = $row['id'];
+    }
+    
+    
+   $sql2 = "SELECT id from Joukkeet where Pisteet = '".$firstTeam."'";  
+	$result2 = $mysqli->query($sql2);
+	if ($result2->num_rows > 0) {
+		while ($row=mysqli_fetch_assoc($result2))
+    {
+    $firstTeamID = $row['id'];
+    }
+  
+  mysqli_free_result($result);
+}
+
+
+}
+?>
 
 
 <div id="teamInfoBoxWrapperC" class ="teamInfoBoxWrapper">
@@ -14,7 +41,7 @@
     <div class="teamLogo">
       <img class="imgsize"src="
       <?php
-      echo databaseQuery('Logot','logo','9');
+      echo databaseQuery( 'Logot','logo', $firstTeamID); //TOIMII
       ?>">
     </div>
 

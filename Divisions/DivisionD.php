@@ -3,6 +3,7 @@
 <script>
 @import "/style.css";
 </script>
+<meta charset="UTF-8">
 </head>
 
 

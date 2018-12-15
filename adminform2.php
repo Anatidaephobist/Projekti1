@@ -720,12 +720,12 @@ function validateForm() {
   
     <?php
    
-$sql = "SELECT EtuNimi, Sukunimi FROM Pelaajat WHERE JoukkueID =  ".$_SESSION['kotijoukkue']." "."OR"." "."JoukkueID = ".$_SESSION['vierasjoukkue'];
-$result = $mysqli->query($sql);
+$sql501 = "SELECT EtuNimi, Sukunimi FROM Pelaajat WHERE JoukkueID =  ".$_SESSION['kotijoukkue']." "."OR"." "."JoukkueID = ".$_SESSION['vierasjoukkue'];
+$result501 = $mysqli->query($sql501);
 
-echo "<select name= 'maalintekija1' class='nameOfPlayer'>";
+echo "<select name='maalintekija1' class='nameOfPlayer'>";
 echo "<option value='' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
-while ($row = mysqli_fetch_array($result)) {
+while ($row = mysqli_fetch_array($result501)) {
  
   echo "<option value='".$row['EtuNimi']."'".">" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
 }
@@ -742,12 +742,12 @@ echo "</select>";
     <h1>Maalintekijä</h1>
   
     <?php
-$sql = "SELECT EtuNimi, Sukunimi FROM Pelaajat WHERE JoukkueID =  ".$_SESSION['kotijoukkue']." "."OR"." "."JoukkueID = ".$_SESSION['vierasjoukkue'];
-$result = $mysqli->query($sql);
+$sql502 = "SELECT EtuNimi, Sukunimi FROM Pelaajat WHERE JoukkueID =  ".$_SESSION['kotijoukkue']." "."OR"." "."JoukkueID = ".$_SESSION['vierasjoukkue'];
+$result502 = $mysqli->query($sql502);
 
 echo "<select name='maalintekija2' class='nameOfPlayer'>";
 echo "<option value='' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
-while ($row = mysqli_fetch_array($result)) {
+while ($row = mysqli_fetch_array($result502)) {
   echo "<option value='".$row['EtuNimi']."'".">". $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
 }
 echo "</select>";
@@ -763,12 +763,12 @@ echo "</select>";
     <h1>Maalintekijä</h1>
   
     <?php
-$sql = "SELECT EtuNimi, Sukunimi FROM Pelaajat WHERE JoukkueID =  ".$_SESSION['kotijoukkue']." "."OR"." "."JoukkueID = ".$_SESSION['vierasjoukkue'];
-$result = $mysqli->query($sql);
+$sql503 = "SELECT EtuNimi, Sukunimi FROM Pelaajat WHERE JoukkueID =  ".$_SESSION['kotijoukkue']." "."OR"." "."JoukkueID = ".$_SESSION['vierasjoukkue'];
+$result503 = $mysqli->query($sql503);
 
 echo "<select name='maalintekija3' class='nameOfPlayer'>";
 echo "<option value='' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
-while ($row = mysqli_fetch_array($result)) {
+while ($row = mysqli_fetch_array($result503)) {
   echo "<option value='".$row['EtuNimi']."'".">" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
 }
 echo "</select>";
@@ -783,12 +783,12 @@ echo "</select>";
     <h1>Maalintekijä</h1>
   
     <?php
-$sql = "SELECT EtuNimi, Sukunimi FROM Pelaajat WHERE JoukkueID =  ".$_SESSION['kotijoukkue']." "."OR"." "."JoukkueID = ".$_SESSION['vierasjoukkue'];
-$result = $mysqli->query($sql);
+$sql504 = "SELECT EtuNimi, Sukunimi FROM Pelaajat WHERE JoukkueID =  ".$_SESSION['kotijoukkue']." "."OR"." "."JoukkueID = ".$_SESSION['vierasjoukkue'];
+$result504 = $mysqli->query($sql504);
 
 echo "<select name='maalintekija4' class='nameOfPlayer'>";
 echo "<option value='' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
-while ($row = mysqli_fetch_array($result)) {
+while ($row = mysqli_fetch_array($result504)) {
   echo "<option value='".$row['EtuNimi']."'".">" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
 }
 echo "</select>";
@@ -803,12 +803,12 @@ echo "</select>";
     <h1>Maalintekijä</h1>
   
     <?php
-$sql = "SELECT EtuNimi, Sukunimi FROM Pelaajat WHERE JoukkueID =  ".$_SESSION['kotijoukkue']." "."OR"." "."JoukkueID = ".$_SESSION['vierasjoukkue'];
-$result = $mysqli->query($sql);
+$sql505 = "SELECT EtuNimi, Sukunimi FROM Pelaajat WHERE JoukkueID =  ".$_SESSION['kotijoukkue']." "."OR"." "."JoukkueID = ".$_SESSION['vierasjoukkue'];
+$result505 = $mysqli->query($sql505);
 
 echo "<select name='maalintekija5' class='nameOfPlayer'>";
 echo "<option value='' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
-while ($row = mysqli_fetch_array($result)) {
+while ($row = mysqli_fetch_array($result505)) {
   echo "<option value='".$row['EtuNimi']."'".">" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
 }
 echo "</select>";
@@ -823,12 +823,12 @@ echo "</select>";
     <h1>Maalintekijä</h1>
   
     <?php
-$sql = "SELECT EtuNimi, Sukunimi FROM Pelaajat WHERE JoukkueID =  ".$_SESSION['kotijoukkue']." "."OR"." "."JoukkueID = ".$_SESSION['vierasjoukkue'];
-$result = $mysqli->query($sql);
+$sql506 = "SELECT EtuNimi, Sukunimi FROM Pelaajat WHERE JoukkueID =  ".$_SESSION['kotijoukkue']." "."OR"." "."JoukkueID = ".$_SESSION['vierasjoukkue'];
+$result506 = $mysqli->query($sql506);
 
 echo "<select name='maalintekija6' class='nameOfPlayer'>";
 echo "<option value='' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
-while ($row = mysqli_fetch_array($result)) {
+while ($row = mysqli_fetch_array($result506)) {
   echo "<option value='".$row['EtuNimi']."'".">" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
 }
 echo "</select>";
@@ -843,12 +843,12 @@ echo "</select>";
     <h1>Maalintekijä</h1>
   
     <?php
-$sql = "SELECT EtuNimi, Sukunimi FROM Pelaajat WHERE JoukkueID =  ".$_SESSION['kotijoukkue']." "."OR"." "."JoukkueID = ".$_SESSION['vierasjoukkue'];
-$result = $mysqli->query($sql);
+$sql507 = "SELECT EtuNimi, Sukunimi FROM Pelaajat WHERE JoukkueID =  ".$_SESSION['kotijoukkue']." "."OR"." "."JoukkueID = ".$_SESSION['vierasjoukkue'];
+$result507 = $mysqli->query($sql507);
 
 echo "<select name='maalintekija7' class='nameOfPlayer'>";
 echo "<option value='' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
-while ($row = mysqli_fetch_array($result)) {
+while ($row = mysqli_fetch_array($result507)) {
   echo "<option value='".$row['EtuNimi']."'".">" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
 }
 echo "</select>";
@@ -864,12 +864,12 @@ echo "</select>";
     <h1>Maalintekijä</h1>
   
     <?php
-$sql = "SELECT EtuNimi, Sukunimi FROM Pelaajat WHERE JoukkueID =  ".$_SESSION['kotijoukkue']." "."OR"." "."JoukkueID = ".$_SESSION['vierasjoukkue'];
-$result = $mysqli->query($sql);
+$sql508 = "SELECT EtuNimi, Sukunimi FROM Pelaajat WHERE JoukkueID =  ".$_SESSION['kotijoukkue']." "."OR"." "."JoukkueID = ".$_SESSION['vierasjoukkue'];
+$result508 = $mysqli->query($sql508);
 
 echo "<select name='maalintekija8' class='nameOfPlayer'>";
 echo "<option value='' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
-while ($row = mysqli_fetch_array($result)) {
+while ($row = mysqli_fetch_array($result508)) {
   echo "<option value='".$row['EtuNimi']."'".">". $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
 }
 echo "</select>";
@@ -885,12 +885,12 @@ echo "</select>";
     <h1>Maalintekijä</h1>
   
     <?php
-$sql = "SELECT EtuNimi, Sukunimi FROM Pelaajat WHERE JoukkueID =  ".$_SESSION['kotijoukkue']." "."OR"." "."JoukkueID = ".$_SESSION['vierasjoukkue'];
-$result = $mysqli->query($sql);
+$sql509 = "SELECT EtuNimi, Sukunimi FROM Pelaajat WHERE JoukkueID =  ".$_SESSION['kotijoukkue']." "."OR"." "."JoukkueID = ".$_SESSION['vierasjoukkue'];
+$result509 = $mysqli->query($sql509);
 
 echo "<select name='maalintekija9' class='nameOfPlayer'>";
 echo "<option value='' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
-while ($row = mysqli_fetch_array($result)) {
+while ($row = mysqli_fetch_array($result509)) {
   echo "<option value='".$row['EtuNimi']."'".">" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
 }
 echo "</select>";
@@ -905,12 +905,12 @@ echo "</select>";
     <h1>Maalintekijä</h1>
   
     <?php
-$sql = "SELECT EtuNimi, Sukunimi FROM Pelaajat WHERE JoukkueID =  ".$_SESSION['kotijoukkue']." "."OR"." "."JoukkueID = ".$_SESSION['vierasjoukkue'];
-$result = $mysqli->query($sql);
+$sql510 = "SELECT EtuNimi, Sukunimi FROM Pelaajat WHERE JoukkueID =  ".$_SESSION['kotijoukkue']." "."OR"." "."JoukkueID = ".$_SESSION['vierasjoukkue'];
+$result510 = $mysqli->query($sql510);
 
 echo "<select name='maalintekija10' class='nameOfPlayer'>";
 echo "<option value='' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
-while ($row = mysqli_fetch_array($result)) {
+while ($row = mysqli_fetch_array($result510)) {
   echo "<option value='".$row['EtuNimi']."'".">" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
 }
 echo "</select>";
@@ -1095,23 +1095,23 @@ echo "</select>";
 
      
         //haetaan tiedot
-      $sql = "SELECT Pelit.id as peliID, Pelit.kotijoukkueID, Pelit.vierasjoukkueID, Joukkueet.id AS homeID, Joukkueet.id AS awayID, Joukkueet.nimi as home, Joukkueet.nimi as away FROM Pelit LEFT JOIN Joukkueet ON Pelit.kotijoukkueID=Joukkueet.id";
-      $result = $mysqli->query($sql);
+      $sql400 = "SELECT Pelit.id as peliID, Pelit.kotijoukkueID, Pelit.vierasjoukkueID, Joukkueet.id AS homeID, Joukkueet.id AS awayID, Joukkueet.nimi as home, Joukkueet.nimi as away FROM Pelit LEFT JOIN Joukkueet ON Pelit.kotijoukkueID=Joukkueet.id";
+      $result400 = $mysqli->query($sql400);
       
-      $sql2 = "SELECT Pelit.vierasjoukkueID, Joukkueet.id AS awayID, Joukkueet.nimi as away FROM Pelit LEFT JOIN Joukkueet ON Pelit.vierasjoukkueID=Joukkueet.id";
-      $result2 = $mysqli->query($sql2);
+      $sql401 = "SELECT Pelit.vierasjoukkueID, Joukkueet.id AS awayID, Joukkueet.nimi as away FROM Pelit LEFT JOIN Joukkueet ON Pelit.vierasjoukkueID=Joukkueet.id";
+      $result401 = $mysqli->query($sql401);
       
-       $sql3 = "SELECT pvm FROM Pelit";
-      $result3 = $mysqli->query($sql3);
+       $sql402 = "SELECT pvm FROM Pelit";
+      $result402 = $mysqli->query($sql402);
       
 
      
   
       //tulostetaan tiedot
-  if ($result->num_rows > 0) {
-    while($row = mysqli_fetch_assoc($result)) {
-       $row2 = mysqli_fetch_assoc($result2);
-       $row3 = mysqli_fetch_assoc($result3);
+  if ($result400->num_rows > 0) {
+    while($row = mysqli_fetch_assoc($result400)) {
+       $row2 = mysqli_fetch_assoc($result401);
+       $row3 = mysqli_fetch_assoc($result402);
         echo "Peli ID: " . $row['peliID']. "<br>". "Kotijoukkue: ".$row['home']. "<br>". "vierasjoukkue: ".$row2['away']."<br>". "Päivämäärä: ".$row3['pvm']. "<br>". "<br>". "<br>";
     }
 } else {
