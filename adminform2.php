@@ -732,7 +732,7 @@ while ($row = mysqli_fetch_array($result501)) {
 echo "</select>";
 ?>
 <br>
-<input type="checkbox" id="owngoal1" class="owngoal" value="owngoal"> oma maali<br>
+<input type="checkbox" name="owngoal1" id="owngoal1" class="owngoal" value="owngoal"> oma maali<br>
 
 <hr>
 </div>
@@ -753,7 +753,7 @@ while ($row = mysqli_fetch_array($result502)) {
 echo "</select>";
 ?>
 <br>
-<input type="checkbox" id="owngoal2" class="owngoal" value="owngoal"> oma maali<br>
+<input type="checkbox" name="owngoal2" id="owngoal2" class="owngoal" value="owngoal"> oma maali<br>
 
 <hr>
 </div>
@@ -774,7 +774,7 @@ while ($row = mysqli_fetch_array($result503)) {
 echo "</select>";
 ?>
 <br>
-<input type="checkbox" id="owngoal3" class="owngoal" value="owngoal"> oma maali<br>
+<input type="checkbox" name="owngoal3" id="owngoal3" class="owngoal" value="owngoal"> oma maali<br>
 <hr>
 </div>
 
@@ -794,7 +794,7 @@ while ($row = mysqli_fetch_array($result504)) {
 echo "</select>";
 ?>
 <br>
-<input type="checkbox" id="owngoal4" class="owngoal" value="owngoal"> oma maali<br>
+<input type="checkbox" name="owngoal4" id="owngoal4" class="owngoal" value="owngoal"> oma maali<br>
 <hr>
 </div>
 
@@ -814,7 +814,7 @@ while ($row = mysqli_fetch_array($result505)) {
 echo "</select>";
 ?>
 <br>
-<input type="checkbox" id="owngoal5" class="owngoal" value="owngoal"> oma maali<br>
+<input type="checkbox" name="owngoal5" id="owngoal5" class="owngoal" value="owngoal"> oma maali<br>
 <hr>
 </div>
 
@@ -834,7 +834,7 @@ while ($row = mysqli_fetch_array($result506)) {
 echo "</select>";
 ?>
 <br>
-<input type="checkbox" id="owngoal6" class="owngoal" value="owngoal"> oma maali<br>
+<input type="checkbox" name="owngoal6" id="owngoal6" class="owngoal" value="owngoal"> oma maali<br>
 <hr>
 </div>
 
@@ -855,7 +855,7 @@ echo "</select>";
 ?>
 
 <br>
-<input type="checkbox" id="owngoal7" class="owngoal" value="owngoal"> oma maali<br>
+<input type="checkbox" name="owngoal7" id="owngoal7" class="owngoal" value="owngoal"> oma maali<br>
 <hr>
 </div>
 
@@ -876,7 +876,7 @@ echo "</select>";
 ?>
 
 <br>
-<input type="checkbox" id="owngoal8" class="owngoal" value="owngoal"> oma maali<br>
+<input type="checkbox" name="owngoal8" id="owngoal8" class="owngoal" value="owngoal"> oma maali<br>
 <hr>
 </div>
 
@@ -896,7 +896,7 @@ while ($row = mysqli_fetch_array($result509)) {
 echo "</select>";
 ?>
 <br>
-<input type="checkbox" id="owngoal9" class="owngoal" value="owngoal"> oma maali<br>
+<input type="checkbox" name="owngoal9" id="owngoal9" class="owngoal" value="owngoal"> oma maali<br>
 <hr>
 </div>
 
@@ -916,7 +916,7 @@ while ($row = mysqli_fetch_array($result510)) {
 echo "</select>";
 ?>
 <br>
-<input type="checkbox" id="owngoal10" class="owngoal" value="owngoal"> oma maali<br>
+<input type="checkbox" name="owngoal10" id="owngoal10" class="owngoal" value="owngoal"> oma maali<br>
 <hr>
 </div>
 

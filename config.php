@@ -9,6 +9,7 @@ $dbtype = 'mysql';
 
 //Otetaan yhteys tietokantaan
 $mysqli = mysqli_connect($dbhost, $dbuser,$dbpass, $dbname);
+$mysqli->set_charset('utf8');
 	if ($mysqli->connect_errno) {
 		echo "Failed to connect to MYSQL: ("
 			. $mysqli->connect_errno
