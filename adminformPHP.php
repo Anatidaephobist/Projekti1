@@ -3,7 +3,7 @@
 <?php
 session_start();
 include 'functions.php';
-
+error_reporting(0);
 ?>
 
 <html>
@@ -115,6 +115,7 @@ if ($result25->num_rows > 0) {
 		   
 }
 }
+
     //haetaan pelaajan ID - maalintekijä1
 	$sql109 = "SELECT id FROM Pelaajat WHERE EtuNimi = '".$maalintekija1."'"." AND JoukkueID = ".$_SESSION['kotijoukkue']." OR EtuNimi ='".$maalintekija1."'"." AND JoukkueID = ".$_SESSION['vierasjoukkue'];
 		$result109 = $mysqli->query($sql109);
@@ -126,6 +127,7 @@ if ($result109->num_rows > 0) {
 
 
 }
+
 
  //haetaan pelaajan ID - maalintekijä2
 	$sql110 = "SELECT id FROM Pelaajat WHERE EtuNimi = '".$maalintekija2."'"." AND JoukkueID = ".$_SESSION['kotijoukkue']." OR EtuNimi ='".$maalintekija2."'"." AND JoukkueID = ".$_SESSION['vierasjoukkue'];
@@ -279,20 +281,20 @@ if ($mysqli->query($sql12) == TRUE) {
 if ($mysqli->query($sql301) == TRUE) {
     alert("Player(1) statistics updated successfully");
 
-     $sql701 = "UPDATE Joukkueet SET PelatutPelit=PelatutPelit+1 WHERE id = '".$teamIDOfPlayer1."'";
+   
 
-if ($mysqli->query($sql701) == TRUE) {
+
     alert("Team  goal statistics(1) updated successfully");
     //tarkitetaan onko maalintekijä koti vai vierasjoukkueen pelaaja
     if($hometeam == $teamIDOfPlayer1 and $_SESSION['owngoal1'] !== 'owngoal' or $awayteam == $teamIDOfPlayer1 and $_SESSION['owngoal1'] == 'owngoal') {
         $hometeamScore++;
     } else {
         $awayteamScore++;
-    }
     
+    }   
 } else {
     alert("Error: " . $sql . "<br>" . $mysqli->error);
-}
+    
 }
 }
 } //end of numberOfGoals(1)
@@ -321,13 +323,7 @@ if ($mysqli->query($sql12) == TRUE and $mysqli->query($sql13) == TRUE) {
 if ($mysqli->query($sql301) == TRUE and $mysqli->query($sql302) == TRUE) {
     alert("Player(2) statistics updated successfully");
     
-    //lisätään pelatut pelit Pelaajan Joukkueelle
-     $sql701 = "UPDATE Joukkueet SET PelatutPelit=PelatutPelit+1 WHERE id = '".$teamIDOfPlayer1."'";
-     $sql702 = "UPDATE Joukkueet SET PelatutPelit=PelatutPelit+1 WHERE id = '".$teamIDOfPlayer2."'";
-     
-     
- 
-if ($mysqli->query($sql701) == TRUE and $mysqli->query($sql702) == TRUE) {
+    
     alert("Team  goal statistics(2) updated successfully");
     //tarkitetaan onko pelaaja koti vai vierasjoukkueen pelaaja
     //1
@@ -341,16 +337,16 @@ if ($mysqli->query($sql701) == TRUE and $mysqli->query($sql702) == TRUE) {
         $hometeamScore++;
     } else {
         $awayteamScore++;
-    }
     
-
+    
+}
 
 
 }else {
     alert("Error: " . $sql . "<br>" . $mysqli->error);
 }
 }
-}
+
 } //end of numberOfGoals(2)
 
 //3
@@ -378,15 +374,7 @@ if ($mysqli->query($sql12) == TRUE and $mysqli->query($sql13) == TRUE and $mysql
 if ($mysqli->query($sql301) == TRUE and $mysqli->query($sql302) == TRUE and $mysqli->query($sql303) == TRUE) {
     alert("Player(3) statistics updated successfully");
     
-    //lisätään pelatut pelit Pelaajan Joukkueelle
-     $sql701 = "UPDATE Joukkueet SET PelatutPelit=PelatutPelit+1 WHERE id = '".$teamIDOfPlayer1."'";
-     $sql702 = "UPDATE Joukkueet SET PelatutPelit=PelatutPelit+1 WHERE id = '".$teamIDOfPlayer2."'";
-     $sql703 = "UPDATE Joukkueet SET PelatutPelit=PelatutPelit+1 WHERE id = '".$teamIDOfPlayer3."'";
-     
-     
- 
-if ($mysqli->query($sql701) == TRUE and $mysqli->query($sql702) == TRUE  and $mysqli->query($sql703) == TRUE) {
-    alert("Team  goal statistics(3) updated successfully");
+   
     //tarkitetaan onko pelaaja koti vai vierasjoukkueen pelaaja
     //1
     if($hometeam == $teamIDOfPlayer1 and $_SESSION['owngoal1'] !== 'owngoal' or $awayteam == $teamIDOfPlayer1 and $_SESSION['owngoal1'] == 'owngoal') {
@@ -413,7 +401,7 @@ if ($mysqli->query($sql701) == TRUE and $mysqli->query($sql702) == TRUE  and $my
     alert("Error: " . $sql . "<br>" . $mysqli->error);
 }
 }
-}
+
 } //end of numberOfGoals(3)
 
 //4
@@ -445,15 +433,7 @@ if ($mysqli->query($sql12) == TRUE and $mysqli->query($sql13) == TRUE and $mysql
 if ($mysqli->query($sql301) == TRUE and $mysqli->query($sql302) == TRUE and $mysqli->query($sql303) == TRUE and $mysqli->query($sql304) == TRUE) {
     alert("Player(4) statistics updated successfully");
     
-    //lisätään pelatut pelit Pelaajan Joukkueelle
-     $sql701 = "UPDATE Joukkueet SET PelatutPelit=PelatutPelit+1 WHERE id = '".$teamIDOfPlayer1."'";
-     $sql702 = "UPDATE Joukkueet SET PelatutPelit=PelatutPelit+1 WHERE id = '".$teamIDOfPlayer2."'";
-     $sql703 = "UPDATE Joukkueet SET PelatutPelit=PelatutPelit+1 WHERE id = '".$teamIDOfPlayer3."'";
-     $sql704 = "UPDATE Joukkueet SET PelatutPelit=PelatutPelit+1 WHERE id = '".$teamIDOfPlayer4."'";
-     
- 
-if ($mysqli->query($sql701) == TRUE and $mysqli->query($sql702) == TRUE  and $mysqli->query($sql703) == TRUE and $mysqli->query($sql704) == TRUE) {
-    alert("Team  goal statistics(4) updated successfully");
+  
     //tarkitetaan onko pelaaja koti vai vierasjoukkueen pelaaja
     //1
     if($hometeam == $teamIDOfPlayer1 and $_SESSION['owngoal1'] !== 'owngoal' or $awayteam == $teamIDOfPlayer1 and $_SESSION['owngoal1'] == 'owngoal') {
@@ -478,14 +458,14 @@ if ($mysqli->query($sql701) == TRUE and $mysqli->query($sql702) == TRUE  and $my
         $hometeamScore++;
     } else {
         $awayteamScore++;
-    }
-
+    
+}
     
 } else {
     alert("Error: " . $sql . "<br>" . $mysqli->error);
 }
 }
-}
+
 } //end of numberOfGoals(4)
 
 //5
@@ -521,20 +501,6 @@ if ($mysqli->query($sql12) == TRUE and $mysqli->query($sql13) == TRUE and $mysql
 if ($mysqli->query($sql301) == TRUE and $mysqli->query($sql302) == TRUE and $mysqli->query($sql303) == TRUE and $mysqli->query($sql304) == TRUE and $mysqli->query($sql305) == TRUE) {
     alert("Player(5) statistics updated successfully");
     
-    //lisätään pelatut pelit Pelaajan Joukkueelle
-     $sql701 = "UPDATE Joukkueet SET PelatutPelit=PelatutPelit+1 WHERE id = '".$teamIDOfPlayer1."'";
-     $sql702 = "UPDATE Joukkueet SET PelatutPelit=PelatutPelit+1 WHERE id = '".$teamIDOfPlayer2."'";
-     $sql703 = "UPDATE Joukkueet SET PelatutPelit=PelatutPelit+1 WHERE id = '".$teamIDOfPlayer3."'";
-     $sql704 = "UPDATE Joukkueet SET PelatutPelit=PelatutPelit+1 WHERE id = '".$teamIDOfPlayer4."'";
-     $sql705 = "UPDATE Joukkueet SET PelatutPelit=PelatutPelit+1 WHERE id = '".$teamIDOfPlayer5."'";
-     
-    
-    
-     
-     
- 
-if ($mysqli->query($sql701) == TRUE and $mysqli->query($sql702) == TRUE  and $mysqli->query($sql703) == TRUE and $mysqli->query($sql704) == TRUE and $mysqli->query($sql705) == TRUE) {
-    alert("Team  goal statistics(5) updated successfully");
     //tarkitetaan onko pelaaja koti vai vierasjoukkueen pelaaja
     //1
     if($hometeam == $teamIDOfPlayer1 and $_SESSION['owngoal1'] !== 'owngoal' or $awayteam == $teamIDOfPlayer1 and $_SESSION['owngoal1'] == 'owngoal') {
@@ -566,15 +532,15 @@ if ($mysqli->query($sql701) == TRUE and $mysqli->query($sql702) == TRUE  and $my
         $hometeamScore++;
     } else {
         $awayteamScore++;
-    }
     
+    }
 
     
 } else {
     alert("Error: " . $sql . "<br>" . $mysqli->error);
 }
 }
-}
+
 } //end of numberOfGoals(5)
 
 //6
@@ -613,21 +579,7 @@ if ($mysqli->query($sql12) == TRUE and $mysqli->query($sql13) == TRUE and $mysql
       
 if ($mysqli->query($sql301) == TRUE and $mysqli->query($sql302) == TRUE and $mysqli->query($sql303) == TRUE and $mysqli->query($sql304) == TRUE and $mysqli->query($sql305) == TRUE and $mysqli->query($sql306) == TRUE) {
     alert("Player(6) statistics updated successfully");
-    
-    //lisätään pelatut pelit Pelaajan Joukkueelle
-     $sql701 = "UPDATE Joukkueet SET PelatutPelit=PelatutPelit+1 WHERE id = '".$teamIDOfPlayer1."'";
-     $sql702 = "UPDATE Joukkueet SET PelatutPelit=PelatutPelit+1 WHERE id = '".$teamIDOfPlayer2."'";
-     $sql703 = "UPDATE Joukkueet SET PelatutPelit=PelatutPelit+1 WHERE id = '".$teamIDOfPlayer3."'";
-     $sql704 = "UPDATE Joukkueet SET PelatutPelit=PelatutPelit+1 WHERE id = '".$teamIDOfPlayer4."'";
-     $sql705 = "UPDATE Joukkueet SET PelatutPelit=PelatutPelit+1 WHERE id = '".$teamIDOfPlayer5."'";
-     $sql706 = "UPDATE Joukkueet SET PelatutPelit=PelatutPelit+1 WHERE id = '".$teamIDOfPlayer6."'";
-    
-    
-     
-     
- 
-if ($mysqli->query($sql701) == TRUE and $mysqli->query($sql702) == TRUE  and $mysqli->query($sql703) == TRUE and $mysqli->query($sql704) == TRUE and $mysqli->query($sql705) == TRUE and $mysqli->query($sql706) == TRUE) {
-    alert("Team  goal statistics(6) updated successfully");
+   
     //tarkitetaan onko pelaaja koti vai vierasjoukkueen pelaaja
     //1
     if($hometeam == $teamIDOfPlayer1 and $_SESSION['owngoal1'] !== 'owngoal' or $awayteam == $teamIDOfPlayer1 and $_SESSION['owngoal1'] == 'owngoal') {
@@ -665,15 +617,15 @@ if ($mysqli->query($sql701) == TRUE and $mysqli->query($sql702) == TRUE  and $my
         $hometeamScore++;
     } else {
         $awayteamScore++;
+    
     }
-     
 
     
 } else {
     alert("Error: " . $sql . "<br>" . $mysqli->error);
 }
 }
-}
+
 } //end of numberOfGoals(6)
 
 //7
@@ -721,20 +673,7 @@ if ($mysqli->query($sql301) == TRUE and $mysqli->query($sql302) == TRUE and $mys
     if ($mysqli->query($sql301) == TRUE and $mysqli->query($sql302) == TRUE and $mysqli->query($sql303) == TRUE and $mysqli->query($sql304) == TRUE and $mysqli->query($sql305) == TRUE and $mysqli->query($sql306) == TRUE and $mysqli->query($sql307) == TRUE and $mysqli->query($sql308) == TRUE) {
     alert("team(7) statistics updated successfully");
     
-    //lisätään pelatut pelit Pelaajan Joukkueelle
-     $sql701 = "UPDATE Joukkueet SET PelatutPelit=PelatutPelit+1 WHERE id = '".$teamIDOfPlayer1."'";
-     $sql702 = "UPDATE Joukkueet SET PelatutPelit=PelatutPelit+1 WHERE id = '".$teamIDOfPlayer2."'";
-     $sql703 = "UPDATE Joukkueet SET PelatutPelit=PelatutPelit+1 WHERE id = '".$teamIDOfPlayer3."'";
-     $sql704 = "UPDATE Joukkueet SET PelatutPelit=PelatutPelit+1 WHERE id = '".$teamIDOfPlayer4."'";
-     $sql705 = "UPDATE Joukkueet SET PelatutPelit=PelatutPelit+1 WHERE id = '".$teamIDOfPlayer5."'";
-     $sql706 = "UPDATE Joukkueet SET PelatutPelit=PelatutPelit+1 WHERE id = '".$teamIDOfPlayer6."'";
-     $sql707 = "UPDATE Joukkueet SET PelatutPelit=PelatutPelit+1 WHERE id = '".$teamIDOfPlayer7."'";
-    
-     
-     
- 
-if ($mysqli->query($sql701) == TRUE and $mysqli->query($sql702) == TRUE  and $mysqli->query($sql703) == TRUE and $mysqli->query($sql704) == TRUE and $mysqli->query($sql705) == TRUE and $mysqli->query($sql706) == TRUE and $mysqli->query($sql707) == TRUE) {
-    alert("Team  goal statistics(7) updated successfully");
+   
     //tarkitetaan onko pelaaja koti vai vierasjoukkueen pelaaja
     //1
     if($hometeam == $teamIDOfPlayer1 and $_SESSION['owngoal1'] !== 'owngoal' or $awayteam == $teamIDOfPlayer1 and $_SESSION['owngoal1'] == 'owngoal') {
@@ -778,15 +717,15 @@ if ($mysqli->query($sql701) == TRUE and $mysqli->query($sql702) == TRUE  and $my
         $hometeamScore++;
     } else {
         $awayteamScore++;
-    }
     
+    }
 
 } else {
     alert("Error: " . $sql . "<br>" . $mysqli->error);
 }
 }
 }
-}
+
 } //end of numberOfGoals(7)
 
 //8
@@ -834,20 +773,7 @@ if ($mysqli->query($sql12) == TRUE and $mysqli->query($sql13) == TRUE and $mysql
 if ($mysqli->query($sql301) == TRUE and $mysqli->query($sql302) == TRUE and $mysqli->query($sql303) == TRUE and $mysqli->query($sql304) == TRUE and $mysqli->query($sql305) == TRUE and $mysqli->query($sql306) == TRUE and $mysqli->query($sql307) == TRUE and $mysqli->query($sql308) == TRUE) {
     alert("team(8) statistics updated successfully");
     
-    //lisätään pelatut pelit Pelaajan Joukkueelle
-     $sql701 = "UPDATE Joukkueet SET PelatutPelit=PelatutPelit+1 WHERE id = '".$teamIDOfPlayer1."'";
-     $sql702 = "UPDATE Joukkueet SET PelatutPelit=PelatutPelit+1 WHERE id = '".$teamIDOfPlayer2."'";
-     $sql703 = "UPDATE Joukkueet SET PelatutPelit=PelatutPelit+1 WHERE id = '".$teamIDOfPlayer3."'";
-     $sql704 = "UPDATE Joukkueet SET PelatutPelit=PelatutPelit+1 WHERE id = '".$teamIDOfPlayer4."'";
-     $sql705 = "UPDATE Joukkueet SET PelatutPelit=PelatutPelit+1 WHERE id = '".$teamIDOfPlayer5."'";
-     $sql706 = "UPDATE Joukkueet SET PelatutPelit=PelatutPelit+1 WHERE id = '".$teamIDOfPlayer6."'";
-     $sql707 = "UPDATE Joukkueet SET PelatutPelit=PelatutPelit+1 WHERE id = '".$teamIDOfPlayer7."'";
-     $sql708 = "UPDATE Joukkueet SET PelatutPelit=PelatutPelit+1 WHERE id = '".$teamIDOfPlayer8."'";
-     
-     
- 
-if ($mysqli->query($sql701) == TRUE and $mysqli->query($sql702) == TRUE  and $mysqli->query($sql703) == TRUE and $mysqli->query($sql704) == TRUE and $mysqli->query($sql705) == TRUE and $mysqli->query($sql706) == TRUE and $mysqli->query($sql707) == TRUE and $mysqli->query($sql708) == TRUE) {
-    alert("Team  goal statistics(8) updated successfully");
+    
     //tarkitetaan onko pelaaja koti vai vierasjoukkueen pelaaja
     //1
     if($hometeam == $teamIDOfPlayer1 and $_SESSION['owngoal1'] !== 'owngoal' or $awayteam == $teamIDOfPlayer1 and $_SESSION['owngoal1'] == 'owngoal') {
@@ -897,15 +823,15 @@ if ($mysqli->query($sql701) == TRUE and $mysqli->query($sql702) == TRUE  and $my
         $hometeamScore++;
     } else {
         $awayteamScore++;
-    }
+    
      
-
+}
     
 } else {
     alert("Error: " . $sql . "<br>" . $mysqli->error);
 }
 }
-}
+
 } //end of numberOfGoals(8)
 
 //9
@@ -957,20 +883,7 @@ if ($mysqli->query($sql12) == TRUE and $mysqli->query($sql13) == TRUE and $mysql
 if ($mysqli->query($sql301) == TRUE and $mysqli->query($sql302) == TRUE and $mysqli->query($sql303) == TRUE and $mysqli->query($sql304) == TRUE and $mysqli->query($sql305) == TRUE and $mysqli->query($sql306) == TRUE and $mysqli->query($sql307) == TRUE and $mysqli->query($sql308) == TRUE and $mysqli->query($sql309) == TRUE) {
     alert("team(9) statistics updated successfully");
     
-    //lisätään pelatut pelit Pelaajan Joukkueelle
-     $sql701 = "UPDATE Joukkueet SET PelatutPelit=PelatutPelit+1 WHERE id = '".$teamIDOfPlayer1."'";
-     $sql702 = "UPDATE Joukkueet SET PelatutPelit=PelatutPelit+1 WHERE id = '".$teamIDOfPlayer2."'";
-     $sql703 = "UPDATE Joukkueet SET PelatutPelit=PelatutPelit+1 WHERE id = '".$teamIDOfPlayer3."'";
-     $sql704 = "UPDATE Joukkueet SET PelatutPelit=PelatutPelit+1 WHERE id = '".$teamIDOfPlayer4."'";
-     $sql705 = "UPDATE Joukkueet SET PelatutPelit=PelatutPelit+1 WHERE id = '".$teamIDOfPlayer5."'";
-     $sql706 = "UPDATE Joukkueet SET PelatutPelit=PelatutPelit+1 WHERE id = '".$teamIDOfPlayer6."'";
-     $sql707 = "UPDATE Joukkueet SET PelatutPelit=PelatutPelit+1 WHERE id = '".$teamIDOfPlayer7."'";
-     $sql708 = "UPDATE Joukkueet SET PelatutPelit=PelatutPelit+1 WHERE id = '".$teamIDOfPlayer8."'";
-     $sql709 = "UPDATE Joukkueet SET PelatutPelit=PelatutPelit+1 WHERE id = '".$teamIDOfPlayer9."'";
-     
- 
-if ($mysqli->query($sql701) == TRUE and $mysqli->query($sql702) == TRUE  and $mysqli->query($sql703) == TRUE and $mysqli->query($sql704) == TRUE and $mysqli->query($sql705) == TRUE and $mysqli->query($sql706) == TRUE and $mysqli->query($sql707) == TRUE and $mysqli->query($sql708) == TRUE and $mysqli->query($sql709) == TRUE) {
-    alert("Team  goal statistics(9) updated successfully");
+    
     //tarkitetaan onko pelaaja koti vai vierasjoukkueen pelaaja
     //1
     if($hometeam == $teamIDOfPlayer1 and $_SESSION['owngoal1'] !== 'owngoal' or $awayteam == $teamIDOfPlayer1 and $_SESSION['owngoal1'] == 'owngoal') {
@@ -1026,15 +939,15 @@ if ($mysqli->query($sql701) == TRUE and $mysqli->query($sql702) == TRUE  and $my
         $hometeamScore++;
     } else {
         $awayteamScore++;
+    
     }
-     
 
     
 } else {
     alert("Error: " . $sql . "<br>" . $mysqli->error);
 }
 }
-}
+
 } //end of numberOfGoals(9)
 
 //10
@@ -1090,20 +1003,7 @@ if ($mysqli->query($sql12) == TRUE and $mysqli->query($sql13) == TRUE and $mysql
 if ($mysqli->query($sql301) == TRUE and $mysqli->query($sql302) == TRUE and $mysqli->query($sql303) == TRUE and $mysqli->query($sql304) == TRUE and $mysqli->query($sql305) == TRUE and $mysqli->query($sql306) == TRUE and $mysqli->query($sql307) == TRUE and $mysqli->query($sql308) == TRUE and $mysqli->query($sql309) == TRUE and $mysqli->query($sql310) == TRUE) {
     alert("Player(10) statistics updated successfully");
     
-    //lisätään pelatut pelit Pelaajan Joukkueelle
-     $sql701 = "UPDATE Joukkueet SET PelatutPelit=PelatutPelit+1 WHERE id = '".$teamIDOfPlayer1."'";
-     $sql702 = "UPDATE Joukkueet SET PelatutPelit=PelatutPelit+1 WHERE id = '".$teamIDOfPlayer2."'";
-     $sql703 = "UPDATE Joukkueet SET PelatutPelit=PelatutPelit+1 WHERE id = '".$teamIDOfPlayer3."'";
-     $sql704 = "UPDATE Joukkueet SET PelatutPelit=PelatutPelit+1 WHERE id = '".$teamIDOfPlayer4."'";
-     $sql705 = "UPDATE Joukkueet SET PelatutPelit=PelatutPelit+1 WHERE id = '".$teamIDOfPlayer5."'";
-     $sql706 = "UPDATE Joukkueet SET PelatutPelit=PelatutPelit+1 WHERE id = '".$teamIDOfPlayer6."'";
-     $sql707 = "UPDATE Joukkueet SET PelatutPelit=PelatutPelit+1 WHERE id = '".$teamIDOfPlayer7."'";
-     $sql708 = "UPDATE Joukkueet SET PelatutPelit=PelatutPelit+1 WHERE id = '".$teamIDOfPlayer8."'";
-     $sql709 = "UPDATE Joukkueet SET PelatutPelit=PelatutPelit+1 WHERE id = '".$teamIDOfPlayer9."'";
-     $sql710 = "UPDATE Joukkueet SET PelatutPelit=PelatutPelit+1 WHERE id = '".$teamIDOfPlayer10."'";
- 
-if ($mysqli->query($sql701) == TRUE and $mysqli->query($sql702) == TRUE  and $mysqli->query($sql703) == TRUE and $mysqli->query($sql704) == TRUE and $mysqli->query($sql705) == TRUE and $mysqli->query($sql706) == TRUE and $mysqli->query($sql707) == TRUE and $mysqli->query($sql708) == TRUE and $mysqli->query($sql709) == TRUE and $mysqli->query($sql710) == TRUE) {
-    alert("Team  goal statistics(1) updated successfully");
+   
     //tarkitetaan onko pelaaja koti vai vierasjoukkueen pelaaja
     //1
     if($hometeam == $teamIDOfPlayer1 and $_SESSION['owngoal1'] !== 'owngoal' or $awayteam == $teamIDOfPlayer1 and $_SESSION['owngoal1'] == 'owngoal') {
@@ -1165,23 +1065,59 @@ if ($mysqli->query($sql701) == TRUE and $mysqli->query($sql702) == TRUE  and $my
         $hometeamScore++;
     } else {
         $awayteamScore++;
-    }
-
+    
+}
     
 } else {
     alert("Error: " . $sql . "<br>" . $mysqli->error);
 }
 }
-}
+
 } //end of numberOfGoals(10)
 
 //päivitetään joukkeen maalit
-
 $sql901 = "UPDATE Joukkueet SET TehdytMaalit=TehdytMaalit+'".$hometeamScore."' WHERE id = '".$hometeam."'";
 $sql902 = "UPDATE Joukkueet SET TehdytMaalit=TehdytMaalit+'".$awayteamScore."' WHERE id = '".$awayteam."'";
 
     if ($mysqli->query($sql901) == TRUE and $mysqli->query($sql902) == TRUE ) {
     alert("teams total goals scored updated succesfully");
+}
+//päivitetään joukkueiden päästetyt maalit
+$sql9011 = "UPDATE Joukkueet SET PaastetytMaalit=PaastetytMaalit+'".$awayteamScore."' WHERE id = '".$hometeam."'";
+$sql9012 = "UPDATE Joukkueet SET PaastetytMaalit=PaastetytMaalit+'".$hometeamScore."' WHERE id = '".$awayteam."'";
+
+$mysqli->query($sql9011);
+$mysqli->query($sql9012);
+
+
+//tarkastetaan voittaja ja päivitetään voittojen määrä sekä pisteet ja hävityt pelit
+if($hometeamScore > $awayteamScore) {
+    
+    $sql903 = "UPDATE Joukkueet SET VoitetutPelit=VoitetutPelit+1 WHERE id = '".$hometeam."'";
+    $sql904 = "UPDATE Joukkueet SET HavitytPelit=HavitytPelit+1 WHERE id = '".$awayteam."'";
+    $sql905 = "UPDATE Joukkueet SET Pisteet=Pisteet+3 WHERE id = '".$hometeam."'";
+    
+    $mysqli->query($sql903);
+    $mysqli->query($sql904);
+    $mysqli->query($sql905);
+} else if($awayteamScore > $hometeamScore) {
+    
+    $sql903 = "UPDATE Joukkueet SET VoitetutPelit=VoitetutPelit+1 WHERE id = '".$awayteam."'";
+    $sql904 = "UPDATE Joukkueet SET HavitytPelit=HavitytPelit+1 WHERE id = '".$hometeam."'";
+    $sql905 = "UPDATE Joukkueet SET Pisteet=Pisteet+3 WHERE id = '".$awayteam."'";
+    $mysqli->query($sql903);
+    $mysqli->query($sql904);
+    $mysqli->query($sql905);
+}else{
+     
+    $sql904 = "UPDATE Joukkueet SET Tasapelit=Tasapelit+1 WHERE id = '".$hometeam."'";
+    $sql905 = "UPDATE Joukkueet SET Tasapelit=Tasapelit+1 WHERE id = '".$awayteam."'";
+    $sql906 = "UPDATE Joukkueet SET Pisteet=Pisteet+1 WHERE id = '".$hometeam."'";
+    $sql907 = "UPDATE Joukkueet SET Pisteet=Pisteet+1 WHERE id = '".$awayteam."'";
+    $mysqli->query($sql904);
+    $mysqli->query($sql905);
+    $mysqli->query($sql906);
+    $mysqli->query($sql907);
 }
 
 
