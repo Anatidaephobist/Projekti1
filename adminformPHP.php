@@ -87,7 +87,7 @@ error_reporting(0);
     $maalintekija10 = $_POST['maalintekija10'];
     $_SESSION['maalintekija10'] = $maalintekija10;
     
-    $gameID;
+    $gameID = 1;
     
     $idOfPlayer1;
     $idOfPlayer2;
@@ -100,6 +100,8 @@ error_reporting(0);
     $idOfPlayer9;
     $idOfPlayer10;
     
+    $_SESSION['hometeamscore'];
+    $_SESSION['awayteamscore'];
     $hometeamScore = 0;
     $awayteamScore= 0;
     
@@ -1088,6 +1090,9 @@ $sql9012 = "UPDATE Joukkueet SET PaastetytMaalit=PaastetytMaalit+'".$hometeamSco
 
 $mysqli->query($sql9011);
 $mysqli->query($sql9012);
+
+$_SESSION['hometeamscore'] = $hometeamScore;
+$_SESSION['awayteamscore'] = $awayteamScore;
 
 
 //tarkastetaan voittaja ja päivitetään voittojen määrä sekä pisteet ja hävityt pelit

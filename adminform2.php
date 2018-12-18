@@ -1104,15 +1104,19 @@ echo "</select>";
        $sql402 = "SELECT pvm FROM Pelit";
       $result402 = $mysqli->query($sql402);
       
-
-     
+      $scorehome;
+      $scoreaway;
+      
+     $_SESSION['hometeamscore'] = $scorehome;
+     $_SESSION['awayteamscore'] = $scoreaway;
+    
   
       //tulostetaan tiedot
   if ($result400->num_rows > 0) {
     while($row = mysqli_fetch_assoc($result400)) {
        $row2 = mysqli_fetch_assoc($result401);
        $row3 = mysqli_fetch_assoc($result402);
-        echo "Peli ID: " . $row['peliID']. "<br>". "Kotijoukkue: ".$row['home']. "<br>". "vierasjoukkue: ".$row2['away']."<br>". "Päivämäärä: ".$row3['pvm']. "<br>". "<br>". "<br>";
+        echo "Peli ID: " . $row['peliID']. "<br>". "Kotijoukkue: ".$row['home']. "<br>". "vierasjoukkue: ".$row2['away']."<br>". "Päivämäärä: ".$row3['pvm']."<br>". "Tulos: ".$scorehome." - ".$scoreaway. "<br>". "<br>". "<br>";
     }
 } else {
     echo "0 results";
