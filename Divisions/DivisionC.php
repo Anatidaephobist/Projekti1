@@ -7,47 +7,77 @@
 </head>
 
 <?php
+$firstTeamPoints;
+$secondTeamPoints;
+$thirdTeamPoints;
+$fourthTeamPoints;
 
-  $sql = "SELECT Pisteet, id FROM Joukkueet WHERE id > 8 AND id < 13 ORDER BY Pisteet DESC LIMIT 1";  
-	$result = $mysqli->query($sql);
-if ($result->num_rows > 0) {
-		while ($row=mysqli_fetch_assoc($result))
+$firstTeamID;
+$secondTeamID;
+$thirdTeamID;
+$fourthTeamID;
+
+//valitaan eniten pisteitä omaava joukkue
+  $sql555 = "SELECT Pisteet, id FROM Joukkueet WHERE id > 8 AND id < 13 ORDER BY Pisteet DESC LIMIT 1";  
+	$result555 = $mysqli->query($sql555);
+if ($result555->num_rows > 0) {
+		while ($row=mysqli_fetch_assoc($result555))
     {
     $firstTeamPoints = $row['Pisteet'];
     $firstTeamID = $row['id'];
     }
-    
-    
-   $sql2 = "SELECT id from Joukkeet where Pisteet = '".$firstTeam."'";  
-	$result2 = $mysqli->query($sql2);
-	if ($result2->num_rows > 0) {
-		while ($row=mysqli_fetch_assoc($result2))
+}
+
+//valitaan toiseksi eniten pisteitä omaava Joukkue
+ $sql556 = "SELECT Pisteet, id FROM Joukkueet WHERE id > 8 AND id < 13 ORDER BY Pisteet DESC LIMIT 1, 1";  
+	$result556 = $mysqli->query($sql556);
+if ($result556->num_rows > 0) {
+		while ($row=mysqli_fetch_assoc($result556))
     {
-    $firstTeamID = $row['id'];
+    $secondTeamPoints = $row['Pisteet'];
+    $secondTeamID = $row['id'];
     }
-  
-  mysqli_free_result($result);
+}
+
+//valitaan kolmanneksi eniten pisteitä saanut Joukkue
+ $sql557 = "SELECT Pisteet, id FROM Joukkueet WHERE id > 8 AND id < 13 ORDER BY Pisteet DESC LIMIT 1, 2";  
+	$result557 = $mysqli->query($sql557);
+if ($result557->num_rows > 0) {
+		while ($row=mysqli_fetch_assoc($result557))
+    {
+    $thirdTeamPoints = $row['Pisteet'];
+    $thirdTeamID = $row['id'];
+    }
+}
+
+//valitaan neljänneksi eniten pisteitä saanut
+ $sql558 = "SELECT Pisteet, id FROM Joukkueet WHERE id > 8 AND id < 13 ORDER BY Pisteet DESC LIMIT 1, 3";  
+	$result558 = $mysqli->query($sql558);
+if ($result558->num_rows > 0) {
+		while ($row=mysqli_fetch_assoc($result558))
+    {
+    $fourthTeamPoints = $row['Pisteet'];
+    $fourthTeamID = $row['id'];
+    }
 }
 
 
-}
 ?>
-
-
+<!-- Eniten pisteitä omaava joukkue -->
 <div id="teamInfoBoxWrapperC" class ="teamInfoBoxWrapper">
 
   <div class="teamInfoBox">
 
     <div class="teamLogo">
-      <img class="imgsize"src="
+      <img class="imgsize" src="
       <?php
-      echo databaseQuery( 'Logot','logo', $firstTeamID); //TOIMII
+      echo databaseQuery( 'Logot','logo', $firstTeamID);
       ?>">
     </div>
 
     <div class="teamName">
     <?php
-    echo databaseQuery('Joukkueet','Nimi','9');
+    echo databaseQuery('Joukkueet','Nimi',$firstTeamID);
     ?>
     </div>
 
@@ -56,7 +86,7 @@ if ($result->num_rows > 0) {
       <h1> Pelatut pelit</h1>
       <div class="infoNumber">
     <?php
-    echo databaseQuery('Joukkueet','Pelatutpelit','9');
+    echo databaseQuery('Joukkueet','Pelatutpelit',$firstTeamID);
     ?>
       </div>
     </div>
@@ -66,7 +96,7 @@ if ($result->num_rows > 0) {
       <h1> Voitetut pelit</h1>
       <div class="infoNumber">
     <?php
-    echo databaseQuery('Joukkueet','Voitetutpelit','9');
+    echo databaseQuery('Joukkueet','Voitetutpelit',$firstTeamID);
     ?>
       </div>
     </div>
@@ -76,7 +106,7 @@ if ($result->num_rows > 0) {
       <h1> Tasapelit</h1>
       <div class="infoNumber">
     <?php
-    echo databaseQuery('Joukkueet','Tasapelit','9');
+    echo databaseQuery('Joukkueet','Tasapelit',$firstTeamID);
     ?>
       </div>
     </div>
@@ -86,7 +116,7 @@ if ($result->num_rows > 0) {
       <h1> Havityt pelit</h1>
       <div class="infoNumber">
     <?php
-    echo databaseQuery('Joukkueet','Havitytpelit','9');
+    echo databaseQuery('Joukkueet','Havitytpelit',$firstTeamID);
     ?>
       </div>
     </div>
@@ -96,7 +126,7 @@ if ($result->num_rows > 0) {
       <h1> Tehdyt Maalit</h1>
       <div class="infoNumber">
     <?php
-    echo databaseQuery('Joukkueet','TehdytMaalit','9');
+    echo databaseQuery('Joukkueet','TehdytMaalit',$firstTeamID);
     ?>
       </div>
     </div>
@@ -106,7 +136,7 @@ if ($result->num_rows > 0) {
       <h1> Päästetyt Maalit</h1>
       <div class="infoNumber">
     <?php
-    echo databaseQuery('Joukkueet','PaastetytMaalit','9');
+    echo databaseQuery('Joukkueet','PaastetytMaalit',$firstTeamID);
     ?>
       </div>
     </div>
@@ -116,7 +146,7 @@ if ($result->num_rows > 0) {
       <h1> Pisteet</h1>
       <div class="infoNumber">
     <?php
-    echo databaseQuery('Joukkueet','Pisteet','9');
+    echo databaseQuery('Joukkueet','Pisteet',$firstTeamID);
     ?>
       </div>
     </div>
@@ -131,13 +161,13 @@ if ($result->num_rows > 0) {
     <div class="teamLogo">
       <img class="imgsize"src="
       <?php
-      echo databaseQuery('Logot','logo','10');
+      echo databaseQuery('Logot','logo',$secondTeamID);
       ?>">
     </div>
 
     <div class="teamName">
     <?php
-    echo databaseQuery('Joukkueet','Nimi','10');
+    echo databaseQuery('Joukkueet','Nimi',$secondTeamID);
     ?>
     </div>
 
@@ -146,7 +176,7 @@ if ($result->num_rows > 0) {
       <h1> Pelatut pelit</h1>
       <div class="infoNumber">
     <?php
-    echo databaseQuery('Joukkueet','Pelatutpelit','10');
+    echo databaseQuery('Joukkueet','Pelatutpelit',$secondTeamID);
     ?>
       </div>
     </div>
@@ -156,7 +186,7 @@ if ($result->num_rows > 0) {
       <h1> Voitetut pelit</h1>
       <div class="infoNumber">
     <?php
-    echo databaseQuery('Joukkueet','Voitetutpelit','10');
+    echo databaseQuery('Joukkueet','Voitetutpelit',$secondTeamID);
     ?>
       </div>
     </div>
@@ -166,7 +196,7 @@ if ($result->num_rows > 0) {
       <h1> Tasapelit</h1>
       <div class="infoNumber">
     <?php
-    echo databaseQuery('Joukkueet','Tasapelit','10');
+    echo databaseQuery('Joukkueet','Tasapelit',$secondTeamID);
     ?>
       </div>
     </div>
@@ -176,7 +206,7 @@ if ($result->num_rows > 0) {
       <h1> Havityt pelit</h1>
       <div class="infoNumber">
     <?php
-    echo databaseQuery('Joukkueet','Havitytpelit','10');
+    echo databaseQuery('Joukkueet','Havitytpelit',$secondTeamID);
     ?>
       </div>
     </div>
@@ -186,7 +216,7 @@ if ($result->num_rows > 0) {
       <h1> Tehdyt Maalit</h1>
       <div class="infoNumber">
     <?php
-    echo databaseQuery('Joukkueet','TehdytMaalit','10');
+    echo databaseQuery('Joukkueet','TehdytMaalit',$secondTeamID);
     ?>
       </div>
     </div>
@@ -196,7 +226,7 @@ if ($result->num_rows > 0) {
       <h1> Päästetyt Maalit</h1>
       <div class="infoNumber">
     <?php
-    echo databaseQuery('Joukkueet','PaastetytMaalit','10');
+    echo databaseQuery('Joukkueet','PaastetytMaalit',$secondTeamID);
     ?>
       </div>
     </div>
@@ -206,7 +236,7 @@ if ($result->num_rows > 0) {
       <h1> Pisteet</h1>
       <div class="infoNumber">
     <?php
-    echo databaseQuery('Joukkueet','Pisteet','10');
+    echo databaseQuery('Joukkueet','Pisteet',$secondTeamID);
     ?>
       </div>
     </div>
@@ -221,13 +251,13 @@ if ($result->num_rows > 0) {
   <div class="teamLogo">
     <img class="imgsize"src="
     <?php
-    echo databaseQuery('Logot','logo','11');
+    echo databaseQuery('Logot','logo',$thirdTeamID);
     ?>">
   </div>
 
   <div class="teamName">
   <?php
-  echo databaseQuery('Joukkueet','Nimi','11');
+  echo databaseQuery('Joukkueet','Nimi',$thirdTeamID);
   ?>
   </div>
 
@@ -236,7 +266,7 @@ if ($result->num_rows > 0) {
     <h1> Pelatut pelit</h1>
     <div class="infoNumber">
   <?php
-  echo databaseQuery('Joukkueet','Pelatutpelit','11');
+  echo databaseQuery('Joukkueet','Pelatutpelit',$thirdTeamID);
   ?>
     </div>
   </div>
@@ -246,7 +276,7 @@ if ($result->num_rows > 0) {
     <h1> Voitetut pelit</h1>
     <div class="infoNumber">
   <?php
-  echo databaseQuery('Joukkueet','Voitetutpelit','11');
+  echo databaseQuery('Joukkueet','Voitetutpelit',$thirdTeamID);
   ?>
     </div>
   </div>
@@ -256,7 +286,7 @@ if ($result->num_rows > 0) {
     <h1> Tasapelit</h1>
     <div class="infoNumber">
   <?php
-  echo databaseQuery('Joukkueet','Tasapelit','11');
+  echo databaseQuery('Joukkueet','Tasapelit',$thirdTeamID);
   ?>
     </div>
   </div>
@@ -266,7 +296,7 @@ if ($result->num_rows > 0) {
     <h1> Havityt pelit</h1>
     <div class="infoNumber">
   <?php
-  echo databaseQuery('Joukkueet','Havitytpelit','11');
+  echo databaseQuery('Joukkueet','Havitytpelit',$thirdTeamID);
   ?>
     </div>
   </div>
@@ -276,7 +306,7 @@ if ($result->num_rows > 0) {
     <h1> Tehdyt Maalit</h1>
     <div class="infoNumber">
   <?php
-  echo databaseQuery('Joukkueet','TehdytMaalit','11');
+  echo databaseQuery('Joukkueet','TehdytMaalit',$thirdTeamID);
   ?>
     </div>
   </div>
@@ -286,7 +316,7 @@ if ($result->num_rows > 0) {
     <h1> Päästetyt Maalit</h1>
     <div class="infoNumber">
   <?php
-  echo databaseQuery('Joukkueet','PaastetytMaalit','11');
+  echo databaseQuery('Joukkueet','PaastetytMaalit',$thirdTeamID);
   ?>
     </div>
   </div>
@@ -296,7 +326,7 @@ if ($result->num_rows > 0) {
     <h1> Pisteet</h1>
     <div class="infoNumber">
   <?php
-  echo databaseQuery('Joukkueet','Pisteet','11');
+  echo databaseQuery('Joukkueet','Pisteet',$thirdTeamID);
   ?>
     </div>
   </div>
@@ -311,13 +341,13 @@ if ($result->num_rows > 0) {
 <div class="teamLogo">
   <img class="imgsize"src="
   <?php
-  echo databaseQuery('Logot','logo','12');
+  echo databaseQuery('Logot','logo',$fourthTeamID);
   ?>">
 </div>
 
 <div class="teamName">
 <?php
-echo databaseQuery('Joukkueet','Nimi','12');
+echo databaseQuery('Joukkueet','Nimi',$fourthTeamID);
 ?>
 </div>
 
@@ -326,7 +356,7 @@ echo databaseQuery('Joukkueet','Nimi','12');
   <h1> Pelatut pelit</h1>
   <div class="infoNumber">
 <?php
-echo databaseQuery('Joukkueet','Pelatutpelit','12');
+echo databaseQuery('Joukkueet','Pelatutpelit',$fourthTeamID);
 ?>
   </div>
 </div>
@@ -336,7 +366,7 @@ echo databaseQuery('Joukkueet','Pelatutpelit','12');
   <h1> Voitetut pelit</h1>
   <div class="infoNumber">
 <?php
-echo databaseQuery('Joukkueet','Voitetutpelit','12');
+echo databaseQuery('Joukkueet','Voitetutpelit',$fourthTeamID);
 ?>
   </div>
 </div>
@@ -346,7 +376,7 @@ echo databaseQuery('Joukkueet','Voitetutpelit','12');
   <h1> Tasapelit</h1>
   <div class="infoNumber">
 <?php
-echo databaseQuery('Joukkueet','Tasapelit','12');
+echo databaseQuery('Joukkueet','Tasapelit',$fourthTeamID);
 ?>
   </div>
 </div>
@@ -356,7 +386,7 @@ echo databaseQuery('Joukkueet','Tasapelit','12');
   <h1> Havityt pelit</h1>
   <div class="infoNumber">
 <?php
-echo databaseQuery('Joukkueet','Havitytpelit','12');
+echo databaseQuery('Joukkueet','Havitytpelit',$fourthTeamID);
 ?>
   </div>
 </div>
@@ -366,7 +396,7 @@ echo databaseQuery('Joukkueet','Havitytpelit','12');
   <h1> Tehdyt Maalit</h1>
   <div class="infoNumber">
 <?php
-echo databaseQuery('Joukkueet','TehdytMaalit','12');
+echo databaseQuery('Joukkueet','TehdytMaalit',$fourthTeamID);
 ?>
   </div>
 </div>
@@ -376,7 +406,7 @@ echo databaseQuery('Joukkueet','TehdytMaalit','12');
   <h1> Päästetyt Maalit</h1>
   <div class="infoNumber">
 <?php
-echo databaseQuery('Joukkueet','PaastetytMaalit','12');
+echo databaseQuery('Joukkueet','PaastetytMaalit',$fourthTeamID);
 ?>
   </div>
 </div>
@@ -386,7 +416,7 @@ echo databaseQuery('Joukkueet','PaastetytMaalit','12');
   <h1> Pisteet</h1>
   <div class="infoNumber">
 <?php
-echo databaseQuery('Joukkueet','Pisteet','12');
+echo databaseQuery('Joukkueet','Pisteet',$fourthTeamID);
 ?>
   </div>
 </div>
@@ -402,7 +432,7 @@ echo databaseQuery('Joukkueet','Pisteet','12');
   <div class= "teamInfoBox playerBox">
   <!-- Pelaajien tiedot -->
   <?php
-  echo databaseQueryInfo('EtuNimi', 'Sukunimi', 'Ika', 'Kansallisuus', 'PelatutPelit', 'Maalit', 'Pelipaikka','9');
+  echo databaseQueryInfo('EtuNimi', 'Sukunimi', 'Ika', 'Kansallisuus', 'PelatutPelit', 'Maalit', 'Pelipaikka',$firstTeamID);
   ?>
   </div>
 </div> <!-- End of wrapperOfPlayers9 -->
@@ -412,7 +442,7 @@ echo databaseQuery('Joukkueet','Pisteet','12');
   <div class= "teamInfoBox playerBox">
   <!-- Pelaajien tiedot -->
   <?php
-  echo databaseQueryInfo('EtuNimi', 'Sukunimi', 'Ika', 'Kansallisuus', 'PelatutPelit', 'Maalit', 'Pelipaikka','10');
+  echo databaseQueryInfo('EtuNimi', 'Sukunimi', 'Ika', 'Kansallisuus', 'PelatutPelit', 'Maalit', 'Pelipaikka',$secondTeamID);
   ?>
   </div>
 </div> <!-- End of wrapperOfPlayers10 -->
@@ -422,7 +452,7 @@ echo databaseQuery('Joukkueet','Pisteet','12');
   <div class= "teamInfoBox playerBox">
   <!-- Pelaajien tiedot -->
   <?php
-  echo databaseQueryInfo('EtuNimi', 'Sukunimi', 'Ika', 'Kansallisuus', 'PelatutPelit', 'Maalit', 'Pelipaikka','11');
+  echo databaseQueryInfo('EtuNimi', 'Sukunimi', 'Ika', 'Kansallisuus', 'PelatutPelit', 'Maalit', 'Pelipaikka',$thirdTeamID);
   ?>
   </div>
 </div> <!-- End of wrapperOfPlayers11 -->
@@ -432,7 +462,7 @@ echo databaseQuery('Joukkueet','Pisteet','12');
   <div class= "teamInfoBox playerBox">
   <!-- Pelaajien tiedot -->
   <?php
-  echo databaseQueryInfo('EtuNimi', 'Sukunimi', 'Ika', 'Kansallisuus', 'PelatutPelit', 'Maalit', 'Pelipaikka','12');
+  echo databaseQueryInfo('EtuNimi', 'Sukunimi', 'Ika', 'Kansallisuus', 'PelatutPelit', 'Maalit', 'Pelipaikka',$fourthTeamID);
   ?>
   </div>
 </div> <!-- End of wrapperOfPlayers12 -->
