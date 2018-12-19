@@ -559,49 +559,70 @@ function validateForm() {
     if(document.getElementById("bookingScorerDiv1").style.display == "block") {
   var x = document.forms["adminform"]["virheensaaja1"].value;
   var y = document.getElementById("yellowCard1");
-  y.required = true;
+  var z = document.getElementById("redCard1");
   if (x == "") {
     alert("valitse varoituksensaaja");
     return false;
   }
+  if (y.checked == false && z.checked == false) {
+    alert("valitse korttityyppi");
+    return false;
+  }
+  
     }
     
      if(document.getElementById("bookingScorerDiv2").style.display == "block") {
-  var x = document.forms["adminform"]["virheensaaja2"].value;
-  var y = document.getElementById("yellowCard2");
-  y.required = true;
-  if (x == "") {
+ var x1 = document.forms["adminform"]["virheensaaja2"].value;
+  var y1 = document.getElementById("yellowCard2");
+  var z1 = document.getElementById("redCard2");
+  if (x1 == "") {
     alert("valitse varoituksensaaja");
+    return false;
+  }
+  if (y1.checked == false && z1.checked == false) {
+    alert("valitse korttityyppi");
     return false;
   }
     }
     
      if(document.getElementById("bookingScorerDiv3").style.display == "block") {
-  var x = document.forms["adminform"]["virheensaaja3"].value;
-  var y = document.getElementById("yellowCard3");
-  y.required = true;
-  if (x == "") {
+  var x2 = document.forms["adminform"]["virheensaaja3"].value;
+  var y2 = document.getElementById("yellowCard3");
+  var z2 = document.getElementById("redCard3");
+  if (x2 == "") {
     alert("valitse varoituksensaaja");
+    return false;
+  }
+  if (y2.checked == false && z2.checked == false) {
+    alert("valitse korttityyppi");
     return false;
   }
     }
     
      if(document.getElementById("bookingScorerDiv4").style.display == "block") {
-  var x = document.forms["adminform"]["virheensaaja4"].value;
-  var y = document.getElementById("yellowCard4");
-  y.required = true;
-  if (x == "") {
-    alert("valitse varoiuksenensaaja");
+  var x3 = document.forms["adminform"]["virheensaaja4"].value;
+  var x3 = document.getElementById("yellowCard4");
+  var z3 = document.getElementById("redCard4");
+  if (x3 == "") {
+    alert("valitse varoituksensaaja");
+    return false;
+  }
+  if (y3.checked == false && z3.checked == false) {
+    alert("valitse korttityyppi");
     return false;
   }
     }
     
      if(document.getElementById("bookingScorerDiv5").style.display == "block") {
-  var x = document.forms["adminform"]["virheensaaja5"].value;
-  var y = document.getElementById("yellowCard5");
-  y.required = true;
-  if (x == "") {
+  var x4 = document.forms["adminform"]["virheensaaja5"].value;
+  var y4 = document.getElementById("yellowCard5");
+  var z4 = document.getElementById("redCard5");
+  if (x4 == "") {
     alert("valitse varoituksensaaja");
+    return false;
+  }
+  if (y4.checked == false && z4.checked == false) {
+    alert("valitse korttityyppi");
     return false;
   }
     }
@@ -732,7 +753,7 @@ while ($row = mysqli_fetch_array($result501)) {
 echo "</select>";
 ?>
 <br>
-<input type="checkbox" name="owngoal1" id="owngoal1" class="owngoal" value="owngoal"> oma maali<br>
+<input type="checkbox" name="owngoal1" id="owngoal1" class="owngoal" value="owngowal"> oma maali<br>
 
 <hr>
 </div>
@@ -936,13 +957,13 @@ echo "</select>";
     
     <h1>Varoituksen saaja</h1>
  <?php
-$sql = "SELECT EtuNimi, Sukunimi FROM Pelaajat WHERE JoukkueID =  ".$_SESSION['kotijoukkue']." "."OR"." "."JoukkueID = ".$_SESSION['vierasjoukkue'];
-$result = $mysqli->query($sql);
+$sql721 = "SELECT EtuNimi, Sukunimi FROM Pelaajat WHERE JoukkueID =  ".$_SESSION['kotijoukkue']." "."OR"." "."JoukkueID = ".$_SESSION['vierasjoukkue'];
+$result721 = $mysqli->query($sql721);
 
 echo "<select name='virheensaaja1' class='nameOfPlayer2'>";
 echo "<option value='' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
-while ($row = mysqli_fetch_array($result)) {
-  echo "<option value='" . $row['EtuNimi']." ". $row['Sukunimi'] . "'>" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
+while ($row = mysqli_fetch_array($result721)) {
+  echo "<option value='".$row['EtuNimi']."'".">" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
 }
 echo "</select>";
 ?>
@@ -950,7 +971,7 @@ echo "</select>";
 
 
   <input type="radio" onclick="yellowCardRadioButton()" value="yellowCard" id="yellowCard1" class="yellowcard" name="Card1"> Keltainen kortti <br>
-  <input type="radio" onclick="redCardRadioButton()" value="redCard" id="redCard1" class="redcards" name="Card1"> Punainen kortti <br>
+  <input type="radio" onclick="redCardRadioButton()" value="redCard" id="redCard1" class="redcards" name="Card11"> Punainen kortti <br>
 
   <hr>
 
@@ -962,13 +983,13 @@ echo "</select>";
     
     <h1>Varoituksen saaja</h1>
  <?php
-$sql = "SELECT EtuNimi, Sukunimi FROM Pelaajat WHERE JoukkueID =  ".$_SESSION['kotijoukkue']." "."OR"." "."JoukkueID = ".$_SESSION['vierasjoukkue'];
-$result = $mysqli->query($sql);
+$sql722 = "SELECT EtuNimi, Sukunimi FROM Pelaajat WHERE JoukkueID =  ".$_SESSION['kotijoukkue']." "."OR"." "."JoukkueID = ".$_SESSION['vierasjoukkue'];
+$result722= $mysqli->query($sql722);
 
 echo "<select name='virheensaaja2' class='nameOfPlayer2'>";
 echo "<option value='' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
-while ($row = mysqli_fetch_array($result)) {
-  echo "<option value='" . $row['EtuNimi']." ". $row['Sukunimi'] . "'>" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
+while ($row = mysqli_fetch_array($result722)) {
+  echo "<option value='".$row['EtuNimi']."'".">" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
 }
 echo "</select>";
 ?>
@@ -976,7 +997,7 @@ echo "</select>";
 
 
   <input type="radio" onclick="yellowCardRadioButton()" value="yellowCard" id="yellowCard2" class="yellowcard" name="Card2"> Keltainen kortti <br>
-  <input type="radio" onclick="redCardRadioButton()" value="redCard" id="redCard2" class="redcards" name="Card2"> Punainen kortti <br>
+  <input type="radio" onclick="redCardRadioButton()" value="redCard" id="redCard2" class="redcards" name="Card22"> Punainen kortti <br>
 
   <hr>
 
@@ -989,13 +1010,13 @@ echo "</select>";
     
     <h1>Varoituksen saaja</h1>
  <?php
-$sql = "SELECT EtuNimi, Sukunimi FROM Pelaajat WHERE JoukkueID =  ".$_SESSION['kotijoukkue']." "."OR"." "."JoukkueID = ".$_SESSION['vierasjoukkue'];
-$result = $mysqli->query($sql);
+$sql723 = "SELECT EtuNimi, Sukunimi FROM Pelaajat WHERE JoukkueID =  ".$_SESSION['kotijoukkue']." "."OR"." "."JoukkueID = ".$_SESSION['vierasjoukkue'];
+$result723 = $mysqli->query($sql723);
 
 echo "<select name='virheensaaja3' class='nameOfPlayer2'>";
 echo "<option value='' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
-while ($row = mysqli_fetch_array($result)) {
-  echo "<option value='" . $row['EtuNimi']." ". $row['Sukunimi'] . "'>" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
+while ($row = mysqli_fetch_array($result723)) {
+  echo "<option value='".$row['EtuNimi']."'".">" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
 }
 echo "</select>";
 ?>
@@ -1003,7 +1024,7 @@ echo "</select>";
 
 
   <input type="radio" onclick="yellowCardRadioButton()" value="yellowCard" id="yellowCard3" class="yellowcard" name="Card3"> Keltainen kortti <br>
-  <input type="radio" onclick="redCardRadioButton()" value="redCard" id="redCard3" class="redcards" name="Card3"> Punainen kortti <br>
+  <input type="radio" onclick="redCardRadioButton()" value="redCard" id="redCard3" class="redcards" name="Card33"> Punainen kortti <br>
 
   <hr>
 
@@ -1016,13 +1037,13 @@ echo "</select>";
     
     <h1>Varoituksen saaja</h1>
  <?php
-$sql = "SELECT EtuNimi, Sukunimi FROM Pelaajat WHERE JoukkueID =  ".$_SESSION['kotijoukkue']." "."OR"." "."JoukkueID = ".$_SESSION['vierasjoukkue'];
-$result = $mysqli->query($sql);
+$sql724 = "SELECT EtuNimi, Sukunimi FROM Pelaajat WHERE JoukkueID =  ".$_SESSION['kotijoukkue']." "."OR"." "."JoukkueID = ".$_SESSION['vierasjoukkue'];
+$result724 = $mysqli->query($sql724);
 
 echo "<select name='virheensaaja4' class='nameOfPlayer2'>";
 echo "<option value='' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
-while ($row = mysqli_fetch_array($result)) {
-  echo "<option value='" . $row['EtuNimi']." ". $row['Sukunimi'] . "'>" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
+while ($row = mysqli_fetch_array($result724)) {
+  echo "<option value='".$row['EtuNimi']."'".">" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
 }
 echo "</select>";
 ?>
@@ -1030,7 +1051,7 @@ echo "</select>";
 
 
   <input type="radio" onclick="yellowCardRadioButton()" value="yellowCard" id="yellowCard4" class="yellowcard"  name="Card4"> Keltainen kortti <br>
-  <input type="radio" onclick="redCardRadioButton()" value="redCard" id="redCard4" class="redcards" name="Card4"> Punainen kortti <br>
+  <input type="radio" onclick="redCardRadioButton()" value="redCard" id="redCard4" class="redcards" name="Card44"> Punainen kortti <br>
 
   <hr>
 
@@ -1043,13 +1064,13 @@ echo "</select>";
     
     <h1>Varoituksen saaja</h1>
  <?php
-$sql = "SELECT EtuNimi, Sukunimi FROM Pelaajat WHERE JoukkueID =  ".$_SESSION['kotijoukkue']." "."OR"." "."JoukkueID = ".$_SESSION['vierasjoukkue'];
-$result = $mysqli->query($sql);
+$sql725 = "SELECT EtuNimi, Sukunimi FROM Pelaajat WHERE JoukkueID =  ".$_SESSION['kotijoukkue']." "."OR"." "."JoukkueID = ".$_SESSION['vierasjoukkue'];
+$result725 = $mysqli->query($sql725);
 
 echo "<select name='virheensaaja5' class='nameOfPlayer2'>";
 echo "<option value='' selected='selected' disabled>"."Valitse Pelaaja". "</option>";
-while ($row = mysqli_fetch_array($result)) {
-  echo "<option value='" . $row['EtuNimi']." ". $row['Sukunimi'] . "'>" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
+while ($row = mysqli_fetch_array($result725)) {
+  echo "<option value='".$row['EtuNimi']."'".">" . $row['EtuNimi']." ". $row['Sukunimi']. "</option>";
 }
 echo "</select>";
 ?>
@@ -1057,7 +1078,7 @@ echo "</select>";
 
 
   <input type="radio" onclick="yellowCardRadioButton()" value="yellowCard" id="yellowCard5" class="yellowcard" name="Card5"> Keltainen kortti <br>
-  <input type="radio" onclick="redCardRadioButton()" value="redCard" id="redCard5" class="redcards" name="Card5"> Punainen kortti <br>
+  <input type="radio" onclick="redCardRadioButton()" value="redCard" id="redCard5" class="redcards" name="Card55"> Punainen kortti <br>
 
   <hr>
 
@@ -1104,11 +1125,22 @@ echo "</select>";
        $sql402 = "SELECT pvm FROM Pelit";
       $result402 = $mysqli->query($sql402);
       
-      $scorehome;
-      $scoreaway;
+      $sql403 = "SELECT tulosKJ FROM Pelit";
+      $result403 = $mysqli->query($sql403);
       
-     $_SESSION['hometeamscore'] = $scorehome;
-     $_SESSION['awayteamscore'] = $scoreaway;
+      $sql404 = "SELECT tulosVJ FROM Pelit";
+      $result404 = $mysqli->query($sql404);
+      
+       
+      
+      
+      
+      
+    
+     
+     
+     
+   
     
   
       //tulostetaan tiedot
@@ -1116,7 +1148,9 @@ echo "</select>";
     while($row = mysqli_fetch_assoc($result400)) {
        $row2 = mysqli_fetch_assoc($result401);
        $row3 = mysqli_fetch_assoc($result402);
-        echo "Peli ID: " . $row['peliID']. "<br>". "Kotijoukkue: ".$row['home']. "<br>". "vierasjoukkue: ".$row2['away']."<br>". "Päivämäärä: ".$row3['pvm']."<br>". "Tulos: ".$scorehome." - ".$scoreaway. "<br>". "<br>". "<br>";
+       $row4 =  mysqli_fetch_assoc($result403);
+       $row5 =  mysqli_fetch_assoc($result404);
+        echo "Peli ID: " . $row['peliID']. "<br>". "Kotijoukkue: ".$row['home']. "<br>". "vierasjoukkue: ".$row2['away']."<br>". "Päivämäärä: ".$row3['pvm']."<br>". "Tulos: ".$row4['tulosKJ']." - ". $row5['tulosVJ']. "<br>". "<br>". "<br>";
     }
 } else {
     echo "0 results";
@@ -1124,9 +1158,8 @@ echo "</select>";
 
  
 
+
 include 'adminformPHP.php';
-
-
       ?>
     
 

@@ -14,12 +14,17 @@
     font-size: 32px;
 }
 
+.gameListGame {
+    width: 55%;
+}
+
 
 
 
 h1 {
      font-size: 30px;
 }
+
 #logOutButton {
      position:fixed;
     right: 2%;

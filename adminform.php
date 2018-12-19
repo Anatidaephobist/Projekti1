@@ -29,9 +29,13 @@ include_once 'functions.php';
   
   
   function adminform2Direct() {
-   window.location.href = "adminform2.php";
+      
+       window.location.href = "adminform2.php";
+       
+     
   }
    
+  
    
 
     document.getElementById("koti").addEventListener("change", checkHomeTeam());
@@ -102,8 +106,8 @@ function checkAwayTeam() {
       <label>Valitse Kotijoukkue</label>
       <br>
    <select name="kotijoukkue" id="koti" onchange="checkHomeTeam()">
-       <option value="Joukkuevalinta" selected="selected" disabled>Valitse Joukkue</option>
-        <option id="homeTeam1" value="1"><?php echo databaseQuery('Joukkueet','Nimi','1')?></option>
+       <option value="0" disabled>Valitse Joukkue</option>
+        <option id="homeTeam1" value="1"selected="selected"><?php echo databaseQuery('Joukkueet','Nimi','1')?></option>
   <option id="homeTeam2" value="2"><?php echo databaseQuery('Joukkueet','Nimi','2')?></option>
   <option id="homeTeam3" value="3"><?php echo databaseQuery('Joukkueet','Nimi','3')?></option>
   <option id="homeTeam4" value="4"><?php echo databaseQuery('Joukkueet','Nimi','4')?></option>
@@ -149,9 +153,9 @@ function checkAwayTeam() {
       <label>Valitse Vierasjoukkue</label>
       <br>
    <select name="vierasjoukkue" id="vieras" onchange="checkAwayTeam()">
-   <option value="Joukkuevalinta" selected="selected" disabled>Valitse Joukkue</option>
+   <option value="0" selected="selected" disabled>Valitse Joukkue</option>
     <option id="awayTeam1" value="1"><?php echo databaseQuery('Joukkueet','Nimi','1')?></option>
-  <option id="awayTeam2" value="2"><?php echo databaseQuery('Joukkueet','Nimi','2')?></option>
+  <option id="awayTeam2" value="2" selected="selected"><?php echo databaseQuery('Joukkueet','Nimi','2')?></option>
   <option id="awayTeam3" value="3"><?php echo databaseQuery('Joukkueet','Nimi','3')?></option>
   <option id="awayTeam4" value="4"><?php echo databaseQuery('Joukkueet','Nimi','4')?></option>
   <option id="awayTeam5" value="5"><?php echo databaseQuery('Joukkueet','Nimi','5')?></option>
@@ -198,13 +202,18 @@ function checkAwayTeam() {
 <?php
 if (isset($_POST["adminSubmit2"])) {
  
- $_SESSION['kotijoukkue'] =  $_POST['kotijoukkue'];
- $_SESSION['vierasjoukkue'] =  $_POST['vierasjoukkue'];
+ 
+ 
+ 
+ $_SESSION['kotijoukkue'] =  $_POST['kotijoukkue'].value;
+ $_SESSION['vierasjoukkue'] =  $_POST['vierasjoukkue'].value;
+ 
  
 echo '<script type="text/javascript">',
      'adminform2Direct();',
      '</script>'
-;
+     ;
+
  
 }
 

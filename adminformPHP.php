@@ -1,5 +1,3 @@
-
-
 <?php
 session_start();
 include 'functions.php';
@@ -42,9 +40,20 @@ error_reporting(0);
    $owngoal9 = $_POST['owngoal9'];
    $owngoal10 = $_POST['owngoal10'];
    
+  //korttien talteen ottaminen
+   $yellowcard1 = $_POST['Card1'];
+   $yellowcard2 = $_POST['Card2'];
+   $yellowcard3 = $_POST['Card3'];
+   $yellowcard4 = $_POST['Card4'];
+   $yellowcard5 = $_POST['Card5'];
    
-    
+   $redcard1 = $_POST['Card11'];
+   $redcard2 = $_POST['Card22'];
+   $redcard3 = $_POST['Card33'];
+   $redcard4 = $_POST['Card44'];
+   $redcard5 = $_POST['Card55'];
   
+
     //pvm talteen ottaminen
     $pvm = $_POST['pvm'];
     $_SESSION['pvm'] = $pvm;
@@ -54,6 +63,10 @@ error_reporting(0);
     //maalien määrä
      $numberOfGoals = $_POST['input1'];
     $_SESSION['numberOfGoals'] = $numberOfGoals;
+    
+    //korttien määrä
+    $numberOfCards = $_POST['input2'];
+    $_SESSION['numberOfCards'] = $numberOfCards;
     
     //maalintekijät  nimenä
     $maalintekija1 = $_POST['maalintekija1'];
@@ -87,7 +100,37 @@ error_reporting(0);
     $maalintekija10 = $_POST['maalintekija10'];
     $_SESSION['maalintekija10'] = $maalintekija10;
     
+    
+    
+    //kortin saajat nimenä
+    $virheensaaja1 = $_POST['virheensaaja1'];
+    $_SESSION['virheensaaja1'] = $virheensaaja1;
+    
+    $virheensaaja2 = $_POST['virheensaaja1'];
+    $_SESSION['virheensaaja2'] = $virheensaaja2;
+    
+    $virheensaaja3 = $_POST['virheensaaja1'];
+    $_SESSION['virheensaaja3'] = $virheensaaja3;
+    
+    $virheensaaja4 = $_POST['virheensaaja1'];
+    $_SESSION['virheensaaja4'] = $virheensaaja4;
+    
+    $virheensaaja5 = $_POST['virheensaaja1'];
+    $_SESSION['virheensaaja5'] = $virheensaaja5;
+    
+    
+    
+    
+    
+    
+    
     $gameID = 1;
+    
+    $idOfPlayer1w;
+    $idOfPlayer2w;
+    $idOfPlayer3w;
+    $idOfPlayer4w;
+    $idOfPlayer5w;
     
     $idOfPlayer1;
     $idOfPlayer2;
@@ -103,7 +146,7 @@ error_reporting(0);
     $_SESSION['hometeamscore'];
     $_SESSION['awayteamscore'];
     $hometeamScore = 0;
-    $awayteamScore= 0;
+    $awayteamScore = 0;
     
     
     //haetaan pelinID
@@ -222,6 +265,57 @@ if ($result120->num_rows > 0) {
 }
 }
 
+ //haetaan pelaajan ID - virheensaaja1
+	$sql1090 = "SELECT id FROM Pelaajat WHERE EtuNimi = '".$virheensaaja1."'"." AND JoukkueID = ".$_SESSION['kotijoukkue']." OR EtuNimi ='".$virheensaaja1."'"." AND JoukkueID = ".$_SESSION['vierasjoukkue'];
+		$result1090 = $mysqli->query($sql1090);
+if ($result1090->num_rows > 0) {
+		while($row = $result1090->fetch_assoc()) {
+		 $idOfPlayer1w = $row['id'];
+
+}
+}
+
+//haetaan pelaajan ID - virheensaaja2
+	$sql1091 = "SELECT id FROM Pelaajat WHERE EtuNimi = '".$virheensaaja2."'"." AND JoukkueID = ".$_SESSION['kotijoukkue']." OR EtuNimi ='".$virheensaaja2."'"." AND JoukkueID = ".$_SESSION['vierasjoukkue'];
+		$result1091 = $mysqli->query($sql1091);
+if ($result1091->num_rows > 0) {
+		while($row = $result1091->fetch_assoc()) {
+		 $idOfPlayer2w = $row['id'];
+
+}
+}
+
+//haetaan pelaajan ID - virheensaaja3
+	$sql1092 = "SELECT id FROM Pelaajat WHERE EtuNimi = '".$virheensaaja3."'"." AND JoukkueID = ".$_SESSION['kotijoukkue']." OR EtuNimi ='".$virheensaaja3."'"." AND JoukkueID = ".$_SESSION['vierasjoukkue'];
+		$result1092 = $mysqli->query($sql1092);
+if ($result1092->num_rows > 0) {
+		while($row = $result1092->fetch_assoc()) {
+		 $idOfPlayer3w = $row['id'];
+
+}
+}
+
+//haetaan pelaajan ID - virheensaaja4
+	$sql1093 = "SELECT id FROM Pelaajat WHERE EtuNimi = '".$virheensaaja3."'"." AND JoukkueID = ".$_SESSION['kotijoukkue']." OR EtuNimi ='".$virheensaaja3."'"." AND JoukkueID = ".$_SESSION['vierasjoukkue'];
+		$result1093 = $mysqli->query($sql1093);
+if ($result1093->num_rows > 0) {
+		while($row = $result1093->fetch_assoc()) {
+		 $idOfPlayer4w = $row['id'];
+
+}
+}
+
+//haetaan pelaajan ID - virheensaaja5
+	$sql1094 = "SELECT id FROM Pelaajat WHERE EtuNimi = '".$virheensaaja3."'"." AND JoukkueID = ".$_SESSION['kotijoukkue']." OR EtuNimi ='".$virheensaaja3."'"." AND JoukkueID = ".$_SESSION['vierasjoukkue'];
+		$result1094 = $mysqli->query($sql1094);
+if ($result1094->num_rows > 0) {
+		while($row = $result1094->fetch_assoc()) {
+		 $idOfPlayer5w = $row['id'];
+
+}
+}
+
+
 
 
 
@@ -235,7 +329,7 @@ $sql602 = "UPDATE Joukkueet SET PelatutPelit=PelatutPelit+1 WHERE id = '".$awayt
 
 //jos pelien päivitys onnistuu
 if ($mysqli->query($sql601) == TRUE and $mysqli->query($sql602) == TRUE) {
-    alert("team statistics updated successfully");
+    
 }
 
 //haetaan Pelaajien Joukkueet
@@ -250,20 +344,19 @@ $teamIDOfPlayer8 = databaseQuery('Pelaajat','JoukkueID',$idOfPlayer8);
 $teamIDOfPlayer9 = databaseQuery('Pelaajat','JoukkueID',$idOfPlayer9);
 $teamIDOfPlayer10 = databaseQuery('Pelaajat','JoukkueID',$idOfPlayer10);
 
+//haetaan virheensaajien joukkueet
+$teamIDOfPlayer1w = databaseQuery('Pelaajat','JoukkueID',$idOfPlayer1w);
+$teamIDOfPlayer2w = databaseQuery('Pelaajat','JoukkueID',$idOfPlayer2w);
+$teamIDOfPlayer3w = databaseQuery('Pelaajat','JoukkueID',$idOfPlayer3w);
+$teamIDOfPlayer4w = databaseQuery('Pelaajat','JoukkueID',$idOfPlayer4w);
+$teamIDOfPlayer5w = databaseQuery('Pelaajat','JoukkueID',$idOfPlayer5w);
 
 
 
 
 
-//lisätään peli
-  $sql11 = "INSERT INTO Pelit (KotijoukkueID, VierasjoukkueID, pvm)
-VALUES ('".$hometeam."','".$awayteam."','".$pvm."')";  
 
-//jos pelin lisäys onnistuu niin lisää tapahtuma
-if ($mysqli->query($sql11) == TRUE) {
-    alert("New Game created successfully");
-  
-  
+
    // lisätään maalitapahtuma
    
 //1
@@ -275,18 +368,18 @@ VALUES ('".$gameID."','".$idOfPlayer1."','maali')";
 
 //jos tapahtuman lisäys onnistuu niin lisää maalit pelaajalle
 if ($mysqli->query($sql12) == TRUE) {
-    alert("New Happening(1) created successfully");
+    //alert("New Happening(1) created successfully");
     
  $sql301 = "UPDATE Pelaajat SET Maalit=Maalit+1, PelatutPelit=PelatutPelit+1 WHERE id = '".$idOfPlayer1."'"; 
 
 //lisätään pelatut pelit Pelaajan Joukkueelle
 if ($mysqli->query($sql301) == TRUE) {
-    alert("Player(1) statistics updated successfully");
+    //alert("Player(1) statistics updated successfully");
 
    
 
 
-    alert("Team  goal statistics(1) updated successfully");
+    //alert("Team  goal statistics(1) updated successfully");
     //tarkitetaan onko maalintekijä koti vai vierasjoukkueen pelaaja
     if($hometeam == $teamIDOfPlayer1 and $_SESSION['owngoal1'] !== 'owngoal' or $awayteam == $teamIDOfPlayer1 and $_SESSION['owngoal1'] == 'owngoal') {
         $hometeamScore++;
@@ -295,7 +388,7 @@ if ($mysqli->query($sql301) == TRUE) {
     
     }   
 } else {
-    alert("Error: " . $sql . "<br>" . $mysqli->error);
+    //alert("Error: " . $sql . "<br>" . $mysqli->error);
     
 }
 }
@@ -315,7 +408,7 @@ VALUES ('".$gameID."','".$idOfPlayer2."','maali')";
 
 //Lisätään maalit pelaajille
 if ($mysqli->query($sql12) == TRUE and $mysqli->query($sql13) == TRUE) {
-    alert("New happening(2) created successfully");
+    //alert("New happening(2) created successfully");
     
     $sql301 = "UPDATE Pelaajat SET Maalit=Maalit+1, PelatutPelit=PelatutPelit+1 WHERE id = '".$idOfPlayer1."'"; 
     $sql302 = "UPDATE Pelaajat SET Maalit=Maalit+1, PelatutPelit=PelatutPelit+1 WHERE id = '".$idOfPlayer2."'"; 
@@ -323,10 +416,10 @@ if ($mysqli->query($sql12) == TRUE and $mysqli->query($sql13) == TRUE) {
 
 //lisätään pelatut pelit pelaajan joukkueelle
 if ($mysqli->query($sql301) == TRUE and $mysqli->query($sql302) == TRUE) {
-    alert("Player(2) statistics updated successfully");
+    //alert("Player(2) statistics updated successfully");
     
     
-    alert("Team  goal statistics(2) updated successfully");
+    //alert("Team  goal statistics(2) updated successfully");
     //tarkitetaan onko pelaaja koti vai vierasjoukkueen pelaaja
     //1
     if($hometeam == $teamIDOfPlayer1 and $_SESSION['owngoal1'] !== 'owngoal' or $awayteam == $teamIDOfPlayer1 and $_SESSION['owngoal1'] == 'owngoal') {
@@ -345,7 +438,7 @@ if ($mysqli->query($sql301) == TRUE and $mysqli->query($sql302) == TRUE) {
 
 
 }else {
-    alert("Error: " . $sql . "<br>" . $mysqli->error);
+    //alert("Error: " . $sql . "<br>" . $mysqli->error);
 }
 }
 
@@ -367,14 +460,14 @@ VALUES ('".$gameID."','".$idOfPlayer3."','maali')";
 
 //Lisätään maalit pelaajille
 if ($mysqli->query($sql12) == TRUE and $mysqli->query($sql13) == TRUE and $mysqli->query($sql14) == TRUE) {
-    alert("New happening(3) created successfully");
+    //alert("New happening(3) created successfully");
     
       $sql301 = "UPDATE Pelaajat SET Maalit=Maalit+1, PelatutPelit=PelatutPelit+1 WHERE id = '".$idOfPlayer1."'"; 
       $sql302 = "UPDATE Pelaajat SET Maalit=Maalit+1, PelatutPelit=PelatutPelit+1 WHERE id = '".$idOfPlayer2."'";
       $sql303 = "UPDATE Pelaajat SET Maalit=Maalit+1, PelatutPelit=PelatutPelit+1 WHERE id = '".$idOfPlayer3."'";
 
 if ($mysqli->query($sql301) == TRUE and $mysqli->query($sql302) == TRUE and $mysqli->query($sql303) == TRUE) {
-    alert("Player(3) statistics updated successfully");
+    //alert("Player(3) statistics updated successfully");
     
    
     //tarkitetaan onko pelaaja koti vai vierasjoukkueen pelaaja
@@ -400,7 +493,7 @@ if ($mysqli->query($sql301) == TRUE and $mysqli->query($sql302) == TRUE and $mys
     
     
 } else {
-    alert("Error: " . $sql . "<br>" . $mysqli->error);
+    //alert("Error: " . $sql . "<br>" . $mysqli->error);
 }
 }
 
@@ -425,7 +518,7 @@ VALUES ('".$gameID."','".$idOfPlayer4."','maali')";
 
 //lisätään maalit pelaajille
 if ($mysqli->query($sql12) == TRUE and $mysqli->query($sql13) == TRUE and $mysqli->query($sql14) == TRUE and $mysqli->query($sql15) == TRUE) {
-    alert("New happening(4) created successfully");
+    //alert("New happening(4) created successfully");
     
       $sql301 = "UPDATE Pelaajat SET Maalit=Maalit+1, PelatutPelit=PelatutPelit+1 WHERE id = '".$idOfPlayer1."'"; 
       $sql302 = "UPDATE Pelaajat SET Maalit=Maalit+1, PelatutPelit=PelatutPelit+1 WHERE id = '".$idOfPlayer2."'";
@@ -433,7 +526,7 @@ if ($mysqli->query($sql12) == TRUE and $mysqli->query($sql13) == TRUE and $mysql
       $sql304 = "UPDATE Pelaajat SET Maalit=Maalit+1, PelatutPelit=PelatutPelit+1 WHERE id = '".$idOfPlayer4."'";
 
 if ($mysqli->query($sql301) == TRUE and $mysqli->query($sql302) == TRUE and $mysqli->query($sql303) == TRUE and $mysqli->query($sql304) == TRUE) {
-    alert("Player(4) statistics updated successfully");
+    //alert("Player(4) statistics updated successfully");
     
   
     //tarkitetaan onko pelaaja koti vai vierasjoukkueen pelaaja
@@ -464,7 +557,7 @@ if ($mysqli->query($sql301) == TRUE and $mysqli->query($sql302) == TRUE and $mys
 }
     
 } else {
-    alert("Error: " . $sql . "<br>" . $mysqli->error);
+    //alert("Error: " . $sql . "<br>" . $mysqli->error);
 }
 }
 
@@ -492,7 +585,7 @@ VALUES ('".$gameID."','".$idOfPlayer5."','maali')";
 
 //Lisätään maalit pelaajille
 if ($mysqli->query($sql12) == TRUE and $mysqli->query($sql13) == TRUE and $mysqli->query($sql14) == TRUE and $mysqli->query($sql15) == TRUE and $mysqli->query($sql16) == TRUE) {
-    alert("New happening(5) created successfully");
+    //alert("New happening(5) created successfully");
     
       $sql301 = "UPDATE Pelaajat SET Maalit=Maalit+1, PelatutPelit=PelatutPelit+1 WHERE id = '".$idOfPlayer1."'"; 
       $sql302 = "UPDATE Pelaajat SET Maalit=Maalit+1, PelatutPelit=PelatutPelit+1 WHERE id = '".$idOfPlayer2."'";
@@ -501,7 +594,7 @@ if ($mysqli->query($sql12) == TRUE and $mysqli->query($sql13) == TRUE and $mysql
       $sql305 = "UPDATE Pelaajat SET Maalit=Maalit+1, PelatutPelit=PelatutPelit+1 WHERE id = '".$idOfPlayer5."'";
   
 if ($mysqli->query($sql301) == TRUE and $mysqli->query($sql302) == TRUE and $mysqli->query($sql303) == TRUE and $mysqli->query($sql304) == TRUE and $mysqli->query($sql305) == TRUE) {
-    alert("Player(5) statistics updated successfully");
+    //alert("Player(5) statistics updated successfully");
     
     //tarkitetaan onko pelaaja koti vai vierasjoukkueen pelaaja
     //1
@@ -539,7 +632,7 @@ if ($mysqli->query($sql301) == TRUE and $mysqli->query($sql302) == TRUE and $mys
 
     
 } else {
-    alert("Error: " . $sql . "<br>" . $mysqli->error);
+    //alert("Error: " . $sql . "<br>" . $mysqli->error);
 }
 }
 
@@ -570,7 +663,7 @@ VALUES ('".$gameID."','".$idOfPlayer6."','maali')";
 
 //Lisätään maalit pelaajille
 if ($mysqli->query($sql12) == TRUE and $mysqli->query($sql13) == TRUE and $mysqli->query($sql14) == TRUE and $mysqli->query($sql15) == TRUE and $mysqli->query($sql16) == TRUE and $mysqli->query($sql17) == TRUE) {
-    alert("New happening(6) created successfully");
+    //alert("New happening(6) created successfully");
     
       $sql301 = "UPDATE Pelaajat SET Maalit=Maalit+1, PelatutPelit=PelatutPelit+1 WHERE id = '".$idOfPlayer1."'"; 
       $sql302 = "UPDATE Pelaajat SET Maalit=Maalit+1, PelatutPelit=PelatutPelit+1 WHERE id = '".$idOfPlayer2."'";
@@ -580,7 +673,7 @@ if ($mysqli->query($sql12) == TRUE and $mysqli->query($sql13) == TRUE and $mysql
       $sql306 = "UPDATE Pelaajat SET Maalit=Maalit+1, PelatutPelit=PelatutPelit+1 WHERE id = '".$idOfPlayer6."'";
       
 if ($mysqli->query($sql301) == TRUE and $mysqli->query($sql302) == TRUE and $mysqli->query($sql303) == TRUE and $mysqli->query($sql304) == TRUE and $mysqli->query($sql305) == TRUE and $mysqli->query($sql306) == TRUE) {
-    alert("Player(6) statistics updated successfully");
+    //alert("Player(6) statistics updated successfully");
    
     //tarkitetaan onko pelaaja koti vai vierasjoukkueen pelaaja
     //1
@@ -624,7 +717,7 @@ if ($mysqli->query($sql301) == TRUE and $mysqli->query($sql302) == TRUE and $mys
 
     
 } else {
-    alert("Error: " . $sql . "<br>" . $mysqli->error);
+    //alert("Error: " . $sql . "<br>" . $mysqli->error);
 }
 }
 
@@ -659,7 +752,7 @@ VALUES ('".$gameID."','".$idOfPlayer7."','maali')";
 
 //lisätään maalit pelaajille
 if ($mysqli->query($sql12) == TRUE and $mysqli->query($sql13) == TRUE and $mysqli->query($sql14) == TRUE and $mysqli->query($sql15) == TRUE and $mysqli->query($sql16) == TRUE and $mysqli->query($sql17) == TRUE and $mysqli->query($sql18) == TRUE) {
-    alert("New happening(7) created successfully");
+    //alert("New happening(7) created successfully");
     
       $sql301 = "UPDATE Pelaajat SET Maalit=Maalit+1, PelatutPelit=PelatutPelit+1 WHERE id = '".$idOfPlayer1."'"; 
       $sql302 = "UPDATE Pelaajat SET Maalit=Maalit+1, PelatutPelit=PelatutPelit+1 WHERE id = '".$idOfPlayer2."'";
@@ -670,10 +763,10 @@ if ($mysqli->query($sql12) == TRUE and $mysqli->query($sql13) == TRUE and $mysql
       $sql307 = "UPDATE Pelaajat SET Maalit=Maalit+1, PelatutPelit=PelatutPelit+1 WHERE id = '".$idOfPlayer7."'";
       
 if ($mysqli->query($sql301) == TRUE and $mysqli->query($sql302) == TRUE and $mysqli->query($sql303) == TRUE and $mysqli->query($sql304) == TRUE and $mysqli->query($sql305) == TRUE and $mysqli->query($sql306) == TRUE and $mysqli->query($sql307) == TRUE) {
-    alert("Player(7) statistics updated successfully");
+    //alert("Player(7) statistics updated successfully");
     
     if ($mysqli->query($sql301) == TRUE and $mysqli->query($sql302) == TRUE and $mysqli->query($sql303) == TRUE and $mysqli->query($sql304) == TRUE and $mysqli->query($sql305) == TRUE and $mysqli->query($sql306) == TRUE and $mysqli->query($sql307) == TRUE and $mysqli->query($sql308) == TRUE) {
-    alert("team(7) statistics updated successfully");
+    //alert("team(7) statistics updated successfully");
     
    
     //tarkitetaan onko pelaaja koti vai vierasjoukkueen pelaaja
@@ -723,7 +816,7 @@ if ($mysqli->query($sql301) == TRUE and $mysqli->query($sql302) == TRUE and $mys
     }
 
 } else {
-    alert("Error: " . $sql . "<br>" . $mysqli->error);
+    //alert("Error: " . $sql . "<br>" . $mysqli->error);
 }
 }
 }
@@ -761,7 +854,7 @@ VALUES ('".$gameID."','".$idOfPlayer8."','maali')";
 
 //Laitetaan maalit pelaajille
 if ($mysqli->query($sql12) == TRUE and $mysqli->query($sql13) == TRUE and $mysqli->query($sql14) == TRUE and $mysqli->query($sql15) == TRUE and $mysqli->query($sql16) == TRUE and $mysqli->query($sql17) == TRUE and $mysqli->query($sql18) == TRUE and $mysqli->query($sql19) == TRUE) {
-    alert("New happening(8) created successfully");
+    //alert("New happening(8) created successfully");
     
       $sql301 = "UPDATE Pelaajat SET Maalit=Maalit+1, PelatutPelit=PelatutPelit+1 WHERE id = '".$idOfPlayer1."'"; 
       $sql302 = "UPDATE Pelaajat SET Maalit=Maalit+1, PelatutPelit=PelatutPelit+1 WHERE id = '".$idOfPlayer2."'";
@@ -773,7 +866,7 @@ if ($mysqli->query($sql12) == TRUE and $mysqli->query($sql13) == TRUE and $mysql
       $sql308 = "UPDATE Pelaajat SET Maalit=Maalit+1, PelatutPelit=PelatutPelit+1 WHERE id = '".$idOfPlayer8."'";
       
 if ($mysqli->query($sql301) == TRUE and $mysqli->query($sql302) == TRUE and $mysqli->query($sql303) == TRUE and $mysqli->query($sql304) == TRUE and $mysqli->query($sql305) == TRUE and $mysqli->query($sql306) == TRUE and $mysqli->query($sql307) == TRUE and $mysqli->query($sql308) == TRUE) {
-    alert("team(8) statistics updated successfully");
+    //alert("team(8) statistics updated successfully");
     
     
     //tarkitetaan onko pelaaja koti vai vierasjoukkueen pelaaja
@@ -830,7 +923,7 @@ if ($mysqli->query($sql301) == TRUE and $mysqli->query($sql302) == TRUE and $mys
 }
     
 } else {
-    alert("Error: " . $sql . "<br>" . $mysqli->error);
+    //alert("Error: " . $sql . "<br>" . $mysqli->error);
 }
 }
 
@@ -870,7 +963,7 @@ VALUES ('".$gameID."','".$idOfPlayer9."','maali')";
 
 //Lisätään maalit pelaajille
 if ($mysqli->query($sql12) == TRUE and $mysqli->query($sql13) == TRUE and $mysqli->query($sql14) == TRUE and $mysqli->query($sql15) == TRUE and $mysqli->query($sql16) == TRUE and $mysqli->query($sql17) == TRUE and $mysqli->query($sql18) == TRUE and $mysqli->query($sql19) == TRUE and $mysqli->query($sql20) == TRUE) {
-    alert("Player(9) statistics updated successfully");
+    //alert("Player(9) statistics updated successfully");
     
       $sql301 = "UPDATE Pelaajat SET Maalit=Maalit+1, PelatutPelit=PelatutPelit+1 WHERE id = '".$idOfPlayer1."'"; 
       $sql302 = "UPDATE Pelaajat SET Maalit=Maalit+1, PelatutPelit=PelatutPelit+1 WHERE id = '".$idOfPlayer2."'";
@@ -883,7 +976,7 @@ if ($mysqli->query($sql12) == TRUE and $mysqli->query($sql13) == TRUE and $mysql
       $sql309 = "UPDATE Pelaajat SET Maalit=Maalit+1, PelatutPelit=PelatutPelit+1 WHERE id = '".$idOfPlayer9."'";
       
 if ($mysqli->query($sql301) == TRUE and $mysqli->query($sql302) == TRUE and $mysqli->query($sql303) == TRUE and $mysqli->query($sql304) == TRUE and $mysqli->query($sql305) == TRUE and $mysqli->query($sql306) == TRUE and $mysqli->query($sql307) == TRUE and $mysqli->query($sql308) == TRUE and $mysqli->query($sql309) == TRUE) {
-    alert("team(9) statistics updated successfully");
+   
     
     
     //tarkitetaan onko pelaaja koti vai vierasjoukkueen pelaaja
@@ -946,7 +1039,7 @@ if ($mysqli->query($sql301) == TRUE and $mysqli->query($sql302) == TRUE and $mys
 
     
 } else {
-    alert("Error: " . $sql . "<br>" . $mysqli->error);
+    //alert("Error: " . $sql . "<br>" . $mysqli->error);
 }
 }
 
@@ -989,7 +1082,7 @@ VALUES ('".$gameID."','".$idOfPlayer10."','maali')";
 
 //lisätään maalit ja pelatut pelit pelaajille
 if ($mysqli->query($sql12) == TRUE and $mysqli->query($sql13) == TRUE and $mysqli->query($sql14) == TRUE and $mysqli->query($sql15) == TRUE and $mysqli->query($sql16) == TRUE and $mysqli->query($sql17) == TRUE and $mysqli->query($sql18) == TRUE and $mysqli->query($sql19) == TRUE and $mysqli->query($sql20) == TRUE and $mysqli->query($sql21) == TRUE) {
-    alert("New happening(10) created successfully");
+    
     
       $sql301 = "UPDATE Pelaajat SET Maalit=Maalit+1, PelatutPelit=PelatutPelit+1 WHERE id = '".$idOfPlayer1."'"; 
       $sql302 = "UPDATE Pelaajat SET Maalit=Maalit+1, PelatutPelit=PelatutPelit+1 WHERE id = '".$idOfPlayer2."'";
@@ -1003,7 +1096,7 @@ if ($mysqli->query($sql12) == TRUE and $mysqli->query($sql13) == TRUE and $mysql
       $sql310 = "UPDATE Pelaajat SET Maalit=Maalit+1, PelatutPelit=PelatutPelit+1 WHERE id = '".$idOfPlayer10."'";
       
 if ($mysqli->query($sql301) == TRUE and $mysqli->query($sql302) == TRUE and $mysqli->query($sql303) == TRUE and $mysqli->query($sql304) == TRUE and $mysqli->query($sql305) == TRUE and $mysqli->query($sql306) == TRUE and $mysqli->query($sql307) == TRUE and $mysqli->query($sql308) == TRUE and $mysqli->query($sql309) == TRUE and $mysqli->query($sql310) == TRUE) {
-    alert("Player(10) statistics updated successfully");
+   
     
    
     //tarkitetaan onko pelaaja koti vai vierasjoukkueen pelaaja
@@ -1071,19 +1164,195 @@ if ($mysqli->query($sql301) == TRUE and $mysqli->query($sql302) == TRUE and $mys
 }
     
 } else {
-    alert("Error: " . $sql . "<br>" . $mysqli->error);
+    //alert("Error: " . $sql . "<br>" . $mysqli->error);
 }
 }
 
 } //end of numberOfGoals(10)
+
+//lisätään korttitaphtuma pelaajille
+
+//1
+if($_SESSION['numberOfCards'] == 1) {
+if($yellowcard1 == "yellowCard") {
+$sql345 = "INSERT INTO Pelaaja_peli (PeliID, PelaajaID, Tapahtuma)
+VALUES ('".$gameID."','".$idOfPlayer1w."','kelt.kortti')";
+$mysqli->query($sql345);
+} else {
+    $sql345 = "INSERT INTO Pelaaja_peli (PeliID, PelaajaID, Tapahtuma)
+VALUES ('".$gameID."','".$idOfPlayer1w."','pun.kortti')";
+$mysqli->query($sql345);
+}
+
+}
+
+
+
+
+
+//2
+if($_SESSION['numberOfCards'] == 2) {
+if($yellowcard1 == "yellowCard") {
+$sql345 = "INSERT INTO Pelaaja_peli (PeliID, PelaajaID, Tapahtuma)
+VALUES ('".$gameID."','".$idOfPlayer1w."','kelt.kortti')";
+$mysqli->query($sql345);
+} else {
+    $sql345 = "INSERT INTO Pelaaja_peli (PeliID, PelaajaID, Tapahtuma)
+VALUES ('".$gameID."','".$idOfPlayer1w."','pun.kortti')";
+$mysqli->query($sql345);
+}
+
+if($yellowcard2 == "yellowCard") {
+$sql346 = "INSERT INTO Pelaaja_peli (PeliID, PelaajaID, Tapahtuma)
+VALUES ('".$gameID."','".$idOfPlayer2w."','kelt.kortti')";
+$mysqli->query($sql346);
+} else {
+$sql346 = "INSERT INTO Pelaaja_peli (PeliID, PelaajaID, Tapahtuma)
+VALUES ('".$gameID."','".$idOfPlayer2w."','pun.kortti')";
+$mysqli->query($sql346);
+}
+
+
+}
+
+//3
+if($_SESSION['numberOfCards'] == 3) {
+if($yellowcard1 == "yellowCard") {
+$sql345 = "INSERT INTO Pelaaja_peli (PeliID, PelaajaID, Tapahtuma)
+VALUES ('".$gameID."','".$idOfPlayer1w."','kelt.kortti')";
+$mysqli->query($sql345);
+} else {
+    $sql345 = "INSERT INTO Pelaaja_peli (PeliID, PelaajaID, Tapahtuma)
+VALUES ('".$gameID."','".$idOfPlayer1w."','pun.kortti')";
+$mysqli->query($sql345);
+}
+
+if($yellowcard2 == "yellowCard") {
+$sql346 = "INSERT INTO Pelaaja_peli (PeliID, PelaajaID, Tapahtuma)
+VALUES ('".$gameID."','".$idOfPlayer2w."','kelt.kortti')";
+$mysqli->query($sql346);
+} else {
+$sql346 = "INSERT INTO Pelaaja_peli (PeliID, PelaajaID, Tapahtuma)
+VALUES ('".$gameID."','".$idOfPlayer2w."','pun.kortti')";
+$mysqli->query($sql346);
+}
+if($yellowcard3 == "yellowCard") {
+$sql347 = "INSERT INTO Pelaaja_peli (PeliID, PelaajaID, Tapahtuma)
+VALUES ('".$gameID."','".$idOfPlayer3w."','kelt.kortti')";
+$mysqli->query($sql347);
+} else {
+    $sql347 = "INSERT INTO Pelaaja_peli (PeliID, PelaajaID, Tapahtuma)
+VALUES ('".$gameID."','".$idOfPlayer3w."','pun.kortti')";
+$mysqli->query($sql347);
+}
+
+}
+//4
+if($_SESSION['numberOfCards'] == 4) {
+if($yellowcard1 == "yellowCard") {
+$sql345 = "INSERT INTO Pelaaja_peli (PeliID, PelaajaID, Tapahtuma)
+VALUES ('".$gameID."','".$idOfPlayer1w."','kelt.kortti')";
+$mysqli->query($sql345);
+} else {
+    $sql345 = "INSERT INTO Pelaaja_peli (PeliID, PelaajaID, Tapahtuma)
+VALUES ('".$gameID."','".$idOfPlayer1w."','pun.kortti')";
+$mysqli->query($sql345);
+}
+
+if($yellowcard2 == "yellowCard") {
+$sql346 = "INSERT INTO Pelaaja_peli (PeliID, PelaajaID, Tapahtuma)
+VALUES ('".$gameID."','".$idOfPlayer2w."','kelt.kortti')";
+$mysqli->query($sql346);
+} else {
+$sql346 = "INSERT INTO Pelaaja_peli (PeliID, PelaajaID, Tapahtuma)
+VALUES ('".$gameID."','".$idOfPlayer2w."','pun.kortti')";
+$mysqli->query($sql346);
+}
+if($yellowcard3 == "yellowCard") {
+$sql347 = "INSERT INTO Pelaaja_peli (PeliID, PelaajaID, Tapahtuma)
+VALUES ('".$gameID."','".$idOfPlayer3w."','kelt.kortti')";
+$mysqli->query($sql347);
+} else {
+    $sql347 = "INSERT INTO Pelaaja_peli (PeliID, PelaajaID, Tapahtuma)
+VALUES ('".$gameID."','".$idOfPlayer3w."','pun.kortti')";
+$mysqli->query($sql347);
+}
+if($yellowcard4 == "yellowCard") {
+$sql348 = "INSERT INTO Pelaaja_peli (PeliID, PelaajaID, Tapahtuma)
+VALUES ('".$gameID."','".$idOfPlayer4w."','kelt.kortti')";
+$mysqli->query($sql348);
+} else {
+    $sql348 = "INSERT INTO Pelaaja_peli (PeliID, PelaajaID, Tapahtuma)
+VALUES ('".$gameID."','".$idOfPlayer4w."','pun.kortti')";
+$mysqli->query($sql348);
+}
+
+
+}
+
+//5
+if($_SESSION['numberOfCards'] == 5) {
+    if($yellowcard1 == "yellowCard") {
+$sql345 = "INSERT INTO Pelaaja_peli (PeliID, PelaajaID, Tapahtuma)
+VALUES ('".$gameID."','".$idOfPlayer1w."','kelt.kortti')";
+$mysqli->query($sql345);
+} else {
+    $sql345 = "INSERT INTO Pelaaja_peli (PeliID, PelaajaID, Tapahtuma)
+VALUES ('".$gameID."','".$idOfPlayer1w."','pun.kortti')";
+$mysqli->query($sql345);
+}
+
+if($yellowcard2 == "yellowCard") {
+$sql346 = "INSERT INTO Pelaaja_peli (PeliID, PelaajaID, Tapahtuma)
+VALUES ('".$gameID."','".$idOfPlayer2w."','kelt.kortti')";
+$mysqli->query($sql346);
+} else {
+$sql346 = "INSERT INTO Pelaaja_peli (PeliID, PelaajaID, Tapahtuma)
+VALUES ('".$gameID."','".$idOfPlayer2w."','pun.kortti')";
+$mysqli->query($sql346);
+}
+if($yellowcard3 == "yellowCard") {
+$sql347 = "INSERT INTO Pelaaja_peli (PeliID, PelaajaID, Tapahtuma)
+VALUES ('".$gameID."','".$idOfPlayer3w."','kelt.kortti')";
+$mysqli->query($sql347);
+} else {
+    $sql347 = "INSERT INTO Pelaaja_peli (PeliID, PelaajaID, Tapahtuma)
+VALUES ('".$gameID."','".$idOfPlayer3w."','pun.kortti')";
+$mysqli->query($sql347);
+}
+if($yellowcard4 == "yellowCard") {
+$sql348 = "INSERT INTO Pelaaja_peli (PeliID, PelaajaID, Tapahtuma)
+VALUES ('".$gameID."','".$idOfPlayer4w."','kelt.kortti')";
+$mysqli->query($sql348);
+} else {
+    $sql348 = "INSERT INTO Pelaaja_peli (PeliID, PelaajaID, Tapahtuma)
+VALUES ('".$gameID."','".$idOfPlayer4w."','pun.kortti')";
+$mysqli->query($sql348);
+}
+if($yellowcard5 == "yellowCard") {
+$sql348 = "INSERT INTO Pelaaja_peli (PeliID, PelaajaID, Tapahtuma)
+VALUES ('".$gameID."','".$idOfPlayer5w."','kelt.kortti')";
+$mysqli->query($sql349);
+} else {
+    $sql349 = "INSERT INTO Pelaaja_peli (PeliID, PelaajaID, Tapahtuma)
+VALUES ('".$gameID."','".$idOfPlayer5w."','pun.kortti')";
+$mysqli->query($sql349);
+}
+
+
+}
+
+
+
+
 
 //päivitetään joukkeen maalit
 $sql901 = "UPDATE Joukkueet SET TehdytMaalit=TehdytMaalit+'".$hometeamScore."' WHERE id = '".$hometeam."'";
 $sql902 = "UPDATE Joukkueet SET TehdytMaalit=TehdytMaalit+'".$awayteamScore."' WHERE id = '".$awayteam."'";
 
     if ($mysqli->query($sql901) == TRUE and $mysqli->query($sql902) == TRUE ) {
-    alert("teams total goals scored updated succesfully");
-}
+    
+
 //päivitetään joukkueiden päästetyt maalit
 $sql9011 = "UPDATE Joukkueet SET PaastetytMaalit=PaastetytMaalit+'".$awayteamScore."' WHERE id = '".$hometeam."'";
 $sql9012 = "UPDATE Joukkueet SET PaastetytMaalit=PaastetytMaalit+'".$hometeamScore."' WHERE id = '".$awayteam."'";
@@ -1091,9 +1360,16 @@ $sql9012 = "UPDATE Joukkueet SET PaastetytMaalit=PaastetytMaalit+'".$hometeamSco
 $mysqli->query($sql9011);
 $mysqli->query($sql9012);
 
-$_SESSION['hometeamscore'] = $hometeamScore;
-$_SESSION['awayteamscore'] = $awayteamScore;
 
+//lisätään peli
+  $sql11 = "INSERT INTO Pelit (KotijoukkueID, VierasjoukkueID, pvm, tulosKJ, tulosVJ)
+VALUES ('".$hometeam."','".$awayteam."','".$pvm."','".$hometeamScore."','".$awayteamScore."')";  
+$mysqli->query($sql11);
+
+  
+
+
+}
 
 //tarkastetaan voittaja ja päivitetään voittojen määrä sekä pisteet ja hävityt pelit
 if($hometeamScore > $awayteamScore) {
@@ -1128,22 +1404,20 @@ if($hometeamScore > $awayteamScore) {
 
 
 $mysqli->close();
-} else {
-    alert("Error: " . $sql . "<br>" . $mysqli->error);
-}
-$mysqli->close();
+
+
 
     
+alert("Peli lisätty onnistuneesti");
 
 
 
- } //end of  adminsubmit
 
- 
  ?>
-
-
-
+<script>window.location = "adminform.php" </script>
+<?php
+ } //end of  adminsubmit
+?>
 </body>
 
 </html>
