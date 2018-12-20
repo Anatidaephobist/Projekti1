@@ -69,6 +69,18 @@ return $value;
 }
 } //end of function 'makeQuery'
 
+function databaseQueryCard($pelaajaID) {
+   $value = "";
+    global $mysqli;
+    $sqlkortti = "SELECT " .$pelaajaID. " FROM Pelaaja_peli WHERE PelaajaID = '$pelaajaID'";
+    $resultkortti = $mysqli->query($sqlkortti);
+    if ($resultkortti->num_rows > 0) {
+       echo "<img class = 'playeryellowcard' src='yellowcard.png'>";
+    }
+   
+  return;
+}
+
 // Pelaajien tietojen haku
 function databaseQueryInfo($columnEtu, $columnSuku, $column1, $column2, $column3, $column4, $column5, $joukkueID) {
     $value = "";

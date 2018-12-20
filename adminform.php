@@ -29,10 +29,10 @@ include_once 'functions.php';
   
   
   function adminform2Direct() {
-      
-       window.location.href = "adminform2.php";
-       
+ 
+     window.location.href = "adminform2.php";
      
+      
   }
    
   
@@ -51,6 +51,8 @@ function checkHomeTeam() {
     var length = select.options.length;
         for (i = 0; i < length; i++) {
          select.options[i].disabled = false;
+         
+        
 }
 
 
@@ -96,7 +98,7 @@ function checkAwayTeam() {
 <button onclick="adminLogOut()" class="btn btn-primary" id="logOutButton" name="logOutForm"> Kirjaudu Ulos</button>
 <form method="POST">
 <div class="formBox" id="adminForm1">
-    <label>Valitse koti ja vierasjoukkue</label>
+    <label>Lisää uusi peli</label>
 
   <br>
   <br>
@@ -106,8 +108,8 @@ function checkAwayTeam() {
       <label>Valitse Kotijoukkue</label>
       <br>
    <select name="kotijoukkue" id="koti" onchange="checkHomeTeam()">
-       <option value="0" disabled>Valitse Joukkue</option>
-        <option id="homeTeam1" value="1"selected="selected"><?php echo databaseQuery('Joukkueet','Nimi','1')?></option>
+       <option value="" selected="selected" disabled>Valitse Joukkue</option>
+        <option id="homeTeam1" value="1"><?php echo databaseQuery('Joukkueet','Nimi','1')?></option>
   <option id="homeTeam2" value="2"><?php echo databaseQuery('Joukkueet','Nimi','2')?></option>
   <option id="homeTeam3" value="3"><?php echo databaseQuery('Joukkueet','Nimi','3')?></option>
   <option id="homeTeam4" value="4"><?php echo databaseQuery('Joukkueet','Nimi','4')?></option>
@@ -153,9 +155,9 @@ function checkAwayTeam() {
       <label>Valitse Vierasjoukkue</label>
       <br>
    <select name="vierasjoukkue" id="vieras" onchange="checkAwayTeam()">
-   <option value="0" selected="selected" disabled>Valitse Joukkue</option>
+   <option value="" selected="selected" disabled>Valitse Joukkue</option>
     <option id="awayTeam1" value="1"><?php echo databaseQuery('Joukkueet','Nimi','1')?></option>
-  <option id="awayTeam2" value="2" selected="selected"><?php echo databaseQuery('Joukkueet','Nimi','2')?></option>
+  <option id="awayTeam2" value="2"><?php echo databaseQuery('Joukkueet','Nimi','2')?></option>
   <option id="awayTeam3" value="3"><?php echo databaseQuery('Joukkueet','Nimi','3')?></option>
   <option id="awayTeam4" value="4"><?php echo databaseQuery('Joukkueet','Nimi','4')?></option>
   <option id="awayTeam5" value="5"><?php echo databaseQuery('Joukkueet','Nimi','5')?></option>
@@ -190,7 +192,7 @@ function checkAwayTeam() {
  <br>
  <br>
  </div>
- <button type="submit" class="btn btn-primary formButton" name="adminSubmit2">Submit</button>
+ <button type="submit" class="btn btn-primary formButton" id="admin1button" name="adminSubmit2">Submit</button>
 
 </div>
  
@@ -205,14 +207,22 @@ if (isset($_POST["adminSubmit2"])) {
  
  
  
- $_SESSION['kotijoukkue'] =  $_POST['kotijoukkue'].value;
- $_SESSION['vierasjoukkue'] =  $_POST['vierasjoukkue'].value;
+ $_SESSION['kotijoukkue'] =  $_POST['kotijoukkue'];
+ $_SESSION['vierasjoukkue'] =  $_POST['vierasjoukkue'];
  
- 
-echo '<script type="text/javascript">',
+
+    if($_SESSION['kotijoukkue'] == "" or $_SESSION['vierasjoukkue'] == "") {
+        alert("valitse joukkueet");
+    } else {
+      
+        echo '<script type="text/javascript">',
      'adminform2Direct();',
      '</script>'
      ;
+    }
+    
+ 
+
 
  
 }
@@ -288,6 +298,60 @@ echo '<script type="text/javascript">',
 </div>
 </div>
 
+  <div class="gameListGame formbox" id="popUpGames">
+       <label id="gamelistH1">Pelit</label>
+      
+     
+
+       <br>
+       <br>
+        <?php
+
+     
+        //haetaan tiedot
+      $sql400 = "SELECT Pelit.id as peliID, Pelit.kotijoukkueID, Pelit.vierasjoukkueID, Joukkueet.id AS homeID, Joukkueet.id AS awayID, Joukkueet.nimi as home, Joukkueet.nimi as away FROM Pelit LEFT JOIN Joukkueet ON Pelit.kotijoukkueID=Joukkueet.id";
+      $result400 = $mysqli->query($sql400);
+      
+      $sql401 = "SELECT Pelit.vierasjoukkueID, Joukkueet.id AS awayID, Joukkueet.nimi as away FROM Pelit LEFT JOIN Joukkueet ON Pelit.vierasjoukkueID=Joukkueet.id";
+      $result401 = $mysqli->query($sql401);
+      
+       $sql402 = "SELECT pvm FROM Pelit";
+      $result402 = $mysqli->query($sql402);
+      
+      $sql403 = "SELECT tulosKJ FROM Pelit";
+      $result403 = $mysqli->query($sql403);
+      
+      $sql404 = "SELECT tulosVJ FROM Pelit";
+      $result404 = $mysqli->query($sql404);
+      
+       
+      
+      
+      
+      
+    
+     
+     
+     
+   
+    
+  
+      //tulostetaan tiedot
+  if ($result400->num_rows > 0) {
+    while($row = mysqli_fetch_assoc($result400)) {
+       $row2 = mysqli_fetch_assoc($result401);
+       $row3 = mysqli_fetch_assoc($result402);
+       $row4 =  mysqli_fetch_assoc($result403);
+       $row5 =  mysqli_fetch_assoc($result404);
+        echo "Peli ID: " . $row['peliID']. "<br>". "Kotijoukkue: ".$row['home']. "<br>". "vierasjoukkue: ".$row2['away']."<br>". "Päivämäärä: ".$row3['pvm']."<br>". "Tulos: ".$row4['tulosKJ']." - ". $row5['tulosVJ']. "<br>". "<br>". "<br>";
+    }
+} else {
+    echo "0 results";
+}
+
+ ?>
+
+</div>
 
 
 </body>

@@ -539,7 +539,7 @@ function addbookingScorer() {
                     elements[i].checked = false;
        } 
     }
-    
+
     var elements = document.getElementsByClassName("nameOfPlayer2");
              
             for(var i = 5, length = elements.length; i < length; i++) {
@@ -554,6 +554,12 @@ function addbookingScorer() {
 
 
 function validateForm() {
+    
+    //tarkasta onko pelaajaa valittu.
+    if(document.getElementById("numberOfGoals").value == 0) {
+        alert("valitse vähintään yksi pelaaja");
+        return false;
+    }
     
     //virheiden saajien validointi
     if(document.getElementById("bookingScorerDiv1").style.display == "block") {
@@ -1105,62 +1111,12 @@ echo "</select>";
 </div>
 
 
-    <div class="gameListGame formbox" id="popUpGames">
-       <label id="gamelistH1">Pelit</label>
-      
-     
-
-       <br>
-       <br>
-        <?php
-
-     
-        //haetaan tiedot
-      $sql400 = "SELECT Pelit.id as peliID, Pelit.kotijoukkueID, Pelit.vierasjoukkueID, Joukkueet.id AS homeID, Joukkueet.id AS awayID, Joukkueet.nimi as home, Joukkueet.nimi as away FROM Pelit LEFT JOIN Joukkueet ON Pelit.kotijoukkueID=Joukkueet.id";
-      $result400 = $mysqli->query($sql400);
-      
-      $sql401 = "SELECT Pelit.vierasjoukkueID, Joukkueet.id AS awayID, Joukkueet.nimi as away FROM Pelit LEFT JOIN Joukkueet ON Pelit.vierasjoukkueID=Joukkueet.id";
-      $result401 = $mysqli->query($sql401);
-      
-       $sql402 = "SELECT pvm FROM Pelit";
-      $result402 = $mysqli->query($sql402);
-      
-      $sql403 = "SELECT tulosKJ FROM Pelit";
-      $result403 = $mysqli->query($sql403);
-      
-      $sql404 = "SELECT tulosVJ FROM Pelit";
-      $result404 = $mysqli->query($sql404);
-      
-       
-      
-      
-      
-      
-    
-     
-     
-     
-   
-    
-  
-      //tulostetaan tiedot
-  if ($result400->num_rows > 0) {
-    while($row = mysqli_fetch_assoc($result400)) {
-       $row2 = mysqli_fetch_assoc($result401);
-       $row3 = mysqli_fetch_assoc($result402);
-       $row4 =  mysqli_fetch_assoc($result403);
-       $row5 =  mysqli_fetch_assoc($result404);
-        echo "Peli ID: " . $row['peliID']. "<br>". "Kotijoukkue: ".$row['home']. "<br>". "vierasjoukkue: ".$row2['away']."<br>". "Päivämäärä: ".$row3['pvm']."<br>". "Tulos: ".$row4['tulosKJ']." - ". $row5['tulosVJ']. "<br>". "<br>". "<br>";
-    }
-} else {
-    echo "0 results";
-}
-
- 
+  <!-- pelilista -->
 
 
+<?php
 include 'adminformPHP.php';
-      ?>
+?>
     
 
 

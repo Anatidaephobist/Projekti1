@@ -14,6 +14,10 @@
     font-size: 32px;
 }
 
+.gameListgame {
+    width: 50%;
+}
+
 h1 {
      font-size: 30px;
 }
@@ -63,3 +67,4 @@ body {
     float:left;
     font-weight: bold;
 }
+
