@@ -555,11 +555,7 @@ function addbookingScorer() {
 
 function validateForm() {
     
-    //tarkasta onko pelaajaa valittu.
-    if(document.getElementById("numberOfGoals").value == 0) {
-        alert("valitse vähintään yksi pelaaja");
-        return false;
-    }
+
     
     //virheiden saajien validointi
     if(document.getElementById("bookingScorerDiv1").style.display == "block") {

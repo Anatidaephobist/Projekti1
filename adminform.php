@@ -343,7 +343,7 @@ if (isset($_POST["adminSubmit2"])) {
        $row3 = mysqli_fetch_assoc($result402);
        $row4 =  mysqli_fetch_assoc($result403);
        $row5 =  mysqli_fetch_assoc($result404);
-        echo "Peli ID: " . $row['peliID']. "<br>". "Kotijoukkue: ".$row['home']. "<br>". "vierasjoukkue: ".$row2['away']."<br>". "Päivämäärä: ".$row3['pvm']."<br>". "Tulos: ".$row4['tulosKJ']." - ". $row5['tulosVJ']. "<br>". "<br>". "<br>";
+        echo "Kotijoukkue: ".$row['home']. "<br>". "vierasjoukkue: ".$row2['away']."<br>". "Päivämäärä: ".$row3['pvm']."<br>". "Tulos: ".$row4['tulosKJ']." - ". $row5['tulosVJ']. "<br>". "<br>". "<br>";
     }
 } else {
     echo "0 results";
