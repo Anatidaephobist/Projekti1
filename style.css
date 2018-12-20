@@ -14,9 +14,6 @@ body {
 
 }
 
-
-
-
 .playerList {
     display:none;
 }
@@ -139,7 +136,7 @@ body {
 }
 
 #popUpWrapper {
-    margin-top:10%;
+    margin-top:10vw;
 }
 
 #teamInfoBoxWrapperA, #teamInfoBoxWrapperB, #teamInfoBoxWrapperC, #teamInfoBoxWrapperD, #teamInfoBoxWrapperE, #teamInfoBoxWrapperF, #teamInfoBoxWrapperG, #teamInfoBoxWrapperH {
@@ -404,6 +401,9 @@ h2 {
 .title>h1 {
     margin: 0;
     padding: 0;
+}
+.teamInfoBox {
+  min-height: 40vw;
 }
 }
 
